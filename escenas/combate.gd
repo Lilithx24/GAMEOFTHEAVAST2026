@@ -3,8 +3,9 @@ extends Node2D
 
 const ESCENA_SKILL := preload("res://escenas/assetsCombate/skill.tscn")
 const ESCENA_ENEMIGO := preload("res://escenas/assetsCombate/enemigo.tscn")
+const ESCENA_PARTE_ENEMIGO := preload("res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.tscn")
 
-@onready var enemigo: Enemigo
+var parteEnemigaSeleccionada: ParteEnemigo
 @onready var contenedor = $PanelJugador/HBoxContainer
 
 # Called when the node enters the scene tree for the first time.
@@ -19,9 +20,17 @@ func _process(delta: float) -> void:
 	pass
 
 func crearEnemigo(vida: int) -> void:
-	enemigo = ESCENA_ENEMIGO.instantiate()
-	enemigo.setVidaActual(vida)
+	var enemigo: Enemigo = ESCENA_ENEMIGO.instantiate()
 	self.add_child(enemigo)
+	crearParte(enemigo, vida)
+
+func crearParte(enemigo:Enemigo, vida: int) -> void:
+	var parte: ParteEnemigo = ESCENA_PARTE_ENEMIGO.instantiate()
+	parte.vidaMax = vida
+	parte.vidaActual = parte.vidaMax
+	parteEnemigaSeleccionada = parte
+	enemigo.parte = parte
+	enemigo.add_child(parte)
 
 func crearSkill(nombre: String, dmg: int) -> void:
 	var skill: Skill = ESCENA_SKILL.instantiate()
@@ -31,7 +40,7 @@ func crearSkill(nombre: String, dmg: int) -> void:
 	contenedor.add_child(skill)
 
 func _onSkillElegida(dmg: int) -> void:
-	enemigo.sufrirDmg(dmg)
+	parteEnemigaSeleccionada.sufrirDmg(dmg)
 
 func _on_button_pressed() -> void:
 	pass # Replace with function body.
