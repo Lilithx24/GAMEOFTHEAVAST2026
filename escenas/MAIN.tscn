@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cf3v5rxnp556"]
 
 [ext_resource type="Script" uid="uid://dly2oce4o1nwq" path="res://escenas/combate.gd" id="1_c1hhp"]
-[ext_resource type="PackedScene" uid="uid://dfgvggkb0ji34" path="res://escenas/assetsCombate/enemigo.tscn" id="2_c1hhp"]
 
 [node name="Combate" type="Node2D" unique_id=876481208]
 script = ExtResource("1_c1hhp")
@@ -29,5 +28,3 @@ offset_top = 464.0
 offset_right = 745.0
 offset_bottom = 596.0
 alignment = 1
-
-[node name="Enemigo" parent="." unique_id=569635208 instance=ExtResource("2_c1hhp")]

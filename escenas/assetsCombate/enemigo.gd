@@ -1,16 +1,20 @@
 class_name Enemigo
 extends Node2D
-var vida: int
+@export var vidaActual: int = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	vida = 100
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func sufrir_damage(damage: int):
-	vida = vida - damage
-	print("vida: ", vida)
+func sufrirDmg(damage: int):
+	var nuevaVida = setVidaActual(vidaActual - damage)
+	print("vida restante: ", nuevaVida)
+
+func setVidaActual(vida: int) -> int:
+	vidaActual = vida
+	return vidaActual
