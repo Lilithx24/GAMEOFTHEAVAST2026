@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cf3v5rxnp556"]
 
 [ext_resource type="Script" uid="uid://dly2oce4o1nwq" path="res://escenas/combate.gd" id="1_c1hhp"]
-[ext_resource type="Script" uid="uid://dcfe0wlbsgxos" path="res://escenas/enemigo.gd" id="2_fav8l"]
+[ext_resource type="PackedScene" uid="uid://dfgvggkb0ji34" path="res://escenas/assetsCombate/enemigo.tscn" id="2_c1hhp"]
 
 [node name="Combate" type="Node2D" unique_id=876481208]
 script = ExtResource("1_c1hhp")
@@ -10,17 +10,6 @@ script = ExtResource("1_c1hhp")
 offset_left = 2.0
 offset_right = 1161.0
 offset_bottom = 658.0
-
-[node name="Enemigo" type="Node2D" parent="." unique_id=2042669790]
-script = ExtResource("2_fav8l")
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemigo" unique_id=1201902468]
-
-[node name="ProgressBar" type="ProgressBar" parent="Enemigo" unique_id=757052991]
-offset_left = -2.0
-offset_top = 66.0
-offset_right = 1156.0
-offset_bottom = 93.0
 
 [node name="PanelJugador" type="Control" parent="." unique_id=675357850]
 layout_mode = 3
@@ -41,15 +30,4 @@ offset_right = 745.0
 offset_bottom = 596.0
 alignment = 1
 
-[node name="Button" type="Button" parent="PanelJugador/HBoxContainer" unique_id=1335415052]
-layout_mode = 2
-text = "Ataque
-Daño 15"
-
-[node name="Button2" type="Button" parent="PanelJugador/HBoxContainer" unique_id=1982873081]
-layout_mode = 2
-text = "Ataque
-Daño 10"
-
-[connection signal="pressed" from="PanelJugador/HBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="PanelJugador/HBoxContainer/Button2" to="." method="_ataque2_pressed"]
+[node name="Enemigo" parent="." unique_id=569635208 instance=ExtResource("2_c1hhp")]

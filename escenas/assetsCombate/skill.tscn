@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://28yodw2bcflg"]
+
+[ext_resource type="Script" uid="uid://dj4f1q16puk5u" path="res://escenas/assetsCombate/skill.gd" id="1_5ogei"]
+
+[node name="Button" type="Button" unique_id=263192264]
+text = "Ataque
+Daño 15"
+script = ExtResource("1_5ogei")

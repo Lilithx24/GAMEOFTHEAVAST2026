@@ -1,5 +1,6 @@
-extends Sprite2D
-var vida: int = 100
+class_name Enemigo
+extends Node2D
+var vida: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dfgvggkb0ji34"]
+
+[ext_resource type="Script" uid="uid://dcfe0wlbsgxos" path="res://escenas/assetsCombate/enemigo.gd" id="1_sms58"]
+
+[node name="Enemigo" type="Node2D" unique_id=569635208]
+script = ExtResource("1_sms58")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2025072951]
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=592474888]
+offset_left = -2.0
+offset_top = 66.0
+offset_right = 1156.0
+offset_bottom = 93.0
