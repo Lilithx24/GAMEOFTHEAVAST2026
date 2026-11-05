@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bhnhkm31u8idg"]
+
+[ext_resource type="Script" uid="uid://c76lho4daby2k" path="res://enemigos/enemigo.gd" id="1_2ehgw"]
+
+[node name="Node2D" type="Node2D" unique_id=1339168029]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=970008504]
+script = ExtResource("1_2ehgw")
