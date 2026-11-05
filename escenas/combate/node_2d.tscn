@@ -1,13 +1,22 @@
 [gd_scene format=3 uid="uid://dcnm25wxbsrht"]
 
-[ext_resource type="Texture2D" uid="uid://c0ia4hkaaqnw7" path="res://icon.svg" id="1_lnm1m"]
+[ext_resource type="Script" uid="uid://lc85wpcub4om" path="res://escenas/combate/botón.gd" id="1_lnm1m"]
 
-[node name="Node2D" type="Node2D" unique_id=1011986257]
+[node name="UICombate" type="Node2D" unique_id=1011986257]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1236339220]
-position = Vector2(480, 538)
-texture = ExtResource("1_lnm1m")
+[node name="Botón15" type="Button" parent="." unique_id=1241311696]
+offset_left = 372.0
+offset_top = 538.0
+offset_right = 488.0
+offset_bottom = 602.0
+text = "Ataque
+15 daño"
+script = ExtResource("1_lnm1m")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1275448035]
-position = Vector2(668, 539)
-texture = ExtResource("1_lnm1m")
+[node name="Botón10" type="Button" parent="." unique_id=1243641791]
+offset_left = 668.0
+offset_top = 539.0
+offset_right = 782.0
+offset_bottom = 602.0
+text = "Ataque 
+10 daño"

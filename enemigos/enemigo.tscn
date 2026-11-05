@@ -4,5 +4,5 @@
 
 [node name="Node2D" type="Node2D" unique_id=1339168029]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=970008504]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=458460775]
 script = ExtResource("1_2ehgw")
