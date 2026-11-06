@@ -17,7 +17,7 @@ var stamina: int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	contenedor = $PanelJugador/HBoxContainer
-	crearSkill("Ataque 15 de daño", 15, 1)
+	crearSkill("Ataque 15 de daño", 15, 2)
 	crearSkill("Ataque 10 de daño", 10, 1)
 	crearEnemigo(100)
 	crearPersonaje()
@@ -48,7 +48,9 @@ func crearSkill(nombre: String, dmg: int, sta: int) -> void:
 	
 func crearPersonaje() -> void:
 	personaje = ESCENA_PERSONAJE.instantiate()
-#	personaje.actualizar_barra()
+	personaje.vidaActual = personaje.vidaMax
+	add_child(personaje)
+	personaje.actualizar_barra()
 
 func _onSkillElegida(dmg: int, sta: int) -> void:
 	if combate_terminado:
@@ -59,9 +61,9 @@ func _onSkillElegida(dmg: int, sta: int) -> void:
 	stamina = stamina - sta
 	if stamina < 1:
 		print("recibes daño")
-	#	personaje.sufrirDmg(10)
+		personaje.sufrirDmg(10)
 		stamina = 2
-	#	personaje.actualizar_barrra()
+		personaje.actualizar_barra()
 	if parteEnemigaSeleccionada.vidaActual == 0 \
 			and parteEnemigaSeleccionada.vital:
 		ganar_combate()

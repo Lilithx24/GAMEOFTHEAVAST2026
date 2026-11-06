@@ -4,3 +4,9 @@
 
 [node name="Personaje" type="Node2D" unique_id=489876830]
 script = ExtResource("1_pkwnt")
+
+[node name="ProgressBarJ" type="ProgressBar" parent="." unique_id=1358147742]
+offset_left = 157.0
+offset_top = 411.0
+offset_right = 919.0
+offset_bottom = 438.0

@@ -14,12 +14,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-#func actualizar_barra() -> void:
-#	barra_vida.max_value = vidaMax
-#	barra_vida.value = vidaActual
+func actualizar_barra() -> void:
+	barra_vida.max_value = vidaMax
+	barra_vida.value = vidaActual
 
-#func sufrirDmg(damage: int):
-#	vidaActual = vidaActual - damage
 
+func sufrirDmg(damage: int):
+	var nuevaVida = setVidaActual(vidaActual - damage)
+	print("vida restante: ", nuevaVida)
+
+func setVidaActual(vida: int) -> int:
+	vidaActual = clampi(vida, 0, vidaMax) #Esta mierda es pa que no baje de 0 (Código reciclado)
+	return vidaActual
 	
 	
