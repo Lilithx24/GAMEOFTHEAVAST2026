@@ -22,5 +22,5 @@ func sufrirDmg(damage: int):
 	print("vida restante: ", nuevaVida)
 
 func setVidaActual(vida: int) -> int:
-	vidaActual = vida
+	vidaActual = clampi(vida, 0, vidaMax) #Esta mierda es pa que no baje de 0
 	return vidaActual
