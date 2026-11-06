@@ -1,0 +1,986 @@
+[gd_scene format=3 uid="uid://d3fan0hkufb5p"]
+
+[ext_resource type="Script" uid="uid://cop44fg7jxmnu" path="res://escenas/Exploración/exploracion.gd" id="1_n8xts"]
+[ext_resource type="Material" uid="uid://bvx15f46q4u22" path="res://Assets/MaterialesGodot/Material_SueloPiso0_3d.tres" id="2_4iyo1"]
+[ext_resource type="Script" uid="uid://8hfli6jcoj8o" path="res://escenas/Exploración/jugador.gd" id="2_ck84f"]
+[ext_resource type="PackedScene" uid="uid://bar8x7nt80g2v" path="res://escenas/Exploración/Encuentros/EnemigoExploracion.tscn" id="3_4iyo1"]
+[ext_resource type="PackedScene" path="res://escenas/HUD/menu_shift.tscn" id="4_xj3ho"]
+
+[sub_resource type="BoxMesh" id="Mesh_SueloSala"]
+material = ExtResource("2_4iyo1")
+size = Vector3(20, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ygfxl"]
+material = ExtResource("2_4iyo1")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x40kq"]
+material = ExtResource("2_4iyo1")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kmckd"]
+material = ExtResource("2_4iyo1")
+size = Vector3(30, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jvi3u"]
+material = ExtResource("2_4iyo1")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xj3ho"]
+material = ExtResource("2_4iyo1")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iuemi"]
+material = ExtResource("2_4iyo1")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2m80i"]
+material = ExtResource("2_4iyo1")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3foeg"]
+material = ExtResource("2_4iyo1")
+size = Vector3(20, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtt6k"]
+material = ExtResource("2_4iyo1")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6mtjs"]
+material = ExtResource("2_4iyo1")
+size = Vector3(40, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2nt4e"]
+material = ExtResource("2_4iyo1")
+size = Vector3(3, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_upggl"]
+material = ExtResource("2_4iyo1")
+size = Vector3(3.5, 0.5, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v3xrx"]
+material = ExtResource("2_4iyo1")
+size = Vector3(3, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b7nuq"]
+material = ExtResource("2_4iyo1")
+size = Vector3(3.5, 0.5, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c3obi"]
+material = ExtResource("2_4iyo1")
+size = Vector3(3, 0.5, 10)
+
+[sub_resource type="StandardMaterial3D" id="Material_Este"]
+albedo_color = Color(0.6510503, 0.5587475, 1, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_ck84f"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxShape3D" id="Shape_Mesh_ParedEste01"]
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4iyo1"]
+albedo_color = Color(0.50519365, 1, 0.72613436, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbx7q"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 19.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pcx54"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 9.791285)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0qls2"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 9.791285)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4iyo1"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 9.791285)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y1qc8"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 13.169568)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hxqyt"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 13.169568)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0s80j"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 33.4025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kunlf"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 13.317517)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sjsfi"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 13.568494)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yqwve"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 9.791285)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1qc8"]
+albedo_color = Color(0.50519365, 1, 0.72613436, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gvifl"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 13.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hxqyt"]
+size = Vector3(0.2, 3, 13.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4gsx8"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 39.510437)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wkc2h"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kunlf"]
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6jr1b"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_86myd"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_343we"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bjxiw"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3egn7"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1eswl"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8042i"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_053l6"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f6075"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.6000977)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y5x63"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 13.467773)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x0uy2"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iw2yn"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vqitt"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pw55g"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ocjy1"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="Mesh_ParedEste01"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.8149414)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0c8l5"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.8149414)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u3bwc"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.7578125)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2r64j"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.7799072)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6cpgk"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qhbhg"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yuka3"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nhfve"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3igwq"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3jqnj"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d54pl"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 13.34082)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ku7p5"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.472168)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7oqk8"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 7.051758)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ebnm2"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.4873047)
+
+[sub_resource type="BoxMesh" id="BoxMesh_skg7f"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.4873047)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ecs34"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.4873047)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hcwx3"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.6904297)
+
+[sub_resource type="BoxMesh" id="BoxMesh_685gf"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.4873047)
+
+[sub_resource type="BoxMesh" id="BoxMesh_in6s4"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.4873047)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xpim7"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.4873047)
+
+[node name="Exploracion" type="Node3D" unique_id=908552948]
+script = ExtResource("1_n8xts")
+
+[node name="SalaPrueba" type="Node3D" parent="." unique_id=40036277]
+
+[node name="Suelos" type="Node3D" parent="SalaPrueba" unique_id=1029452316]
+
+[node name="SueloSalaInicio" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=2025265054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.25, 0)
+mesh = SubResource("Mesh_SueloSala")
+
+[node name="SueloSalaA" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=1684639002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.25, 0)
+mesh = SubResource("BoxMesh_ygfxl")
+
+[node name="SueloSalaB" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=434117298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -0.25, 0)
+mesh = SubResource("BoxMesh_x40kq")
+
+[node name="SueloSalaT1" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=501494299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.25, -10)
+mesh = SubResource("BoxMesh_kmckd")
+
+[node name="SueloSalaT2" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=1170314261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.25, 0)
+mesh = SubResource("BoxMesh_jvi3u")
+
+[node name="SueloSalaC" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=932441894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -20)
+mesh = SubResource("BoxMesh_xj3ho")
+
+[node name="SueloSalaD" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=381033833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.25, -20)
+mesh = SubResource("BoxMesh_iuemi")
+
+[node name="SueloSalaE" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=897700197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -0.25, -20)
+mesh = SubResource("BoxMesh_2m80i")
+
+[node name="SueloSalaF" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=2100858616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.25, -30)
+mesh = SubResource("BoxMesh_3foeg")
+
+[node name="SueloSalaG" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=678973613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -0.25, -30)
+mesh = SubResource("BoxMesh_qtt6k")
+
+[node name="SueloSalaH" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=361115028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.25, -40)
+mesh = SubResource("BoxMesh_6mtjs")
+
+[node name="SueloPasillo1a" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=953466309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -10)
+mesh = SubResource("BoxMesh_2nt4e")
+
+[node name="SueloPasillo1b" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=709123597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25, -0.25, -10)
+mesh = SubResource("BoxMesh_upggl")
+
+[node name="SueloPasillo2a" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=590125352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.25, -20)
+mesh = SubResource("BoxMesh_v3xrx")
+
+[node name="SueloPasillo2b" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=1816091601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.25, -0.25, -20)
+mesh = SubResource("BoxMesh_b7nuq")
+
+[node name="SueloPasillo3" type="MeshInstance3D" parent="SalaPrueba/Suelos" unique_id=657491704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -30)
+mesh = SubResource("BoxMesh_c3obi")
+
+[node name="Paredes" type="Node3D" parent="SalaPrueba" unique_id=1545209654]
+
+[node name="ParedA" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1166209413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9, 1.5, 0)
+mesh = SubResource("BoxMesh_ck84f")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA" unique_id=925787153]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA/Cuerpo" unique_id=143421482]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA7" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1402261443]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.95, 1.5, 4.9)
+mesh = SubResource("BoxMesh_tbx7q")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA7" unique_id=1339069000]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA7/Cuerpo" unique_id=181093671]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA27" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1725619302]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.956604, 1.5, 4.9)
+mesh = SubResource("BoxMesh_pcx54")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA27" unique_id=1732507991]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA27/Cuerpo" unique_id=1786908198]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA29" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1264544368]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.839243, 1.5, 4.9)
+mesh = SubResource("BoxMesh_0qls2")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA29" unique_id=1424797168]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA29/Cuerpo" unique_id=549394842]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA32" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=194426568]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.839243, 1.5, -4.948483)
+mesh = SubResource("BoxMesh_4iyo1")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA32" unique_id=515358472]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA32/Cuerpo" unique_id=332160157]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA38" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1581874738]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28.1501, 1.5, -14.934006)
+mesh = SubResource("BoxMesh_y1qc8")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA38" unique_id=888973963]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA38/Cuerpo" unique_id=1126429655]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA53" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1945172747]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28.1501, 1.5, -25.144447)
+mesh = SubResource("BoxMesh_hxqyt")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA53" unique_id=1855979926]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA53/Cuerpo" unique_id=55491812]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA54" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=830335869]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.033636, 1.5, -35.1389)
+mesh = SubResource("BoxMesh_0s80j")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA54" unique_id=2073061201]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA54/Cuerpo" unique_id=110219164]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA39" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1666716106]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.856258, 1.5, -14.934006)
+mesh = SubResource("BoxMesh_kunlf")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA39" unique_id=1857469876]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA39/Cuerpo" unique_id=399831479]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA33" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=584623041]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.0822525, 1.5, -4.948483)
+mesh = SubResource("BoxMesh_sjsfi")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA33" unique_id=542587170]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA33/Cuerpo" unique_id=1270863978]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA28" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=27251903]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.829632, 1.5, 4.9)
+mesh = SubResource("BoxMesh_yqwve")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA28" unique_id=880218555]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA28/Cuerpo" unique_id=76467586]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA8" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1375338741]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.050909, 1.5, -4.9)
+mesh = SubResource("BoxMesh_gvifl")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA8" unique_id=197275088]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA8/Cuerpo" unique_id=1146951716]
+shape = SubResource("BoxShape3D_hxqyt")
+
+[node name="ParedA52" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=821478093]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.017787, 1.5, -44.7858)
+mesh = SubResource("BoxMesh_4gsx8")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA52" unique_id=1677349419]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA52/Cuerpo" unique_id=483160984]
+shape = SubResource("BoxShape3D_hxqyt")
+
+[node name="ParedA12" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=182053872]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.0851445, 1.5, -8.367695)
+mesh = SubResource("BoxMesh_wkc2h")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA12" unique_id=1651973209]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA12/Cuerpo" unique_id=2093134272]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA40" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1767178015]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.711943, 1.5, -25.106125)
+mesh = SubResource("BoxMesh_6jr1b")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA40" unique_id=975452573]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA40/Cuerpo" unique_id=195494148]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA42" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1242563942]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.177841, 1.5, -21.368164)
+mesh = SubResource("BoxMesh_86myd")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA42" unique_id=1634359204]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA42/Cuerpo" unique_id=531795473]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA43" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1127162874]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.177841, 1.5, -18.578583)
+mesh = SubResource("BoxMesh_343we")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA43" unique_id=622099720]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA43/Cuerpo" unique_id=672079382]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA13" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=998301076]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.0851445, 1.5, -15.114227)
+mesh = SubResource("BoxMesh_bjxiw")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA13" unique_id=209880714]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA13/Cuerpo" unique_id=2096524805]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA17" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1174075012]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.1688728, 1.5, -15.114227)
+mesh = SubResource("BoxMesh_3egn7")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA17" unique_id=1127336439]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA17/Cuerpo" unique_id=555829903]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA21" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=2107444976]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.1688728, 1.5, -24.933565)
+mesh = SubResource("BoxMesh_1eswl")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA21" unique_id=2005963779]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA21/Cuerpo" unique_id=1168330566]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA25" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=2032219972]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.2852945, 1.5, -24.933565)
+mesh = SubResource("BoxMesh_8042i")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA25" unique_id=55428196]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA25/Cuerpo" unique_id=1227319422]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA22" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=267582487]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.1688728, 1.5, -34.926453)
+mesh = SubResource("BoxMesh_053l6")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA22" unique_id=28588611]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA22/Cuerpo" unique_id=527671713]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA14" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1615569679]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.0851445, 1.5, -11.369904)
+mesh = SubResource("BoxMesh_f6075")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA14" unique_id=1316479827]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA14/Cuerpo" unique_id=2037014353]
+shape = SubResource("BoxShape3D_kunlf")
+
+[node name="ParedA2" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1501749966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5, -1.7338867)
+mesh = SubResource("BoxMesh_y5x63")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA2" unique_id=408728994]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA2/Cuerpo" unique_id=357798476]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA5" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1584116418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.881092, 1.5, 0)
+mesh = SubResource("BoxMesh_x0uy2")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA5" unique_id=323114855]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA5/Cuerpo" unique_id=2027156838]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA34" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1029718251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.881092, 1.5, -10.042894)
+mesh = SubResource("BoxMesh_iw2yn")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA34" unique_id=1877633144]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA34/Cuerpo" unique_id=1706069409]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA35" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1502724768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.881092, 1.5, -20.050842)
+mesh = SubResource("BoxMesh_vqitt")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA35" unique_id=1940726484]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA35/Cuerpo" unique_id=1997052381]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA36" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=802868965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.881092, 1.5, -30.087646)
+mesh = SubResource("BoxMesh_pw55g")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA36" unique_id=1781718748]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA36/Cuerpo" unique_id=1500294800]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA37" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1683247381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.881092, 1.5, -40.130653)
+mesh = SubResource("BoxMesh_ocjy1")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA37" unique_id=601349334]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA37/Cuerpo" unique_id=823790680]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA3" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=514246301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, -3.0925293)
+mesh = SubResource("Mesh_ParedEste01")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA3" unique_id=2050207393]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA3/Cuerpo" unique_id=1958915350]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA31" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=623482483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.967035, 1.5, -3.0925293)
+mesh = SubResource("BoxMesh_0c8l5")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA31" unique_id=730363617]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA31/Cuerpo" unique_id=1531571259]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA30" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=2095683074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, 3.1210938)
+mesh = SubResource("BoxMesh_u3bwc")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA30" unique_id=781170782]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA30/Cuerpo" unique_id=1875809764]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA4" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1837536857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, 3.017273)
+mesh = SubResource("BoxMesh_2r64j")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA4" unique_id=2066875402]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA4/Cuerpo" unique_id=2019733359]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA6" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1489742141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 1.5, -10)
+mesh = SubResource("BoxMesh_6cpgk")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA6" unique_id=699852925]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA6/Cuerpo" unique_id=825391836]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA18" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=676060708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8716016, 1.5, -20.014315)
+mesh = SubResource("BoxMesh_6cpgk")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA18" unique_id=1636062245]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA18/Cuerpo" unique_id=957051139]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA48" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=646282803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.059748, 1.5, -20.014315)
+mesh = SubResource("BoxMesh_qhbhg")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA48" unique_id=367938314]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA48/Cuerpo" unique_id=658576665]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA49" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=961692839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.55466, 1.5, -20.014315)
+mesh = SubResource("BoxMesh_yuka3")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA49" unique_id=1447557017]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA49/Cuerpo" unique_id=30152527]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA23" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=900572930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8716016, 1.5, -39.854298)
+mesh = SubResource("BoxMesh_nhfve")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA23" unique_id=917683095]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA23/Cuerpo" unique_id=478441106]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA19" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1987557351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.505487, 1.5, -29.974241)
+mesh = SubResource("BoxMesh_3igwq")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA19" unique_id=1963347538]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA19/Cuerpo" unique_id=1593682146]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA20" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1411789553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4634566, 1.5, -29.974241)
+mesh = SubResource("BoxMesh_3jqnj")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA20" unique_id=120118764]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA20/Cuerpo" unique_id=567967963]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA24" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=319901973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.075924, 1.5, -28.303831)
+mesh = SubResource("BoxMesh_d54pl")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA24" unique_id=1856788668]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA24/Cuerpo" unique_id=946426705]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA10" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1073342928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3913513, 1.5, -6.736084)
+mesh = SubResource("BoxMesh_ku7p5")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA10" unique_id=1655291970]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA10/Cuerpo" unique_id=2018222774]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA51" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=484561593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1545663, 1.5, -14.865643)
+mesh = SubResource("BoxMesh_7oqk8")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA51" unique_id=1081334514]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA51/Cuerpo" unique_id=586033266]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA44" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1511328390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.895182, 1.5, -16.697666)
+mesh = SubResource("BoxMesh_ebnm2")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA44" unique_id=179739074]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA44/Cuerpo" unique_id=945160421]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA46" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=574638116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.447628, 1.5, -16.697666)
+mesh = SubResource("BoxMesh_skg7f")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA46" unique_id=1052887013]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA46/Cuerpo" unique_id=1001439714]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA47" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1651436257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.447628, 1.5, -23.313763)
+mesh = SubResource("BoxMesh_ecs34")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA47" unique_id=1720890911]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA47/Cuerpo" unique_id=188191400]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA45" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=929461045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.895182, 1.5, -23.160872)
+mesh = SubResource("BoxMesh_hcwx3")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA45" unique_id=1298504261]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA45/Cuerpo" unique_id=71422588]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA50" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=46063579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.895182, 1.5, -33.348778)
+mesh = SubResource("BoxMesh_685gf")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA50" unique_id=253290115]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA50/Cuerpo" unique_id=979775240]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA55" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1172864467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.895182, 1.5, -27.021103)
+mesh = SubResource("BoxMesh_in6s4")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA55" unique_id=1277594040]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA55/Cuerpo" unique_id=1008198047]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="ParedA16" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=214544651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3672872, 1.5, -13.077129)
+mesh = SubResource("BoxMesh_xpim7")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA16" unique_id=382180909]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA16/Cuerpo" unique_id=324101029]
+shape = SubResource("Shape_Mesh_ParedEste01")
+
+[node name="Luces" type="Node3D" parent="SalaPrueba" unique_id=442093195]
+
+[node name="Luz01" type="OmniLight3D" parent="SalaPrueba/Luces" unique_id=939671039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+light_energy = 0.8
+omni_range = 7.0
+
+[node name="Luz02" type="OmniLight3D" parent="SalaPrueba/Luces" unique_id=1037653083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.783085, 2.5, -30.098501)
+light_energy = 0.8
+omni_range = 7.0
+
+[node name="Luz03" type="OmniLight3D" parent="SalaPrueba/Luces" unique_id=1750647278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.73378, 2.5, -9.891056)
+light_energy = 0.8
+omni_range = 7.0
+
+[node name="Luz04" type="OmniLight3D" parent="SalaPrueba/Luces" unique_id=1455991977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.406761, 2.5, -20.210844)
+light_energy = 0.8
+omni_range = 7.0
+
+[node name="Luz05" type="OmniLight3D" parent="SalaPrueba/Luces" unique_id=1894966641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.30651, 2.5, -29.174892)
+light_energy = 0.8
+omni_range = 7.0
+
+[node name="PuntosExploracion" type="Node3D" parent="SalaPrueba" unique_id=492228236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="Punto00" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=2117987148 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+gizmo_extents = 0.5
+
+[node name="Punto01" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1404062160 groups=["puntos_exploracion"]]
+gizmo_extents = 0.5
+
+[node name="Punto02" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1200716927 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+gizmo_extents = 0.5
+
+[node name="Punto03" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1093025144 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+gizmo_extents = 0.5
+
+[node name="Punto04" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1867641079 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
+gizmo_extents = 0.5
+
+[node name="Punto05" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=697516519 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+gizmo_extents = 0.5
+
+[node name="Punto06" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=882201481 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
+gizmo_extents = 0.5
+
+[node name="Punto07" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1143717173 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10)
+gizmo_extents = 0.5
+
+[node name="Punto08" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=180960019 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -10)
+gizmo_extents = 0.5
+
+[node name="Punto09" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=987820486 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+gizmo_extents = 0.5
+
+[node name="Punto10" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=269017131 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -20)
+gizmo_extents = 0.5
+
+[node name="Punto11" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1472558452 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -20)
+gizmo_extents = 0.5
+
+[node name="Punto12" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=666558693 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -20)
+gizmo_extents = 0.5
+
+[node name="Punto13" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=840419852 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
+gizmo_extents = 0.5
+
+[node name="Punto14" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1255459450 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -30)
+gizmo_extents = 0.5
+
+[node name="Punto15" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1955586821 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -30)
+gizmo_extents = 0.5
+
+[node name="Punto16" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1652122346 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -30)
+gizmo_extents = 0.5
+
+[node name="Punto17" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=24024482 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -40)
+gizmo_extents = 0.5
+
+[node name="Punto18" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1246145328 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -40)
+gizmo_extents = 0.5
+
+[node name="Punto19" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1219165583 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -40)
+gizmo_extents = 0.5
+
+[node name="Punto20" type="Marker3D" parent="SalaPrueba/PuntosExploracion" unique_id=1143359491 groups=["puntos_exploracion"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -40)
+gizmo_extents = 0.5
+
+[node name="Jugador" type="Node3D" parent="SalaPrueba" unique_id=314312463]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10, 1.2, 0)
+script = ExtResource("2_ck84f")
+
+[node name="Camera3D" type="Camera3D" parent="SalaPrueba/Jugador" unique_id=1112957686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+current = true
+
+[node name="EnemigoExploracion" parent="SalaPrueba" unique_id=337344313 instance=ExtResource("3_4iyo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.73378, 0.7442324, -19.871666)
+visible = false
+
+[node name="MenuShift" parent="." unique_id=699806286 instance=ExtResource("4_xj3ho")]

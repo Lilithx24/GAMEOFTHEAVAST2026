@@ -55,7 +55,7 @@ func ganar_combate() -> void:
 	EstadoPartida.enemigo_derrotado = true
 	EstadoPartida.volver_de_combate = true
 	get_tree().change_scene_to_file(
-		"res://escenas/Exploración/exploracion.tscn"
+		"res://escenas/Exploración/Pisos/PlantaCero.tscn"
 	)
 
 func _on_button_pressed() -> void:
