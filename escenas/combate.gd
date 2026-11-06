@@ -4,18 +4,24 @@ extends Node2D
 const ESCENA_SKILL := preload("res://escenas/assetsCombate/skill.tscn")
 const ESCENA_ENEMIGO := preload("res://escenas/assetsCombate/enemigo.tscn")
 const ESCENA_PARTE_ENEMIGO := preload("res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.tscn")
+const ESCENA_PERSONAJE := preload("res://escenas/assetsCombate/personaje/personaje.tscn")
+
 
 var parteEnemigaSeleccionada: ParteEnemigo
 var enemigo_actual: Enemigo
+var personaje: Personaje
 var combate_terminado: bool = false
 @onready var contenedor = $PanelJugador/HBoxContainer
+var stamina: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	contenedor = $PanelJugador/HBoxContainer
-	crearSkill("Ataque 15 de daño", 15)
-	crearSkill("Ataque 10 de daño", 10)
+	crearSkill("Ataque 15 de daño", 15, 1)
+	crearSkill("Ataque 10 de daño", 10, 1)
 	crearEnemigo(100)
+	crearPersonaje()
+	stamina = 2
 
 func crearEnemigo(vida: int) -> void:
 	enemigo_actual = ESCENA_ENEMIGO.instantiate()
@@ -32,20 +38,30 @@ func crearParte(enemigo:Enemigo, vida: int) -> void:
 	enemigo.parte = parte
 	enemigo.add_child(parte)
 
-func crearSkill(nombre: String, dmg: int) -> void:
+func crearSkill(nombre: String, dmg: int, sta: int) -> void:
 	var skill: Skill = ESCENA_SKILL.instantiate()
 	skill.nombreSkill= nombre
 	skill.dmgSkill = dmg
+	skill.staSkill = sta
 	skill.skillUsada.connect(_onSkillElegida)
 	contenedor.add_child(skill)
+	
+func crearPersonaje() -> void:
+	personaje = ESCENA_PERSONAJE.instantiate()
+#	personaje.actualizar_barra()
 
-func _onSkillElegida(dmg: int) -> void:
+func _onSkillElegida(dmg: int, sta: int) -> void:
 	if combate_terminado:
 		return
 
 	parteEnemigaSeleccionada.sufrirDmg(dmg)
 	enemigo_actual.actualizar_barra()
-
+	stamina = stamina - sta
+	if stamina < 1:
+		print("recibes daño")
+	#	personaje.sufrirDmg(10)
+		stamina = 2
+	#	personaje.actualizar_barrra()
 	if parteEnemigaSeleccionada.vidaActual == 0 \
 			and parteEnemigaSeleccionada.vital:
 		ganar_combate()
