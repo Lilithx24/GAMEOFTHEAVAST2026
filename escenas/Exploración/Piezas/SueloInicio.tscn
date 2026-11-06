@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets Blockbench/Suelo_Inicio.glb" id="1_modelo"]
+
+[node name="SueloInicio" type="Node3D"]
+metadata/dimensiones_metros = Vector3(8, 0.2, 7)
+metadata/origen = "Centro de la superficie transitable, Y=0"
+
+[node name="Modelo" parent="." instance=ExtResource("1_modelo")]
