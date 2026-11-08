@@ -24,6 +24,10 @@ EstadoPartida="*uid://bte5wrms8nv0e"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 girar_izquierda={
