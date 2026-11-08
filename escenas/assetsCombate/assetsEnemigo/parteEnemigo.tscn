@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://vus5amm41mlr" path="res://sprites/test_AC.jpg" id="1_2gcjn"]
 
 [node name="ParteEnemigo" type="TextureRect" unique_id=440506619]
-offset_left = 553.0
-offset_top = 236.0
-offset_right = 553.0
-offset_bottom = 236.0
+offset_left = 469.0
+offset_top = 122.0
+offset_right = 4794.5176
+offset_bottom = 6147.8857
 scale = Vector2(0.056640625, 0.042815283)
 mouse_filter = 0
 texture = ExtResource("1_2gcjn")
