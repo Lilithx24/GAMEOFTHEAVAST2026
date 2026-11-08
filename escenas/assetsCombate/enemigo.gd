@@ -14,3 +14,6 @@ func _process(_delta: float) -> void:
 func actualizar_barra() -> void:
 	barra_vida.max_value = parte.vidaMax
 	barra_vida.value = parte.vidaActual
+
+func turno(objetivo: Personaje) -> void:
+	objetivo.sufrirDmg(10)

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cf3v5rxnp556"]
+
+[ext_resource type="Script" uid="uid://dly2oce4o1nwq" path="res://escenas/combate.gd" id="1_3xnsx"]
+[ext_resource type="PackedScene" path="res://escenas/HUD/menu_shift.tscn" id="2_414ia"]
+
+[node name="Combate" type="Node2D" unique_id=876481208]
+script = ExtResource("1_3xnsx")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=261303568]
+offset_left = 2.0
+offset_right = 1161.0
+offset_bottom = 658.0
+
+[node name="PanelJugador" type="Control" parent="." unique_id=675357850]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador" unique_id=1668645083]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 464.0
+offset_right = 745.0
+offset_bottom = 596.0
+alignment = 1
+
+[node name="MenuShift" parent="." unique_id=1139798836 instance=ExtResource("2_414ia")]

@@ -59,7 +59,7 @@ func _onSkillElegida(dmg: int, sta: int) -> void:
 	enemigo_actual.actualizar_barra()
 	stamina = stamina - sta
 	if stamina < 1:
-		print("recibes daño")
+		enemigo_actual.turno(personaje)
 		personaje.sufrirDmg(10)
 		stamina = 2
 		personaje.actualizar_barra()
