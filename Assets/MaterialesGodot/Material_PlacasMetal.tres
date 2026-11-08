@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5x1j6uvlq0v2"]
+
+[ext_resource type="Texture2D" uid="uid://cn0m427h5vr0a" path="res://Assets/TexturaSueloPiso1/metal_plate_02_diff_2k.jpg" id="1_0bp1e"]
+[ext_resource type="Texture2D" uid="uid://crsacsanc3gux" path="res://Assets/TexturaSueloPiso1/metal_plate_02_ao_2k.jpg" id="2_7hbr3"]
+[ext_resource type="Texture2D" uid="uid://booqnpav0r74" path="res://Assets/TexturaSueloPiso1/metal_plate_02_metal_2k.jpg" id="3_c78x3"]
+[ext_resource type="Texture2D" uid="uid://dqj078gr8wniy" path="res://Assets/TexturaSueloPiso1/metal_plate_02_nor_gl_2k.png" id="4_bre56"]
+[ext_resource type="Texture2D" uid="uid://cvt0tw43ini1" path="res://Assets/TexturaSueloPiso1/metal_plate_02_rough_2k.jpg" id="5_w55cr"]
+
+[resource]
+albedo_texture = ExtResource("1_0bp1e")
+metallic = 1.0
+metallic_texture = ExtResource("3_c78x3")
+roughness_texture = ExtResource("5_w55cr")
+normal_enabled = true
+normal_texture = ExtResource("4_bre56")
+ao_enabled = true
+ao_texture = ExtResource("2_7hbr3")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
