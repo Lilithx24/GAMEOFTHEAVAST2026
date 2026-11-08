@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ct0uxsrhsbwog"]
 
-[ext_resource type="Script" uid="uid://nhlfehvwdrx3" path="res://escenas/assetsCombate/personaje/personaje.gd" id="1_pkwnt"]
+[ext_resource type="Script" uid="uid://nhlfehvwdrx3" path="res://escenas/assetsCombate/personaje.gd" id="1_pkwnt"]
 
 [node name="Personaje" type="Node2D" unique_id=489876830]
 script = ExtResource("1_pkwnt")

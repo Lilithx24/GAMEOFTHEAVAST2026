@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c3qx85s6jab07"]
+
+[ext_resource type="Script" uid="uid://cqerqp6iw0ju3" path="res://escenas/assetsCombate/assetsPersonaje/partePersonaje.gd" id="1_05x2t"]
+
+[node name="PartePersonaje" type="Sprite2D" unique_id=92773101]
+script = ExtResource("1_05x2t")

@@ -2,7 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dj4f1q16puk5u" path="res://escenas/assetsCombate/skill.gd" id="1_5ogei"]
 
-[node name="Button" type="Button" unique_id=263192264]
-text = "Ataque
-Daño 15"
+[node name="Skill" type="PanelContainer" unique_id=1907490923]
+offset_right = 72.0
+offset_bottom = 54.0
 script = ExtResource("1_5ogei")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=684639416]
+layout_mode = 2
+
+[node name="Nombre" type="Label" parent="VBoxContainer" unique_id=2102865391]
+layout_mode = 2
+
+[node name="Coste" type="Label" parent="VBoxContainer" unique_id=1743242823]
+layout_mode = 2

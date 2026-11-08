@@ -3,8 +3,10 @@ extends Node
 
 var vidaMax: int = 100
 var vidaActual: int
+var partes: Array[PartePersonaje]
 @onready var barra_vida: ProgressBar = $ProgressBarJ
-
+var staminaMax: int
+var staminaActual: int
 
 func _ready() -> void:
 	pass # Replace with function body.
