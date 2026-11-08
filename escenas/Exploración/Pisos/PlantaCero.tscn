@@ -4,8 +4,12 @@
 [ext_resource type="Material" uid="uid://bvx15f46q4u22" path="res://Assets/MaterialesGodot/Material_SueloPiso0_3d.tres" id="2_4iyo1"]
 [ext_resource type="Script" uid="uid://8hfli6jcoj8o" path="res://escenas/Exploración/jugador.gd" id="2_ck84f"]
 [ext_resource type="PackedScene" uid="uid://bar8x7nt80g2v" path="res://escenas/Exploración/Encuentros/EnemigoExploracion.tscn" id="3_4iyo1"]
+[ext_resource type="Texture2D" uid="uid://jjodxj3xrcig" path="res://Assets/TexturaDesconchao1/white_rough_plaster_diff_2k.jpg" id="3_tbx7q"]
+[ext_resource type="Texture2D" uid="uid://ggt8u5ebp4ll" path="res://Assets/TexturaDesconchao1/white_rough_plaster_ao_2k.jpg" id="4_pcx54"]
 [ext_resource type="PackedScene" path="res://escenas/HUD/menu_shift.tscn" id="4_xj3ho"]
+[ext_resource type="Texture2D" uid="uid://dyn3c82b2hssa" path="res://Assets/TexturaDesconchao1/white_rough_plaster_nor_gl_2k.png" id="5_0qls2"]
 [ext_resource type="PackedScene" uid="uid://baxfuj075e4gq" path="res://escenas/Exploración/Piezas/ParedConPuerta.tscn" id="6_4iyo1"]
+[ext_resource type="Texture2D" uid="uid://cvdajx41do0bg" path="res://Assets/TexturaDesconchao1/white_rough_plaster_rough_2k.jpg" id="6_yqwve"]
 
 [sub_resource type="BoxMesh" id="Mesh_SueloSala"]
 material = ExtResource("2_4iyo1")
@@ -79,12 +83,16 @@ size = Vector3(10, 0.5, 10)
 material = ExtResource("2_4iyo1")
 size = Vector3(40, 0.5, 50)
 
-[sub_resource type="StandardMaterial3D" id="Material_Este"]
-albedo_color = Color(0.6510503, 0.5587475, 1, 1)
-roughness = 0.9
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvifl"]
+albedo_texture = ExtResource("3_tbx7q")
+roughness_texture = ExtResource("6_yqwve")
+normal_enabled = true
+normal_texture = ExtResource("5_0qls2")
+ao_enabled = true
+ao_texture = ExtResource("4_pcx54")
 
 [sub_resource type="BoxMesh" id="BoxMesh_ck84f"]
-material = SubResource("Material_Este")
+material = SubResource("StandardMaterial3D_gvifl")
 size = Vector3(0.2, 3, 10)
 
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA"]
@@ -242,6 +250,10 @@ size = Vector3(0.2, 3, 3.9)
 [sub_resource type="BoxMesh" id="BoxMesh_0qls2"]
 material = SubResource("StandardMaterial3D_y1qc8")
 size = Vector3(0.2, 3, 3.9)
+
+[sub_resource type="StandardMaterial3D" id="Material_Este"]
+albedo_color = Color(0.6510503, 0.5587475, 1, 1)
+roughness = 0.9
 
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA2"]
 material = SubResource("Material_Este")
@@ -1155,8 +1167,7 @@ current = true
 target_position = Vector3(0, 0, -6)
 
 [node name="EnemigoExploracion" parent="SalaPrueba" unique_id=337344313 instance=ExtResource("3_4iyo1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.73378, 0.7442324, -19.871666)
-visible = false
+transform = Transform3D(0.73641, 0, -0.6765355, 0, 1, 0, 0.6765355, 0, 0.73641, 7.185599, 3.323009, -17.537386)
 
 [node name="MenuShift" parent="." unique_id=699806286 instance=ExtResource("4_xj3ho")]
 

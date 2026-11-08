@@ -6,7 +6,6 @@ const ESCENA_ENEMIGO := preload("res://escenas/assetsCombate/enemigo.tscn")
 const ESCENA_PARTE_ENEMIGO := preload("res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.tscn")
 const ESCENA_PERSONAJE := preload("res://escenas/assetsCombate/personaje/personaje.tscn")
 
-
 var parteEnemigaSeleccionada: ParteEnemigo
 var enemigo_actual: Enemigo
 var personaje: Personaje
