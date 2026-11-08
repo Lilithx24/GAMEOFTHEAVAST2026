@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://8hfli6jcoj8o" path="res://escenas/Exploración/jugador.gd" id="2_ck84f"]
 [ext_resource type="PackedScene" uid="uid://bar8x7nt80g2v" path="res://escenas/Exploración/Encuentros/EnemigoExploracion.tscn" id="3_4iyo1"]
 [ext_resource type="PackedScene" path="res://escenas/HUD/menu_shift.tscn" id="4_xj3ho"]
+[ext_resource type="PackedScene" uid="uid://baxfuj075e4gq" path="res://escenas/Exploración/Piezas/ParedConPuerta.tscn" id="6_4iyo1"]
 
 [sub_resource type="BoxMesh" id="Mesh_SueloSala"]
 material = ExtResource("2_4iyo1")
@@ -70,6 +71,14 @@ size = Vector3(3.5, 0.5, 3)
 material = ExtResource("2_4iyo1")
 size = Vector3(3, 0.5, 10)
 
+[sub_resource type="BoxMesh" id="BoxMesh_tbx7q"]
+material = ExtResource("2_4iyo1")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pcx54"]
+material = ExtResource("2_4iyo1")
+size = Vector3(40, 0.5, 50)
+
 [sub_resource type="StandardMaterial3D" id="Material_Este"]
 albedo_color = Color(0.6510503, 0.5587475, 1, 1)
 roughness = 0.9
@@ -105,8 +114,11 @@ size = Vector3(0.2, 3, 9.7)
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA29"]
 size = Vector3(0.2, 3, 9.7)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck84f"]
+albedo_color = Color(0.50519365, 1, 0.72613436, 1)
+
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA32"]
-material = SubResource("StandardMaterial3D_4iyo1")
+material = SubResource("StandardMaterial3D_ck84f")
 size = Vector3(0.2, 3, 9.7)
 
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA32"]
@@ -149,7 +161,7 @@ size = Vector3(0.2, 3, 13.6)
 
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA28"]
 material = SubResource("StandardMaterial3D_4iyo1")
-size = Vector3(0.2, 3, 9.7)
+size = Vector3(0.2, 3, 9.9)
 
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA28"]
 size = Vector3(0.2, 3, 9.7)
@@ -171,13 +183,6 @@ size = Vector3(0.2, 3, 39.6)
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA52"]
 size = Vector3(0.2, 3, 39.6)
 
-[sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA12"]
-material = SubResource("StandardMaterial3D_y1qc8")
-size = Vector3(0.2, 3, 3.8)
-
-[sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA12"]
-size = Vector3(0.2, 3, 3.8)
-
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA40"]
 material = SubResource("StandardMaterial3D_y1qc8")
 size = Vector3(0.2, 3, 3.7)
@@ -185,19 +190,12 @@ size = Vector3(0.2, 3, 3.7)
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA40"]
 size = Vector3(0.2, 3, 3.7)
 
-[sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA42"]
-material = SubResource("StandardMaterial3D_y1qc8")
-size = Vector3(0.2, 3, 3.9)
-
-[sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA42"]
-size = Vector3(0.2, 3, 3.9)
-
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA43"]
 material = SubResource("StandardMaterial3D_y1qc8")
-size = Vector3(0.2, 3, 3.9)
+size = Vector3(0.2, 3, 3.7)
 
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA43"]
-size = Vector3(0.2, 3, 3.9)
+size = Vector3(0.2, 3, 3.7)
 
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA13"]
 material = SubResource("StandardMaterial3D_y1qc8")
@@ -213,19 +211,19 @@ size = Vector3(0.2, 3, 3.5)
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA17"]
 size = Vector3(0.2, 3, 3.5)
 
-[sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA21"]
-material = SubResource("StandardMaterial3D_y1qc8")
-size = Vector3(0.2, 3, 3.5)
-
-[sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA21"]
-size = Vector3(0.2, 3, 3.5)
-
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA25"]
 material = SubResource("StandardMaterial3D_y1qc8")
-size = Vector3(0.2, 3, 3.7)
+size = Vector3(0.2, 3, 3.5)
 
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA25"]
 size = Vector3(0.2, 3, 3.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hxqyt"]
+material = SubResource("StandardMaterial3D_y1qc8")
+size = Vector3(0.2, 3, 3.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0s80j"]
+size = Vector3(0.2, 3, 3.3)
 
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA22"]
 material = SubResource("StandardMaterial3D_y1qc8")
@@ -239,6 +237,10 @@ material = SubResource("StandardMaterial3D_y1qc8")
 size = Vector3(0.2, 3, 3.9)
 
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA14"]
+size = Vector3(0.2, 3, 3.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0qls2"]
+material = SubResource("StandardMaterial3D_y1qc8")
 size = Vector3(0.2, 3, 3.9)
 
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA2"]
@@ -283,33 +285,30 @@ size = Vector3(0.2, 3, 9.8)
 [sub_resource type="BoxShape3D" id="Shape_Correccion_ParedA37"]
 size = Vector3(0.2, 3, 9.8)
 
-[sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA3"]
+[sub_resource type="BoxMesh" id="BoxMesh_yqwve"]
 material = SubResource("Material_Este")
-size = Vector3(0.2, 3, 3.75)
+size = Vector3(0.2, 3, 3.5)
 
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA3"]
-size = Vector3(0.2, 3, 3.75)
+size = Vector3(0.2, 3, 3.5)
 
-[sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA31"]
+[sub_resource type="BoxMesh" id="BoxMesh_y1qc8"]
 material = SubResource("Material_Este")
-size = Vector3(0.2, 3, 3.85)
+size = Vector3(0.2, 3, 3.5)
 
-[sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA31"]
-size = Vector3(0.2, 3, 3.85)
+[sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA30"]
+size = Vector3(0.2, 3, 3.5)
+
+[sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA3"]
+material = SubResource("Material_Este")
+size = Vector3(0.2, 3, 3.5983398)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gvifl"]
+size = Vector3(0.2, 3, 3.5983398)
 
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA30"]
 material = SubResource("Material_Este")
-size = Vector3(0.2, 3, 3.75)
-
-[sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA30"]
-size = Vector3(0.2, 3, 3.75)
-
-[sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA4"]
-material = SubResource("Material_Este")
-size = Vector3(0.2, 3, 3.75)
-
-[sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA4"]
-size = Vector3(0.2, 3, 3.75)
+size = Vector3(0.2, 3, 3.5)
 
 [sub_resource type="BoxMesh" id="Mesh_Ajuste_ParedA6"]
 material = SubResource("Material_Este")
@@ -508,6 +507,17 @@ mesh = SubResource("BoxMesh_b7nuq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -30)
 mesh = SubResource("BoxMesh_c3obi")
 
+[node name="Techos" type="Node3D" parent="SalaPrueba" unique_id=2146880121]
+visible = false
+
+[node name="TechoSalaInicio" type="MeshInstance3D" parent="SalaPrueba/Techos" unique_id=973707007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.25, 0)
+mesh = SubResource("BoxMesh_tbx7q")
+
+[node name="TechoPiso" type="MeshInstance3D" parent="SalaPrueba/Techos" unique_id=2059043508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 3.25, -20)
+mesh = SubResource("BoxMesh_pcx54")
+
 [node name="Paredes" type="Node3D" parent="SalaPrueba" unique_id=1545209654]
 
 [node name="ParedA" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1166209413]
@@ -611,7 +621,7 @@ collision_mask = 0
 shape = SubResource("Shape_Ajuste_ParedA33")
 
 [node name="ParedA28" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=27251903]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 10.05, 1.5, 4.9)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 9.95, 1.5, 4.9)
 mesh = SubResource("Mesh_Ajuste_ParedA28")
 
 [node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA28" unique_id=880218555]
@@ -640,16 +650,6 @@ collision_mask = 0
 [node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA52/Cuerpo" unique_id=483160984]
 shape = SubResource("Shape_Ajuste_ParedA52")
 
-[node name="ParedA12" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=182053872]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 3.2, 1.5, -8.6)
-mesh = SubResource("Mesh_Ajuste_ParedA12")
-
-[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA12" unique_id=1651973209]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA12/Cuerpo" unique_id=2093134272]
-shape = SubResource("Shape_Ajuste_ParedA12")
-
 [node name="ParedA40" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1767178015]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 16.85, 1.5, -25.1)
 mesh = SubResource("Mesh_Ajuste_ParedA40")
@@ -660,24 +660,24 @@ collision_mask = 0
 [node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA40/Cuerpo" unique_id=195494148]
 shape = SubResource("Shape_Ajuste_ParedA40")
 
-[node name="ParedA42" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1242563942]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 23.250439, 1.5, -21.4)
-mesh = SubResource("Mesh_Ajuste_ParedA42")
-
-[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA42" unique_id=1634359204]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA42/Cuerpo" unique_id=531795473]
-shape = SubResource("Shape_Ajuste_ParedA42")
-
 [node name="ParedA43" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1127162874]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 23.250439, 1.5, -18.6)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 23.15, 1.5, -18.6)
 mesh = SubResource("Mesh_Ajuste_ParedA43")
 
 [node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA43" unique_id=622099720]
 collision_mask = 0
 
 [node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA43/Cuerpo" unique_id=672079382]
+shape = SubResource("Shape_Ajuste_ParedA43")
+
+[node name="ParedA56" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=887150557]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 23.15, 1.5, -21.4)
+mesh = SubResource("Mesh_Ajuste_ParedA43")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA56" unique_id=2071804871]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA56/Cuerpo" unique_id=847923492]
 shape = SubResource("Shape_Ajuste_ParedA43")
 
 [node name="ParedA13" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=998301076]
@@ -700,18 +700,8 @@ collision_mask = 0
 [node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA17/Cuerpo" unique_id=555829903]
 shape = SubResource("Shape_Ajuste_ParedA17")
 
-[node name="ParedA21" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=2107444976]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.05, 1.5, -24.9)
-mesh = SubResource("Mesh_Ajuste_ParedA21")
-
-[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA21" unique_id=2005963779]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA21/Cuerpo" unique_id=1168330566]
-shape = SubResource("Shape_Ajuste_ParedA21")
-
 [node name="ParedA25" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=2032219972]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 3.15, 1.5, -24.9)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 3.25, 1.5, -24.9)
 mesh = SubResource("Mesh_Ajuste_ParedA25")
 
 [node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA25" unique_id=55428196]
@@ -719,6 +709,16 @@ collision_mask = 0
 
 [node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA25/Cuerpo" unique_id=1227319422]
 shape = SubResource("Shape_Ajuste_ParedA25")
+
+[node name="ParedA26" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1303980457]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.15, 1.5, -24.9)
+mesh = SubResource("BoxMesh_hxqyt")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA26" unique_id=983292085]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA26/Cuerpo" unique_id=788709501]
+shape = SubResource("BoxShape3D_0s80j")
 
 [node name="ParedA22" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=267582487]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.05, 1.5, -35.1)
@@ -738,6 +738,16 @@ mesh = SubResource("Mesh_Ajuste_ParedA14")
 collision_mask = 0
 
 [node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA14/Cuerpo" unique_id=2037014353]
+shape = SubResource("Shape_Ajuste_ParedA14")
+
+[node name="ParedA15" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=643488995]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 3.25, 1.5, -8.6)
+mesh = SubResource("BoxMesh_0qls2")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA15" unique_id=1612554753]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA15/Cuerpo" unique_id=1555230959]
 shape = SubResource("Shape_Ajuste_ParedA14")
 
 [node name="ParedA2" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1501749966]
@@ -801,8 +811,8 @@ collision_mask = 0
 shape = SubResource("Shape_Correccion_ParedA37")
 
 [node name="ParedA3" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=514246301]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, -3.125)
-mesh = SubResource("Mesh_Ajuste_ParedA3")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, -3.2523804)
+mesh = SubResource("BoxMesh_yqwve")
 
 [node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA3" unique_id=2050207393]
 collision_mask = 0
@@ -810,19 +820,9 @@ collision_mask = 0
 [node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA3/Cuerpo" unique_id=1958915350]
 shape = SubResource("Shape_Ajuste_ParedA3")
 
-[node name="ParedA31" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=623482483]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, -3.175)
-mesh = SubResource("Mesh_Ajuste_ParedA31")
-
-[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA31" unique_id=730363617]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA31/Cuerpo" unique_id=1531571259]
-shape = SubResource("Shape_Ajuste_ParedA31")
-
 [node name="ParedA30" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=2095683074]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, 3.125)
-mesh = SubResource("Mesh_Ajuste_ParedA30")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, 3.2492676)
+mesh = SubResource("BoxMesh_y1qc8")
 
 [node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA30" unique_id=781170782]
 collision_mask = 0
@@ -830,15 +830,25 @@ collision_mask = 0
 [node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA30/Cuerpo" unique_id=1875809764]
 shape = SubResource("Shape_Ajuste_ParedA30")
 
-[node name="ParedA4" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1837536857]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, 3.125)
-mesh = SubResource("Mesh_Ajuste_ParedA4")
+[node name="ParedA4" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=650683190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, -3.3011699)
+mesh = SubResource("Mesh_Ajuste_ParedA3")
 
-[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA4" unique_id=2066875402]
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA4" unique_id=1851865577]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA4/Cuerpo" unique_id=2019733359]
-shape = SubResource("Shape_Ajuste_ParedA4")
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA4/Cuerpo" unique_id=1554170673]
+shape = SubResource("BoxShape3D_gvifl")
+
+[node name="ParedA31" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1241035198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, 3.249)
+mesh = SubResource("Mesh_Ajuste_ParedA30")
+
+[node name="Cuerpo" type="StaticBody3D" parent="SalaPrueba/Paredes/ParedA31" unique_id=1607228562]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="SalaPrueba/Paredes/ParedA31/Cuerpo" unique_id=1929510703]
+shape = SubResource("Shape_Ajuste_ParedA30")
 
 [node name="ParedA6" type="MeshInstance3D" parent="SalaPrueba/Paredes" unique_id=1489742141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 1.5, -10)
@@ -1141,8 +1151,32 @@ script = ExtResource("2_ck84f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
 current = true
 
+[node name="RayoInteraccion" type="RayCast3D" parent="SalaPrueba/Jugador/Camera3D" unique_id=1736972125]
+target_position = Vector3(0, 0, -6)
+
 [node name="EnemigoExploracion" parent="SalaPrueba" unique_id=337344313 instance=ExtResource("3_4iyo1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.73378, 0.7442324, -19.871666)
 visible = false
 
 [node name="MenuShift" parent="." unique_id=699806286 instance=ExtResource("4_xj3ho")]
+
+[node name="ParedConPuerta" parent="." unique_id=944486220 instance=ExtResource("6_4iyo1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 0)
+
+[node name="ParedConPuerta2" parent="." unique_id=1866706834 instance=ExtResource("6_4iyo1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25, 0, 0)
+
+[node name="Puerta_F_G" parent="." unique_id=281237202 instance=ExtResource("6_4iyo1")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 25, 0, -30)
+
+[node name="Puerta_Pasillo2_E" parent="." unique_id=1688918265 instance=ExtResource("6_4iyo1")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 25.1, 0, -20)
+
+[node name="Puerta_C_D" parent="." unique_id=2097809803 instance=ExtResource("6_4iyo1")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.1, 0, -20)
+
+[node name="Puerta_Pasillo1_T1" parent="." unique_id=970964205 instance=ExtResource("6_4iyo1")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.1, 0, -10)
+
+[node name="Puerta_C_Pasillo3" parent="." unique_id=1289524763 instance=ExtResource("6_4iyo1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24.9)

@@ -2,6 +2,7 @@ extends Node3D
 signal punto_alcanzado(punto: Node3D)
 @export var duracion_giro: float = 0.25
 @export var duracion_movimiento: float = 0.8
+@onready var rayo_interaccion: RayCast3D = $Camera3D/RayoInteraccion
 
 var girando: bool = false
 var moviendo: bool = false
@@ -20,6 +21,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		movimiento_pendiente = -1
 
 func _physics_process(_delta: float) -> void:
+	if Input.is_action_just_pressed("interactuar"):
+		if not girando and not moviendo and movimiento_pendiente == 0:
+			intentar_interactuar()
+
 	# Consultamos las colisiones durante el paso de física.
 	if movimiento_pendiente != 0:
 		mover(movimiento_pendiente)
@@ -82,3 +87,21 @@ func mover(sentido: int) -> void:
 	await tween.finished
 	moviendo = false
 	punto_alcanzado.emit(punto)
+
+func intentar_interactuar() -> void:
+	rayo_interaccion.force_raycast_update()
+
+	if not rayo_interaccion.is_colliding():
+		return
+
+	var cuerpo := rayo_interaccion.get_collider() as Node
+	var nodo: Node = cuerpo
+
+	while nodo != null:
+		if nodo.has_method("interactuar"):
+			# Solo se activa al mirar la hoja, no el marco.
+			if nodo.get_node_or_null("Bisagra/Puerta/Cuerpo") == cuerpo:
+				nodo.call("interactuar")
+			return
+
+		nodo = nodo.get_parent()
