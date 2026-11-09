@@ -78,12 +78,10 @@ func _on_carta_soltada(skill: Skill, parte: ParteEnemigo) -> void:
 func _onSkillElegida(dmg: int, sta: int) -> void:
 	if combate_terminado:
 		return
-
 	parteEnemigaSeleccionada.sufrirDmg(dmg)
 	enemigo_actual.actualizar_barra()
 	personaje.staminaActual -= sta
 	personaje.actualizar_barra()
-
 	if parteEnemigaSeleccionada.vidaActual == 0 \
 			and parteEnemigaSeleccionada.vital:
 		ganarCombate()
