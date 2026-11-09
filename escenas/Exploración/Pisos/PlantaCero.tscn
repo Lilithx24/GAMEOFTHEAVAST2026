@@ -427,825 +427,827 @@ environment = SubResource("Environment_Oscuridad")
 
 [node name="MenuShift" parent="." unique_id=699806286 instance=ExtResource("4_xj3ho")]
 
-[node name="ParedConPuerta" parent="." unique_id=944486220 instance=ExtResource("6_4iyo1")]
+[node name="PisoCero" type="Node3D" parent="." unique_id=350677683]
+
+[node name="ParedConPuerta" parent="PisoCero" unique_id=944486220 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 0)
 
-[node name="ParedConPuerta2" parent="." unique_id=1866706834 instance=ExtResource("6_4iyo1")]
+[node name="ParedConPuerta2" parent="PisoCero" unique_id=1866706834 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25, 0, 0)
 
-[node name="Puerta_F_G" parent="." unique_id=281237202 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_F_G" parent="PisoCero" unique_id=281237202 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 25, 0, -30)
 
-[node name="Puerta_Pasillo2_E" parent="." unique_id=1688918265 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_Pasillo2_E" parent="PisoCero" unique_id=1688918265 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 25.1, 0, -20)
 
-[node name="Puerta_C_D" parent="." unique_id=2097809803 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_C_D" parent="PisoCero" unique_id=2097809803 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.1, 0, -20)
 
-[node name="Puerta_Pasillo1_T1" parent="." unique_id=970964205 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_Pasillo1_T1" parent="PisoCero" unique_id=970964205 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.1, 0, -10)
 
-[node name="Puerta_C_Pasillo3" parent="." unique_id=1289524763 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_C_Pasillo3" parent="PisoCero" unique_id=1289524763 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24.9)
 
-[node name="Suelos" type="Node3D" parent="." unique_id=1029452316]
+[node name="Suelos" type="Node3D" parent="PisoCero" unique_id=1029452316]
 
-[node name="SueloSalaInicio" type="MeshInstance3D" parent="Suelos" unique_id=2025265054]
+[node name="SueloSalaInicio" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=2025265054]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.25, 0)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("Mesh_SueloSala")
 
-[node name="SueloSalaA" type="MeshInstance3D" parent="Suelos" unique_id=1684639002]
+[node name="SueloSalaA" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=1684639002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.25, 0)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_ygfxl")
 
-[node name="SueloSalaB" type="MeshInstance3D" parent="Suelos" unique_id=434117298]
+[node name="SueloSalaB" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=434117298]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -0.25, 0)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_x40kq")
 
-[node name="SueloSalaT1" type="MeshInstance3D" parent="Suelos" unique_id=501494299]
+[node name="SueloSalaT1" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=501494299]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.25, -10)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_kmckd")
 
-[node name="SueloSalaT2" type="MeshInstance3D" parent="Suelos" unique_id=1170314261]
+[node name="SueloSalaT2" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=1170314261]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.25, 0)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_jvi3u")
 
-[node name="SueloSalaC" type="MeshInstance3D" parent="Suelos" unique_id=932441894]
+[node name="SueloSalaC" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=932441894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -20)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_xj3ho")
 
-[node name="SueloSalaD" type="MeshInstance3D" parent="Suelos" unique_id=381033833]
+[node name="SueloSalaD" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=381033833]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.25, -20)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_iuemi")
 
-[node name="SueloSalaE" type="MeshInstance3D" parent="Suelos" unique_id=897700197]
+[node name="SueloSalaE" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=897700197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -0.25, -20)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_2m80i")
 
-[node name="SueloSalaF" type="MeshInstance3D" parent="Suelos" unique_id=2100858616]
+[node name="SueloSalaF" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=2100858616]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.25, -30)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_3foeg")
 
-[node name="SueloSalaG" type="MeshInstance3D" parent="Suelos" unique_id=678973613]
+[node name="SueloSalaG" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=678973613]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -0.25, -30)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_qtt6k")
 
-[node name="SueloSalaH" type="MeshInstance3D" parent="Suelos" unique_id=361115028]
+[node name="SueloSalaH" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=361115028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.25, -40)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_6mtjs")
 
-[node name="SueloPasillo1a" type="MeshInstance3D" parent="Suelos" unique_id=953466309]
+[node name="SueloPasillo1a" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=953466309]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -10)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_2nt4e")
 
-[node name="SueloPasillo1b" type="MeshInstance3D" parent="Suelos" unique_id=709123597]
+[node name="SueloPasillo1b" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=709123597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25, -0.25, -10)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_upggl")
 
-[node name="SueloPasillo2a" type="MeshInstance3D" parent="Suelos" unique_id=590125352]
+[node name="SueloPasillo2a" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=590125352]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.25, -20)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_v3xrx")
 
-[node name="SueloPasillo2b" type="MeshInstance3D" parent="Suelos" unique_id=1816091601]
+[node name="SueloPasillo2b" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=1816091601]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.25, -0.25, -20)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_b7nuq")
 
-[node name="SueloPasillo3" type="MeshInstance3D" parent="Suelos" unique_id=657491704]
+[node name="SueloPasillo3" type="MeshInstance3D" parent="PisoCero/Suelos" unique_id=657491704]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -30)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_c3obi")
 
-[node name="Techos" type="Node3D" parent="." unique_id=2146880121]
+[node name="Techos" type="Node3D" parent="PisoCero" unique_id=2146880121]
 
-[node name="TechoSalaInicio" type="MeshInstance3D" parent="Techos" unique_id=973707007]
+[node name="TechoSalaInicio" type="MeshInstance3D" parent="PisoCero/Techos" unique_id=973707007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.25, 0)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_tbx7q")
 
-[node name="TechoPiso" type="MeshInstance3D" parent="Techos" unique_id=2059043508]
+[node name="TechoPiso" type="MeshInstance3D" parent="PisoCero/Techos" unique_id=2059043508]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 3.25, -20)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_pcx54")
 
-[node name="Paredes" type="Node3D" parent="." unique_id=1545209654]
+[node name="Paredes" type="Node3D" parent="PisoCero" unique_id=1545209654]
 
-[node name="ParedA" type="MeshInstance3D" parent="Paredes" unique_id=1166209413]
+[node name="ParedA" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1166209413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9, 1.5, 0)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("BoxMesh_ck84f")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA" unique_id=925787153]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA" unique_id=925787153]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA/Cuerpo" unique_id=143421482]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA/Cuerpo" unique_id=143421482]
 shape = SubResource("Shape_Ajuste_ParedA")
 
-[node name="ParedA7" type="MeshInstance3D" parent="Paredes" unique_id=1402261443]
+[node name="ParedA7" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1402261443]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -4.9, 1.5, 4.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA7")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA7" unique_id=1339069000]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA7" unique_id=1339069000]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA7/Cuerpo" unique_id=181093671]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA7/Cuerpo" unique_id=181093671]
 shape = SubResource("Shape_Ajuste_ParedA7")
 
-[node name="ParedA27" type="MeshInstance3D" parent="Paredes" unique_id=1725619302]
+[node name="ParedA27" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1725619302]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 20, 1.5, 4.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA27")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA27" unique_id=1732507991]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA27" unique_id=1732507991]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA27/Cuerpo" unique_id=1786908198]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA27/Cuerpo" unique_id=1786908198]
 shape = SubResource("Shape_Ajuste_ParedA27")
 
-[node name="ParedA29" type="MeshInstance3D" parent="Paredes" unique_id=1264544368]
+[node name="ParedA29" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1264544368]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 29.95, 1.5, 4.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA29")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA29" unique_id=1424797168]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA29" unique_id=1424797168]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA29/Cuerpo" unique_id=549394842]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA29/Cuerpo" unique_id=549394842]
 shape = SubResource("Shape_Ajuste_ParedA29")
 
-[node name="ParedA32" type="MeshInstance3D" parent="Paredes" unique_id=194426568]
+[node name="ParedA32" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=194426568]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 29.95, 1.5, -5)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA32")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA32" unique_id=515358472]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA32" unique_id=515358472]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA32/Cuerpo" unique_id=332160157]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA32/Cuerpo" unique_id=332160157]
 shape = SubResource("Shape_Ajuste_ParedA32")
 
-[node name="ParedA38" type="MeshInstance3D" parent="Paredes" unique_id=1581874738]
+[node name="ParedA38" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1581874738]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 28.05, 1.5, -14.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA38")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA38" unique_id=888973963]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA38" unique_id=888973963]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA38/Cuerpo" unique_id=1126429655]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA38/Cuerpo" unique_id=1126429655]
 shape = SubResource("Shape_Ajuste_ParedA38")
 
-[node name="ParedA53" type="MeshInstance3D" parent="Paredes" unique_id=1945172747]
+[node name="ParedA53" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1945172747]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 28.05, 1.5, -25.1)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA53")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA53" unique_id=1855979926]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA53" unique_id=1855979926]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA53/Cuerpo" unique_id=55491812]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA53/Cuerpo" unique_id=55491812]
 shape = SubResource("Shape_Ajuste_ParedA53")
 
-[node name="ParedA54" type="MeshInstance3D" parent="Paredes" unique_id=830335869]
+[node name="ParedA54" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=830335869]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 18.15, 1.5, -35.1)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA54")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA54" unique_id=2073061201]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA54" unique_id=2073061201]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA54/Cuerpo" unique_id=110219164]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA54/Cuerpo" unique_id=110219164]
 shape = SubResource("Shape_Correccion_ParedA54")
 
-[node name="ParedA39" type="MeshInstance3D" parent="Paredes" unique_id=1666716106]
+[node name="ParedA39" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1666716106]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 11.95, 1.5, -14.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA39")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA39" unique_id=1857469876]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA39" unique_id=1857469876]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA39/Cuerpo" unique_id=399831479]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA39/Cuerpo" unique_id=399831479]
 shape = SubResource("Shape_Ajuste_ParedA39")
 
-[node name="ParedA33" type="MeshInstance3D" parent="Paredes" unique_id=584623041]
+[node name="ParedA33" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=584623041]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 8.1, 1.5, -4.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA33")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA33" unique_id=542587170]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA33" unique_id=542587170]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA33/Cuerpo" unique_id=1270863978]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA33/Cuerpo" unique_id=1270863978]
 shape = SubResource("Shape_Ajuste_ParedA33")
 
-[node name="ParedA28" type="MeshInstance3D" parent="Paredes" unique_id=27251903]
+[node name="ParedA28" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=27251903]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 9.95, 1.5, 4.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA28")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA28" unique_id=880218555]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA28" unique_id=880218555]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA28/Cuerpo" unique_id=76467586]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA28/Cuerpo" unique_id=76467586]
 shape = SubResource("Shape_Ajuste_ParedA28")
 
-[node name="ParedA8" type="MeshInstance3D" parent="Paredes" unique_id=1375338741]
+[node name="ParedA8" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1375338741]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.050909, 1.5, -4.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("BoxMesh_gvifl")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA8" unique_id=197275088]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA8" unique_id=197275088]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA8/Cuerpo" unique_id=1146951716]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA8/Cuerpo" unique_id=1146951716]
 shape = SubResource("Shape_Ajuste_ParedA8")
 
-[node name="ParedA52" type="MeshInstance3D" parent="Paredes" unique_id=821478093]
+[node name="ParedA52" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=821478093]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 15, 1.5, -44.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA52")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA52" unique_id=1677349419]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA52" unique_id=1677349419]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA52/Cuerpo" unique_id=483160984]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA52/Cuerpo" unique_id=483160984]
 shape = SubResource("Shape_Ajuste_ParedA52")
 
-[node name="ParedA40" type="MeshInstance3D" parent="Paredes" unique_id=1767178015]
+[node name="ParedA40" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1767178015]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 16.85, 1.5, -25.1)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA40")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA40" unique_id=975452573]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA40" unique_id=975452573]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA40/Cuerpo" unique_id=195494148]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA40/Cuerpo" unique_id=195494148]
 shape = SubResource("Shape_Ajuste_ParedA40")
 
-[node name="ParedA43" type="MeshInstance3D" parent="Paredes" unique_id=1127162874]
+[node name="ParedA43" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1127162874]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 23.15, 1.5, -18.6)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA43")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA43" unique_id=622099720]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA43" unique_id=622099720]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA43/Cuerpo" unique_id=672079382]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA43/Cuerpo" unique_id=672079382]
 shape = SubResource("Shape_Ajuste_ParedA43")
 
-[node name="ParedA56" type="MeshInstance3D" parent="Paredes" unique_id=887150557]
+[node name="ParedA56" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=887150557]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 23.15, 1.5, -21.4)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA43")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA56" unique_id=2071804871]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA56" unique_id=2071804871]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA56/Cuerpo" unique_id=847923492]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA56/Cuerpo" unique_id=847923492]
 shape = SubResource("Shape_Ajuste_ParedA43")
 
-[node name="ParedA13" type="MeshInstance3D" parent="Paredes" unique_id=998301076]
+[node name="ParedA13" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=998301076]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 3.15, 1.5, -15.1)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA13")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA13" unique_id=209880714]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA13" unique_id=209880714]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA13/Cuerpo" unique_id=2096524805]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA13/Cuerpo" unique_id=2096524805]
 shape = SubResource("Shape_Ajuste_ParedA13")
 
-[node name="ParedA17" type="MeshInstance3D" parent="Paredes" unique_id=1174075012]
+[node name="ParedA17" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1174075012]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.05, 1.5, -15.1)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA17")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA17" unique_id=1127336439]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA17" unique_id=1127336439]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA17/Cuerpo" unique_id=555829903]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA17/Cuerpo" unique_id=555829903]
 shape = SubResource("Shape_Ajuste_ParedA17")
 
-[node name="ParedA25" type="MeshInstance3D" parent="Paredes" unique_id=2032219972]
+[node name="ParedA25" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=2032219972]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 3.25, 1.5, -24.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA25")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA25" unique_id=55428196]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA25" unique_id=55428196]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA25/Cuerpo" unique_id=1227319422]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA25/Cuerpo" unique_id=1227319422]
 shape = SubResource("Shape_Ajuste_ParedA25")
 
-[node name="ParedA26" type="MeshInstance3D" parent="Paredes" unique_id=1303980457]
+[node name="ParedA26" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1303980457]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.15, 1.5, -24.9)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("BoxMesh_hxqyt")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA26" unique_id=983292085]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA26" unique_id=983292085]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA26/Cuerpo" unique_id=788709501]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA26/Cuerpo" unique_id=788709501]
 shape = SubResource("BoxShape3D_0s80j")
 
-[node name="ParedA22" type="MeshInstance3D" parent="Paredes" unique_id=267582487]
+[node name="ParedA22" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=267582487]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.05, 1.5, -35.1)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA22")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA22" unique_id=28588611]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA22" unique_id=28588611]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA22/Cuerpo" unique_id=527671713]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA22/Cuerpo" unique_id=527671713]
 shape = SubResource("Shape_Ajuste_ParedA22")
 
-[node name="ParedA14" type="MeshInstance3D" parent="Paredes" unique_id=1615569679]
+[node name="ParedA14" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1615569679]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 3.1499999, 1.5, -11.4)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA14")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA14" unique_id=1316479827]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA14" unique_id=1316479827]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA14/Cuerpo" unique_id=2037014353]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA14/Cuerpo" unique_id=2037014353]
 shape = SubResource("BoxShape3D_upggl")
 
-[node name="ParedA15" type="MeshInstance3D" parent="Paredes" unique_id=643488995]
+[node name="ParedA15" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=643488995]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 3.1499999, 1.5, -8.6)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("BoxMesh_0qls2")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA15" unique_id=1612554753]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA15" unique_id=1612554753]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA15/Cuerpo" unique_id=1555230959]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA15/Cuerpo" unique_id=1555230959]
 shape = SubResource("Shape_Ajuste_ParedA14")
 
-[node name="ParedA2" type="MeshInstance3D" parent="Paredes" unique_id=1501749966]
+[node name="ParedA2" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1501749966]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9, 1.5, 0)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA2")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA2" unique_id=408728994]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA2" unique_id=408728994]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA2/Cuerpo" unique_id=357798476]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA2/Cuerpo" unique_id=357798476]
 shape = SubResource("Shape_Correccion_ParedA2")
 
-[node name="ParedA5" type="MeshInstance3D" parent="Paredes" unique_id=1584116418]
+[node name="ParedA5" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1584116418]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9, 1.5, 0)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA5")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA5" unique_id=323114855]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA5" unique_id=323114855]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA5/Cuerpo" unique_id=2027156838]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA5/Cuerpo" unique_id=2027156838]
 shape = SubResource("Shape_Ajuste_ParedA5")
 
-[node name="ParedA34" type="MeshInstance3D" parent="Paredes" unique_id=1029718251]
+[node name="ParedA34" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1029718251]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9, 1.5, -10)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA34")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA34" unique_id=1877633144]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA34" unique_id=1877633144]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA34/Cuerpo" unique_id=1706069409]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA34/Cuerpo" unique_id=1706069409]
 shape = SubResource("Shape_Ajuste_ParedA34")
 
-[node name="ParedA35" type="MeshInstance3D" parent="Paredes" unique_id=1502724768]
+[node name="ParedA35" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1502724768]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9, 1.5, -20)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA35")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA35" unique_id=1940726484]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA35" unique_id=1940726484]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA35/Cuerpo" unique_id=1997052381]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA35/Cuerpo" unique_id=1997052381]
 shape = SubResource("Shape_Ajuste_ParedA35")
 
-[node name="ParedA36" type="MeshInstance3D" parent="Paredes" unique_id=802868965]
+[node name="ParedA36" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=802868965]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9, 1.5, -30)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA36")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA36" unique_id=1781718748]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA36" unique_id=1781718748]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA36/Cuerpo" unique_id=1500294800]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA36/Cuerpo" unique_id=1500294800]
 shape = SubResource("Shape_Ajuste_ParedA36")
 
-[node name="ParedA37" type="MeshInstance3D" parent="Paredes" unique_id=1683247381]
+[node name="ParedA37" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1683247381]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9, 1.5, -40.1)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA37")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA37" unique_id=601349334]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA37" unique_id=601349334]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA37/Cuerpo" unique_id=823790680]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA37/Cuerpo" unique_id=823790680]
 shape = SubResource("Shape_Correccion_ParedA37")
 
-[node name="ParedA3" type="MeshInstance3D" parent="Paredes" unique_id=514246301]
+[node name="ParedA3" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=514246301]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, -3.2523804)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("BoxMesh_yqwve")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA3" unique_id=2050207393]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA3" unique_id=2050207393]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA3/Cuerpo" unique_id=1958915350]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA3/Cuerpo" unique_id=1958915350]
 shape = SubResource("Shape_Ajuste_ParedA3")
 
-[node name="ParedA30" type="MeshInstance3D" parent="Paredes" unique_id=2095683074]
+[node name="ParedA30" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=2095683074]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, 3.2492676)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("BoxMesh_y1qc8")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA30" unique_id=781170782]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA30" unique_id=781170782]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA30/Cuerpo" unique_id=1875809764]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA30/Cuerpo" unique_id=1875809764]
 shape = SubResource("Shape_Ajuste_ParedA30")
 
-[node name="ParedA4" type="MeshInstance3D" parent="Paredes" unique_id=650683190]
+[node name="ParedA4" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=650683190]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, -3.3011699)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA3")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA4" unique_id=1851865577]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA4" unique_id=1851865577]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA4/Cuerpo" unique_id=1554170673]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA4/Cuerpo" unique_id=1554170673]
 shape = SubResource("BoxShape3D_gvifl")
 
-[node name="ParedA31" type="MeshInstance3D" parent="Paredes" unique_id=1241035198]
+[node name="ParedA31" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1241035198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, 3.249)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA30")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA31" unique_id=1607228562]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA31" unique_id=1607228562]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA31/Cuerpo" unique_id=1929510703]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA31/Cuerpo" unique_id=1929510703]
 shape = SubResource("Shape_Ajuste_ParedA30")
 
-[node name="ParedA6" type="MeshInstance3D" parent="Paredes" unique_id=1489742141]
+[node name="ParedA6" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1489742141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 1.5, -10)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA6")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA6" unique_id=699852925]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA6" unique_id=699852925]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA6/Cuerpo" unique_id=825391836]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA6/Cuerpo" unique_id=825391836]
 shape = SubResource("Shape_Ajuste_ParedA6")
 
-[node name="ParedA18" type="MeshInstance3D" parent="Paredes" unique_id=676060708]
+[node name="ParedA18" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=676060708]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 1.5, -20)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA18")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA18" unique_id=1636062245]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA18" unique_id=1636062245]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA18/Cuerpo" unique_id=957051139]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA18/Cuerpo" unique_id=957051139]
 shape = SubResource("Shape_Ajuste_ParedA18")
 
-[node name="ParedA48" type="MeshInstance3D" parent="Paredes" unique_id=646282803]
+[node name="ParedA48" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=646282803]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9, 1.5, -20.1)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA48")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA48" unique_id=367938314]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA48" unique_id=367938314]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA48/Cuerpo" unique_id=658576665]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA48/Cuerpo" unique_id=658576665]
 shape = SubResource("Shape_Ajuste_ParedA48")
 
-[node name="ParedA49" type="MeshInstance3D" parent="Paredes" unique_id=961692839]
+[node name="ParedA49" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=961692839]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6, 1.5, -20)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA49")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA49" unique_id=1447557017]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA49" unique_id=1447557017]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA49/Cuerpo" unique_id=30152527]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA49/Cuerpo" unique_id=30152527]
 shape = SubResource("Shape_Ajuste_ParedA49")
 
-[node name="ParedA23" type="MeshInstance3D" parent="Paredes" unique_id=900572930]
+[node name="ParedA23" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=900572930]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 1.5, -40)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA23")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA23" unique_id=917683095]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA23" unique_id=917683095]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA23/Cuerpo" unique_id=478441106]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA23/Cuerpo" unique_id=478441106]
 shape = SubResource("Shape_Ajuste_ParedA23")
 
-[node name="ParedA19" type="MeshInstance3D" parent="Paredes" unique_id=1987557351]
+[node name="ParedA19" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1987557351]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 1.5, -30)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA19")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA19" unique_id=1963347538]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA19" unique_id=1963347538]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA19/Cuerpo" unique_id=1593682146]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA19/Cuerpo" unique_id=1593682146]
 shape = SubResource("Shape_Ajuste_ParedA19")
 
-[node name="ParedA20" type="MeshInstance3D" parent="Paredes" unique_id=1411789553]
+[node name="ParedA20" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1411789553]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 1.5, -30)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA20")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA20" unique_id=120118764]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA20" unique_id=120118764]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA20/Cuerpo" unique_id=567967963]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA20/Cuerpo" unique_id=567967963]
 shape = SubResource("Shape_Ajuste_ParedA20")
 
-[node name="ParedA24" type="MeshInstance3D" parent="Paredes" unique_id=319901973]
+[node name="ParedA24" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=319901973]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 1.5, -28.25)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA24")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA24" unique_id=1856788668]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA24" unique_id=1856788668]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA24/Cuerpo" unique_id=946426705]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA24/Cuerpo" unique_id=946426705]
 shape = SubResource("Shape_Ajuste_ParedA24")
 
-[node name="ParedA10" type="MeshInstance3D" parent="Paredes" unique_id=1073342928]
+[node name="ParedA10" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1073342928]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 1.5, -6.75)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA10")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA10" unique_id=1655291970]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA10" unique_id=1655291970]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA10/Cuerpo" unique_id=2018222774]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA10/Cuerpo" unique_id=2018222774]
 shape = SubResource("Shape_Ajuste_ParedA10")
 
-[node name="ParedA11" type="MeshInstance3D" parent="Paredes" unique_id=370469876]
+[node name="ParedA11" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=370469876]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 1.5, -6.75)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("BoxMesh_4iyo1")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA11" unique_id=109806754]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA11" unique_id=109806754]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA11/Cuerpo" unique_id=648808477]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA11/Cuerpo" unique_id=648808477]
 shape = SubResource("Shape_Correccion_ParedA11")
 
-[node name="ParedA51" type="MeshInstance3D" parent="Paredes" unique_id=484561593]
+[node name="ParedA51" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=484561593]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 1.5, -15)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA51")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA51" unique_id=1081334514]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA51" unique_id=1081334514]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA51/Cuerpo" unique_id=586033266]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA51/Cuerpo" unique_id=586033266]
 shape = SubResource("Shape_Ajuste_ParedA51")
 
-[node name="ParedA44" type="MeshInstance3D" parent="Paredes" unique_id=1511328390]
+[node name="ParedA44" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1511328390]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.1, 1.5, -16.75)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA44")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA44" unique_id=179739074]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA44" unique_id=179739074]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA44/Cuerpo" unique_id=945160421]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA44/Cuerpo" unique_id=945160421]
 shape = SubResource("Shape_Ajuste_ParedA44")
 
-[node name="ParedA46" type="MeshInstance3D" parent="Paredes" unique_id=574638116]
+[node name="ParedA46" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=574638116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4, 1.5, -16.75)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA46")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA46" unique_id=1052887013]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA46" unique_id=1052887013]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA46/Cuerpo" unique_id=1001439714]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA46/Cuerpo" unique_id=1001439714]
 shape = SubResource("Shape_Ajuste_ParedA46")
 
-[node name="ParedA47" type="MeshInstance3D" parent="Paredes" unique_id=1651436257]
+[node name="ParedA47" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1651436257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4, 1.5, -23.25)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA47")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA47" unique_id=1720890911]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA47" unique_id=1720890911]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA47/Cuerpo" unique_id=188191400]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA47/Cuerpo" unique_id=188191400]
 shape = SubResource("Shape_Ajuste_ParedA47")
 
-[node name="ParedA45" type="MeshInstance3D" parent="Paredes" unique_id=929461045]
+[node name="ParedA45" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=929461045]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.1, 1.5, -23.25)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA45")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA45" unique_id=1298504261]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA45" unique_id=1298504261]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA45/Cuerpo" unique_id=71422588]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA45/Cuerpo" unique_id=71422588]
 shape = SubResource("Shape_Ajuste_ParedA45")
 
-[node name="ParedA50" type="MeshInstance3D" parent="Paredes" unique_id=46063579]
+[node name="ParedA50" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=46063579]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, -33.25)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA50")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA50" unique_id=253290115]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA50" unique_id=253290115]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA50/Cuerpo" unique_id=979775240]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA50/Cuerpo" unique_id=979775240]
 shape = SubResource("Shape_Ajuste_ParedA50")
 
-[node name="ParedA55" type="MeshInstance3D" parent="Paredes" unique_id=1172864467]
+[node name="ParedA55" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=1172864467]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1.5, -26.85)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA55")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA55" unique_id=1277594040]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA55" unique_id=1277594040]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA55/Cuerpo" unique_id=1008198047]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA55/Cuerpo" unique_id=1008198047]
 shape = SubResource("Shape_Correccion_ParedA55")
 
-[node name="ParedA16" type="MeshInstance3D" parent="Paredes" unique_id=214544651]
+[node name="ParedA16" type="MeshInstance3D" parent="PisoCero/Paredes" unique_id=214544651]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 1.5, -13.25)
 material_override = ExtResource("3_xj3ho")
 mesh = SubResource("Mesh_Ajuste_ParedA16")
 
-[node name="Cuerpo" type="StaticBody3D" parent="Paredes/ParedA16" unique_id=382180909]
+[node name="Cuerpo" type="StaticBody3D" parent="PisoCero/Paredes/ParedA16" unique_id=382180909]
 collision_mask = 0
 
-[node name="Colision" type="CollisionShape3D" parent="Paredes/ParedA16/Cuerpo" unique_id=324101029]
+[node name="Colision" type="CollisionShape3D" parent="PisoCero/Paredes/ParedA16/Cuerpo" unique_id=324101029]
 shape = SubResource("Shape_Ajuste_ParedA16")
 
-[node name="Luces" type="Node3D" parent="." unique_id=442093195]
+[node name="Luces" type="Node3D" parent="PisoCero" unique_id=442093195]
 
-[node name="industrial_wall_lamp_1k10" parent="Luces" unique_id=653023781 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k10" parent="PisoCero/Luces" unique_id=653023781 instance=ExtResource("4_upggl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.3097532, 2.5, -9.19527)
 
-[node name="industrial_wall_lamp_1k13" parent="Luces" unique_id=1396873502 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k13" parent="PisoCero/Luces" unique_id=1396873502 instance=ExtResource("4_upggl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.1808743, 2.5, -6.644004)
 
-[node name="industrial_wall_lamp_1k14" parent="Luces" unique_id=139693674 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k14" parent="PisoCero/Luces" unique_id=139693674 instance=ExtResource("4_upggl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.1808743, 2.5, -12.947998)
 
-[node name="industrial_wall_lamp_1k12" parent="Luces" unique_id=1507502533 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k12" parent="PisoCero/Luces" unique_id=1507502533 instance=ExtResource("4_upggl")]
 transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 5.017, 2.562, -10.025)
 
-[node name="industrial_wall_lamp_1k11" parent="Luces" unique_id=1849668121 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k11" parent="PisoCero/Luces" unique_id=1849668121 instance=ExtResource("4_upggl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.3097532, 2.5, -14.493533)
 
-[node name="industrial_wall_lamp_1k2" parent="Luces" unique_id=163596001 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k2" parent="PisoCero/Luces" unique_id=163596001 instance=ExtResource("4_upggl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.799999, 2.5, -4.8110995)
 
-[node name="industrial_wall_lamp_1k3" parent="Luces" unique_id=1690576724 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k3" parent="PisoCero/Luces" unique_id=1690576724 instance=ExtResource("4_upggl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.5, -4.8)
 
-[node name="industrial_wall_lamp_1k6" parent="Luces" unique_id=846194065 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k6" parent="PisoCero/Luces" unique_id=846194065 instance=ExtResource("4_upggl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9368267, 2.5, -4.8099594)
 
-[node name="industrial_wall_lamp_1k4" parent="Luces" unique_id=1881046931 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k4" parent="PisoCero/Luces" unique_id=1881046931 instance=ExtResource("4_upggl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.623267, 2.5, -4.81072)
 
-[node name="industrial_wall_lamp_1k" parent="Luces" unique_id=1966747326 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k" parent="PisoCero/Luces" unique_id=1966747326 instance=ExtResource("4_upggl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.816074, 2.5, 0.09899914)
 
-[node name="industrial_wall_lamp_1k5" parent="Luces" unique_id=1159130524 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k5" parent="PisoCero/Luces" unique_id=1159130524 instance=ExtResource("4_upggl")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -13.623267, 2.5, 4.808558)
 
-[node name="industrial_wall_lamp_1k7" parent="Luces" unique_id=355395503 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k7" parent="PisoCero/Luces" unique_id=355395503 instance=ExtResource("4_upggl")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.560066, 2.5, 4.808558)
 
-[node name="industrial_wall_lamp_1k8" parent="Luces" unique_id=280881435 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k8" parent="PisoCero/Luces" unique_id=280881435 instance=ExtResource("4_upggl")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.560515, 2.5, 4.808558)
 
-[node name="industrial_wall_lamp_1k9" parent="Luces" unique_id=1575232416 instance=ExtResource("4_upggl")]
+[node name="industrial_wall_lamp_1k9" parent="PisoCero/Luces" unique_id=1575232416 instance=ExtResource("4_upggl")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.680263, 2.5, 4.808558)
 
-[node name="PuntosExploracion" type="Node3D" parent="." unique_id=492228236]
+[node name="PuntosExploracion" type="Node3D" parent="PisoCero" unique_id=492228236]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 
-[node name="Punto00" type="Marker3D" parent="PuntosExploracion" unique_id=2117987148 groups=["puntos_exploracion"]]
+[node name="Punto00" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=2117987148 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
 gizmo_extents = 0.5
 
-[node name="Punto01" type="Marker3D" parent="PuntosExploracion" unique_id=1404062160 groups=["puntos_exploracion"]]
+[node name="Punto01" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1404062160 groups=["puntos_exploracion"]]
 gizmo_extents = 0.5
 
-[node name="Punto02" type="Marker3D" parent="PuntosExploracion" unique_id=1200716927 groups=["puntos_exploracion"]]
+[node name="Punto02" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1200716927 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 gizmo_extents = 0.5
 
-[node name="Punto03" type="Marker3D" parent="PuntosExploracion" unique_id=1093025144 groups=["puntos_exploracion"]]
+[node name="Punto03" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1093025144 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
 gizmo_extents = 0.5
 
-[node name="Punto04" type="Marker3D" parent="PuntosExploracion" unique_id=1867641079 groups=["puntos_exploracion"]]
+[node name="Punto04" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1867641079 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
 gizmo_extents = 0.5
 
-[node name="Punto05" type="Marker3D" parent="PuntosExploracion" unique_id=697516519 groups=["puntos_exploracion"]]
+[node name="Punto05" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=697516519 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 gizmo_extents = 0.5
 
-[node name="Punto06" type="Marker3D" parent="PuntosExploracion" unique_id=882201481 groups=["puntos_exploracion"]]
+[node name="Punto06" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=882201481 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
 gizmo_extents = 0.5
 
-[node name="Punto07" type="Marker3D" parent="PuntosExploracion" unique_id=1143717173 groups=["puntos_exploracion"]]
+[node name="Punto07" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1143717173 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10)
 gizmo_extents = 0.5
 
-[node name="Punto08" type="Marker3D" parent="PuntosExploracion" unique_id=180960019 groups=["puntos_exploracion"]]
+[node name="Punto08" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=180960019 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -10)
 gizmo_extents = 0.5
 
-[node name="Punto09" type="Marker3D" parent="PuntosExploracion" unique_id=987820486 groups=["puntos_exploracion"]]
+[node name="Punto09" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=987820486 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
 gizmo_extents = 0.5
 
-[node name="Punto10" type="Marker3D" parent="PuntosExploracion" unique_id=269017131 groups=["puntos_exploracion"]]
+[node name="Punto10" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=269017131 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -20)
 gizmo_extents = 0.5
 
-[node name="Punto11" type="Marker3D" parent="PuntosExploracion" unique_id=1472558452 groups=["puntos_exploracion"]]
+[node name="Punto11" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1472558452 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -20)
 gizmo_extents = 0.5
 
-[node name="Punto12" type="Marker3D" parent="PuntosExploracion" unique_id=666558693 groups=["puntos_exploracion"]]
+[node name="Punto12" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=666558693 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -20)
 gizmo_extents = 0.5
 
-[node name="Punto13" type="Marker3D" parent="PuntosExploracion" unique_id=840419852 groups=["puntos_exploracion"]]
+[node name="Punto13" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=840419852 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
 gizmo_extents = 0.5
 
-[node name="Punto14" type="Marker3D" parent="PuntosExploracion" unique_id=1255459450 groups=["puntos_exploracion"]]
+[node name="Punto14" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1255459450 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -30)
 gizmo_extents = 0.5
 
-[node name="Punto15" type="Marker3D" parent="PuntosExploracion" unique_id=1955586821 groups=["puntos_exploracion"]]
+[node name="Punto15" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1955586821 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -30)
 gizmo_extents = 0.5
 
-[node name="Punto16" type="Marker3D" parent="PuntosExploracion" unique_id=1652122346 groups=["puntos_exploracion"]]
+[node name="Punto16" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1652122346 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -30)
 gizmo_extents = 0.5
 
-[node name="Punto17" type="Marker3D" parent="PuntosExploracion" unique_id=24024482 groups=["puntos_exploracion"]]
+[node name="Punto17" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=24024482 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -40)
 gizmo_extents = 0.5
 
-[node name="Punto18" type="Marker3D" parent="PuntosExploracion" unique_id=1246145328 groups=["puntos_exploracion"]]
+[node name="Punto18" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1246145328 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -40)
 gizmo_extents = 0.5
 
-[node name="Punto19" type="Marker3D" parent="PuntosExploracion" unique_id=1219165583 groups=["puntos_exploracion"]]
+[node name="Punto19" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1219165583 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -40)
 gizmo_extents = 0.5
 
-[node name="Punto20" type="Marker3D" parent="PuntosExploracion" unique_id=1143359491 groups=["puntos_exploracion"]]
+[node name="Punto20" type="Marker3D" parent="PisoCero/PuntosExploracion" unique_id=1143359491 groups=["puntos_exploracion"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -40)
 gizmo_extents = 0.5
 
-[node name="Jugador" type="Node3D" parent="." unique_id=314312463]
+[node name="Jugador" type="Node3D" parent="PisoCero" unique_id=314312463]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10, 1.2, 0)
 script = ExtResource("2_ck84f")
 
-[node name="Camera3D" type="Camera3D" parent="Jugador" unique_id=1112957686]
+[node name="Camera3D" type="Camera3D" parent="PisoCero/Jugador" unique_id=1112957686]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
 current = true
 fov = 46.0
 
-[node name="RayoInteraccion" type="RayCast3D" parent="Jugador/Camera3D" unique_id=1736972125]
+[node name="RayoInteraccion" type="RayCast3D" parent="PisoCero/Jugador/Camera3D" unique_id=1736972125]
 target_position = Vector3(0, 0, -6)
 
-[node name="EnemigoExploracion" parent="." unique_id=337344313 instance=ExtResource("3_4iyo1")]
+[node name="EnemigoExploracion" parent="PisoCero" unique_id=337344313 instance=ExtResource("3_4iyo1")]
 transform = Transform3D(-0.6108862, 0, -0.7917184, 0, 1, 0, 0.7917184, 0, -0.6108862, 11.252174, 0.73778534, -18.315386)
