@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cu68c78vyt7vi" path="res://escenas/Exploración/Piezas/Lampara.tscn" id="4_upggl"]
 [ext_resource type="PackedScene" path="res://escenas/HUD/menu_shift.tscn" id="4_xj3ho"]
 [ext_resource type="PackedScene" uid="uid://baxfuj075e4gq" path="res://escenas/Exploración/Piezas/ParedConPuerta.tscn" id="6_4iyo1"]
+[ext_resource type="Shader" uid="uid://cn032ucbpdssk" path="res://shader/retro_effect.gdshader" id="9_c3obi"]
 
 [sub_resource type="Environment" id="Environment_Oscuridad"]
 background_mode = 1
@@ -419,6 +420,23 @@ size = Vector3(0.2, 3, 3.5)
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA16"]
 size = Vector3(0.2, 3, 3.5)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbx7q"]
+shader = ExtResource("9_c3obi")
+shader_parameter/exposure = 1.0
+shader_parameter/contrast = 1.05
+shader_parameter/saturation = 0.9
+shader_parameter/enable_pixelate = true
+shader_parameter/pixel_factor = 1.00000002375
+shader_parameter/enable_posterize = true
+shader_parameter/color_levels = 16.0
+shader_parameter/dither_strength = 0.35
+shader_parameter/chrom_aberration = 0.0
+shader_parameter/vignette_strength = 1.4000000665
+shader_parameter/grain_strength = 0.2
+shader_parameter/tint_color = Vector3(0.95, 1.03, 0.9)
+shader_parameter/tint_strength = 0.15
+shader_parameter/viewport_size_override = Vector2(0, 0)
+
 [node name="Exploracion" type="Node3D" unique_id=908552948]
 script = ExtResource("1_n8xts")
 
@@ -555,7 +573,6 @@ material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_c3obi")
 
 [node name="Techos" type="Node3D" parent="PisoCero" unique_id=2146880121]
-visible = false
 
 [node name="TechoSalaInicio" type="MeshInstance3D" parent="PisoCero/Techos" unique_id=973707007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.25, 0)
@@ -1276,4 +1293,14 @@ target_position = Vector3(0, 0, -6)
 omni_range = 26.189905
 
 [node name="EnemigoExploracion" parent="PisoCero" unique_id=337344313 instance=ExtResource("3_4iyo1")]
-transform = Transform3D(-0.6108862, 0, -0.7917184, 0, 1, 0, 0.7917184, 0, -0.6108862, 11.252174, 0.73778534, -18.315386)
+transform = Transform3D(0.13735619, 0, -0.99052167, 0, 1, 0, 0.99052167, 0, 0.13735619, 7.7001944, 0, -20.301144)
+
+[node name="Shader" type="CanvasLayer" parent="." unique_id=418767805]
+
+[node name="ColorRect" type="ColorRect" parent="Shader" unique_id=1481366148]
+material = SubResource("ShaderMaterial_tbx7q")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
