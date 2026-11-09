@@ -1,8 +1,8 @@
 extends Node3D
 
-@onready var jugador = $SalaPrueba/Jugador
-@onready var punto_combate = $SalaPrueba/PuntosExploracion/Punto10
-@onready var enemigo_visual = $SalaPrueba/EnemigoExploracion
+@onready var jugador = $PisoCero/Jugador
+@onready var punto_combate = $PisoCero/PuntosExploracion/Punto10
+@onready var enemigo_visual = $PisoCero/EnemigoExploracion
 
 
 func _ready() -> void:
