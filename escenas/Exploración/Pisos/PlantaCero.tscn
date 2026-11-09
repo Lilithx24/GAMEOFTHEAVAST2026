@@ -533,6 +533,7 @@ material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_c3obi")
 
 [node name="Techos" type="Node3D" parent="PisoCero" unique_id=2146880121]
+visible = false
 
 [node name="TechoSalaInicio" type="MeshInstance3D" parent="PisoCero/Techos" unique_id=973707007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.25, 0)
@@ -1248,6 +1249,9 @@ fov = 46.0
 
 [node name="RayoInteraccion" type="RayCast3D" parent="PisoCero/Jugador/Camera3D" unique_id=1736972125]
 target_position = Vector3(0, 0, -6)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="PisoCero/Jugador" unique_id=711460390]
+omni_range = 26.189905
 
 [node name="EnemigoExploracion" parent="PisoCero" unique_id=337344313 instance=ExtResource("3_4iyo1")]
 transform = Transform3D(-0.6108862, 0, -0.7917184, 0, 1, 0, 0.7917184, 0, -0.6108862, 11.252174, 0.73778534, -18.315386)
