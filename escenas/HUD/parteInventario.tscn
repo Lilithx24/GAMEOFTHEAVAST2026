@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dim45lk1c8s7l"]
+
+[ext_resource type="Script" uid="uid://b1ux771lmrk8s" path="res://escenas/HUD/parteInventario.gd" id="1_mqjnq"]
+
+[node name="ParteInventario" type="Node2D" unique_id=452977154]
+script = ExtResource("1_mqjnq")

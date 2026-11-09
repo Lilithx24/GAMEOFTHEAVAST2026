@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cfa14xa7pq4wh"]
+
+[ext_resource type="Script" uid="uid://qag32kkaritw" path="res://escenas/HUD/slot.gd" id="1_l342d"]
+
+[node name="Slot" type="PanelContainer" unique_id=325292575]
+script = ExtResource("1_l342d")
