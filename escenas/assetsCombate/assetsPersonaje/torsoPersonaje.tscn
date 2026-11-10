@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dmt0n8c48k2bn"]
+
+[ext_resource type="Script" uid="uid://tpvof0ijywmb" path="res://escenas/assetsCombate/assetsPersonaje/torsoPersonaje.gd" id="1_lncgq"]
+
+[node name="TorsoPersonaje" type="Node2D" unique_id=1806425659]
+script = ExtResource("1_lncgq")

@@ -38,3 +38,26 @@ anchor_bottom = 0.92
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBox_panel")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1636717342]
+anchors_preset = -1
+anchor_left = -0.07189582
+anchor_top = 0.012604937
+anchor_right = 1.2616597
+anchor_bottom = 0.9186297
+offset_left = 214.82399
+offset_top = 57.832
+offset_right = -428.432
+offset_bottom = -40.272034
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" type="GridContainer" parent="HSplitContainer" unique_id=569403327]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 2
+
+[node name="GridContainer2" type="GridContainer" parent="HSplitContainer" unique_id=1163371206]
+unique_name_in_owner = true
+layout_mode = 2
