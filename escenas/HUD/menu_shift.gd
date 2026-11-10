@@ -12,6 +12,8 @@ const ESCENA_SLOT := preload("res://escenas/HUD/slot.tscn")
 
 var pausa_anterior: bool = false
 
+@export var slotsBrazos: int = 2
+@export var slotsPiernas: int = 1
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS   # necesario: el juego está en pausa con el menú abierto
@@ -26,12 +28,13 @@ func _ready() -> void:
 	slot_torso.tag_requerido = "torso"
 	slot_torso.item_cambiado.connect(_on_parte_equipada.bind(parte_torso))
 	
-	var slot_piernas := _crear_slot(destino)
-	slot_piernas.tag_requerido = "piernas"
-	slot_piernas.item_cambiado.connect(_on_parte_equipada.bind(parte_piernas))
-	
+	for i in slotsPiernas:
+		var slot_piernas := _crear_slot(destino)
+		slot_piernas.tag_requerido = "piernas"
+		slot_piernas.item_cambiado.connect(_on_parte_equipada.bind(parte_piernas))
+		
 
-	for i in 4:
+	for i in slotsBrazos:
 		var slot_brazo := _crear_slot(destino)
 		slot_brazo.tag_requerido = "brazo"
 		slot_brazo.item_cambiado.connect(_on_parte_equipada.bind(parte_brazo))

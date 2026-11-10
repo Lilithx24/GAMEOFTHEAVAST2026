@@ -1,8 +1,8 @@
 class_name TorsoPersonaje
 extends PartePersonaje
 
-@export var slotsBrazos: int = 2
-@export var slotsPiernas: int = 1
+@export var slotsBrazos: int 
+@export var slotsPiernas: int 
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
