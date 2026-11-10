@@ -7,17 +7,9 @@
 [ext_resource type="Material" uid="uid://dp1rxhnnoihwd" path="res://Assets/Materiales/Desconchao/Desconchao.tres" id="3_xj3ho"]
 [ext_resource type="PackedScene" uid="uid://cu68c78vyt7vi" path="res://Assets/Objetos/Lampara/Lampara.tscn" id="4_upggl"]
 [ext_resource type="PackedScene" uid="uid://c7trry61vrlrr" path="res://escenas/HUD/menu_shift.tscn" id="4_xj3ho"]
-[ext_resource type="PackedScene" uid="uid://c68vnnn1jtwdp" path="res://Assets/Objetos/BarrilMetalOxidado/barrel_stove_1k.glb" id="5_kunlf"]
 [ext_resource type="PackedScene" uid="uid://baxfuj075e4gq" path="res://Assets/Objetos/ParedConPuerta/ParedConPuerta.tscn" id="6_4iyo1"]
-[ext_resource type="PackedScene" uid="uid://btq4w1tvq5gct" path="res://Assets/Objetos/CajaCarton/cardboard_box_01_1k.glb" id="6_wkc2h"]
-[ext_resource type="PackedScene" uid="uid://bfbwtl1mvagta" path="res://Assets/Objetos/CuadernoNotas/binder_notebook_1k.glb" id="7_bjxiw"]
-[ext_resource type="PackedScene" uid="uid://bk67qwugntsj0" path="res://Assets/Objetos/Enciclopedia/book_encyclopedia_set_01_1k.glb" id="8_3egn7"]
-[ext_resource type="PackedScene" uid="uid://b04s4cubafhvn" path="res://Assets/Objetos/JuegoDeQuimica/beaker_large.glb" id="9_1eswl"]
 [ext_resource type="Shader" uid="uid://cn032ucbpdssk" path="res://shader/retro_effect.gdshader" id="9_c3obi"]
-[ext_resource type="PackedScene" uid="uid://bws7ru30ulr2t" path="res://Assets/Objetos/LamparaTecho/caged_hanging_light_1k.glb" id="10_8042i"]
-[ext_resource type="PackedScene" uid="uid://brx6c2eqp3pvf" path="res://Assets/Objetos/LataOxidada/can_rusted_1k.glb" id="11_sjsfi"]
-[ext_resource type="PackedScene" uid="uid://c2plf8vsqn38n" path="res://Assets/Objetos/LlaveInglesa/adjustable_wrench_1k.glb" id="12_053l6"]
-[ext_resource type="PackedScene" uid="uid://b1qrft42m8772" path="res://Assets/Objetos/BarrilPlastico/Barrel_02_1k.glb" id="18_f6075"]
+[ext_resource type="PackedScene" uid="uid://sxr71xbu6deb" path="res://escenas/Exploración/Pisos/Decoracion/TuberiasPlantaCero.tscn" id="10_tuberias"]
 
 [sub_resource type="Environment" id="Environment_Oscuridad"]
 background_mode = 1
@@ -432,16 +424,16 @@ size = Vector3(0.2, 3, 3.5)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbx7q"]
 shader = ExtResource("9_c3obi")
 shader_parameter/exposure = 1.0
-shader_parameter/contrast = 1.05
-shader_parameter/saturation = 0.9
+shader_parameter/contrast = 1.1000000285
+shader_parameter/saturation = 0.9200000437
 shader_parameter/enable_pixelate = true
-shader_parameter/pixel_factor = 1.00000002375
+shader_parameter/pixel_factor = 1.60000005225
 shader_parameter/enable_posterize = true
 shader_parameter/color_levels = 16.0
-shader_parameter/dither_strength = 0.35
+shader_parameter/dither_strength = 0.2000000095
 shader_parameter/chrom_aberration = 0.0
-shader_parameter/vignette_strength = 1.4000000665
-shader_parameter/grain_strength = 0.2
+shader_parameter/vignette_strength = 2.0
+shader_parameter/grain_strength = 0.400000019
 shader_parameter/tint_color = Vector3(0.95, 1.03, 0.9)
 shader_parameter/tint_strength = 0.15
 shader_parameter/viewport_size_override = Vector2(0, 0)
@@ -478,25 +470,27 @@ layout_mode = 2
 
 [node name="PisoCero" type="Node3D" parent="." unique_id=350677683]
 
-[node name="ParedConPuerta" parent="PisoCero" unique_id=944486220 instance=ExtResource("6_4iyo1")]
+[node name="Puertas" type="Node3D" parent="PisoCero" unique_id=2123810962]
+
+[node name="ParedConPuerta" parent="PisoCero/Puertas" unique_id=944486220 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 0)
 
-[node name="ParedConPuerta2" parent="PisoCero" unique_id=1866706834 instance=ExtResource("6_4iyo1")]
+[node name="ParedConPuerta2" parent="PisoCero/Puertas" unique_id=1866706834 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25, 0, 0)
 
-[node name="Puerta_F_G" parent="PisoCero" unique_id=281237202 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_F_G" parent="PisoCero/Puertas" unique_id=281237202 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 25, 0, -30)
 
-[node name="Puerta_Pasillo2_E" parent="PisoCero" unique_id=1688918265 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_Pasillo2_E" parent="PisoCero/Puertas" unique_id=1688918265 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 25.1, 0, -20)
 
-[node name="Puerta_C_D" parent="PisoCero" unique_id=2097809803 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_C_D" parent="PisoCero/Puertas" unique_id=2097809803 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.1, 0, -20)
 
-[node name="Puerta_Pasillo1_T1" parent="PisoCero" unique_id=970964205 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_Pasillo1_T1" parent="PisoCero/Puertas" unique_id=970964205 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.1, 0, -10)
 
-[node name="Puerta_C_Pasillo3" parent="PisoCero" unique_id=1289524763 instance=ExtResource("6_4iyo1")]
+[node name="Puerta_C_Pasillo3" parent="PisoCero/Puertas" unique_id=1289524763 instance=ExtResource("6_4iyo1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24.9)
 
 [node name="Suelos" type="Node3D" parent="PisoCero" unique_id=1029452316]
@@ -580,35 +574,6 @@ mesh = SubResource("BoxMesh_b7nuq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -30)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_c3obi")
-
-[node name="Objetos Pruebas" type="Node3D" parent="PisoCero/Suelos" unique_id=1501510098]
-
-[node name="Barrel_02_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1238556474 instance=ExtResource("18_f6075")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5262537, 0, -4.3102727)
-
-[node name="barrel_stove_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=2114041294 instance=ExtResource("5_kunlf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2273736, 0, -4.1131086)
-
-[node name="cardboard_box_01_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1687588285 instance=ExtResource("6_wkc2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3676972, 0, -2.8354309)
-
-[node name="binder_notebook_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1393365974 instance=ExtResource("7_bjxiw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2217124, 0, -3.3558643)
-
-[node name="book_encyclopedia_set_01_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=611344169 instance=ExtResource("8_3egn7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1132076, 0, -2.3303037)
-
-[node name="beaker_large" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1118769850 instance=ExtResource("9_1eswl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74987316, 0, -3.2083797)
-
-[node name="caged_hanging_light_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=638466921 instance=ExtResource("10_8042i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9672832, 1.1758349, -1.9145452)
-
-[node name="can_rusted_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1557421092 instance=ExtResource("11_sjsfi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1323822, 0, -3.7811341)
-
-[node name="adjustable_wrench_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=407794810 instance=ExtResource("12_053l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2194381, 0, -2.8358862)
 
 [node name="Techos" type="Node3D" parent="PisoCero" unique_id=2146880121]
 
@@ -1186,6 +1151,7 @@ collision_mask = 0
 shape = SubResource("Shape_Ajuste_ParedA16")
 
 [node name="Luces" type="Node3D" parent="PisoCero" unique_id=442093195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 
 [node name="industrial_wall_lamp_1k10" parent="PisoCero/Luces" unique_id=653023781 instance=ExtResource("4_upggl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.3097532, 2.5, -9.19527)
@@ -1228,6 +1194,220 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.5
 
 [node name="industrial_wall_lamp_1k9" parent="PisoCero/Luces" unique_id=1575232416 instance=ExtResource("4_upggl")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.680263, 2.5, 4.808558)
+
+[node name="Industrial_wall_lamp_SalaA" parent="PisoCero/Luces" unique_id=1915611051 instance=ExtResource("4_upggl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.5, -4.79)
+intensidad = 1.4
+alcance = 6.0
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_SalaT2" parent="PisoCero/Luces" unique_id=1777891974 instance=ExtResource("4_upggl")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 20, 2.5, 4.79)
+intensidad = 1.0
+alcance = 5.5
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_SalaB" parent="PisoCero/Luces" unique_id=1463737516 instance=ExtResource("4_upggl")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 34.79, 2.5, 1.7)
+intensidad = 0.9
+alcance = 5.2
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_SalaB_Averiada" parent="PisoCero/Luces" unique_id=1164377811 instance=ExtResource("4_upggl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2.5, -4.89)
+encendida = false
+intensidad = 0.0
+alcance = 5.0
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_SalaT1_Entrada" parent="PisoCero/Luces" unique_id=1369766050 instance=ExtResource("4_upggl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2.5, -14.79)
+intensidad = 1.4
+alcance = 6.0
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_SalaT1_Centro" parent="PisoCero/Luces" unique_id=171682907 instance=ExtResource("4_upggl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 2.5, -14.79)
+intensidad = 1.1
+alcance = 5.6
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_SalaT1_Fondo" parent="PisoCero/Luces" unique_id=1765988229 instance=ExtResource("4_upggl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 2.5, -14.79)
+intensidad = 0.8
+alcance = 5.4
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_SalaC" parent="PisoCero/Luces" unique_id=479784793 instance=ExtResource("4_upggl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.79, 2.5, -19)
+intensidad = 1.1
+alcance = 5.8
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_SalaD" parent="PisoCero/Luces" unique_id=1565583150 instance=ExtResource("4_upggl")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 10, 2.5, -15.01)
+intensidad = 1.0
+alcance = 5.4
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_Pasillo2" parent="PisoCero/Luces" unique_id=684714088 instance=ExtResource("4_upggl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.71, 2.5, -18)
+intensidad = 0.7
+alcance = 4.2
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_PasoSalaE" parent="PisoCero/Luces" unique_id=1030700144 instance=ExtResource("4_upggl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1, 2.5, -21.29)
+intensidad = 0.7
+alcance = 3.6
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_SalaE" parent="PisoCero/Luces" unique_id=2003786353 instance=ExtResource("4_upggl")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 34.79, 2.5, -22)
+intensidad = 0.8
+alcance = 5.2
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_Pasillo3" parent="PisoCero/Luces" unique_id=1350061341 instance=ExtResource("4_upggl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.29, 2.5, -29)
+intensidad = 0.7
+alcance = 4.0
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_SalaF_Entrada" parent="PisoCero/Luces" unique_id=645866003 instance=ExtResource("4_upggl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.21, 2.5, -28)
+intensidad = 1.0
+alcance = 5.5
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_SalaF_Averiada" parent="PisoCero/Luces" unique_id=1554197263 instance=ExtResource("4_upggl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.5, -34.99)
+encendida = false
+intensidad = 0.0
+alcance = 5.0
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_SalaF_Puerta" parent="PisoCero/Luces" unique_id=1664395105 instance=ExtResource("4_upggl")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.89, 2.5, -32.5)
+intensidad = 0.8
+alcance = 4.8
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_SalaG_Averiada" parent="PisoCero/Luces" unique_id=476660345 instance=ExtResource("4_upggl")]
+transform = Transform3D(-7.395083e-06, 0, -1, 0, 1, 0, 1, 0, -7.395083e-06, 34.79, 2.5, -30)
+encendida = false
+intensidad = 0.0
+alcance = 5.0
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_SalaH_Acceso" parent="PisoCero/Luces" unique_id=717236088 instance=ExtResource("4_upggl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.79, 2.5, -37)
+intensidad = 0.9
+alcance = 5.5
+atenuacion = 1.7
+brillo_bombilla = 18.0
+parpadeo = false
+
+[node name="Industrial_wall_lamp_SalaH_Centro" parent="PisoCero/Luces" unique_id=390020507 instance=ExtResource("4_upggl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.5, -44.79)
+intensidad = 0.8
+alcance = 5.3
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Industrial_wall_lamp_SalaH_Fondo" parent="PisoCero/Luces" unique_id=1890875163 instance=ExtResource("4_upggl")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 30, 2.5, -35.21)
+intensidad = 0.7
+alcance = 5.0
+atenuacion = 1.7
+brillo_bombilla = 18.0
+intervalo_minimo = 7.0
+intervalo_maximo = 18.0
+tension_minima = 0.12
+
+[node name="Tuberias" parent="PisoCero" unique_id=1344939659 instance=ExtResource("10_tuberias")]
+
+[node name="Tramo_001" parent="PisoCero/Tuberias/Inicio_Lateral" index="0"]
+transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, 4.8768477)
+
+[node name="Tramo_002" parent="PisoCero/Tuberias/Inicio_Lateral" index="1"]
+transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, 2.8082654)
+
+[node name="Tramo_003" parent="PisoCero/Tuberias/Inicio_Lateral" index="2"]
+transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, 0.8124574)
+
+[node name="Tramo_004" parent="PisoCero/Tuberias/Inicio_Lateral" index="3"]
+transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, -1.1728517)
+
+[node name="Tramo_005" parent="PisoCero/Tuberias/Inicio_Lateral" index="4"]
+transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, -3.138205)
+
+[node name="CodoBajante_006" parent="PisoCero/Tuberias/Inicio_Lateral" index="5"]
+transform = Transform3D(0, 0, -1, 0, -1, 0, -1, 0, 0, -14.42, 2.733141, -4.4403563)
+
+[node name="BajanteSuperior_007" parent="PisoCero/Tuberias/Inicio_Lateral" index="6"]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, -14.42, 1.984511, -4.464479)
+
+[node name="Valvula_008" parent="PisoCero/Tuberias/Inicio_Lateral" index="7"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.42, 1.3, -4.4609337)
+
+[node name="BajanteSuelo_009" parent="PisoCero/Tuberias/Inicio_Lateral" index="8"]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, -14.42, 0.53563, -4.4667435)
 
 [node name="PuntosExploracion" type="Node3D" parent="PisoCero" unique_id=492228236]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
@@ -1342,3 +1522,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[editable path="PisoCero/Tuberias"]

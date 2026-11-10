@@ -1,0 +1,930 @@
+[gd_scene format=3 uid="uid://sxr71xbu6deb"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Tuberias/pipe01.glb" id="1"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Tuberias/pipe02.glb" id="2"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Tuberias/pipe04.glb" id="4"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Tuberias/pipe06.glb" id="6"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Tuberias/pipe08.glb" id="8"]
+
+[node name="Tuberias" type="Node3D"]
+
+[node name="Inicio_Lateral" type="Node3D" parent="."]
+
+[node name="Tramo_001" parent="Inicio_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, -14.65, 2.82, 4.082)
+
+[node name="Tramo_002" parent="Inicio_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, -14.65, 2.82, 2.386)
+
+[node name="Tramo_003" parent="Inicio_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, -14.65, 2.82, 0.69)
+
+[node name="Tramo_004" parent="Inicio_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, -14.65, 2.82, -1.006)
+
+[node name="Tramo_005" parent="Inicio_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, -14.65, 2.82, -2.702)
+
+[node name="CodoBajante_006" parent="Inicio_Lateral" instance=ExtResource("4")]
+transform = Transform3D(0, 0, -1, 0, -1, 0, -1, 0, 0, -14.65, 2.733141, -3.846723)
+
+[node name="BajanteSuperior_007" parent="Inicio_Lateral" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, -14.65, 1.984511, -3.870593)
+
+[node name="Valvula_008" parent="Inicio_Lateral" instance=ExtResource("8")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -14.65, 1.3, -3.870593)
+
+[node name="BajanteSuelo_009" parent="Inicio_Lateral" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, -14.65, 0.53563, -3.870593)
+
+[node name="Pasillo1_Suministro" type="Node3D" parent="."]
+
+[node name="Tramo_010" parent="Pasillo1_Suministro" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, -1.15, 2.82, -5.75)
+
+[node name="Tramo_011" parent="Pasillo1_Suministro" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, -1.15, 2.82, -7.45)
+
+[node name="Tramo_012" parent="Pasillo1_Suministro" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, -1.15, 2.82, -9.15)
+
+[node name="Tramo_013" parent="Pasillo1_Suministro" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, -1.15, 2.82, -10.85)
+
+[node name="Tramo_014" parent="Pasillo1_Suministro" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, -1.15, 2.82, -12.55)
+
+[node name="CodoBajante_015" parent="Pasillo1_Suministro" instance=ExtResource("4")]
+transform = Transform3D(0, 0, -1, 0, -1, 0, -1, 0, 0, -1.15, 2.733141, -13.696723)
+
+[node name="BajanteSuperior_016" parent="Pasillo1_Suministro" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, -1.15, 1.984511, -13.720593)
+
+[node name="Valvula_017" parent="Pasillo1_Suministro" instance=ExtResource("8")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.15, 1.3, -13.720593)
+
+[node name="BajanteSuelo_018" parent="Pasillo1_Suministro" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, -1.15, 0.53563, -13.720593)
+
+[node name="T1_Colector" type="Node3D" parent="."]
+
+[node name="Tramo_019" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.87474, 0, -1, 0, 0, 0, 0, 1, 5.904901, 2.82, -14.65)
+
+[node name="Tramo_020" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.87474, 0, -1, 0, 0, 0, 0, 1, 7.614703, 2.82, -14.65)
+
+[node name="Tramo_021" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.87474, 0, -1, 0, 0, 0, 0, 1, 9.324504, 2.82, -14.65)
+
+[node name="Tramo_022" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.87474, 0, -1, 0, 0, 0, 0, 1, 11.034306, 2.82, -14.65)
+
+[node name="Tramo_023" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.87474, 0, -1, 0, 0, 0, 0, 1, 12.744108, 2.82, -14.65)
+
+[node name="Tramo_024" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.87474, 0, -1, 0, 0, 0, 0, 1, 14.453909, 2.82, -14.65)
+
+[node name="Tramo_025" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.87474, 0, -1, 0, 0, 0, 0, 1, 16.163711, 2.82, -14.65)
+
+[node name="Derivacion_026" parent="T1_Colector" instance=ExtResource("6")]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 17.1975, 2.82, -14.65)
+
+[node name="Tramo_027" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 18.260814, 2.82, -14.65)
+
+[node name="Tramo_028" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 20.03013, 2.82, -14.65)
+
+[node name="Tramo_029" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 21.799446, 2.82, -14.65)
+
+[node name="Tramo_030" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 23.568762, 2.82, -14.65)
+
+[node name="Tramo_031" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 25.338078, 2.82, -14.65)
+
+[node name="Tramo_032" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 27.107394, 2.82, -14.65)
+
+[node name="Tramo_033" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 28.87671, 2.82, -14.65)
+
+[node name="Tramo_034" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 30.646026, 2.82, -14.65)
+
+[node name="Tramo_035" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.905188, 0, -1, 0, 0, 0, 0, 1, 32.415342, 2.82, -14.65)
+
+[node name="BajanteSuperior_036" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.575428, 0, 0, 0, 1, 17.1975, 2.052449, -14.65)
+
+[node name="Valvula_037" parent="T1_Colector" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1975, 1.3, -14.65)
+
+[node name="BajanteSuelo_038" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 17.1975, 0.53563, -14.65)
+
+[node name="CodoBajante_039" parent="T1_Colector" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, 33.596723, 2.733141, -14.65)
+
+[node name="BajanteSuperior_040" parent="T1_Colector" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 33.620593, 1.984511, -14.65)
+
+[node name="Valvula_041" parent="T1_Colector" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.620593, 1.3, -14.65)
+
+[node name="BajanteSuelo_042" parent="T1_Colector" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 33.620593, 0.53563, -14.65)
+
+[node name="C_Retorno" type="Node3D" parent="."]
+
+[node name="Tramo_043" parent="C_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.877911, 0, -1, 0, 0, 0, 0, 1, -4.072, 2.82, -24.65)
+
+[node name="Tramo_044" parent="C_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.877911, 0, -1, 0, 0, 0, 0, 1, -2.356, 2.82, -24.65)
+
+[node name="Tramo_045" parent="C_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.877911, 0, -1, 0, 0, 0, 0, 1, -0.64, 2.82, -24.65)
+
+[node name="Tramo_046" parent="C_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.877911, 0, -1, 0, 0, 0, 0, 1, 1.076, 2.82, -24.65)
+
+[node name="Tramo_047" parent="C_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.877911, 0, -1, 0, 0, 0, 0, 1, 2.792, 2.82, -24.65)
+
+[node name="CodoBajante_048" parent="C_Retorno" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, 3.946723, 2.733141, -24.65)
+
+[node name="BajanteSuperior_049" parent="C_Retorno" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 3.970593, 1.984511, -24.65)
+
+[node name="Valvula_050" parent="C_Retorno" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.970593, 1.3, -24.65)
+
+[node name="BajanteSuelo_051" parent="C_Retorno" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 3.970593, 0.53563, -24.65)
+
+[node name="D_Lateral" type="Node3D" parent="."]
+
+[node name="Tramo_052" parent="D_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 14.65, 2.82, -15.81)
+
+[node name="Tramo_053" parent="D_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 14.65, 2.82, -17.53)
+
+[node name="Tramo_054" parent="D_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 14.65, 2.82, -19.25)
+
+[node name="Tramo_055" parent="D_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 14.65, 2.82, -20.97)
+
+[node name="Tramo_056" parent="D_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 14.65, 2.82, -22.69)
+
+[node name="CodoBajante_057" parent="D_Lateral" instance=ExtResource("4")]
+transform = Transform3D(0, 0, -1, 0, -1, 0, -1, 0, 0, 14.65, 2.733141, -23.846723)
+
+[node name="BajanteSuperior_058" parent="D_Lateral" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 14.65, 1.984511, -23.870593)
+
+[node name="Valvula_059" parent="D_Lateral" instance=ExtResource("8")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 14.65, 1.3, -23.870593)
+
+[node name="BajanteSuelo_060" parent="D_Lateral" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 14.65, 0.53563, -23.870593)
+
+[node name="E_Lateral" type="Node3D" parent="."]
+
+[node name="Tramo_061" parent="E_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 34.65, 2.82, -15.81)
+
+[node name="Tramo_062" parent="E_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 34.65, 2.82, -17.53)
+
+[node name="Tramo_063" parent="E_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 34.65, 2.82, -19.25)
+
+[node name="Tramo_064" parent="E_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 34.65, 2.82, -20.97)
+
+[node name="Tramo_065" parent="E_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.879958, 0, 34.65, 2.82, -22.69)
+
+[node name="CodoBajante_066" parent="E_Lateral" instance=ExtResource("4")]
+transform = Transform3D(0, 0, -1, 0, -1, 0, -1, 0, 0, 34.65, 2.733141, -23.846723)
+
+[node name="BajanteSuperior_067" parent="E_Lateral" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 34.65, 1.984511, -23.870593)
+
+[node name="Valvula_068" parent="E_Lateral" instance=ExtResource("8")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 34.65, 1.3, -23.870593)
+
+[node name="BajanteSuelo_069" parent="E_Lateral" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 34.65, 0.53563, -23.870593)
+
+[node name="F_Distribucion" type="Node3D" parent="."]
+
+[node name="Tramo_070" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.994571, 0, -1, 0, 0, 0, 0, 1, 6.022014, 2.82, -34.85)
+
+[node name="Tramo_071" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.994571, 0, -1, 0, 0, 0, 0, 1, 7.966042, 2.82, -34.85)
+
+[node name="Tramo_072" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.994571, 0, -1, 0, 0, 0, 0, 1, 9.91007, 2.82, -34.85)
+
+[node name="Tramo_073" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.994571, 0, -1, 0, 0, 0, 0, 1, 11.854098, 2.82, -34.85)
+
+[node name="Derivacion_074" parent="F_Distribucion" instance=ExtResource("6")]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 13.005, 2.82, -34.85)
+
+[node name="Tramo_075" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.883909, 0, -1, 0, 0, 0, 0, 1, 14.047518, 2.82, -34.85)
+
+[node name="Tramo_076" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.883909, 0, -1, 0, 0, 0, 0, 1, 15.775242, 2.82, -34.85)
+
+[node name="Tramo_077" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.883909, 0, -1, 0, 0, 0, 0, 1, 17.502966, 2.82, -34.85)
+
+[node name="Tramo_078" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.883909, 0, -1, 0, 0, 0, 0, 1, 19.23069, 2.82, -34.85)
+
+[node name="Tramo_079" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.883909, 0, -1, 0, 0, 0, 0, 1, 20.958414, 2.82, -34.85)
+
+[node name="Tramo_080" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(0, 0.883909, 0, -1, 0, 0, 0, 0, 1, 22.686138, 2.82, -34.85)
+
+[node name="BajanteSuperior_081" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.575428, 0, 0, 0, 1, 13.005, 2.052449, -34.85)
+
+[node name="Valvula_082" parent="F_Distribucion" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.005, 1.3, -34.85)
+
+[node name="BajanteSuelo_083" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 13.005, 0.53563, -34.85)
+
+[node name="CodoBajante_084" parent="F_Distribucion" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, 23.846723, 2.733141, -34.85)
+
+[node name="BajanteSuperior_085" parent="F_Distribucion" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 23.870593, 1.984511, -34.85)
+
+[node name="Valvula_086" parent="F_Distribucion" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.870593, 1.3, -34.85)
+
+[node name="BajanteSuelo_087" parent="F_Distribucion" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 23.870593, 0.53563, -34.85)
+
+[node name="G_Lateral" type="Node3D" parent="."]
+
+[node name="Tramo_088" parent="G_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, 34.65, 2.82, -25.9)
+
+[node name="Tramo_089" parent="G_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, 34.65, 2.82, -27.6)
+
+[node name="Tramo_090" parent="G_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, 34.65, 2.82, -29.3)
+
+[node name="Tramo_091" parent="G_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, 34.65, 2.82, -31)
+
+[node name="Tramo_092" parent="G_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, 34.65, 2.82, -32.7)
+
+[node name="CodoBajante_093" parent="G_Lateral" instance=ExtResource("4")]
+transform = Transform3D(0, 0, -1, 0, -1, 0, -1, 0, 0, 34.65, 2.733141, -33.846723)
+
+[node name="BajanteSuperior_094" parent="G_Lateral" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 34.65, 1.984511, -33.870593)
+
+[node name="Valvula_095" parent="G_Lateral" instance=ExtResource("8")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 34.65, 1.3, -33.870593)
+
+[node name="BajanteSuelo_096" parent="G_Lateral" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 34.65, 0.53563, -33.870593)
+
+[node name="H_Colector" type="Node3D" parent="."]
+
+[node name="Tramo_097" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, -4.049772, 2.82, -44.65)
+
+[node name="Tramo_098" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, -2.249315, 2.82, -44.65)
+
+[node name="Tramo_099" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, -0.448858, 2.82, -44.65)
+
+[node name="Tramo_100" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, 1.351599, 2.82, -44.65)
+
+[node name="Tramo_101" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, 3.152056, 2.82, -44.65)
+
+[node name="Tramo_102" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, 4.952513, 2.82, -44.65)
+
+[node name="Tramo_103" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, 6.75297, 2.82, -44.65)
+
+[node name="Tramo_104" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, 8.553427, 2.82, -44.65)
+
+[node name="Tramo_105" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.92112, 0, -1, 0, 0, 0, 0, 1, 10.353884, 2.82, -44.65)
+
+[node name="Derivacion_106" parent="H_Colector" instance=ExtResource("6")]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 11.433, 2.82, -44.65)
+
+[node name="Tramo_107" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 12.509087, 2.82, -44.65)
+
+[node name="Tramo_108" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 14.303949, 2.82, -44.65)
+
+[node name="Tramo_109" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 16.098811, 2.82, -44.65)
+
+[node name="Tramo_110" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 17.893673, 2.82, -44.65)
+
+[node name="Tramo_111" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 19.688535, 2.82, -44.65)
+
+[node name="Tramo_112" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 21.483397, 2.82, -44.65)
+
+[node name="Tramo_113" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 23.278259, 2.82, -44.65)
+
+[node name="Tramo_114" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 25.073121, 2.82, -44.65)
+
+[node name="Tramo_115" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 26.867983, 2.82, -44.65)
+
+[node name="Tramo_116" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 28.662845, 2.82, -44.65)
+
+[node name="Tramo_117" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 30.457707, 2.82, -44.65)
+
+[node name="Tramo_118" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(0, 0.918257, 0, -1, 0, 0, 0, 0, 1, 32.252569, 2.82, -44.65)
+
+[node name="BajanteSuperior_119" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.575428, 0, 0, 0, 1, 11.433, 2.052449, -44.65)
+
+[node name="Valvula_120" parent="H_Colector" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.433, 1.3, -44.65)
+
+[node name="BajanteSuelo_121" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 11.433, 0.53563, -44.65)
+
+[node name="CodoBajante_122" parent="H_Colector" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, 33.446723, 2.733141, -44.65)
+
+[node name="BajanteSuperior_123" parent="H_Colector" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 33.470593, 1.984511, -44.65)
+
+[node name="Valvula_124" parent="H_Colector" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.470593, 1.3, -44.65)
+
+[node name="BajanteSuelo_125" parent="H_Colector" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 33.470593, 0.53563, -44.65)
+
+[node name="B_Lateral" type="Node3D" parent="."]
+
+[node name="Tramo_126" parent="B_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, 34.65, 2.82, 4.082)
+
+[node name="Tramo_127" parent="B_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, 34.65, 2.82, 2.386)
+
+[node name="Tramo_128" parent="B_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, 34.65, 2.82, 0.69)
+
+[node name="Tramo_129" parent="B_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, 34.65, 2.82, -1.006)
+
+[node name="Tramo_130" parent="B_Lateral" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.867679, 0, 34.65, 2.82, -2.702)
+
+[node name="CodoBajante_131" parent="B_Lateral" instance=ExtResource("4")]
+transform = Transform3D(0, 0, -1, 0, -1, 0, -1, 0, 0, 34.65, 2.733141, -3.846723)
+
+[node name="BajanteSuperior_132" parent="B_Lateral" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 34.65, 1.984511, -3.870593)
+
+[node name="Valvula_133" parent="B_Lateral" instance=ExtResource("8")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 34.65, 1.3, -3.870593)
+
+[node name="BajanteSuelo_134" parent="B_Lateral" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 34.65, 0.53563, -3.870593)
+
+[node name="T2_Pared" type="Node3D" parent="."]
+
+[node name="Tramo_135" parent="T2_Pared" instance=ExtResource("2")]
+transform = Transform3D(0, 0.869726, 0, -1, 0, 0, 0, 0, 1, 15.9, 2.82, 4.65)
+
+[node name="Tramo_136" parent="T2_Pared" instance=ExtResource("2")]
+transform = Transform3D(0, 0.869726, 0, -1, 0, 0, 0, 0, 1, 17.6, 2.82, 4.65)
+
+[node name="Tramo_137" parent="T2_Pared" instance=ExtResource("2")]
+transform = Transform3D(0, 0.869726, 0, -1, 0, 0, 0, 0, 1, 19.3, 2.82, 4.65)
+
+[node name="Tramo_138" parent="T2_Pared" instance=ExtResource("2")]
+transform = Transform3D(0, 0.869726, 0, -1, 0, 0, 0, 0, 1, 21, 2.82, 4.65)
+
+[node name="Tramo_139" parent="T2_Pared" instance=ExtResource("2")]
+transform = Transform3D(0, 0.869726, 0, -1, 0, 0, 0, 0, 1, 22.7, 2.82, 4.65)
+
+[node name="CodoBajante_140" parent="T2_Pared" instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, -1, 0, 0, 0, -1, 23.846723, 2.733141, 4.65)
+
+[node name="BajanteSuperior_141" parent="T2_Pared" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, 23.870593, 1.984511, 4.65)
+
+[node name="Valvula_142" parent="T2_Pared" instance=ExtResource("8")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 23.870593, 1.3, 4.65)
+
+[node name="BajanteSuelo_143" parent="T2_Pared" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, 23.870593, 0.53563, 4.65)
+
+[node name="Suelo_Inicio" type="Node3D" parent="."]
+
+[node name="Suelo_144" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, -13.959091, 0.14, 4.65)
+
+[node name="Suelo_145" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, -12.157273, 0.14, 4.65)
+
+[node name="Suelo_146" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, -10.355455, 0.14, 4.65)
+
+[node name="Suelo_147" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, -8.553636, 0.14, 4.65)
+
+[node name="Suelo_148" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, -6.751818, 0.14, 4.65)
+
+[node name="Suelo_149" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, -4.95, 0.14, 4.65)
+
+[node name="Suelo_150" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, -3.148182, 0.14, 4.65)
+
+[node name="Suelo_151" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, -1.346364, 0.14, 4.65)
+
+[node name="Suelo_152" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, 0.455455, 0.14, 4.65)
+
+[node name="Suelo_153" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, 2.257273, 0.14, 4.65)
+
+[node name="Suelo_154" parent="Suelo_Inicio" instance=ExtResource("2")]
+transform = Transform3D(0, 0.921816, 0, -1, 0, 0, 0, 0, 1, 4.059091, 0.14, 4.65)
+
+[node name="Suelo_C" type="Node3D" parent="."]
+
+[node name="Suelo_155" parent="Suelo_C" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.849261, 0, -4.65, 0.14, -15.85)
+
+[node name="Suelo_156" parent="Suelo_C" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.849261, 0, -4.65, 0.14, -17.51)
+
+[node name="Suelo_157" parent="Suelo_C" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.849261, 0, -4.65, 0.14, -19.17)
+
+[node name="Suelo_158" parent="Suelo_C" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.849261, 0, -4.65, 0.14, -20.83)
+
+[node name="Suelo_159" parent="Suelo_C" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.849261, 0, -4.65, 0.14, -22.49)
+
+[node name="Suelo_160" parent="Suelo_C" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.849261, 0, -4.65, 0.14, -24.15)
+
+[node name="Suelo_E" type="Node3D" parent="."]
+
+[node name="Suelo_161" parent="Suelo_E" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 25.85, 0.14, -24.85)
+
+[node name="Suelo_162" parent="Suelo_E" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 27.51, 0.14, -24.85)
+
+[node name="Suelo_163" parent="Suelo_E" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 29.17, 0.14, -24.85)
+
+[node name="Suelo_164" parent="Suelo_E" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 30.83, 0.14, -24.85)
+
+[node name="Suelo_165" parent="Suelo_E" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 32.49, 0.14, -24.85)
+
+[node name="Suelo_166" parent="Suelo_E" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 34.15, 0.14, -24.85)
+
+[node name="Suelo_F" type="Node3D" parent="."]
+
+[node name="Suelo_167" parent="Suelo_F" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.844145, 0, 5.35, 0.14, -26.005)
+
+[node name="Suelo_168" parent="Suelo_F" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.844145, 0, 5.35, 0.14, -27.655)
+
+[node name="Suelo_169" parent="Suelo_F" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.844145, 0, 5.35, 0.14, -29.305)
+
+[node name="Suelo_170" parent="Suelo_F" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.844145, 0, 5.35, 0.14, -30.955)
+
+[node name="Suelo_171" parent="Suelo_F" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.844145, 0, 5.35, 0.14, -32.605)
+
+[node name="Suelo_172" parent="Suelo_F" instance=ExtResource("2")]
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.844145, 0, 5.35, 0.14, -34.255)
+
+[node name="EntradaSuelo_173" parent="Suelo_F" instance=ExtResource("4")]
+transform = Transform3D(0, 0, 1, 0, -1, 0, 1, 0, 0, 5.35, 0.053141, -24.883277)
+
+[node name="Suelo_G" type="Node3D" parent="."]
+
+[node name="Suelo_174" parent="Suelo_G" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 25.85, 0.14, -25.35)
+
+[node name="Suelo_175" parent="Suelo_G" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 27.51, 0.14, -25.35)
+
+[node name="Suelo_176" parent="Suelo_G" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 29.17, 0.14, -25.35)
+
+[node name="Suelo_177" parent="Suelo_G" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 30.83, 0.14, -25.35)
+
+[node name="Suelo_178" parent="Suelo_G" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 32.49, 0.14, -25.35)
+
+[node name="Suelo_179" parent="Suelo_G" instance=ExtResource("2")]
+transform = Transform3D(0, 0.849261, 0, -1, 0, 0, 0, 0, 1, 34.15, 0.14, -25.35)
+
+[node name="Suelo_H" type="Node3D" parent="."]
+
+[node name="Suelo_180" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 2.186944, 0.14, -35.35)
+
+[node name="Suelo_181" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 4.060833, 0.14, -35.35)
+
+[node name="Suelo_182" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 5.934722, 0.14, -35.35)
+
+[node name="Suelo_183" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 7.808611, 0.14, -35.35)
+
+[node name="Suelo_184" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 9.6825, 0.14, -35.35)
+
+[node name="Suelo_185" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 11.556389, 0.14, -35.35)
+
+[node name="Suelo_186" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 13.430278, 0.14, -35.35)
+
+[node name="Suelo_187" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 15.304167, 0.14, -35.35)
+
+[node name="Suelo_188" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 17.178056, 0.14, -35.35)
+
+[node name="Suelo_189" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 19.051944, 0.14, -35.35)
+
+[node name="Suelo_190" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 20.925833, 0.14, -35.35)
+
+[node name="Suelo_191" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 22.799722, 0.14, -35.35)
+
+[node name="Suelo_192" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 24.673611, 0.14, -35.35)
+
+[node name="Suelo_193" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 26.5475, 0.14, -35.35)
+
+[node name="Suelo_194" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 28.421389, 0.14, -35.35)
+
+[node name="Suelo_195" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 30.295278, 0.14, -35.35)
+
+[node name="Suelo_196" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 32.169167, 0.14, -35.35)
+
+[node name="Suelo_197" parent="Suelo_H" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 34.043056, 0.14, -35.35)
+
+[node name="EntradaSuelo_198" parent="Suelo_H" instance=ExtResource("4")]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, 1, 0.953277, 0.053141, -35.35)
+
+[node name="Suelo_H_Retorno" type="Node3D" parent="."]
+
+[node name="Suelo_199" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 2.186944, 0.14, -35.7)
+
+[node name="Suelo_200" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 4.060833, 0.14, -35.7)
+
+[node name="Suelo_201" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 5.934722, 0.14, -35.7)
+
+[node name="Suelo_202" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 7.808611, 0.14, -35.7)
+
+[node name="Suelo_203" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 9.6825, 0.14, -35.7)
+
+[node name="Suelo_204" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 11.556389, 0.14, -35.7)
+
+[node name="Suelo_205" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 13.430278, 0.14, -35.7)
+
+[node name="Suelo_206" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 15.304167, 0.14, -35.7)
+
+[node name="Suelo_207" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 17.178056, 0.14, -35.7)
+
+[node name="Suelo_208" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 19.051944, 0.14, -35.7)
+
+[node name="Suelo_209" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 20.925833, 0.14, -35.7)
+
+[node name="Suelo_210" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 22.799722, 0.14, -35.7)
+
+[node name="Suelo_211" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 24.673611, 0.14, -35.7)
+
+[node name="Suelo_212" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 26.5475, 0.14, -35.7)
+
+[node name="Suelo_213" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 28.421389, 0.14, -35.7)
+
+[node name="Suelo_214" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 30.295278, 0.14, -35.7)
+
+[node name="Suelo_215" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 32.169167, 0.14, -35.7)
+
+[node name="Suelo_216" parent="Suelo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.958688, 0, -1, 0, 0, 0, 0, 1, 34.043056, 0.14, -35.7)
+
+[node name="EntradaSuelo_217" parent="Suelo_H_Retorno" instance=ExtResource("4")]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, 1, 0.953277, 0.053141, -35.7)
+
+[node name="Techo_T1_Ida" type="Node3D" parent="."]
+
+[node name="Techo_218" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 5.984375, 2.86, -8.1)
+
+[node name="Techo_219" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 7.853125, 2.86, -8.1)
+
+[node name="Techo_220" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 9.721875, 2.86, -8.1)
+
+[node name="Techo_221" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 11.590625, 2.86, -8.1)
+
+[node name="Techo_222" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 13.459375, 2.86, -8.1)
+
+[node name="Techo_223" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 15.328125, 2.86, -8.1)
+
+[node name="Techo_224" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 17.196875, 2.86, -8.1)
+
+[node name="Techo_225" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 19.065625, 2.86, -8.1)
+
+[node name="Techo_226" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 20.934375, 2.86, -8.1)
+
+[node name="Techo_227" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 22.803125, 2.86, -8.1)
+
+[node name="Techo_228" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 24.671875, 2.86, -8.1)
+
+[node name="Techo_229" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 26.540625, 2.86, -8.1)
+
+[node name="Techo_230" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 28.409375, 2.86, -8.1)
+
+[node name="Techo_231" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 30.278125, 2.86, -8.1)
+
+[node name="Techo_232" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 32.146875, 2.86, -8.1)
+
+[node name="Techo_233" parent="Techo_T1_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 34.015625, 2.86, -8.1)
+
+[node name="Techo_T1_Retorno" type="Node3D" parent="."]
+
+[node name="Techo_234" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 5.984375, 2.86, -8.48)
+
+[node name="Techo_235" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 7.853125, 2.86, -8.48)
+
+[node name="Techo_236" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 9.721875, 2.86, -8.48)
+
+[node name="Techo_237" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 11.590625, 2.86, -8.48)
+
+[node name="Techo_238" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 13.459375, 2.86, -8.48)
+
+[node name="Techo_239" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 15.328125, 2.86, -8.48)
+
+[node name="Techo_240" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 17.196875, 2.86, -8.48)
+
+[node name="Techo_241" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 19.065625, 2.86, -8.48)
+
+[node name="Techo_242" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 20.934375, 2.86, -8.48)
+
+[node name="Techo_243" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 22.803125, 2.86, -8.48)
+
+[node name="Techo_244" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 24.671875, 2.86, -8.48)
+
+[node name="Techo_245" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 26.540625, 2.86, -8.48)
+
+[node name="Techo_246" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 28.409375, 2.86, -8.48)
+
+[node name="Techo_247" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 30.278125, 2.86, -8.48)
+
+[node name="Techo_248" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 32.146875, 2.86, -8.48)
+
+[node name="Techo_249" parent="Techo_T1_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.956059, 0, -1, 0, 0, 0, 0, 1, 34.015625, 2.86, -8.48)
+
+[node name="Techo_H_Ida" type="Node3D" parent="."]
+
+[node name="Techo_250" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, -4, 2.86, -39)
+
+[node name="Techo_251" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, -2.1, 2.86, -39)
+
+[node name="Techo_252" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, -0.2, 2.86, -39)
+
+[node name="Techo_253" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 1.7, 2.86, -39)
+
+[node name="Techo_254" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 3.6, 2.86, -39)
+
+[node name="Techo_255" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 5.5, 2.86, -39)
+
+[node name="Techo_256" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 7.4, 2.86, -39)
+
+[node name="Techo_257" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 9.3, 2.86, -39)
+
+[node name="Techo_258" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 11.2, 2.86, -39)
+
+[node name="Techo_259" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 13.1, 2.86, -39)
+
+[node name="Techo_260" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 15, 2.86, -39)
+
+[node name="Techo_261" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 16.9, 2.86, -39)
+
+[node name="Techo_262" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 18.8, 2.86, -39)
+
+[node name="Techo_263" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 20.7, 2.86, -39)
+
+[node name="Techo_264" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 22.6, 2.86, -39)
+
+[node name="Techo_265" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 24.5, 2.86, -39)
+
+[node name="Techo_266" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 26.4, 2.86, -39)
+
+[node name="Techo_267" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 28.3, 2.86, -39)
+
+[node name="Techo_268" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 30.2, 2.86, -39)
+
+[node name="Techo_269" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 32.1, 2.86, -39)
+
+[node name="Techo_270" parent="Techo_H_Ida" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 34, 2.86, -39)
+
+[node name="Techo_H_Retorno" type="Node3D" parent="."]
+
+[node name="Techo_271" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, -4, 2.86, -39.38)
+
+[node name="Techo_272" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, -2.1, 2.86, -39.38)
+
+[node name="Techo_273" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, -0.2, 2.86, -39.38)
+
+[node name="Techo_274" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 1.7, 2.86, -39.38)
+
+[node name="Techo_275" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 3.6, 2.86, -39.38)
+
+[node name="Techo_276" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 5.5, 2.86, -39.38)
+
+[node name="Techo_277" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 7.4, 2.86, -39.38)
+
+[node name="Techo_278" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 9.3, 2.86, -39.38)
+
+[node name="Techo_279" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 11.2, 2.86, -39.38)
+
+[node name="Techo_280" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 13.1, 2.86, -39.38)
+
+[node name="Techo_281" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 15, 2.86, -39.38)
+
+[node name="Techo_282" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 16.9, 2.86, -39.38)
+
+[node name="Techo_283" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 18.8, 2.86, -39.38)
+
+[node name="Techo_284" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 20.7, 2.86, -39.38)
+
+[node name="Techo_285" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 22.6, 2.86, -39.38)
+
+[node name="Techo_286" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 24.5, 2.86, -39.38)
+
+[node name="Techo_287" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 26.4, 2.86, -39.38)
+
+[node name="Techo_288" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 28.3, 2.86, -39.38)
+
+[node name="Techo_289" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 30.2, 2.86, -39.38)
+
+[node name="Techo_290" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 32.1, 2.86, -39.38)
+
+[node name="Techo_291" parent="Techo_H_Retorno" instance=ExtResource("2")]
+transform = Transform3D(0, 0.972046, 0, -1, 0, 0, 0, 0, 1, 34, 2.86, -39.38)

@@ -4,3 +4,6 @@
 
 [node name="Slot" type="PanelContainer" unique_id=325292575]
 script = ExtResource("1_l342d")
+
+[node name="Icono" type="TextureRect" parent="." unique_id=1330662609]
+layout_mode = 2
