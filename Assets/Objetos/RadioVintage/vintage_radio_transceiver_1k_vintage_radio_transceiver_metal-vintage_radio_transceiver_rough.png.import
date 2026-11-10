@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d0ie5gdokiqms"
+path.s3tc="res://.godot/imported/vintage_radio_transceiver_1k_vintage_radio_transceiver_metal-vintage_radio_transceiver_rough.png-f98e73261b3855d433b1d8125762cdcb.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "c32d368ffa02799ace19e3f865c814bb"
+}
+
+[deps]
+
+source_file="res://Assets/Objetos/RadioVintage/vintage_radio_transceiver_1k_vintage_radio_transceiver_metal-vintage_radio_transceiver_rough.png"
+dest_files=["res://.godot/imported/vintage_radio_transceiver_1k_vintage_radio_transceiver_metal-vintage_radio_transceiver_rough.png-f98e73261b3855d433b1d8125762cdcb.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

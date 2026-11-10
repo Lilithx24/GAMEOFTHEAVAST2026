@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://d3fan0hkufb5p"]
 
 [ext_resource type="Script" uid="uid://cop44fg7jxmnu" path="res://escenas/Exploración/exploracion.gd" id="1_n8xts"]
-[ext_resource type="Material" uid="uid://5x1j6uvlq0v2" path="res://Assets/MaterialesGodot/Material_PlacasMetal.tres" id="2_0qls2"]
+[ext_resource type="Material" uid="uid://5x1j6uvlq0v2" path="res://Assets/Materiales/SueloMetal/SueloMetal.tres" id="2_0qls2"]
 [ext_resource type="Script" uid="uid://8hfli6jcoj8o" path="res://escenas/Exploración/jugador.gd" id="2_ck84f"]
 [ext_resource type="PackedScene" uid="uid://bar8x7nt80g2v" path="res://escenas/Exploración/Encuentros/EnemigoExploracion.tscn" id="3_4iyo1"]
-[ext_resource type="Material" uid="uid://dp1rxhnnoihwd" path="res://Assets/MaterialesGodot/Material_Desconchao.tres" id="3_xj3ho"]
-[ext_resource type="PackedScene" uid="uid://cu68c78vyt7vi" path="res://escenas/Exploración/Piezas/Lampara.tscn" id="4_upggl"]
-[ext_resource type="PackedScene" path="res://escenas/HUD/menu_shift.tscn" id="4_xj3ho"]
-[ext_resource type="PackedScene" uid="uid://baxfuj075e4gq" path="res://escenas/Exploración/Piezas/ParedConPuerta.tscn" id="6_4iyo1"]
+[ext_resource type="Material" uid="uid://dp1rxhnnoihwd" path="res://Assets/Materiales/Desconchao/Desconchao.tres" id="3_xj3ho"]
+[ext_resource type="PackedScene" uid="uid://cu68c78vyt7vi" path="res://Assets/Objetos/Lampara/Lampara.tscn" id="4_upggl"]
+[ext_resource type="PackedScene" uid="uid://c7trry61vrlrr" path="res://escenas/HUD/menu_shift.tscn" id="4_xj3ho"]
+[ext_resource type="PackedScene" uid="uid://c68vnnn1jtwdp" path="res://Assets/Objetos/BarrilMetalOxidado/barrel_stove_1k.glb" id="5_kunlf"]
+[ext_resource type="PackedScene" uid="uid://baxfuj075e4gq" path="res://Assets/Objetos/ParedConPuerta/ParedConPuerta.tscn" id="6_4iyo1"]
+[ext_resource type="PackedScene" uid="uid://btq4w1tvq5gct" path="res://Assets/Objetos/CajaCarton/cardboard_box_01_1k.glb" id="6_wkc2h"]
+[ext_resource type="PackedScene" uid="uid://bfbwtl1mvagta" path="res://Assets/Objetos/CuadernoNotas/binder_notebook_1k.glb" id="7_bjxiw"]
+[ext_resource type="PackedScene" uid="uid://bk67qwugntsj0" path="res://Assets/Objetos/Enciclopedia/book_encyclopedia_set_01_1k.glb" id="8_3egn7"]
+[ext_resource type="PackedScene" uid="uid://b04s4cubafhvn" path="res://Assets/Objetos/JuegoDeQuimica/beaker_large.glb" id="9_1eswl"]
 [ext_resource type="Shader" uid="uid://cn032ucbpdssk" path="res://shader/retro_effect.gdshader" id="9_c3obi"]
+[ext_resource type="PackedScene" uid="uid://bws7ru30ulr2t" path="res://Assets/Objetos/LamparaTecho/caged_hanging_light_1k.glb" id="10_8042i"]
+[ext_resource type="PackedScene" uid="uid://brx6c2eqp3pvf" path="res://Assets/Objetos/LataOxidada/can_rusted_1k.glb" id="11_sjsfi"]
+[ext_resource type="PackedScene" uid="uid://c2plf8vsqn38n" path="res://Assets/Objetos/LlaveInglesa/adjustable_wrench_1k.glb" id="12_053l6"]
+[ext_resource type="PackedScene" uid="uid://b1qrft42m8772" path="res://Assets/Objetos/BarrilPlastico/Barrel_02_1k.glb" id="18_f6075"]
 
 [sub_resource type="Environment" id="Environment_Oscuridad"]
 background_mode = 1
@@ -571,6 +580,35 @@ mesh = SubResource("BoxMesh_b7nuq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -30)
 material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_c3obi")
+
+[node name="Objetos Pruebas" type="Node3D" parent="PisoCero/Suelos" unique_id=1501510098]
+
+[node name="Barrel_02_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1238556474 instance=ExtResource("18_f6075")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5262537, 0, -4.3102727)
+
+[node name="barrel_stove_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=2114041294 instance=ExtResource("5_kunlf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2273736, 0, -4.1131086)
+
+[node name="cardboard_box_01_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1687588285 instance=ExtResource("6_wkc2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3676972, 0, -2.8354309)
+
+[node name="binder_notebook_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1393365974 instance=ExtResource("7_bjxiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2217124, 0, -3.3558643)
+
+[node name="book_encyclopedia_set_01_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=611344169 instance=ExtResource("8_3egn7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1132076, 0, -2.3303037)
+
+[node name="beaker_large" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1118769850 instance=ExtResource("9_1eswl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74987316, 0, -3.2083797)
+
+[node name="caged_hanging_light_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=638466921 instance=ExtResource("10_8042i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9672832, 1.1758349, -1.9145452)
+
+[node name="can_rusted_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=1557421092 instance=ExtResource("11_sjsfi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1323822, 0, -3.7811341)
+
+[node name="adjustable_wrench_1k" parent="PisoCero/Suelos/Objetos Pruebas" unique_id=407794810 instance=ExtResource("12_053l6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2194381, 0, -2.8358862)
 
 [node name="Techos" type="Node3D" parent="PisoCero" unique_id=2146880121]
 

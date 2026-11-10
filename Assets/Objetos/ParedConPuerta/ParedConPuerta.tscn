@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://baxfuj075e4gq"]
+
+[ext_resource type="Script" uid="uid://s2nqyochmjw" path="res://escenas/Exploración/Piezas/puerta.gd" id="1_17asb"]
+[ext_resource type="Material" uid="uid://dp1rxhnnoihwd" path="res://Assets/Materiales/Desconchao/Desconchao.tres" id="2_dt8lt"]
+[ext_resource type="Material" uid="uid://c73345h72ysx6" path="res://Assets/Objetos/ParedConPuerta/Materiales/Acero.tres" id="2_q03ug"]
+[ext_resource type="Texture2D" uid="uid://jjodxj3xrcig" path="res://Assets/Materiales/Desconchao/Texturas/white_rough_plaster_diff_2k.jpg" id="3_o2xd8"]
+[ext_resource type="Texture2D" uid="uid://ggt8u5ebp4ll" path="res://Assets/Materiales/Desconchao/Texturas/white_rough_plaster_ao_2k.jpg" id="4_6x0n4"]
+[ext_resource type="Texture2D" uid="uid://dyn3c82b2hssa" path="res://Assets/Materiales/Desconchao/Texturas/white_rough_plaster_nor_gl_2k.png" id="5_cjohh"]
+[ext_resource type="Texture2D" uid="uid://cvdajx41do0bg" path="res://Assets/Materiales/Desconchao/Texturas/white_rough_plaster_rough_2k.jpg" id="6_uhcpm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4iyo1"]
+albedo_color = Color(0.50519365, 1, 0.72613436, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b1341"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 3, 0.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_17asb"]
+size = Vector3(0.2, 3, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkc1r"]
+albedo_texture = ExtResource("3_o2xd8")
+roughness_texture = ExtResource("6_uhcpm")
+normal_enabled = true
+normal_texture = ExtResource("5_cjohh")
+ao_enabled = true
+ao_texture = ExtResource("4_6x0n4")
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_offset = Vector3(0, -1.905, 0)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_q03ug"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(0.2, 0.8, 1.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3xn78"]
+size = Vector3(0.2, 0.8, 1.6)
+
+[sub_resource type="BoxMesh" id="Mesh_Puerta"]
+material = SubResource("StandardMaterial3D_4iyo1")
+size = Vector3(1.6, 2.2, 0.1)
+
+[sub_resource type="BoxShape3D" id="Shape_Puerta"]
+size = Vector3(1.6, 2.2, 0.1)
+
+[node name="ParedConPuerta" type="Node3D" unique_id=944486220]
+script = ExtResource("1_17asb")
+
+[node name="PuertaL" type="MeshInstance3D" parent="." unique_id=768338226]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.15, 1.5, 0)
+material_override = ExtResource("2_dt8lt")
+mesh = SubResource("BoxMesh_b1341")
+
+[node name="Cuerpo" type="StaticBody3D" parent="PuertaL" unique_id=906957385]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="PuertaL/Cuerpo" unique_id=783693822]
+shape = SubResource("BoxShape3D_17asb")
+
+[node name="PuertaR" type="MeshInstance3D" parent="." unique_id=1960281035]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 1.15, 1.5, 0)
+material_override = ExtResource("2_dt8lt")
+mesh = SubResource("BoxMesh_b1341")
+
+[node name="Cuerpo" type="StaticBody3D" parent="PuertaR" unique_id=63724421]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="PuertaR/Cuerpo" unique_id=1869444903]
+shape = SubResource("BoxShape3D_17asb")
+
+[node name="PuertaDintel" type="MeshInstance3D" parent="." unique_id=185573773]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 2.6, 0)
+material_override = SubResource("StandardMaterial3D_lkc1r")
+mesh = SubResource("BoxMesh_q03ug")
+
+[node name="Cuerpo" type="StaticBody3D" parent="PuertaDintel" unique_id=342921992]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="PuertaDintel/Cuerpo" unique_id=299932120]
+shape = SubResource("BoxShape3D_3xn78")
+
+[node name="Bisagra" type="Node3D" parent="." unique_id=1844001396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0)
+
+[node name="Puerta" type="MeshInstance3D" parent="Bisagra" unique_id=1421801971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1.1, 0)
+material_override = ExtResource("2_q03ug")
+mesh = SubResource("Mesh_Puerta")
+
+[node name="Cuerpo" type="StaticBody3D" parent="Bisagra/Puerta" unique_id=2026583946]
+collision_mask = 0
+
+[node name="Colision" type="CollisionShape3D" parent="Bisagra/Puerta/Cuerpo" unique_id=692668864]
+shape = SubResource("Shape_Puerta")

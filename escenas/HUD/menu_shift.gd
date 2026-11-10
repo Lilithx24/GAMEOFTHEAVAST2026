@@ -13,7 +13,6 @@ var pausa_anterior: bool = false
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS   # necesario: el juego está en pausa con el menú abierto
 	hide()                                    # el menú empieza cerrado
-
 	inventario.columns = 4
 	destino.columns = 4
 
