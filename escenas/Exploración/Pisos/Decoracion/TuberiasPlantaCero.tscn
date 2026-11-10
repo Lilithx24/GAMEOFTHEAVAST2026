@@ -44,7 +44,7 @@ transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, -14.65, 0.53563, -3.
 [node name="Pasillo1_Suministro" type="Node3D" parent="."]
 
 [node name="Tramo_010" parent="Pasillo1_Suministro" instance=ExtResource("2")]
-transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, -1.15, 2.82, -5.75)
+transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.475791, 0, -1.15, 2.82, -6.135)
 
 [node name="Tramo_011" parent="Pasillo1_Suministro" instance=ExtResource("2")]
 transform = Transform3D(0, 0, 1, -1, 0, 0, 0, -0.869726, 0, -1.15, 2.82, -7.45)
@@ -69,6 +69,18 @@ transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.15, 1.3, -13.720593)
 
 [node name="BajanteSuelo_018" parent="Pasillo1_Suministro" instance=ExtResource("2")]
 transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, -1.15, 0.53563, -13.720593)
+
+[node name="CodoEntrada" parent="Pasillo1_Suministro" instance=ExtResource("4")]
+transform = Transform3D(0, 0, 1, 0, -1, 0, 1, 0, 0, -1.15, 2.733141, -5.373277)
+
+[node name="BajanteEntradaAlta" parent="Pasillo1_Suministro" instance=ExtResource("1")]
+transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, -1.15, 1.984511, -5.349407)
+
+[node name="ValvulaEntrada" parent="Pasillo1_Suministro" instance=ExtResource("8")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.15, 1.3, -5.349407)
+
+[node name="BajanteEntradaBaja" parent="Pasillo1_Suministro" instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, -1.15, 0.53563, -5.349407)
 
 [node name="T1_Colector" type="Node3D" parent="."]
 

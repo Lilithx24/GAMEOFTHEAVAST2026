@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://baxfuj075e4gq" path="res://Assets/Objetos/ParedConPuerta/ParedConPuerta.tscn" id="6_4iyo1"]
 [ext_resource type="Shader" uid="uid://cn032ucbpdssk" path="res://shader/retro_effect.gdshader" id="9_c3obi"]
 [ext_resource type="PackedScene" uid="uid://sxr71xbu6deb" path="res://escenas/Exploración/Pisos/Decoracion/TuberiasPlantaCero.tscn" id="10_tuberias"]
+[ext_resource type="PackedScene" path="res://escenas/Exploración/Pisos/Decoracion/CableadoPlantaCero.tscn" id="11_cableado"]
+[ext_resource type="PackedScene" path="res://escenas/Exploración/Pisos/Decoracion/VentilacionPlantaCero.tscn" id="12_ventilacion"]
+[ext_resource type="PackedScene" path="res://escenas/Exploración/Pisos/Decoracion/MobiliarioMayorPlantaCero.tscn" id="13_mobiliario"]
 
 [sub_resource type="Environment" id="Environment_Oscuridad"]
 background_mode = 1
@@ -576,6 +579,7 @@ material_override = ExtResource("2_0qls2")
 mesh = SubResource("BoxMesh_c3obi")
 
 [node name="Techos" type="Node3D" parent="PisoCero" unique_id=2146880121]
+visible = false
 
 [node name="TechoSalaInicio" type="MeshInstance3D" parent="PisoCero/Techos" unique_id=973707007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.25, 0)
@@ -1382,32 +1386,309 @@ tension_minima = 0.12
 
 [node name="Tuberias" parent="PisoCero" unique_id=1344939659 instance=ExtResource("10_tuberias")]
 
-[node name="Tramo_001" parent="PisoCero/Tuberias/Inicio_Lateral" index="0"]
-transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, 4.8768477)
+[node name="Cableado" parent="PisoCero" unique_id=2130745178 instance=ExtResource("11_cableado")]
 
-[node name="Tramo_002" parent="PisoCero/Tuberias/Inicio_Lateral" index="1"]
-transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, 2.8082654)
+[node name="Ventilacion" parent="PisoCero" unique_id=895679953 instance=ExtResource("12_ventilacion")]
 
-[node name="Tramo_003" parent="PisoCero/Tuberias/Inicio_Lateral" index="2"]
-transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, 0.8124574)
+[node name="MobiliarioMayor" parent="PisoCero" unique_id=2231271 instance=ExtResource("13_mobiliario")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014550686, 0.012221336, 0.0067255497)
 
-[node name="Tramo_004" parent="PisoCero/Tuberias/Inicio_Lateral" index="3"]
-transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, -1.1728517)
+[node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/BancoPreparacion_001" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.86692524)
 
-[node name="Tramo_005" parent="PisoCero/Tuberias/Inicio_Lateral" index="4"]
-transform = Transform3D(-1, 8.742278e-08, 3.7927453e-08, -4.371139e-08, 1.9106855e-15, -0.867679, -8.742278e-08, -1, 1.6578617e-15, -14.42, 2.82, -3.138205)
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/BancoPreparacion_001/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
 
-[node name="CodoBajante_006" parent="PisoCero/Tuberias/Inicio_Lateral" index="5"]
-transform = Transform3D(0, 0, -1, 0, -1, 0, -1, 0, 0, -14.42, 2.733141, -4.4403563)
+[node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/BancoPreparacion_002" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23477459, 0, -0.891922)
 
-[node name="BajanteSuperior_007" parent="PisoCero/Tuberias/Inicio_Lateral" index="6"]
-transform = Transform3D(-1, 0, 0, 0, -1.151115, 0, 0, 0, 1, -14.42, 1.984511, -4.464479)
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/BancoPreparacion_002/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
 
-[node name="Valvula_008" parent="PisoCero/Tuberias/Inicio_Lateral" index="7"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.42, 1.3, -4.4609337)
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/IslaTrabajo_003/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
 
-[node name="BajanteSuelo_009" parent="PisoCero/Tuberias/Inicio_Lateral" index="8"]
-transform = Transform3D(-1, 0, 0, 0, -0.588988, 0, 0, 0, 1, -14.42, 0.53563, -4.4667435)
+[node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/IslaTrabajo_004" index="0"]
+transform = Transform3D(0.009359297, 0, 0.9999561, 0, 1, 0, -0.9999561, 0, 0.009359297, -9.263388, 0, 0.5338409)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/IslaTrabajo_004/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
+
+[node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/MesitaIndustrial_005" index="0"]
+transform = Transform3D(0.30354053, 0, -0.9528185, 0, 1, 0, 0.9528185, 0, 0.30354053, 1.3974819, 0, -0.24641323)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/MesitaIndustrial_005/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.6910127, 1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/EstanteríaBaldas_006/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/EstanteríaBaldas_007/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Mueble_008" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion" index="7"]
+transform = Transform3D(-0.008793756, 0, -1.049963, 0, 1.0499998, 0, 1.049963, 0, -0.008793756, 4.3362026, 0.0053894, 3.8272216)
+
+[node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Mueble_008" index="0"]
+transform = Transform3D(0.9961628, 0, -0.08752222, 0, 1, 0, 0.08752222, 0, 0.9961628, -0.05341983, 0, 0.10355759)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Mueble_008/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026324, 0.590564, 0.0259254)
+
+[node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_009" index="0"]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.22832012, 0, -1.0741639)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_009/Cuerpo" index="0"]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -0.13478756, 0.441406, 0.6340735)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_010/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.441406, -4.93e-05)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/A_Metrologia/MuebleCajonera_011/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/A_Metrologia/MuebleCajonera_012/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/A_Metrologia/MesitaIndustrial_013/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.6910127, 1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/A_Metrologia/Mueble_014/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026324, 0.590564, 0.0259254)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/A_Metrologia/EstanteríaBaldas_015/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/A_Metrologia/Taburete_016/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.441406, -4.93e-05)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/A_Metrologia/CuadroInstrumentacion_017/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.5601667, 0.006)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T2_ControlRegistro/MuebleCajonera_018/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T2_ControlRegistro/MuebleCajonera_019/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T2_ControlRegistro/Mueble_020/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026324, 0.590564, 0.0259254)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T2_ControlRegistro/Taburete_021/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.441406, -4.93e-05)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T2_ControlRegistro/CuadroControl_022/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.5601667, 0.006)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/B_DescansoGuardia/MesitaCafe_023/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3132561, 0.8631441, -0.0208584)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/B_DescansoGuardia/MesitaMadera_024/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2438928, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/B_DescansoGuardia/Taburete_025/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.441406, -4.93e-05)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/B_DescansoGuardia/Taburete_026/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.441406, -4.93e-05)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/B_DescansoGuardia/Mueble_027/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026324, 0.590564, 0.0259254)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/B_DescansoGuardia/EstufaDescanso_028/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0033768, 0.427802, 0.0027713)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/BancoMecanico_029/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/BancoMecanico_030/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/CarroHerramientas_031/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0208921, 0.4787624, -0.0081273)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/EstanteríaBaldas_032/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/Escaleras_033/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0423348, 0.8594743, -0.0030416)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/CarritoBombonas_034/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7815851, 0.130447)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/CompresorDeAire_035/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38e-05, 0.587917, -0.218817)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/MesitaIndustrial_036/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.6910127, 1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/CarroHerramientas_037/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0208921, 0.4787624, -0.0081273)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/SillaDeRuedas_038/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016459, 0.5575294, 0.0597637)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/Mueble_039/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026324, 0.590564, 0.0259254)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/MesitaNoche_040/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011297, 0.3077605, 0.0051107)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/Mueble_041/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026324, 0.590564, 0.0259254)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/MesitaIndustrial_042/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.6910127, 1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/EstanteríaBaldas_043/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/EstanteríaBaldas_044/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/EstanteríaBaldas_045/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/EstanteríaBaldas_046/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/EstanteríaBaldas_047/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/EstanteríaBaldas_048/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/Mueble_049/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026324, 0.590564, 0.0259254)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/MesaCatalogacion_050/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0046816, 0.4150408, -2e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/E_AlmacenQuimico/BarrilPlastico_051/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4446374, -1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/E_AlmacenQuimico/BarrilPlastico_052/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4446374, -1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/E_AlmacenQuimico/BarrilPlastico_053/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4446374, -1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/E_AlmacenQuimico/BarrilPlastico_054/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4446374, -1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/E_AlmacenQuimico/BarrilPlastico_055/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4446374, -1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/E_AlmacenQuimico/EstanteríaBaldas_056/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/E_AlmacenQuimico/EstanteríaBaldas_057/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/E_AlmacenQuimico/MesitaIndustrial_058/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.6910127, 1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/F_EnsayoEnergia/Generador_059/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053471, 0.2885197, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/F_EnsayoEnergia/Generador_060/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0053471, 0.2885197, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/F_EnsayoEnergia/CompresorDeAire_061/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38e-05, 0.587917, -0.218817)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/F_EnsayoEnergia/CarritoBombonas_062/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7815851, 0.130447)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/F_EnsayoEnergia/MesitaIndustrial_063/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.6910127, 1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/F_EnsayoEnergia/EstanteríaBaldas_064/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/F_EnsayoEnergia/CuadroEnsayos_065/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.5601667, 0.006)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/EstanteríaBaldas_066/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/EstanteríaBaldas_067/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/CarroHerramientas_068/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0208921, 0.4787624, -0.0081273)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/Escaleras_069/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0423348, 0.8594743, -0.0030416)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/MesitaIndustrial_070/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.6910127, 1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/Mueble_071/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026324, 0.590564, 0.0259254)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_072/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_073/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_074/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_075/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_076/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_077/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_078/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_079/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_080/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_081/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_082/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/EstanteríaBaldas_083/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022917, 0.95, 0)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/Escaleras_084/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0423348, 0.8594743, -0.0030416)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/MesitaIndustrial_085/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1e-07, 0.6910127, 1e-07)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/CarroHerramientas_086/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0208921, 0.4787624, -0.0081273)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/CajaTransporteInferior_087/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1668758, 0.0083372)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/CajaTransporteSuperior_088/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1668758, 0.0083372)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/CajaTransporteInferior_089/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1668758, 0.0083372)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/CajaTransporteSuperior_090/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1668758, 0.0083372)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/CajaTransporteInferior_091/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1668758, 0.0083372)
+
+[node name="Colision" parent="PisoCero/MobiliarioMayor/H_Logistica/CajaTransporteSuperior_092/Cuerpo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1668758, 0.0083372)
 
 [node name="PuntosExploracion" type="Node3D" parent="PisoCero" unique_id=492228236]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
@@ -1524,3 +1805,4 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [editable path="PisoCero/Tuberias"]
+[editable path="PisoCero/MobiliarioMayor"]
