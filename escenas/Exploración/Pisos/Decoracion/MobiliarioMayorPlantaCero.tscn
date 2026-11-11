@@ -36,59 +36,59 @@
 
 [ext_resource type="PackedScene" path="res://Assets/Objetos/CajaDeMadera/wooden_crate_01_1k.glb" id="18"]
 
-[sub_resource type="BoxShape3D" id="Colision_1"]
-size = Vector3(1.3268529, 0.8300816, 0.5617093)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/EstanteríaBaldas/worn_metal_rack_1k.glb" id="cuadro_EstanteríaBaldas"]
 
-[sub_resource type="BoxShape3D" id="Colision_2"]
-size = Vector3(1.6033487, 1.3773844, 1.1027455)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CajaPlastico/plastic_container_1k.glb" id="cuadro_CajaPlastico"]
 
-[sub_resource type="BoxShape3D" id="Colision_3"]
-size = Vector3(0.9154167, 1.9, 0.6)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/MuebleCajonera/WoodenTable_03_1k.glb" id="cuadro_MuebleCajonera"]
 
-[sub_resource type="BoxShape3D" id="Colision_4"]
-size = Vector3(1.1946745, 1.1818698, 0.6166356)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Electroscopio/vintage_spacecraft_instrument_1k.glb" id="cuadro_Electroscopio"]
 
-[sub_resource type="BoxShape3D" id="Colision_5"]
-size = Vector3(0.3519909, 0.8827743, 0.3545702)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Multimetro/retro_multimeter_1k.glb" id="cuadro_Multimetro"]
 
-[sub_resource type="BoxShape3D" id="Colision_6"]
-size = Vector3(0.9200002, 1.1203334, 0.432)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Mueble/painted_wooden_cabinet_1k.glb" id="cuadro_Mueble"]
 
-[sub_resource type="BoxShape3D" id="Colision_7"]
-size = Vector3(2.1676369, 1.7176724, 1.0732901)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Taburete/metal_stool_01_1k.glb" id="cuadro_Taburete"]
 
-[sub_resource type="BoxShape3D" id="Colision_8"]
-size = Vector3(0.8300825, 0.4877857, 0.5182917)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CajaCarton/cardboard_box_01_1k.glb" id="cuadro_CajaCarton"]
 
-[sub_resource type="BoxShape3D" id="Colision_9"]
-size = Vector3(0.5993211, 0.8556039, 0.5981101)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Cajas/CajaMilitar_a.glb" id="cuadro_Cajas"]
 
-[sub_resource type="BoxShape3D" id="Colision_10"]
-size = Vector3(1.2734253, 0.9646447, 0.7536306)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/MesitaIndustrial/industrial_storage_cart_1k.glb" id="cuadro_MesitaIndustrial"]
 
-[sub_resource type="BoxShape3D" id="Colision_11"]
-size = Vector3(0.9895061, 1.7221797, 0.618138)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/RadioVintage/vintage_radio_transceiver_1k.glb" id="cuadro_RadioVintage"]
 
-[sub_resource type="BoxShape3D" id="Colision_12"]
-size = Vector3(0.8382882, 1.5631702, 0.6549039)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Enciclopedia/book_encyclopedia_set_01_1k.glb" id="cuadro_Enciclopedia"]
 
-[sub_resource type="BoxShape3D" id="Colision_13"]
-size = Vector3(0.5982826, 1.1790864, 1.6755443)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/PortatilRuso/classic_laptop_1k.glb" id="cuadro_PortatilRuso"]
 
-[sub_resource type="BoxShape3D" id="Colision_14"]
-size = Vector3(0.824091, 1.1035016, 1.090867)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CajaControl/utility_box_02_1k.glb" id="cuadro_CajaControl"]
 
-[sub_resource type="BoxShape3D" id="Colision_15"]
-size = Vector3(0.5045646, 0.615521, 0.508716)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/MesitaNoche/painted_wooden_nightstand_1k.glb" id="cuadro_MesitaNoche"]
 
-[sub_resource type="BoxShape3D" id="Colision_16"]
-size = Vector3(0.4881756, 0.88, 0.4846165)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CarroHerramientas/tool_cart_1k.glb" id="cuadro_CarroHerramientas"]
 
-[sub_resource type="BoxShape3D" id="Colision_17"]
-size = Vector3(0.8183408, 0.5769232, 0.564)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/MesitaCafe/CoffeeCart_01_1k.glb" id="cuadro_MesitaCafe"]
 
-[sub_resource type="BoxShape3D" id="Colision_18"]
-size = Vector3(0.8252729, 0.3496183, 0.4089537)
+[ext_resource type="PackedScene" path="res://Assets/Objetos/MesitaMadera/gallinera_table_1k.glb" id="cuadro_MesitaMadera"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/BarrilMetalOxidado/barrel_stove_1k.glb" id="cuadro_BarrilMetalOxidado"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CajaDeMadera/wooden_crate_01_1k.glb" id="cuadro_CajaDeMadera"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CajaHerramientasMetal/metal_tool_chest_1k.glb" id="cuadro_CajaHerramientasMetal"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Escaleras/wooden_ladder_02_1k.glb" id="cuadro_Escaleras"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CarritoBombonas/portable_welding_cart_1k.glb" id="cuadro_CarritoBombonas"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CompresorDeAire/old_military_compressor_1k.glb" id="cuadro_CompresorDeAire"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/Generador/portable_generator_1k.glb" id="cuadro_Generador"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/SillaDeRuedas/wheelchair_01_1k.glb" id="cuadro_SillaDeRuedas"]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/BarrilPlastico/Barrel_02_1k.glb" id="cuadro_BarrilPlastico"]
 
 [node name="MobiliarioMayor" type="Node3D"]
 
@@ -99,1121 +99,1342 @@ transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -10.5051498, 0.0050001,
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/BancoPreparacion_001" instance=ExtResource("1")]
 
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/BancoPreparacion_001"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/BancoPreparacion_001/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
-
 [node name="BancoPreparacion_002" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -8.9551498, 0.0050001, -3.3499998)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/BancoPreparacion_002" instance=ExtResource("1")]
-
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/BancoPreparacion_002"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/BancoPreparacion_002/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
 
 [node name="IslaTrabajo_003" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, -7.2948502, 0.0050001, 2.7999998)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/IslaTrabajo_003" instance=ExtResource("1")]
 
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/IslaTrabajo_003"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/IslaTrabajo_003/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
-
 [node name="IslaTrabajo_004" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, -5.7448502, 0.0050001, 2.7999998)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/IslaTrabajo_004" instance=ExtResource("1")]
-
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/IslaTrabajo_004"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/IslaTrabajo_004/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
 
 [node name="MesitaIndustrial_005" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(0.1736482, 0, 0.9848078, 0, 1, 0, -0.9848078, 0, 0.1736482, -12.8000001, 0.0026795, -2.5)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/MesitaIndustrial_005" instance=ExtResource("2")]
 
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/MesitaIndustrial_005"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/MesitaIndustrial_005/Cuerpo"]
-position = Vector3(0.0000001, 0.6910127, 0.0000001)
-shape = SubResource("Colision_2")
-
 [node name="EstanteríaBaldas_006" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, -13.6025209, 0.005, 3.8)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/EstanteríaBaldas_006" instance=ExtResource("3")]
-
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/EstanteríaBaldas_006"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/EstanteríaBaldas_006/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
 
 [node name="EstanteríaBaldas_007" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, -12.3025209, 0.005, 3.8)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/EstanteríaBaldas_007" instance=ExtResource("3")]
 
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/EstanteríaBaldas_007"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/EstanteríaBaldas_007/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
-
 [node name="Mueble_008" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(-1.05, 0, 0, 0, 1.05, 0, -0, 0, -1.05, 2.7027641, 0.0053894, 3.8272217)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/Mueble_008" instance=ExtResource("4")]
-
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/Mueble_008"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/Mueble_008/Cuerpo"]
-position = Vector3(0.0026324, 0.590564, 0.0259254)
-shape = SubResource("Colision_4")
 
 [node name="Taburete_009" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, -9.5999897, 0.0049812, -2.2999518)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/Taburete_009" instance=ExtResource("5")]
 
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/Taburete_009"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/Taburete_009/Cuerpo"]
-position = Vector3(-0, 0.441406, -0.0000493)
-shape = SubResource("Colision_5")
-
 [node name="Taburete_010" type="Node3D" parent="Inicio_LaboratorioPreparacion"]
 transform = Transform3D(0.9702957, 0, -0.2419219, 0, 1, 0, 0.2419219, 0, 0.9702957, -6.4000119, 0.0049812, 1.8000478)
 
 [node name="Modelo" parent="Inicio_LaboratorioPreparacion/Taburete_010" instance=ExtResource("5")]
 
-[node name="Cuerpo" type="StaticBody3D" parent="Inicio_LaboratorioPreparacion/Taburete_010"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="Inicio_LaboratorioPreparacion/Taburete_010/Cuerpo"]
-position = Vector3(-0, 0.441406, -0.0000493)
-shape = SubResource("Colision_5")
-
 [node name="A_Metrologia" type="Node3D" parent="."]
 
-[node name="MuebleCajonera_011" type="Node3D" parent="A_Metrologia"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 7.5051498, 0.0050001, 3.6999998)
+[node name="Sur_Instrumentacion" type="Node3D" parent="A_Metrologia"]
+metadata/motivo = "metrologia"
+metadata/pov = Vector3(10, 1.32, 0)
 
-[node name="Modelo" parent="A_Metrologia/MuebleCajonera_011" instance=ExtResource("1")]
+[node name="EstanteríaBaldas_0001" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 7.45102, -0.0082213, -4.2367255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="A_Metrologia/MuebleCajonera_011"]
-collision_mask = 0
+[node name="CajaPlastico_0002" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 7.418545, 0.4685027, -4.2367256)
 
-[node name="Colision" type="CollisionShape3D" parent="A_Metrologia/MuebleCajonera_011/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
+[node name="CajaPlastico_0003" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 7.488545, 0.9975947, -4.2367256)
 
-[node name="MuebleCajonera_012" type="Node3D" parent="A_Metrologia"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 9.0551498, 0.0050001, 3.6999998)
+[node name="MuebleCajonera_0004" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 9.2433951, -0.0082213, -4.2567254)
 
-[node name="Modelo" parent="A_Metrologia/MuebleCajonera_012" instance=ExtResource("1")]
+[node name="Electroscopio_0005" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_Electroscopio")]
+transform = Transform3D(0.9986295, 0, 0.052336, 0, 1, 0, -0.052336, 0, 0.9986295, 9.2490528, 1.0435103, -4.2734387)
 
-[node name="Cuerpo" type="StaticBody3D" parent="A_Metrologia/MuebleCajonera_012"]
-collision_mask = 0
+[node name="MuebleCajonera_0006" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 10.7933951, -0.0082213, -4.2567254)
 
-[node name="Colision" type="CollisionShape3D" parent="A_Metrologia/MuebleCajonera_012/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
+[node name="Multimetro_0007" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_Multimetro")]
+transform = Transform3D(0.9986295, 0, 0.052336, 0, 1, 0, -0.052336, 0, 0.9986295, 10.82965, 0.9089487, -4.3258531)
 
-[node name="MesitaIndustrial_013" type="Node3D" parent="A_Metrologia"]
-transform = Transform3D(0.9848078, 0, -0.1736482, 0, 1, 0, 0.1736482, 0, 0.9848078, 12.2, 0.0026795, -2.8000001)
+[node name="Mueble_0008" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 12.4957809, -0.0078319, -4.2539472)
 
-[node name="Modelo" parent="A_Metrologia/MesitaIndustrial_013" instance=ExtResource("2")]
+[node name="Taburete_0009" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(0.9848078, 0, -0.1736482, 0, 1, 0, 0.1736482, 0, 0.9848078, 10.6985535, -0.0082402, -3.506677)
 
-[node name="Cuerpo" type="StaticBody3D" parent="A_Metrologia/MesitaIndustrial_013"]
-collision_mask = 0
+[node name="CajaCarton_0010" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.1492995, 0, 0.0401344, 0, 1.15, 0, -0.0401344, 0, 1.1492995, 8.2487071, -0.000452, -3.8145222)
 
-[node name="Colision" type="CollisionShape3D" parent="A_Metrologia/MesitaIndustrial_013/Cuerpo"]
-position = Vector3(0.0000001, 0.6910127, 0.0000001)
-shape = SubResource("Colision_2")
+[node name="Norte_Calibracion" type="Node3D" parent="A_Metrologia"]
+metadata/motivo = "calibracion"
+metadata/pov = Vector3(10, 1.32, 0)
 
-[node name="Mueble_014" type="Node3D" parent="A_Metrologia"]
-transform = Transform3D(0, 0, -1.05, 0, 1.05, 0, 1.05, 0, 0, 13.6772217, 0.0053894, 3.1972359)
+[node name="EstanteríaBaldas_0011" parent="A_Metrologia/Norte_Calibracion" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 12.2960699, -0.0082213, 4.2232745)
 
-[node name="Modelo" parent="A_Metrologia/Mueble_014" instance=ExtResource("4")]
+[node name="Cajas_0012" parent="A_Metrologia/Norte_Calibracion" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 12.3253057, 0.4685144, 4.2560506)
 
-[node name="Cuerpo" type="StaticBody3D" parent="A_Metrologia/Mueble_014"]
-collision_mask = 0
+[node name="Cajas_0013" parent="A_Metrologia/Norte_Calibracion" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 12.2524614, 0.9976064, 4.2556435)
 
-[node name="Colision" type="CollisionShape3D" parent="A_Metrologia/Mueble_014/Cuerpo"]
-position = Vector3(0.0026324, 0.590564, 0.0259254)
-shape = SubResource("Colision_4")
+[node name="MesitaIndustrial_0014" parent="A_Metrologia/Norte_Calibracion" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 9.998545, -0.0105419, 4.0232745)
 
-[node name="EstanteríaBaldas_015" type="Node3D" parent="A_Metrologia"]
-transform = Transform3D(0, 0, 1.05, 0, 1.05, 0, -1.05, 0, 0, 6.1, 0.005, -3.3024063)
+[node name="Mueble_0015" parent="A_Metrologia/Norte_Calibracion" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 7.7511774, -0.0078505, 4.2491999)
 
-[node name="Modelo" parent="A_Metrologia/EstanteríaBaldas_015" instance=ExtResource("3")]
+[node name="RadioVintage_0016" parent="A_Metrologia/Norte_Calibracion" instance=ExtResource("cuadro_RadioVintage")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 7.7004887, 1.1791372, 4.2940029)
 
-[node name="Cuerpo" type="StaticBody3D" parent="A_Metrologia/EstanteríaBaldas_015"]
-collision_mask = 0
+[node name="Taburete_0017" parent="A_Metrologia/Norte_Calibracion" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(-0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.9659258, 11.1985577, -0.0082402, 3.4732268)
 
-[node name="Colision" type="CollisionShape3D" parent="A_Metrologia/EstanteríaBaldas_015/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaCarton_0018" parent="A_Metrologia/Norte_Calibracion" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-0.9993908, 0, -0.0348995, 0, 1, 0, 0.0348995, 0, -0.9993908, 8.748404, -0.0014654, 3.5261411)
 
-[node name="Taburete_016" type="Node3D" parent="A_Metrologia"]
-transform = Transform3D(-0.9848078, 0, 0.1736482, 0, 1, 0, -0.1736482, 0, -0.9848078, 8.2000085, 0.0049812, 2.5999515)
+[node name="Oeste_Medicion" type="Node3D" parent="A_Metrologia"]
+metadata/motivo = "control"
+metadata/pov = Vector3(10, 1.32, 0)
 
-[node name="Modelo" parent="A_Metrologia/Taburete_016" instance=ExtResource("5")]
+[node name="Mueble_0019" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.5226195, -0.0078505, 2.3959069)
 
-[node name="Cuerpo" type="StaticBody3D" parent="A_Metrologia/Taburete_016"]
-collision_mask = 0
+[node name="Enciclopedia_0020" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_Enciclopedia")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.5290836, 1.1776484, 2.6496067)
 
-[node name="Colision" type="CollisionShape3D" parent="A_Metrologia/Taburete_016/Cuerpo"]
-position = Vector3(-0, 0.441406, -0.0000493)
-shape = SubResource("Colision_5")
+[node name="MuebleCajonera_0021" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(0, 0, -1.1, 0, 1.1, 0, 1.1, 0, 0, 5.5485451, -0.0082213, 0.7484243)
 
-[node name="CuadroInstrumentacion_017" type="Node3D" parent="A_Metrologia"]
-transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 14.641, 0.655, 2.6999999)
+[node name="PortatilRuso_0022" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_PortatilRuso")]
+transform = Transform3D(0.052336, 0, -0.9986295, 0, 1, 0, 0.9986295, 0, 0.052336, 5.5474463, 0.9096855, 0.7433593)
 
-[node name="Modelo" parent="A_Metrologia/CuadroInstrumentacion_017" instance=ExtResource("6")]
+[node name="MuebleCajonera_0023" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(0, 0, -1.1, 0, 1.1, 0, 1.1, 0, 0, 5.5485451, -0.0082213, -0.8015757)
 
-[node name="Cuerpo" type="StaticBody3D" parent="A_Metrologia/CuadroInstrumentacion_017"]
-collision_mask = 0
+[node name="RadioVintage_0024" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_RadioVintage")]
+transform = Transform3D(0.052336, 0, -0.9986295, 0, 1, 0, 0.9986295, 0, 0.052336, 5.4804284, 0.9103573, -0.8584176)
 
-[node name="Colision" type="CollisionShape3D" parent="A_Metrologia/CuadroInstrumentacion_017/Cuerpo"]
-position = Vector3(0.0000001, 0.5601667, 0.006)
-shape = SubResource("Colision_6")
+[node name="CajaControl_0025" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_CajaControl")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.2425449, 0.7417787, -2.4067255)
+
+[node name="MesitaNoche_0026" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_MesitaNoche")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.5634343, -0.0082213, -2.4078552)
+
+[node name="Taburete_0027" parent="A_Metrologia/Oeste_Medicion" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(0.1391731, 0, -0.9902681, 0, 1, 0, 0.9902681, 0, 0.1391731, 6.2985937, -0.0082402, 0.5932813)
+
+[node name="Este_Acceso" type="Node3D" parent="A_Metrologia"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(10, 1.32, 0)
+
+[node name="Mueble_0028" parent="A_Metrologia/Este_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 14.3744704, -0.0078505, -2.559358)
+
+[node name="CajaPlastico_0029" parent="A_Metrologia/Este_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, 0.8, 0, 0.8, 0, -0.8, 0, 0, 14.348545, 1.1776484, -2.5567255)
+
+[node name="EstanteríaBaldas_0030" parent="A_Metrologia/Este_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 14.3285449, -0.0082213, 2.5957495)
+
+[node name="Cajas_0031" parent="A_Metrologia/Este_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 14.361321, 0.4685144, 2.5665137)
+
+[node name="Cajas_0032" parent="A_Metrologia/Este_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 14.360914, 0.9976064, 2.639358)
 
 [node name="T2_ControlRegistro" type="Node3D" parent="."]
 
-[node name="MuebleCajonera_018" type="Node3D" parent="T2_ControlRegistro"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 17.4051498, 0.0050001, 3.6999998)
+[node name="Norte_PuestoControl" type="Node3D" parent="T2_ControlRegistro"]
+metadata/motivo = "control"
+metadata/pov = Vector3(20, 1.32, 0)
 
-[node name="Modelo" parent="T2_ControlRegistro/MuebleCajonera_018" instance=ExtResource("1")]
+[node name="Mueble_0033" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 22.4011774, -0.0078505, 4.2691999)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T2_ControlRegistro/MuebleCajonera_018"]
-collision_mask = 0
+[node name="Enciclopedia_0034" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_Enciclopedia")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 22.6548772, 1.1776484, 4.2627357)
 
-[node name="Colision" type="CollisionShape3D" parent="T2_ControlRegistro/MuebleCajonera_018/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
+[node name="MuebleCajonera_0035" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, 0, 0, -1.1, 20.7536947, -0.0082213, 4.2432743)
 
-[node name="MuebleCajonera_019" type="Node3D" parent="T2_ControlRegistro"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 18.9551498, 0.0050001, 3.6999998)
+[node name="PortatilRuso_0036" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_PortatilRuso")]
+transform = Transform3D(-0.9986295, 0, -0.052336, 0, 1, 0, 0.052336, 0, -0.9986295, 20.7486298, 0.9096855, 4.2443731)
 
-[node name="Modelo" parent="T2_ControlRegistro/MuebleCajonera_019" instance=ExtResource("1")]
+[node name="MuebleCajonera_0037" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, 0, 0, -1.1, 19.2036947, -0.0082213, 4.2432743)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T2_ControlRegistro/MuebleCajonera_019"]
-collision_mask = 0
+[node name="RadioVintage_0038" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_RadioVintage")]
+transform = Transform3D(-0.9986295, 0, -0.052336, 0, 1, 0, 0.052336, 0, -0.9986295, 19.1468529, 0.9103573, 4.3113909)
 
-[node name="Colision" type="CollisionShape3D" parent="T2_ControlRegistro/MuebleCajonera_019/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
+[node name="CajaControl_0039" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_CajaControl")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 17.598545, 0.7417787, 4.5492744)
 
-[node name="Mueble_020" type="Node3D" parent="T2_ControlRegistro"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, -0, 0, -1, 22.8026324, 0.0053709, 3.7259254)
+[node name="MesitaNoche_0040" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_MesitaNoche")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 17.5974153, -0.0082213, 4.2283851)
 
-[node name="Modelo" parent="T2_ControlRegistro/Mueble_020" instance=ExtResource("4")]
+[node name="Taburete_0041" parent="T2_ControlRegistro/Norte_PuestoControl" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(-0.9902681, 0, -0.1391731, 0, 1, 0, 0.1391731, 0, -0.9902681, 20.5985518, -0.0082402, 3.4932256)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T2_ControlRegistro/Mueble_020"]
-collision_mask = 0
+[node name="Oeste_Acceso" type="Node3D" parent="T2_ControlRegistro"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(20, 1.32, 0)
 
-[node name="Colision" type="CollisionShape3D" parent="T2_ControlRegistro/Mueble_020/Cuerpo"]
-position = Vector3(0.0026324, 0.590564, 0.0259254)
-shape = SubResource("Colision_4")
+[node name="Mueble_0042" parent="T2_ControlRegistro/Oeste_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 15.6226195, -0.0078505, 2.5459069)
 
-[node name="Taburete_021" type="Node3D" parent="T2_ControlRegistro"]
-transform = Transform3D(-0.9659258, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.9659258, 17.8000127, 0.0049812, 2.5999524)
+[node name="CajaPlastico_0043" parent="T2_ControlRegistro/Oeste_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 15.6485449, 1.1776484, 2.5432744)
 
-[node name="Modelo" parent="T2_ControlRegistro/Taburete_021" instance=ExtResource("5")]
+[node name="CarroHerramientas_0044" parent="T2_ControlRegistro/Oeste_Acceso" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 15.7566722, -0.0046613, -2.5776177)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T2_ControlRegistro/Taburete_021"]
-collision_mask = 0
+[node name="Este_Acceso" type="Node3D" parent="T2_ControlRegistro"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(20, 1.32, 0)
 
-[node name="Colision" type="CollisionShape3D" parent="T2_ControlRegistro/Taburete_021/Cuerpo"]
-position = Vector3(-0, 0.441406, -0.0000493)
-shape = SubResource("Colision_5")
+[node name="Mueble_0045" parent="T2_ControlRegistro/Este_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 24.3744704, -0.0078505, -2.559358)
 
-[node name="CuadroControl_022" type="Node3D" parent="T2_ControlRegistro"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, -0, 0, -1, 23.0000001, 0.755, 4.566)
+[node name="CajaPlastico_0046" parent="T2_ControlRegistro/Este_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, 0.8, 0, 0.8, 0, -0.8, 0, 0, 24.348545, 1.1776484, -2.5567255)
 
-[node name="Modelo" parent="T2_ControlRegistro/CuadroControl_022" instance=ExtResource("6")]
+[node name="EstanteríaBaldas_0047" parent="T2_ControlRegistro/Este_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 24.3285449, -0.0082213, 2.5957495)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T2_ControlRegistro/CuadroControl_022"]
-collision_mask = 0
+[node name="Cajas_0048" parent="T2_ControlRegistro/Este_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 24.361321, 0.4685144, 2.5665137)
 
-[node name="Colision" type="CollisionShape3D" parent="T2_ControlRegistro/CuadroControl_022/Cuerpo"]
-position = Vector3(0.0000001, 0.5601667, 0.006)
-shape = SubResource("Colision_6")
+[node name="Cajas_0049" parent="T2_ControlRegistro/Este_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 24.360914, 0.9976064, 2.639358)
 
 [node name="B_DescansoGuardia" type="Node3D" parent="."]
 
-[node name="MesitaCafe_023" type="Node3D" parent="B_DescansoGuardia"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, -0, 0, -1, 28.6867439, 0.0006921, 3.4791416)
+[node name="Norte_Cafe" type="Node3D" parent="B_DescansoGuardia"]
+metadata/motivo = "cafe"
+metadata/pov = Vector3(30, 1.32, 0)
 
-[node name="Modelo" parent="B_DescansoGuardia/MesitaCafe_023" instance=ExtResource("7")]
+[node name="EstanteríaBaldas_0050" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 32.4960699, -0.0082213, 4.2232745)
 
-[node name="Cuerpo" type="StaticBody3D" parent="B_DescansoGuardia/MesitaCafe_023"]
-collision_mask = 0
+[node name="CajaPlastico_0051" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 32.5285449, 0.4685027, 4.2232745)
 
-[node name="Colision" type="CollisionShape3D" parent="B_DescansoGuardia/MesitaCafe_023/Cuerpo"]
-position = Vector3(-0.3132561, 0.8631441, -0.0208584)
-shape = SubResource("Colision_7")
+[node name="CajaPlastico_0052" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 32.4585449, 0.9975947, 4.2232745)
 
-[node name="MesitaMadera_024" type="Node3D" parent="B_DescansoGuardia"]
-transform = Transform3D(1.1954336, 0, 0.1045869, 0, 1.2, 0, -0.1045869, 0, 1.1954336, 32, 0.005, 2)
+[node name="MesitaCafe_0053" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_MesitaCafe")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 29.6852888, -0.0125293, 3.982416)
 
-[node name="Modelo" parent="B_DescansoGuardia/MesitaMadera_024" instance=ExtResource("8")]
+[node name="Mueble_0054" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 27.5011774, -0.0078505, 4.2391999)
 
-[node name="Cuerpo" type="StaticBody3D" parent="B_DescansoGuardia/MesitaMadera_024"]
-collision_mask = 0
+[node name="CajaCarton_0055" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.15, 0, 0, 0, 1.15, 0, 0, 0, -1.15, 27.499702, 1.1854177, 4.2510537)
 
-[node name="Colision" type="CollisionShape3D" parent="B_DescansoGuardia/MesitaMadera_024/Cuerpo"]
-position = Vector3(0, 0.2438928, 0)
-shape = SubResource("Colision_8")
+[node name="Taburete_0056" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(-0.9702957, 0, 0.2419219, 0, 1, 0, -0.2419219, 0, -0.9702957, 29.598533, -0.0082402, 3.1432266)
 
-[node name="Taburete_025" type="Node3D" parent="B_DescansoGuardia"]
-transform = Transform3D(0.3420201, 0, 0.9396926, 0, 1, 0, -0.9396926, 0, 0.3420201, 31.2000463, 0.0049812, 1.7000168)
+[node name="Sur_Descanso" type="Node3D" parent="B_DescansoGuardia"]
+metadata/motivo = "descanso"
+metadata/pov = Vector3(30, 1.32, 0)
 
-[node name="Modelo" parent="B_DescansoGuardia/Taburete_025" instance=ExtResource("5")]
+[node name="Mueble_0057" parent="B_DescansoGuardia/Sur_Descanso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1959125, -0.0078505, -4.362651)
 
-[node name="Cuerpo" type="StaticBody3D" parent="B_DescansoGuardia/Taburete_025"]
-collision_mask = 0
+[node name="RadioVintage_0058" parent="B_DescansoGuardia/Sur_Descanso" instance=ExtResource("cuadro_RadioVintage")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2466012, 1.1791372, -4.407454)
 
-[node name="Colision" type="CollisionShape3D" parent="B_DescansoGuardia/Taburete_025/Cuerpo"]
-position = Vector3(-0, 0.441406, -0.0000493)
-shape = SubResource("Colision_5")
+[node name="MesitaMadera_0059" parent="B_DescansoGuardia/Sur_Descanso" instance=ExtResource("cuadro_MesitaMadera")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 29.9985449, -0.0082213, -4.0067255)
 
-[node name="Taburete_026" type="Node3D" parent="B_DescansoGuardia"]
-transform = Transform3D(0.1736482, 0, -0.9848078, 0, 1, 0, 0.9848078, 0, 0.1736482, 32.7999515, 0.0049812, 2.0000086)
+[node name="Taburete_0060" parent="B_DescansoGuardia/Sur_Descanso" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1485449, -0.0082402, -3.7566763)
 
-[node name="Modelo" parent="B_DescansoGuardia/Taburete_026" instance=ExtResource("5")]
+[node name="Taburete_0061" parent="B_DescansoGuardia/Sur_Descanso" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8485449, -0.0082402, -3.7566763)
 
-[node name="Cuerpo" type="StaticBody3D" parent="B_DescansoGuardia/Taburete_026"]
-collision_mask = 0
+[node name="BarrilMetalOxidado_0062" parent="B_DescansoGuardia/Sur_Descanso" instance=ExtResource("cuadro_BarrilMetalOxidado")]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 32.3020906, -0.0082213, -4.2096354)
 
-[node name="Colision" type="CollisionShape3D" parent="B_DescansoGuardia/Taburete_026/Cuerpo"]
-position = Vector3(-0, 0.441406, -0.0000493)
-shape = SubResource("Colision_5")
+[node name="CajaCarton_0063" parent="B_DescansoGuardia/Sur_Descanso" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.0993299, 0, 0.0383894, 0, 1.1, 0, -0.0383894, 0, 1.0993299, 27.1987, -0.0007898, -3.9428788)
 
-[node name="Mueble_027" type="Node3D" parent="B_DescansoGuardia"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, -0, 0, -1, 26.3026324, 0.0053709, 3.7259254)
+[node name="Este_EquipamientoGuardia" type="Node3D" parent="B_DescansoGuardia"]
+metadata/motivo = "calibracion"
+metadata/pov = Vector3(30, 1.32, 0)
 
-[node name="Modelo" parent="B_DescansoGuardia/Mueble_027" instance=ExtResource("4")]
+[node name="EstanteríaBaldas_0064" parent="B_DescansoGuardia/Este_EquipamientoGuardia" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 34.2285449, -0.0082213, -2.3042505)
 
-[node name="Cuerpo" type="StaticBody3D" parent="B_DescansoGuardia/Mueble_027"]
-collision_mask = 0
+[node name="Cajas_0065" parent="B_DescansoGuardia/Este_EquipamientoGuardia" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 34.261321, 0.4685144, -2.3334863)
 
-[node name="Colision" type="CollisionShape3D" parent="B_DescansoGuardia/Mueble_027/Cuerpo"]
-position = Vector3(0.0026324, 0.590564, 0.0259254)
-shape = SubResource("Colision_4")
+[node name="Cajas_0066" parent="B_DescansoGuardia/Este_EquipamientoGuardia" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 34.260914, 0.9976064, -2.260642)
 
-[node name="EstufaDescanso_028" type="Node3D" parent="B_DescansoGuardia"]
-transform = Transform3D(-0.7660444, 0, -0.6427876, 0, 1, 0, 0.6427876, 0, -0.7660444, 33.6991945, 0.005, -3.4957065)
+[node name="MesitaIndustrial_0067" parent="B_DescansoGuardia/Este_EquipamientoGuardia" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 34.028545, -0.0105419, -0.0067256)
 
-[node name="Modelo" parent="B_DescansoGuardia/EstufaDescanso_028" instance=ExtResource("9")]
+[node name="Mueble_0068" parent="B_DescansoGuardia/Este_EquipamientoGuardia" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 34.2544704, -0.0078505, 2.240642)
 
-[node name="Cuerpo" type="StaticBody3D" parent="B_DescansoGuardia/EstufaDescanso_028"]
-collision_mask = 0
+[node name="RadioVintage_0069" parent="B_DescansoGuardia/Este_EquipamientoGuardia" instance=ExtResource("cuadro_RadioVintage")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 34.2992734, 1.1791372, 2.2913307)
 
-[node name="Colision" type="CollisionShape3D" parent="B_DescansoGuardia/EstufaDescanso_028/Cuerpo"]
-position = Vector3(-0.0033768, 0.427802, 0.0027713)
-shape = SubResource("Colision_9")
+[node name="Taburete_0070" parent="B_DescansoGuardia/Este_EquipamientoGuardia" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(-0.258819, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.258819, 33.4784973, -0.0082402, -1.2067383)
+
+[node name="CajaCarton_0071" parent="B_DescansoGuardia/Este_EquipamientoGuardia" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-0.0348995, 0, 0.9993908, 0, 1, 0, -0.9993908, 0, -0.0348995, 33.5314116, -0.0014654, 1.2434154)
+
+[node name="Oeste_Acceso" type="Node3D" parent="B_DescansoGuardia"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(30, 1.32, 0)
+
+[node name="Mueble_0072" parent="B_DescansoGuardia/Oeste_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 25.6226195, -0.0078505, 2.5459069)
+
+[node name="CajaPlastico_0073" parent="B_DescansoGuardia/Oeste_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 25.6485449, 1.1776484, 2.5432744)
+
+[node name="CarroHerramientas_0074" parent="B_DescansoGuardia/Oeste_Acceso" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 25.7566722, -0.0046613, -2.5776177)
 
 [node name="T1_TallerMantenimiento" type="Node3D" parent="."]
 
-[node name="BancoMecanico_029" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 8.4948502, 0.0050001, -13.4999998)
+[node name="Sur_10" type="Node3D" parent="T1_TallerMantenimiento"]
+metadata/motivo = "herramientas"
+metadata/pov = Vector3(10, 1.32, -10)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/BancoMecanico_029" instance=ExtResource("1")]
+[node name="EstanteríaBaldas_0075" parent="T1_TallerMantenimiento/Sur_10" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 7.60102, -0.0082213, -14.2367255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/BancoMecanico_029"]
-collision_mask = 0
+[node name="Cajas_0076" parent="T1_TallerMantenimiento/Sur_10" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 7.5717842, 0.4685144, -14.2695017)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/BancoMecanico_029/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
+[node name="Cajas_0077" parent="T1_TallerMantenimiento/Sur_10" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 7.6446285, 0.9976064, -14.2690946)
 
-[node name="BancoMecanico_030" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 10.0448502, 0.0050001, -13.4999998)
+[node name="CarroHerramientas_0078" parent="T1_TallerMantenimiento/Sur_10" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 9.3215263, -0.0043053, -14.0977856)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/BancoMecanico_030" instance=ExtResource("1")]
+[node name="MesitaIndustrial_0079" parent="T1_TallerMantenimiento/Sur_10" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1985449, -0.0105419, -14.0067256)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/BancoMecanico_030"]
-collision_mask = 0
+[node name="CajaDeMadera_0080" parent="T1_TallerMantenimiento/Sur_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.0993299, 0, 0.0383894, 0, 1.1, 0, -0.0383894, 0, 1.0993299, 12.648865, 0.0005053, -14.1658909)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/BancoMecanico_030/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
+[node name="CajaDeMadera_0081" parent="T1_TallerMantenimiento/Sur_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.0984925, 0, -0.0575696, 0, 1.1, 0, 0.0575696, 0, 1.0984925, 12.683065, 0.3890855, -14.165884)
 
-[node name="CarroHerramientas_031" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(0.9659258, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.9659258, 12.2180768, 0.00856, -12.6867424)
+[node name="CajaHerramientasMetal_0082" parent="T1_TallerMantenimiento/Sur_10" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 9.0666121, 1.0578882, -14.1122643)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/CarroHerramientas_031" instance=ExtResource("10")]
+[node name="Norte_10" type="Node3D" parent="T1_TallerMantenimiento"]
+metadata/motivo = "repuestos"
+metadata/pov = Vector3(10, 1.32, -10)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/CarroHerramientas_031"]
-collision_mask = 0
+[node name="Escaleras_0083" parent="T1_TallerMantenimiento/Norte_10" instance=ExtResource("cuadro_Escaleras")]
+transform = Transform3D(-1.0939741, 0, 0.1149813, 0, 1.1, 0, -0.1149813, 0, -1.0939741, 12.451882, -0.0064442, -5.7551853)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/CarroHerramientas_031/Cuerpo"]
-position = Vector3(-0.0208921, 0.4787624, -0.0081273)
-shape = SubResource("Colision_10")
+[node name="MesitaIndustrial_0084" parent="T1_TallerMantenimiento/Norte_10" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 10.448545, -0.0105419, -5.9067255)
 
-[node name="EstanteríaBaldas_032" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(0, 0, 1.1, 0, 1.1, 0, -1.1, 0, 0, 6.3, 0.005, -12.8025209)
+[node name="EstanteríaBaldas_0085" parent="T1_TallerMantenimiento/Norte_10" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 8.0960699, -0.0082213, -5.6767255)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/EstanteríaBaldas_032" instance=ExtResource("3")]
+[node name="Cajas_0086" parent="T1_TallerMantenimiento/Norte_10" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 8.1253057, 0.4685144, -5.6439494)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/EstanteríaBaldas_032"]
-collision_mask = 0
+[node name="Cajas_0087" parent="T1_TallerMantenimiento/Norte_10" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 8.0524614, 0.9976064, -5.6443565)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/EstanteríaBaldas_032/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaHerramientasMetal_0088" parent="T1_TallerMantenimiento/Norte_10" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(-0.95, 0, 0, 0, 0.95, 0, 0, 0, -0.95, 9.3433629, -0.0082213, -6.7008791)
 
-[node name="Escaleras_033" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(1.0662614, 0, 0.4307976, 0, 1.15, 0, -0.4307976, 0, 1.0662614, 27.1464503, 0.0068579, -7.0149946)
+[node name="CajaCarton_0089" parent="T1_TallerMantenimiento/Norte_10" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.1492995, 0, -0.0401344, 0, 1.15, 0, 0.0401344, 0, -1.1492995, 7.1983828, -0.000452, -6.2689289)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/Escaleras_033" instance=ExtResource("11")]
+[node name="Sur_30" type="Node3D" parent="T1_TallerMantenimiento"]
+metadata/motivo = "taller"
+metadata/pov = Vector3(30, 1.32, -10)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/Escaleras_033"]
-collision_mask = 0
+[node name="CarritoBombonas_0090" parent="T1_TallerMantenimiento/Sur_30" instance=ExtResource("cuadro_CarritoBombonas")]
+transform = Transform3D(1.0474423, 0, -0.0732443, 0, 1.05, 0, 0.0732443, 0, 1.0474423, 27.4889904, -0.0082213, -14.2933612)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/Escaleras_033/Cuerpo"]
-position = Vector3(-0.0423348, 0.8594743, -0.0030416)
-shape = SubResource("Colision_11")
+[node name="MuebleCajonera_0091" parent="T1_TallerMantenimiento/Sur_30" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 29.3433951, -0.0082213, -14.2567254)
 
-[node name="CarritoBombonas_034" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(-1.0142221, 0, 0.27176, 0, 1.05, 0, -0.27176, 0, -1.0142221, 30.6645497, 0.005, -6.9676978)
+[node name="CajaHerramientasMetal_0092" parent="T1_TallerMantenimiento/Sur_30" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(0.8987666, 0, 0.0471024, 0, 0.9, 0, -0.0471024, 0, 0.8987666, 29.1172198, 0.9088685, -14.2743951)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/CarritoBombonas_034" instance=ExtResource("12")]
+[node name="MuebleCajonera_0093" parent="T1_TallerMantenimiento/Sur_30" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 30.8933951, -0.0082213, -14.2567254)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/CarritoBombonas_034"]
-collision_mask = 0
+[node name="Cajas_0094" parent="T1_TallerMantenimiento/Sur_30" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.9986295, 0, 0.052336, 0, 1, 0, -0.052336, 0, 0.9986295, 30.9059639, 0.9088828, -14.2962)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/CarritoBombonas_034/Cuerpo"]
-position = Vector3(0, 0.7815851, 0.130447)
-shape = SubResource("Colision_12")
+[node name="Escaleras_0095" parent="T1_TallerMantenimiento/Sur_30" instance=ExtResource("cuadro_Escaleras")]
+transform = Transform3D(1.0958142, 0, 0.0958713, 0, 1.1, 0, -0.0958713, 0, 1.0958142, 32.5946444, -0.0064442, -14.1793338)
 
-[node name="CompresorDeAire_035" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 32.7000249, 0.0067075, -11.7702422)
+[node name="Taburete_0096" parent="T1_TallerMantenimiento/Sur_30" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(0.9902681, 0, -0.1391731, 0, 1, 0, 0.1391731, 0, 0.9902681, 30.4985518, -0.0082402, -13.4566767)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/CompresorDeAire_035" instance=ExtResource("13")]
+[node name="Norte_30" type="Node3D" parent="T1_TallerMantenimiento"]
+metadata/motivo = "energia"
+metadata/pov = Vector3(30, 1.32, -10)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/CompresorDeAire_035"]
-collision_mask = 0
+[node name="Mueble_0097" parent="T1_TallerMantenimiento/Norte_30" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 32.2511774, -0.0078505, -5.6308001)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/CompresorDeAire_035/Cuerpo"]
-position = Vector3(-0.0000238, 0.587917, -0.218817)
-shape = SubResource("Colision_13")
+[node name="CajaHerramientasMetal_0098" parent="T1_TallerMantenimiento/Norte_30" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(-0.9, 0, 0, 0, 0.9, 0, 0, 0, -0.9, 32.4804777, 1.1776484, -5.6511868)
 
-[node name="MesitaIndustrial_036" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(0.9961947, 0, -0.0871557, 0, 1, 0, 0.0871557, 0, 0.9961947, 22.9999999, 0.0026795, -12.8000001)
+[node name="CompresorDeAire_0099" parent="T1_TallerMantenimiento/Norte_30" instance=ExtResource("cuadro_CompresorDeAire")]
+transform = Transform3D(0, 0, 1.1, 0, 1.1, 0, -1.1, 0, 0, 30.0078462, -0.0064325, -5.7566994)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/MesitaIndustrial_036" instance=ExtResource("2")]
+[node name="Generador_0100" parent="T1_TallerMantenimiento/Norte_30" instance=ExtResource("cuadro_Generador")]
+transform = Transform3D(-1.2, 0, 0, 0, 1.2, 0, 0, 0, -1.2, 28.4421284, -0.008291, -5.7567255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/MesitaIndustrial_036"]
-collision_mask = 0
+[node name="CajaControl_0101" parent="T1_TallerMantenimiento/Norte_30" instance=ExtResource("cuadro_CajaControl")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 28.298545, 0.8917787, -5.3507256)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/MesitaIndustrial_036/Cuerpo"]
-position = Vector3(0.0000001, 0.6910127, 0.0000001)
-shape = SubResource("Colision_2")
+[node name="CarritoBombonas_0102" parent="T1_TallerMantenimiento/Norte_30" instance=ExtResource("cuadro_CarritoBombonas")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 27.2985449, -0.0082213, -5.6262786)
 
-[node name="CarroHerramientas_037" type="Node3D" parent="T1_TallerMantenimiento"]
-transform = Transform3D(-0.9961947, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, -0.9961947, 15.9798957, 0.00856, -7.2099172)
+[node name="Este_Compresion" type="Node3D" parent="T1_TallerMantenimiento"]
+metadata/motivo = "energia"
+metadata/pov = Vector3(30, 1.32, -10)
 
-[node name="Modelo" parent="T1_TallerMantenimiento/CarroHerramientas_037" instance=ExtResource("10")]
+[node name="Mueble_0103" parent="T1_TallerMantenimiento/Este_Compresion" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 34.2744704, -0.0078505, -12.259358)
 
-[node name="Cuerpo" type="StaticBody3D" parent="T1_TallerMantenimiento/CarroHerramientas_037"]
-collision_mask = 0
+[node name="CajaHerramientasMetal_0104" parent="T1_TallerMantenimiento/Este_Compresion" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(0, 0, 0.9, 0, 0.9, 0, -0.9, 0, 0, 34.2540837, 1.1776484, -12.4886584)
 
-[node name="Colision" type="CollisionShape3D" parent="T1_TallerMantenimiento/CarroHerramientas_037/Cuerpo"]
-position = Vector3(-0.0208921, 0.4787624, -0.0081273)
-shape = SubResource("Colision_10")
+[node name="CompresorDeAire_0105" parent="T1_TallerMantenimiento/Este_Compresion" instance=ExtResource("cuadro_CompresorDeAire")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 34.1485711, -0.0064325, -10.0160269)
+
+[node name="Generador_0106" parent="T1_TallerMantenimiento/Este_Compresion" instance=ExtResource("cuadro_Generador")]
+transform = Transform3D(0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 34.1485449, -0.008291, -8.4503091)
+
+[node name="CajaControl_0107" parent="T1_TallerMantenimiento/Este_Compresion" instance=ExtResource("cuadro_CajaControl")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 34.5545449, 0.8917787, -8.3067256)
+
+[node name="CarritoBombonas_0108" parent="T1_TallerMantenimiento/Este_Compresion" instance=ExtResource("cuadro_CarritoBombonas")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 34.2789919, -0.0082213, -7.3067255)
+
+[node name="Centro_PasoTecnico" type="Node3D" parent="T1_TallerMantenimiento"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(20, 1.32, -10)
+
+[node name="Mueble_0109" parent="T1_TallerMantenimiento/Centro_PasoTecnico" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4459125, -0.0078505, -14.282651)
+
+[node name="CajaPlastico_0110" parent="T1_TallerMantenimiento/Centro_PasoTecnico" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 17.448545, 1.1776484, -14.2567256)
+
+[node name="EstanteríaBaldas_0111" parent="T1_TallerMantenimiento/Centro_PasoTecnico" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 22.60102, -0.0082213, -14.2367255)
+
+[node name="Cajas_0112" parent="T1_TallerMantenimiento/Centro_PasoTecnico" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 22.5717842, 0.4685144, -14.2695017)
+
+[node name="Cajas_0113" parent="T1_TallerMantenimiento/Centro_PasoTecnico" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 22.6446285, 0.9976064, -14.2690946)
+
+[node name="Oeste_Entrada" type="Node3D" parent="T1_TallerMantenimiento"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(10, 1.32, -10)
+
+[node name="Mueble_0114" parent="T1_TallerMantenimiento/Oeste_Entrada" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.7226195, -0.0078505, -7.4540931)
+
+[node name="CajaPlastico_0115" parent="T1_TallerMantenimiento/Oeste_Entrada" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 5.7485449, 1.1776484, -7.4567256)
+
+[node name="CarroHerramientas_0116" parent="T1_TallerMantenimiento/Oeste_Entrada" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.8566722, -0.0046613, -12.5776177)
 
 [node name="C_ClinicaCuarentena" type="Node3D" parent="."]
 
-[node name="SillaDeRuedas_038" type="Node3D" parent="C_ClinicaCuarentena"]
-transform = Transform3D(-0.8601096, 0, 0.6022553, 0, 1.05, 0, -0.6022553, 0, -0.8601096, -2.3374086, -0.0010676, -18.2495879)
+[node name="Oeste_Atencion" type="Node3D" parent="C_ClinicaCuarentena"]
+metadata/motivo = "clinica"
+metadata/pov = Vector3(0, 1.32, -20)
 
-[node name="Modelo" parent="C_ClinicaCuarentena/SillaDeRuedas_038" instance=ExtResource("14")]
+[node name="Mueble_0117" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1.05, 0, 1.05, 0, 1.05, 0, 0, -4.2686768, -0.0078319, -18.8039615)
 
-[node name="Cuerpo" type="StaticBody3D" parent="C_ClinicaCuarentena/SillaDeRuedas_038"]
-collision_mask = 0
+[node name="CajaPlastico_0118" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, -0.85, 0, 0.85, 0, 0.85, 0, 0, -4.2414551, 1.2367419, -18.8067256)
 
-[node name="Colision" type="CollisionShape3D" parent="C_ClinicaCuarentena/SillaDeRuedas_038/Cuerpo"]
-position = Vector3(-0.0016459, 0.5575294, 0.0597637)
-shape = SubResource("Colision_14")
+[node name="SillaDeRuedas_0119" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_SillaDeRuedas")]
+transform = Transform3D(0.1461318, 0, -1.0397815, 0, 1.05, 0, 1.0397815, 0, 0.1461318, -3.7633558, -0.0142889, -20.0171703)
 
-[node name="Mueble_039" type="Node3D" parent="C_ClinicaCuarentena"]
-transform = Transform3D(-1.05, 0, 0, 0, 1.05, 0, -0, 0, -1.05, -3.6972359, 0.0053894, -16.2727783)
+[node name="MesitaNoche_0120" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_MesitaNoche")]
+transform = Transform3D(0, 0, -1.1, 0, 1.1, 0, 1.1, 0, 0, -4.0570768, -0.0082213, -21.0579682)
 
-[node name="Modelo" parent="C_ClinicaCuarentena/Mueble_039" instance=ExtResource("4")]
+[node name="EstanteríaBaldas_0121" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, -1.08, 0, 1.08, 0, 1.08, 0, 0, -4.2314551, -0.0082213, -22.4592006)
 
-[node name="Cuerpo" type="StaticBody3D" parent="C_ClinicaCuarentena/Mueble_039"]
-collision_mask = 0
+[node name="CajaPlastico_0122" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.0286176, 0, -0.8195005, 0, 0.82, 0, 0.8195005, 0, -0.0286176, -4.2314551, 0.4685027, -22.4267256)
 
-[node name="Colision" type="CollisionShape3D" parent="C_ClinicaCuarentena/Mueble_039/Cuerpo"]
-position = Vector3(0.0026324, 0.590564, 0.0259254)
-shape = SubResource("Colision_4")
+[node name="CajaPlastico_0123" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0.0429155, 0, -0.8188762, 0, 0.82, 0, 0.8188762, 0, 0.0429155, -4.2314551, 0.9975947, -22.4967256)
 
-[node name="MesitaNoche_040" type="Node3D" parent="C_ClinicaCuarentena"]
-transform = Transform3D(-1.0832885, 0, 0.191013, 0, 1.1, 0, -0.191013, 0, -1.0832885, -2.2021999, 0.005, -16.9946795)
+[node name="Taburete_0124" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -4.0014058, -0.0082402, -17.5067256)
 
-[node name="Modelo" parent="C_ClinicaCuarentena/MesitaNoche_040" instance=ExtResource("15")]
+[node name="Norte_Acceso" type="Node3D" parent="C_ClinicaCuarentena"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(0, 1.32, -20)
 
-[node name="Cuerpo" type="StaticBody3D" parent="C_ClinicaCuarentena/MesitaNoche_040"]
-collision_mask = 0
+[node name="Mueble_0125" parent="C_ClinicaCuarentena/Norte_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 2.5511774, -0.0078505, -15.7308001)
 
-[node name="Colision" type="CollisionShape3D" parent="C_ClinicaCuarentena/MesitaNoche_040/Cuerpo"]
-position = Vector3(-0.0011297, 0.3077605, 0.0051107)
-shape = SubResource("Colision_15")
+[node name="CajaPlastico_0126" parent="C_ClinicaCuarentena/Norte_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.8, 0, 0, 0, 0.8, 0, 0, 0, -0.8, 2.5485449, 1.1776484, -15.7567255)
 
-[node name="Mueble_041" type="Node3D" parent="C_ClinicaCuarentena"]
-transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 3.4972359, 0.0053894, -23.5272217)
+[node name="CarroHerramientas_0127" parent="C_ClinicaCuarentena/Norte_Acceso" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -2.5723472, -0.0046613, -15.8648528)
 
-[node name="Modelo" parent="C_ClinicaCuarentena/Mueble_041" instance=ExtResource("4")]
+[node name="Sur_Acceso" type="Node3D" parent="C_ClinicaCuarentena"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(0, 1.32, -20)
 
-[node name="Cuerpo" type="StaticBody3D" parent="C_ClinicaCuarentena/Mueble_041"]
-collision_mask = 0
+[node name="Mueble_0128" parent="C_ClinicaCuarentena/Sur_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5540875, -0.0078505, -24.282651)
 
-[node name="Colision" type="CollisionShape3D" parent="C_ClinicaCuarentena/Mueble_041/Cuerpo"]
-position = Vector3(0.0026324, 0.590564, 0.0259254)
-shape = SubResource("Colision_4")
+[node name="CajaPlastico_0129" parent="C_ClinicaCuarentena/Sur_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -2.551455, 1.1776484, -24.2567256)
 
-[node name="MesitaIndustrial_042" type="Node3D" parent="C_ClinicaCuarentena"]
-transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 2.9000001, 0.0026795, -17.5000001)
+[node name="CarroHerramientas_0130" parent="C_ClinicaCuarentena/Sur_Acceso" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5694371, -0.0046613, -24.1485983)
 
-[node name="Modelo" parent="C_ClinicaCuarentena/MesitaIndustrial_042" instance=ExtResource("2")]
+[node name="Este_Acceso" type="Node3D" parent="C_ClinicaCuarentena"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(0, 1.32, -20)
 
-[node name="Cuerpo" type="StaticBody3D" parent="C_ClinicaCuarentena/MesitaIndustrial_042"]
-collision_mask = 0
+[node name="Mueble_0131" parent="C_ClinicaCuarentena/Este_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 4.4744704, -0.0078505, -22.559358)
 
-[node name="Colision" type="CollisionShape3D" parent="C_ClinicaCuarentena/MesitaIndustrial_042/Cuerpo"]
-position = Vector3(0.0000001, 0.6910127, 0.0000001)
-shape = SubResource("Colision_2")
+[node name="CajaPlastico_0132" parent="C_ClinicaCuarentena/Este_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, 0.8, 0, 0.8, 0, -0.8, 0, 0, 4.448545, 1.1776484, -22.5567255)
+
+[node name="EstanteríaBaldas_0133" parent="C_ClinicaCuarentena/Este_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 4.4285449, -0.0082213, -17.4042505)
+
+[node name="Cajas_0134" parent="C_ClinicaCuarentena/Este_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 4.461321, 0.4685144, -17.4334863)
+
+[node name="Cajas_0135" parent="C_ClinicaCuarentena/Este_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 4.460914, 0.9976064, -17.360642)
 
 [node name="D_ArchivoMuestras" type="Node3D" parent="."]
 
-[node name="EstanteríaBaldas_043" type="Node3D" parent="D_ArchivoMuestras"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 6.9974791, 0.005, -16)
+[node name="Norte_Archivo" type="Node3D" parent="D_ArchivoMuestras"]
+metadata/motivo = "archivo"
+metadata/pov = Vector3(10, 1.32, -20)
 
-[node name="Modelo" parent="D_ArchivoMuestras/EstanteríaBaldas_043" instance=ExtResource("3")]
+[node name="EstanteríaBaldas_0136" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 11.2960699, -0.0082213, -15.5767255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="D_ArchivoMuestras/EstanteríaBaldas_043"]
-collision_mask = 0
+[node name="Cajas_0137" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 11.3253057, 0.4685144, -15.5439494)
 
-[node name="Colision" type="CollisionShape3D" parent="D_ArchivoMuestras/EstanteríaBaldas_043/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Cajas_0138" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 11.2524614, 0.9976064, -15.5443565)
 
-[node name="EstanteríaBaldas_044" type="Node3D" parent="D_ArchivoMuestras"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 8.2974791, 0.005, -16)
+[node name="EstanteríaBaldas_0139" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 9.9960699, -0.0082213, -15.5767255)
 
-[node name="Modelo" parent="D_ArchivoMuestras/EstanteríaBaldas_044" instance=ExtResource("3")]
+[node name="Cajas_0140" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 10.0253057, 0.4685144, -15.5439494)
 
-[node name="Cuerpo" type="StaticBody3D" parent="D_ArchivoMuestras/EstanteríaBaldas_044"]
-collision_mask = 0
+[node name="Cajas_0141" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 9.9524614, 0.9976064, -15.5443565)
 
-[node name="Colision" type="CollisionShape3D" parent="D_ArchivoMuestras/EstanteríaBaldas_044/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="EstanteríaBaldas_0142" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 8.6960699, -0.0082213, -15.5767255)
 
-[node name="EstanteríaBaldas_045" type="Node3D" parent="D_ArchivoMuestras"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 11.6974791, 0.005, -16)
+[node name="Cajas_0143" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 8.7253057, 0.4685144, -15.5439494)
 
-[node name="Modelo" parent="D_ArchivoMuestras/EstanteríaBaldas_045" instance=ExtResource("3")]
+[node name="Cajas_0144" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 8.6524614, 0.9976064, -15.5443565)
 
-[node name="Cuerpo" type="StaticBody3D" parent="D_ArchivoMuestras/EstanteríaBaldas_045"]
-collision_mask = 0
+[node name="CajaDeMadera_0145" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-1.2492385, 0, -0.0436244, 0, 1.25, 0, 0.0436244, 0, -1.2492385, 12.6981812, 0.0016953, -15.6663103)
 
-[node name="Colision" type="CollisionShape3D" parent="D_ArchivoMuestras/EstanteríaBaldas_045/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaDeMadera_0146" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-1.2482869, 0, 0.0654199, 0, 1.25, 0, -0.0654199, 0, -1.2482869, 12.6640904, 0.4427182, -15.6663183)
 
-[node name="EstanteríaBaldas_046" type="Node3D" parent="D_ArchivoMuestras"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 12.9974791, 0.005, -16)
+[node name="CajaCarton_0147" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.1492995, 0, -0.0401344, 0, 1.15, 0, 0.0401344, 0, -1.1492995, 7.3483828, -0.000452, -15.6889289)
 
-[node name="Modelo" parent="D_ArchivoMuestras/EstanteríaBaldas_046" instance=ExtResource("3")]
+[node name="CajaCarton_0148" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.148424, 0, 0.0601863, 0, 1.15, 0, -0.0601863, 0, -1.148424, 7.3166776, 0.3966175, -15.6890586)
 
-[node name="Cuerpo" type="StaticBody3D" parent="D_ArchivoMuestras/EstanteríaBaldas_046"]
-collision_mask = 0
+[node name="CajaCarton_0149" parent="D_ArchivoMuestras/Norte_Archivo" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.148424, 0, 0.0601863, 0, 1.15, 0, -0.0601863, 0, -1.148424, 7.3166776, 0.7936869, -15.6890586)
 
-[node name="Colision" type="CollisionShape3D" parent="D_ArchivoMuestras/EstanteríaBaldas_046/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Este_Catalogacion" type="Node3D" parent="D_ArchivoMuestras"]
+metadata/motivo = "catalogacion"
+metadata/pov = Vector3(10, 1.32, -20)
 
-[node name="EstanteríaBaldas_047" type="Node3D" parent="D_ArchivoMuestras"]
-transform = Transform3D(0, 0, -1.1, 0, 1.1, 0, 1.1, 0, 0, 13.8, 0.005, -17.9974791)
+[node name="EstanteríaBaldas_0150" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 14.2285449, -0.0082213, -22.5542505)
 
-[node name="Modelo" parent="D_ArchivoMuestras/EstanteríaBaldas_047" instance=ExtResource("3")]
+[node name="Cajas_0151" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 14.261321, 0.4685144, -22.5834863)
 
-[node name="Cuerpo" type="StaticBody3D" parent="D_ArchivoMuestras/EstanteríaBaldas_047"]
-collision_mask = 0
+[node name="Cajas_0152" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 14.260914, 0.9976064, -22.510642)
 
-[node name="Colision" type="CollisionShape3D" parent="D_ArchivoMuestras/EstanteríaBaldas_047/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="MuebleCajonera_0153" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(0, 0, 1.1, 0, 1.1, 0, -1.1, 0, 0, 14.2485447, -0.0082213, -20.7618754)
 
-[node name="EstanteríaBaldas_048" type="Node3D" parent="D_ArchivoMuestras"]
-transform = Transform3D(0, 0, -1.1, 0, 1.1, 0, 1.1, 0, 0, 13.8, 0.005, -22.2974791)
+[node name="Enciclopedia_0154" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_Enciclopedia")]
+transform = Transform3D(-0.052336, 0, 0.9986295, 0, 1, 0, -0.9986295, 0, -0.052336, 14.2813949, 0.9088685, -21.011688)
 
-[node name="Modelo" parent="D_ArchivoMuestras/EstanteríaBaldas_048" instance=ExtResource("3")]
+[node name="MuebleCajonera_0155" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(0, 0, 1.1, 0, 1.1, 0, -1.1, 0, 0, 14.2485447, -0.0082213, -19.2118754)
 
-[node name="Cuerpo" type="StaticBody3D" parent="D_ArchivoMuestras/EstanteríaBaldas_048"]
-collision_mask = 0
+[node name="CajaPlastico_0156" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.052336, 0, 0.9986295, 0, 1, 0, -0.9986295, 0, -0.052336, 14.248545, 0.9088685, -19.2067255)
 
-[node name="Colision" type="CollisionShape3D" parent="D_ArchivoMuestras/EstanteríaBaldas_048/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Mueble_0157" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 14.2744704, -0.0078505, -17.509358)
 
-[node name="Mueble_049" type="Node3D" parent="D_ArchivoMuestras"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3973676, 0.0053709, -23.5259254)
+[node name="Taburete_0158" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 13.4984956, -0.0082402, -19.3067255)
 
-[node name="Modelo" parent="D_ArchivoMuestras/Mueble_049" instance=ExtResource("4")]
+[node name="Oeste_Acceso" type="Node3D" parent="D_ArchivoMuestras"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(10, 1.32, -20)
 
-[node name="Cuerpo" type="StaticBody3D" parent="D_ArchivoMuestras/Mueble_049"]
-collision_mask = 0
+[node name="Mueble_0159" parent="D_ArchivoMuestras/Oeste_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.7226195, -0.0078505, -17.4540931)
 
-[node name="Colision" type="CollisionShape3D" parent="D_ArchivoMuestras/Mueble_049/Cuerpo"]
-position = Vector3(0.0026324, 0.590564, 0.0259254)
-shape = SubResource("Colision_4")
+[node name="CajaPlastico_0160" parent="D_ArchivoMuestras/Oeste_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 5.7485449, 1.1776484, -17.4567256)
 
-[node name="MesaCatalogacion_050" type="Node3D" parent="D_ArchivoMuestras"]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 7.9948502, 0.0050001, -23.4999998)
+[node name="EstanteríaBaldas_0161" parent="D_ArchivoMuestras/Oeste_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, -1.08, 0, 1.08, 0, 1.08, 0, 0, 5.7685449, -0.0082213, -22.6092006)
 
-[node name="Modelo" parent="D_ArchivoMuestras/MesaCatalogacion_050" instance=ExtResource("1")]
+[node name="Cajas_0162" parent="D_ArchivoMuestras/Oeste_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0286176, 0, -0.8195005, 0, 0.82, 0, 0.8195005, 0, -0.0286176, 5.7357688, 0.4685144, -22.5799648)
 
-[node name="Cuerpo" type="StaticBody3D" parent="D_ArchivoMuestras/MesaCatalogacion_050"]
-collision_mask = 0
-
-[node name="Colision" type="CollisionShape3D" parent="D_ArchivoMuestras/MesaCatalogacion_050/Cuerpo"]
-position = Vector3(0.0046816, 0.4150408, -0.0000002)
-shape = SubResource("Colision_1")
+[node name="Cajas_0163" parent="D_ArchivoMuestras/Oeste_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0429155, 0, -0.8188762, 0, 0.82, 0, 0.8188762, 0, 0.0429155, 5.7361759, 0.9976064, -22.6528091)
 
 [node name="E_AlmacenQuimico" type="Node3D" parent="."]
 
-[node name="BarrilPlastico_051" type="Node3D" parent="E_AlmacenQuimico"]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 32.1, -0.0001011, -16.6999999)
+[node name="Norte" type="Node3D" parent="E_AlmacenQuimico"]
+metadata/motivo = "quimico"
+metadata/pov = Vector3(30, 1.32, -20)
 
-[node name="Modelo" parent="E_AlmacenQuimico/BarrilPlastico_051" instance=ExtResource("16")]
+[node name="EstanteríaBaldas_0164" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 32.3960699, -0.0082213, -15.5767255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="E_AlmacenQuimico/BarrilPlastico_051"]
-collision_mask = 0
+[node name="CajaPlastico_0165" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 32.4285449, 0.4685027, -15.5767255)
 
-[node name="Colision" type="CollisionShape3D" parent="E_AlmacenQuimico/BarrilPlastico_051/Cuerpo"]
-position = Vector3(0, 0.4446374, -0.0000001)
-shape = SubResource("Colision_16")
+[node name="CajaPlastico_0166" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 32.3585449, 0.9975947, -15.5767255)
 
-[node name="BarrilPlastico_052" type="Node3D" parent="E_AlmacenQuimico"]
-transform = Transform3D(1.0519352, 0, 0.3216089, 0, 1.1, 0, -0.3216089, 0, 1.0519352, 33, -0.0001011, -16.6999999)
+[node name="BarrilPlastico_0167" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_BarrilPlastico")]
+transform = Transform3D(-1.0732986, 0, -0.2408943, 0, 1.1, 0, 0.2408943, 0, -1.0732986, 30.548545, -0.0133224, -15.5567256)
 
-[node name="Modelo" parent="E_AlmacenQuimico/BarrilPlastico_052" instance=ExtResource("16")]
+[node name="BarrilPlastico_0168" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_BarrilPlastico")]
+transform = Transform3D(-1.0920331, 0, 0.1321505, 0, 1.1, 0, -0.1321505, 0, -1.0920331, 29.6985449, -0.0133224, -15.5567256)
 
-[node name="Cuerpo" type="StaticBody3D" parent="E_AlmacenQuimico/BarrilPlastico_052"]
-collision_mask = 0
+[node name="BarrilPlastico_0169" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_BarrilPlastico")]
+transform = Transform3D(-1.0858499, 0, -0.1758693, 0, 1.1, 0, 0.1758693, 0, -1.0858499, 30.398545, -0.0133224, -16.2567256)
 
-[node name="Colision" type="CollisionShape3D" parent="E_AlmacenQuimico/BarrilPlastico_052/Cuerpo"]
-position = Vector3(0, 0.4446374, -0.0000001)
-shape = SubResource("Colision_16")
+[node name="BarrilPlastico_0170" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_BarrilPlastico")]
+transform = Transform3D(-1.0821015, 0, 0.1976268, 0, 1.1, 0, -0.1976268, 0, -1.0821015, 29.5485449, -0.0133224, -16.2567256)
 
-[node name="BarrilPlastico_053" type="Node3D" parent="E_AlmacenQuimico"]
-transform = Transform3D(0.9119413, 0, 0.6151122, 0, 1.1, 0, -0.6151122, 0, 0.9119413, 32.1, -0.0001011, -17.5999999)
+[node name="MesitaIndustrial_0171" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 27.898545, -0.0105419, -15.8067255)
 
-[node name="Modelo" parent="E_AlmacenQuimico/BarrilPlastico_053" instance=ExtResource("16")]
+[node name="Sur" type="Node3D" parent="E_AlmacenQuimico"]
+metadata/motivo = "archivo"
+metadata/pov = Vector3(30, 1.32, -20)
 
-[node name="Cuerpo" type="StaticBody3D" parent="E_AlmacenQuimico/BarrilPlastico_053"]
-collision_mask = 0
+[node name="EstanteríaBaldas_0172" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 28.70102, -0.0082213, -24.4367255)
 
-[node name="Colision" type="CollisionShape3D" parent="E_AlmacenQuimico/BarrilPlastico_053/Cuerpo"]
-position = Vector3(0, 0.4446374, -0.0000001)
-shape = SubResource("Colision_16")
+[node name="CajaDeMadera_0173" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 28.6683063, 0.475008, -24.4435579)
 
-[node name="BarrilPlastico_054" type="Node3D" parent="E_AlmacenQuimico"]
-transform = Transform3D(0.6922524, 0, 0.8548606, 0, 1.1, 0, -0.8548606, 0, 0.6922524, 33.0000001, -0.0001011, -17.5999999)
+[node name="CajaDeMadera_0174" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 28.7389027, 1.0041, -24.4435527)
 
-[node name="Modelo" parent="E_AlmacenQuimico/BarrilPlastico_054" instance=ExtResource("16")]
+[node name="EstanteríaBaldas_0175" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 30.00102, -0.0082213, -24.4367255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="E_AlmacenQuimico/BarrilPlastico_054"]
-collision_mask = 0
+[node name="CajaDeMadera_0176" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 29.9683063, 0.475008, -24.4435579)
 
-[node name="Colision" type="CollisionShape3D" parent="E_AlmacenQuimico/BarrilPlastico_054/Cuerpo"]
-position = Vector3(0, 0.4446374, -0.0000001)
-shape = SubResource("Colision_16")
+[node name="CajaDeMadera_0177" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 30.0389027, 1.0041, -24.4435527)
 
-[node name="BarrilPlastico_055" type="Node3D" parent="E_AlmacenQuimico"]
-transform = Transform3D(0.4120673, 0, 1.0199022, 0, 1.1, 0, -1.0199022, 0, 0.4120673, 27.0000001, -0.0001011, -17.4999999)
+[node name="EstanteríaBaldas_0178" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 31.30102, -0.0082213, -24.4367255)
 
-[node name="Modelo" parent="E_AlmacenQuimico/BarrilPlastico_055" instance=ExtResource("16")]
+[node name="CajaDeMadera_0179" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 31.2683063, 0.475008, -24.4435579)
 
-[node name="Cuerpo" type="StaticBody3D" parent="E_AlmacenQuimico/BarrilPlastico_055"]
-collision_mask = 0
+[node name="CajaDeMadera_0180" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 31.3389027, 1.0041, -24.4435527)
 
-[node name="Colision" type="CollisionShape3D" parent="E_AlmacenQuimico/BarrilPlastico_055/Cuerpo"]
-position = Vector3(0, 0.4446374, -0.0000001)
-shape = SubResource("Colision_16")
+[node name="CajaDeMadera_0181" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2492385, 0, 0.0436244, 0, 1.25, 0, -0.0436244, 0, 1.2492385, 27.2989086, 0.0016953, -24.3471408)
 
-[node name="EstanteríaBaldas_056" type="Node3D" parent="E_AlmacenQuimico"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 27.7974791, 0.005, -16.1)
+[node name="CajaDeMadera_0182" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2482869, 0, -0.0654199, 0, 1.25, 0, 0.0654199, 0, 1.2482869, 27.3329995, 0.4427182, -24.3471328)
 
-[node name="Modelo" parent="E_AlmacenQuimico/EstanteríaBaldas_056" instance=ExtResource("3")]
+[node name="CajaCarton_0183" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.1492995, 0, 0.0401344, 0, 1.15, 0, -0.0401344, 0, 1.1492995, 32.6487071, -0.000452, -24.3245222)
 
-[node name="Cuerpo" type="StaticBody3D" parent="E_AlmacenQuimico/EstanteríaBaldas_056"]
-collision_mask = 0
+[node name="CajaCarton_0184" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.148424, 0, -0.0601863, 0, 1.15, 0, 0.0601863, 0, 1.148424, 32.6804122, 0.3966175, -24.3243925)
 
-[node name="Colision" type="CollisionShape3D" parent="E_AlmacenQuimico/EstanteríaBaldas_056/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaCarton_0185" parent="E_AlmacenQuimico/Sur" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.148424, 0, -0.0601863, 0, 1.15, 0, 0.0601863, 0, 1.148424, 32.6804122, 0.7936869, -24.3243925)
 
-[node name="EstanteríaBaldas_057" type="Node3D" parent="E_AlmacenQuimico"]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 33.0025209, 0.005, -23.8)
+[node name="Este" type="Node3D" parent="E_AlmacenQuimico"]
+metadata/motivo = "quimico"
+metadata/pov = Vector3(30, 1.32, -20)
 
-[node name="Modelo" parent="E_AlmacenQuimico/EstanteríaBaldas_057" instance=ExtResource("3")]
+[node name="EstanteríaBaldas_0186" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 34.2285449, -0.0082213, -22.4042505)
 
-[node name="Cuerpo" type="StaticBody3D" parent="E_AlmacenQuimico/EstanteríaBaldas_057"]
-collision_mask = 0
+[node name="CajaPlastico_0187" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 34.228545, 0.4685027, -22.4367255)
 
-[node name="Colision" type="CollisionShape3D" parent="E_AlmacenQuimico/EstanteríaBaldas_057/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaPlastico_0188" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 34.228545, 0.9975947, -22.3667255)
 
-[node name="MesitaIndustrial_058" type="Node3D" parent="E_AlmacenQuimico"]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 26.5999999, 0.0026795, -22.5999999)
+[node name="BarrilPlastico_0189" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_BarrilPlastico")]
+transform = Transform3D(-0.2408943, 0, 1.0732986, 0, 1.1, 0, -1.0732986, 0, -0.2408943, 34.2485448, -0.0133224, -20.5567256)
 
-[node name="Modelo" parent="E_AlmacenQuimico/MesitaIndustrial_058" instance=ExtResource("2")]
+[node name="BarrilPlastico_0190" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_BarrilPlastico")]
+transform = Transform3D(0.1321505, 0, 1.0920331, 0, 1.1, 0, -1.0920331, 0, 0.1321505, 34.2485448, -0.0133224, -19.7067256)
 
-[node name="Cuerpo" type="StaticBody3D" parent="E_AlmacenQuimico/MesitaIndustrial_058"]
-collision_mask = 0
+[node name="BarrilPlastico_0191" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_BarrilPlastico")]
+transform = Transform3D(-0.1758693, 0, 1.0858499, 0, 1.1, 0, -1.0858499, 0, -0.1758693, 33.5485448, -0.0133224, -20.4067256)
 
-[node name="Colision" type="CollisionShape3D" parent="E_AlmacenQuimico/MesitaIndustrial_058/Cuerpo"]
-position = Vector3(0.0000001, 0.6910127, 0.0000001)
-shape = SubResource("Colision_2")
+[node name="BarrilPlastico_0192" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_BarrilPlastico")]
+transform = Transform3D(0.1976268, 0, 1.0821015, 0, 1.1, 0, -1.0821015, 0, 0.1976268, 33.5485448, -0.0133224, -19.5567255)
+
+[node name="MesitaIndustrial_0193" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 33.998545, -0.0105419, -17.9067256)
+
+[node name="Oeste" type="Node3D" parent="E_AlmacenQuimico"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(30, 1.32, -20)
+
+[node name="Mueble_0194" parent="E_AlmacenQuimico/Oeste" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 25.7226195, -0.0078505, -17.4540931)
+
+[node name="CajaPlastico_0195" parent="E_AlmacenQuimico/Oeste" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 25.7485449, 1.1776484, -17.4567256)
+
+[node name="EstanteríaBaldas_0196" parent="E_AlmacenQuimico/Oeste" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, -1.08, 0, 1.08, 0, 1.08, 0, 0, 25.7685449, -0.0082213, -22.6092006)
+
+[node name="Cajas_0197" parent="E_AlmacenQuimico/Oeste" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0286176, 0, -0.8195005, 0, 0.82, 0, 0.8195005, 0, -0.0286176, 25.7357688, 0.4685144, -22.5799648)
+
+[node name="Cajas_0198" parent="E_AlmacenQuimico/Oeste" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0429155, 0, -0.8188762, 0, 0.82, 0, 0.8188762, 0, 0.0429155, 25.7361759, 0.9976064, -22.6528091)
 
 [node name="F_EnsayoEnergia" type="Node3D" parent="."]
 
-[node name="Generador_059" type="Node3D" parent="F_EnsayoEnergia"]
-transform = Transform3D(1.1108147, 0, 0.2976419, 0, 1.15, 0, -0.2976419, 0, 1.1108147, 8.0059396, 0.0049332, -32.4015915)
+[node name="Sur_10" type="Node3D" parent="F_EnsayoEnergia"]
+metadata/motivo = "energia"
+metadata/pov = Vector3(10, 1.32, -30)
 
-[node name="Modelo" parent="F_EnsayoEnergia/Generador_059" instance=ExtResource("17")]
+[node name="Mueble_0199" parent="F_EnsayoEnergia/Sur_10" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7459125, -0.0078505, -34.482651)
 
-[node name="Cuerpo" type="StaticBody3D" parent="F_EnsayoEnergia/Generador_059"]
-collision_mask = 0
+[node name="CajaHerramientasMetal_0200" parent="F_EnsayoEnergia/Sur_10" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 7.5166121, 1.1776484, -34.4622643)
 
-[node name="Colision" type="CollisionShape3D" parent="F_EnsayoEnergia/Generador_059/Cuerpo"]
-position = Vector3(-0.0053471, 0.2885197, 0)
-shape = SubResource("Colision_17")
+[node name="CompresorDeAire_0201" parent="F_EnsayoEnergia/Sur_10" instance=ExtResource("cuadro_CompresorDeAire")]
+transform = Transform3D(0, 0, -1.1, 0, 1.1, 0, 1.1, 0, 0, 9.9892436, -0.0064325, -34.3567517)
 
-[node name="Generador_060" type="Node3D" parent="F_EnsayoEnergia"]
-transform = Transform3D(1.1388083, 0, -0.1600491, 0, 1.15, 0, 0.1600491, 0, 1.1388083, 11.4060893, 0.0049332, -32.3991442)
+[node name="Generador_0202" parent="F_EnsayoEnergia/Sur_10" instance=ExtResource("cuadro_Generador")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 11.5549614, -0.008291, -34.3567255)
 
-[node name="Modelo" parent="F_EnsayoEnergia/Generador_060" instance=ExtResource("17")]
+[node name="CajaControl_0203" parent="F_EnsayoEnergia/Sur_10" instance=ExtResource("cuadro_CajaControl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6985449, 0.8917787, -34.7627255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="F_EnsayoEnergia/Generador_060"]
-collision_mask = 0
+[node name="CarritoBombonas_0204" parent="F_EnsayoEnergia/Sur_10" instance=ExtResource("cuadro_CarritoBombonas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6985449, -0.0082213, -34.4871725)
 
-[node name="Colision" type="CollisionShape3D" parent="F_EnsayoEnergia/Generador_060/Cuerpo"]
-position = Vector3(-0.0053471, 0.2885197, 0)
-shape = SubResource("Colision_17")
+[node name="Sur_20" type="Node3D" parent="F_EnsayoEnergia"]
+metadata/motivo = "taller"
+metadata/pov = Vector3(20, 1.32, -30)
 
-[node name="CompresorDeAire_061" type="Node3D" parent="F_EnsayoEnergia"]
-transform = Transform3D(0, 0, 1.05, 0, 1.05, 0, -1.05, 0, 0, 17.2297578, 0.0067075, -32.4000249)
+[node name="CarritoBombonas_0205" parent="F_EnsayoEnergia/Sur_20" instance=ExtResource("cuadro_CarritoBombonas")]
+transform = Transform3D(1.0474423, 0, -0.0732443, 0, 1.05, 0, 0.0732443, 0, 1.0474423, 17.4889904, -0.0082213, -34.4933612)
 
-[node name="Modelo" parent="F_EnsayoEnergia/CompresorDeAire_061" instance=ExtResource("13")]
+[node name="MuebleCajonera_0206" parent="F_EnsayoEnergia/Sur_20" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 19.3433951, -0.0082213, -34.4567254)
 
-[node name="Cuerpo" type="StaticBody3D" parent="F_EnsayoEnergia/CompresorDeAire_061"]
-collision_mask = 0
+[node name="CajaHerramientasMetal_0207" parent="F_EnsayoEnergia/Sur_20" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(0.8987666, 0, 0.0471024, 0, 0.9, 0, -0.0471024, 0, 0.8987666, 19.1172198, 0.9088685, -34.4743951)
 
-[node name="Colision" type="CollisionShape3D" parent="F_EnsayoEnergia/CompresorDeAire_061/Cuerpo"]
-position = Vector3(-0.0000238, 0.587917, -0.218817)
-shape = SubResource("Colision_13")
+[node name="MuebleCajonera_0208" parent="F_EnsayoEnergia/Sur_20" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 20.8933951, -0.0082213, -34.4567254)
 
-[node name="CarritoBombonas_062" type="Node3D" parent="F_EnsayoEnergia"]
-transform = Transform3D(-0.9866773, 0, -0.3591212, 0, 1.05, 0, 0.3591212, 0, -0.9866773, 18.0468463, 0.005, -27.0712909)
+[node name="Cajas_0209" parent="F_EnsayoEnergia/Sur_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.9986295, 0, 0.052336, 0, 1, 0, -0.052336, 0, 0.9986295, 20.9059639, 0.9088828, -34.4962)
 
-[node name="Modelo" parent="F_EnsayoEnergia/CarritoBombonas_062" instance=ExtResource("12")]
+[node name="Escaleras_0210" parent="F_EnsayoEnergia/Sur_20" instance=ExtResource("cuadro_Escaleras")]
+transform = Transform3D(1.0958142, 0, 0.0958713, 0, 1.1, 0, -0.0958713, 0, 1.0958142, 22.5946444, -0.0064442, -34.3793338)
 
-[node name="Cuerpo" type="StaticBody3D" parent="F_EnsayoEnergia/CarritoBombonas_062"]
-collision_mask = 0
+[node name="Taburete_0211" parent="F_EnsayoEnergia/Sur_20" instance=ExtResource("cuadro_Taburete")]
+transform = Transform3D(0.9902681, 0, -0.1391731, 0, 1, 0, 0.1391731, 0, 0.9902681, 20.4985518, -0.0082402, -33.6566767)
 
-[node name="Colision" type="CollisionShape3D" parent="F_EnsayoEnergia/CarritoBombonas_062/Cuerpo"]
-position = Vector3(0, 0.7815851, 0.130447)
-shape = SubResource("Colision_12")
+[node name="Oeste_BancoPruebas" type="Node3D" parent="F_EnsayoEnergia"]
+metadata/motivo = "energia"
+metadata/pov = Vector3(10, 1.32, -30)
 
-[node name="MesitaIndustrial_063" type="Node3D" parent="F_EnsayoEnergia"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, -0, 0, -1, 22.0000001, 0.0026795, -27.2999999)
+[node name="Mueble_0212" parent="F_EnsayoEnergia/Oeste_BancoPruebas" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.7226195, -0.0078505, -27.7540931)
 
-[node name="Modelo" parent="F_EnsayoEnergia/MesitaIndustrial_063" instance=ExtResource("2")]
+[node name="CajaHerramientasMetal_0213" parent="F_EnsayoEnergia/Oeste_BancoPruebas" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(0, 0, -0.9, 0, 0.9, 0, 0.9, 0, 0, 5.7430062, 1.1776484, -27.5247927)
 
-[node name="Cuerpo" type="StaticBody3D" parent="F_EnsayoEnergia/MesitaIndustrial_063"]
-collision_mask = 0
+[node name="CompresorDeAire_0214" parent="F_EnsayoEnergia/Oeste_BancoPruebas" instance=ExtResource("cuadro_CompresorDeAire")]
+transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, 0, 0, -1.1, 5.8485188, -0.0064325, -29.9974242)
 
-[node name="Colision" type="CollisionShape3D" parent="F_EnsayoEnergia/MesitaIndustrial_063/Cuerpo"]
-position = Vector3(0.0000001, 0.6910127, 0.0000001)
-shape = SubResource("Colision_2")
+[node name="Generador_0215" parent="F_EnsayoEnergia/Oeste_BancoPruebas" instance=ExtResource("cuadro_Generador")]
+transform = Transform3D(0, 0, -1.2, 0, 1.2, 0, 1.2, 0, 0, 5.8485449, -0.008291, -31.563142)
 
-[node name="EstanteríaBaldas_064" type="Node3D" parent="F_EnsayoEnergia"]
-transform = Transform3D(0, 0, 1.1, 0, 1.1, 0, -1.1, 0, 0, 7.2, 0.005, -27.0025209)
+[node name="CajaControl_0216" parent="F_EnsayoEnergia/Oeste_BancoPruebas" instance=ExtResource("cuadro_CajaControl")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.4425449, 0.8917787, -31.7067255)
 
-[node name="Modelo" parent="F_EnsayoEnergia/EstanteríaBaldas_064" instance=ExtResource("3")]
+[node name="CarritoBombonas_0217" parent="F_EnsayoEnergia/Oeste_BancoPruebas" instance=ExtResource("cuadro_CarritoBombonas")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.718098, -0.0082213, -32.7067255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="F_EnsayoEnergia/EstanteríaBaldas_064"]
-collision_mask = 0
+[node name="Norte_Suministro" type="Node3D" parent="F_EnsayoEnergia"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(20, 1.32, -30)
 
-[node name="Colision" type="CollisionShape3D" parent="F_EnsayoEnergia/EstanteríaBaldas_064/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Mueble_0218" parent="F_EnsayoEnergia/Norte_Suministro" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 22.5511774, -0.0078505, -25.7308001)
 
-[node name="CuadroEnsayos_065" type="Node3D" parent="F_EnsayoEnergia"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8999999, 0.755, -34.766)
+[node name="CajaPlastico_0219" parent="F_EnsayoEnergia/Norte_Suministro" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.8, 0, 0, 0, 0.8, 0, 0, 0, -0.8, 22.5485449, 1.1776484, -25.7567255)
 
-[node name="Modelo" parent="F_EnsayoEnergia/CuadroEnsayos_065" instance=ExtResource("6")]
+[node name="CarroHerramientas_0220" parent="F_EnsayoEnergia/Norte_Suministro" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 17.4276528, -0.0046613, -25.8648528)
 
-[node name="Cuerpo" type="StaticBody3D" parent="F_EnsayoEnergia/CuadroEnsayos_065"]
-collision_mask = 0
+[node name="Este_Acceso" type="Node3D" parent="F_EnsayoEnergia"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(20, 1.32, -30)
 
-[node name="Colision" type="CollisionShape3D" parent="F_EnsayoEnergia/CuadroEnsayos_065/Cuerpo"]
-position = Vector3(0.0000001, 0.5601667, 0.006)
-shape = SubResource("Colision_6")
+[node name="Mueble_0221" parent="F_EnsayoEnergia/Este_Acceso" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 24.3744704, -0.0078505, -32.559358)
+
+[node name="CajaPlastico_0222" parent="F_EnsayoEnergia/Este_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, 0.8, 0, 0.8, 0, -0.8, 0, 0, 24.348545, 1.1776484, -32.5567255)
+
+[node name="EstanteríaBaldas_0223" parent="F_EnsayoEnergia/Este_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 24.3285449, -0.0082213, -27.4042505)
+
+[node name="Cajas_0224" parent="F_EnsayoEnergia/Este_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 24.361321, 0.4685144, -27.4334863)
+
+[node name="Cajas_0225" parent="F_EnsayoEnergia/Este_Acceso" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 24.360914, 0.9976064, -27.360642)
 
 [node name="G_ReservaRepuestos" type="Node3D" parent="."]
 
-[node name="EstanteríaBaldas_066" type="Node3D" parent="G_ReservaRepuestos"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 26.9974791, 0.005, -26.1)
+[node name="Norte" type="Node3D" parent="G_ReservaRepuestos"]
+metadata/motivo = "repuestos"
+metadata/pov = Vector3(30, 1.32, -30)
 
-[node name="Modelo" parent="G_ReservaRepuestos/EstanteríaBaldas_066" instance=ExtResource("3")]
+[node name="Escaleras_0226" parent="G_ReservaRepuestos/Norte" instance=ExtResource("cuadro_Escaleras")]
+transform = Transform3D(-1.0939741, 0, 0.1149813, 0, 1.1, 0, -0.1149813, 0, -1.0939741, 32.451882, -0.0064442, -25.8551853)
 
-[node name="Cuerpo" type="StaticBody3D" parent="G_ReservaRepuestos/EstanteríaBaldas_066"]
-collision_mask = 0
+[node name="MesitaIndustrial_0227" parent="G_ReservaRepuestos/Norte" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 30.448545, -0.0105419, -26.0067255)
 
-[node name="Colision" type="CollisionShape3D" parent="G_ReservaRepuestos/EstanteríaBaldas_066/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="EstanteríaBaldas_0228" parent="G_ReservaRepuestos/Norte" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 28.0960699, -0.0082213, -25.7767255)
 
-[node name="EstanteríaBaldas_067" type="Node3D" parent="G_ReservaRepuestos"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 28.2974791, 0.005, -26.1)
+[node name="Cajas_0229" parent="G_ReservaRepuestos/Norte" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 28.1253057, 0.4685144, -25.7439494)
 
-[node name="Modelo" parent="G_ReservaRepuestos/EstanteríaBaldas_067" instance=ExtResource("3")]
+[node name="Cajas_0230" parent="G_ReservaRepuestos/Norte" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 28.0524614, 0.9976064, -25.7443565)
 
-[node name="Cuerpo" type="StaticBody3D" parent="G_ReservaRepuestos/EstanteríaBaldas_067"]
-collision_mask = 0
+[node name="CajaHerramientasMetal_0231" parent="G_ReservaRepuestos/Norte" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(-0.95, 0, 0, 0, 0.95, 0, 0, 0, -0.95, 29.3433629, -0.0082213, -26.8008791)
 
-[node name="Colision" type="CollisionShape3D" parent="G_ReservaRepuestos/EstanteríaBaldas_067/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaCarton_0232" parent="G_ReservaRepuestos/Norte" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.1492995, 0, -0.0401344, 0, 1.15, 0, 0.0401344, 0, -1.1492995, 27.1983828, -0.000452, -26.3689289)
 
-[node name="CarroHerramientas_068" type="Node3D" parent="G_ReservaRepuestos"]
-transform = Transform3D(-1.0832885, 0, 0.191013, 0, 1.1, 0, -0.191013, 0, -1.0832885, 32.5789202, 0.008916, -27.2127949)
+[node name="Sur" type="Node3D" parent="G_ReservaRepuestos"]
+metadata/motivo = "herramientas"
+metadata/pov = Vector3(30, 1.32, -30)
 
-[node name="Modelo" parent="G_ReservaRepuestos/CarroHerramientas_068" instance=ExtResource("10")]
+[node name="EstanteríaBaldas_0233" parent="G_ReservaRepuestos/Sur" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 27.60102, -0.0082213, -34.4367255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="G_ReservaRepuestos/CarroHerramientas_068"]
-collision_mask = 0
+[node name="Cajas_0234" parent="G_ReservaRepuestos/Sur" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 27.5717842, 0.4685144, -34.4695017)
 
-[node name="Colision" type="CollisionShape3D" parent="G_ReservaRepuestos/CarroHerramientas_068/Cuerpo"]
-position = Vector3(-0.0208921, 0.4787624, -0.0081273)
-shape = SubResource("Colision_10")
+[node name="Cajas_0235" parent="G_ReservaRepuestos/Sur" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 27.6446285, 0.9976064, -34.4690946)
 
-[node name="Escaleras_069" type="Node3D" parent="G_ReservaRepuestos"]
-transform = Transform3D(1.1108147, 0, -0.2976419, 0, 1.15, 0, 0.2976419, 0, 1.1108147, 33.2461208, 0.0068579, -33.4840207)
+[node name="CarroHerramientas_0236" parent="G_ReservaRepuestos/Sur" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 29.3215263, -0.0043053, -34.2977856)
 
-[node name="Modelo" parent="G_ReservaRepuestos/Escaleras_069" instance=ExtResource("11")]
+[node name="MesitaIndustrial_0237" parent="G_ReservaRepuestos/Sur" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1985449, -0.0105419, -34.2067256)
 
-[node name="Cuerpo" type="StaticBody3D" parent="G_ReservaRepuestos/Escaleras_069"]
-collision_mask = 0
+[node name="CajaDeMadera_0238" parent="G_ReservaRepuestos/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.0993299, 0, 0.0383894, 0, 1.1, 0, -0.0383894, 0, 1.0993299, 32.648865, 0.0005053, -34.3658909)
 
-[node name="Colision" type="CollisionShape3D" parent="G_ReservaRepuestos/Escaleras_069/Cuerpo"]
-position = Vector3(-0.0423348, 0.8594743, -0.0030416)
-shape = SubResource("Colision_11")
+[node name="CajaDeMadera_0239" parent="G_ReservaRepuestos/Sur" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.0984925, 0, -0.0575696, 0, 1.1, 0, 0.0575696, 0, 1.0984925, 32.683065, 0.3890855, -34.365884)
 
-[node name="MesitaIndustrial_070" type="Node3D" parent="G_ReservaRepuestos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2999999, 0.0026795, -33.5000001)
+[node name="CajaHerramientasMetal_0240" parent="G_ReservaRepuestos/Sur" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 29.0666121, 1.0578882, -34.3122643)
 
-[node name="Modelo" parent="G_ReservaRepuestos/MesitaIndustrial_070" instance=ExtResource("2")]
+[node name="Este" type="Node3D" parent="G_ReservaRepuestos"]
+metadata/motivo = "archivo"
+metadata/pov = Vector3(30, 1.32, -30)
 
-[node name="Cuerpo" type="StaticBody3D" parent="G_ReservaRepuestos/MesitaIndustrial_070"]
-collision_mask = 0
+[node name="EstanteríaBaldas_0241" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 34.2285449, -0.0082213, -31.3042505)
 
-[node name="Colision" type="CollisionShape3D" parent="G_ReservaRepuestos/MesitaIndustrial_070/Cuerpo"]
-position = Vector3(0.0000001, 0.6910127, 0.0000001)
-shape = SubResource("Colision_2")
+[node name="CajaDeMadera_0242" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 34.2353773, 0.475008, -31.3369641)
 
-[node name="Mueble_071" type="Node3D" parent="G_ReservaRepuestos"]
-transform = Transform3D(0, 0, -1.05, 0, 1.05, 0, 1.05, 0, 0, 32.9272217, 0.0053894, -31.9027641)
+[node name="CajaDeMadera_0243" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 34.2353721, 1.0041, -31.2663678)
 
-[node name="Modelo" parent="G_ReservaRepuestos/Mueble_071" instance=ExtResource("4")]
+[node name="EstanteríaBaldas_0244" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 34.2285449, -0.0082213, -30.0042505)
 
-[node name="Cuerpo" type="StaticBody3D" parent="G_ReservaRepuestos/Mueble_071"]
-collision_mask = 0
+[node name="CajaDeMadera_0245" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 34.2353773, 0.475008, -30.0369641)
 
-[node name="Colision" type="CollisionShape3D" parent="G_ReservaRepuestos/Mueble_071/Cuerpo"]
-position = Vector3(0.0026324, 0.590564, 0.0259254)
-shape = SubResource("Colision_4")
+[node name="CajaDeMadera_0246" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 34.2353721, 1.0041, -29.9663678)
+
+[node name="EstanteríaBaldas_0247" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 34.2285449, -0.0082213, -28.7042505)
+
+[node name="CajaDeMadera_0248" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 34.2353773, 0.475008, -28.7369641)
+
+[node name="CajaDeMadera_0249" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 34.2353721, 1.0041, -28.6663678)
+
+[node name="CajaDeMadera_0250" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.0436244, 0, 1.2492385, 0, 1.25, 0, -1.2492385, 0, -0.0436244, 34.1389601, 0.0016953, -32.7063618)
+
+[node name="CajaDeMadera_0251" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.0654199, 0, 1.2482869, 0, 1.25, 0, -1.2482869, 0, 0.0654199, 34.1389522, 0.4427182, -32.672271)
+
+[node name="CajaCarton_0252" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-0.0401344, 0, 1.1492995, 0, 1.15, 0, -1.1492995, 0, -0.0401344, 34.1163415, -0.000452, -27.3565634)
+
+[node name="CajaCarton_0253" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(0.0601863, 0, 1.148424, 0, 1.15, 0, -1.148424, 0, 0.0601863, 34.1162118, 0.3966175, -27.3248582)
+
+[node name="CajaCarton_0254" parent="G_ReservaRepuestos/Este" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(0.0601863, 0, 1.148424, 0, 1.15, 0, -1.148424, 0, 0.0601863, 34.1162118, 0.7936869, -27.3248582)
+
+[node name="Oeste" type="Node3D" parent="G_ReservaRepuestos"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(30, 1.32, -30)
+
+[node name="Mueble_0255" parent="G_ReservaRepuestos/Oeste" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 25.6226195, -0.0078505, -27.4540931)
+
+[node name="CajaPlastico_0256" parent="G_ReservaRepuestos/Oeste" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 25.6485449, 1.1776484, -27.4567256)
+
+[node name="EstanteríaBaldas_0257" parent="G_ReservaRepuestos/Oeste" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, -1.08, 0, 1.08, 0, 1.08, 0, 0, 25.6685449, -0.0082213, -32.6092006)
+
+[node name="Cajas_0258" parent="G_ReservaRepuestos/Oeste" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0286176, 0, -0.8195005, 0, 0.82, 0, 0.8195005, 0, -0.0286176, 25.6357688, 0.4685144, -32.5799648)
+
+[node name="Cajas_0259" parent="G_ReservaRepuestos/Oeste" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0429155, 0, -0.8188762, 0, 0.82, 0, 0.8188762, 0, 0.0429155, 25.6361759, 0.9976064, -32.6528091)
 
 [node name="H_Logistica" type="Node3D" parent="."]
 
-[node name="EstanteríaBaldas_072" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 5.8026355, 0.005, -43.6)
+[node name="Sur_0" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "archivo"
+metadata/pov = Vector3(0, 1.32, -40)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_072" instance=ExtResource("3")]
+[node name="EstanteríaBaldas_0260" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, -1.29898, -0.0082213, -44.2367255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_072"]
-collision_mask = 0
+[node name="Cajas_0261" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, -1.3282158, 0.4685144, -44.2695017)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_072/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Cajas_0262" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, -1.2553715, 0.9976064, -44.2690946)
 
-[node name="EstanteríaBaldas_073" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 7.1026355, 0.005, -43.6)
+[node name="EstanteríaBaldas_0263" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 0.00102, -0.0082213, -44.2367255)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_073" instance=ExtResource("3")]
+[node name="Cajas_0264" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, -0.0282158, 0.4685144, -44.2695017)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_073"]
-collision_mask = 0
+[node name="Cajas_0265" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 0.0446285, 0.9976064, -44.2690946)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_073/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="EstanteríaBaldas_0266" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 1.30102, -0.0082213, -44.2367255)
 
-[node name="EstanteríaBaldas_074" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 14.3026355, 0.005, -43.6)
+[node name="Cajas_0267" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 1.2717842, 0.4685144, -44.2695017)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_074" instance=ExtResource("3")]
+[node name="Cajas_0268" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 1.3446285, 0.9976064, -44.2690946)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_074"]
-collision_mask = 0
+[node name="CajaDeMadera_0269" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2492385, 0, 0.0436244, 0, 1.25, 0, -0.0436244, 0, 1.2492385, -2.7010914, 0.0016953, -44.1471408)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_074/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaDeMadera_0270" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2482869, 0, -0.0654199, 0, 1.25, 0, 0.0654199, 0, 1.2482869, -2.6670005, 0.4427182, -44.1471328)
 
-[node name="EstanteríaBaldas_075" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 15.6026355, 0.005, -43.6)
+[node name="CajaCarton_0271" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.1492995, 0, 0.0401344, 0, 1.15, 0, -0.0401344, 0, 1.1492995, 2.6487071, -0.000452, -44.1245222)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_075" instance=ExtResource("3")]
+[node name="CajaCarton_0272" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.148424, 0, -0.0601863, 0, 1.15, 0, 0.0601863, 0, 1.148424, 2.6804122, 0.3966175, -44.1243925)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_075"]
-collision_mask = 0
+[node name="CajaCarton_0273" parent="H_Logistica/Sur_0" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.148424, 0, -0.0601863, 0, 1.15, 0, 0.0601863, 0, 1.148424, 2.6804122, 0.7936869, -44.1243925)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_075/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Sur_10" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "expedicion"
+metadata/pov = Vector3(10, 1.32, -40)
 
-[node name="EstanteríaBaldas_076" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 24.2026355, 0.005, -43.6)
+[node name="EstanteríaBaldas_0274" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 7.70102, -0.0082213, -44.2367255)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_076" instance=ExtResource("3")]
+[node name="Cajas_0275" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 7.6717842, 0.4685144, -44.2695017)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_076"]
-collision_mask = 0
+[node name="Cajas_0276" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 7.7446285, 0.9976064, -44.2690946)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_076/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="MuebleCajonera_0277" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 9.3933951, -0.0082213, -44.2567254)
 
-[node name="EstanteríaBaldas_077" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 25.5026355, 0.005, -43.6)
+[node name="Cajas_0278" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.9986295, 0, 0.052336, 0, 1, 0, -0.052336, 0, 0.9986295, 9.4059639, 0.9088828, -44.2962)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_077" instance=ExtResource("3")]
+[node name="CarroHerramientas_0279" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 11.1204817, -0.0044833, -44.1481919)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_077"]
-collision_mask = 0
+[node name="CajaDeMadera_0280" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2992081, 0, 0.0453693, 0, 1.3, 0, -0.0453693, 0, 1.2992081, 12.4989232, 0.002092, -44.0675574)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_077/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaDeMadera_0281" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2982184, 0, -0.0680367, 0, 1.3, 0, 0.0680367, 0, 1.2982184, 12.5329777, 0.4605958, -44.0675491)
 
-[node name="EstanteríaBaldas_078" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 6.4974791, 0.005, -36.4)
+[node name="CajaCarton_0282" parent="H_Logistica/Sur_10" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(0.9993908, 0, 0.0348995, 0, 1, 0, -0.0348995, 0, 0.9993908, 8.4986859, -0.0014654, -43.7395922)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_078" instance=ExtResource("3")]
+[node name="Sur_20" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "archivo"
+metadata/pov = Vector3(20, 1.32, -40)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_078"]
-collision_mask = 0
+[node name="EstanteríaBaldas_0283" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 18.70102, -0.0082213, -44.2367255)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_078/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Cajas_0284" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 18.6717842, 0.4685144, -44.2695017)
 
-[node name="EstanteríaBaldas_079" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 7.9974791, 0.005, -36.4)
+[node name="Cajas_0285" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 18.7446285, 0.9976064, -44.2690946)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_079" instance=ExtResource("3")]
+[node name="EstanteríaBaldas_0286" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 20.00102, -0.0082213, -44.2367255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_079"]
-collision_mask = 0
+[node name="Cajas_0287" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 19.9717842, 0.4685144, -44.2695017)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_079/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Cajas_0288" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 20.0446285, 0.9976064, -44.2690946)
 
-[node name="EstanteríaBaldas_080" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 16.9974791, 0.005, -36.4)
+[node name="EstanteríaBaldas_0289" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 21.30102, -0.0082213, -44.2367255)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_080" instance=ExtResource("3")]
+[node name="Cajas_0290" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 21.2717842, 0.4685144, -44.2695017)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_080"]
-collision_mask = 0
+[node name="Cajas_0291" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 21.3446285, 0.9976064, -44.2690946)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_080/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaDeMadera_0292" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2492385, 0, 0.0436244, 0, 1.25, 0, -0.0436244, 0, 1.2492385, 17.2989086, 0.0016953, -44.1471408)
 
-[node name="EstanteríaBaldas_081" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 18.4974791, 0.005, -36.4)
+[node name="CajaDeMadera_0293" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2482869, 0, -0.0654199, 0, 1.25, 0, 0.0654199, 0, 1.2482869, 17.3329995, 0.4427182, -44.1471328)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_081" instance=ExtResource("3")]
+[node name="CajaCarton_0294" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.1492995, 0, 0.0401344, 0, 1.15, 0, -0.0401344, 0, 1.1492995, 22.6487071, -0.000452, -44.1245222)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_081"]
-collision_mask = 0
+[node name="CajaCarton_0295" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.148424, 0, -0.0601863, 0, 1.15, 0, 0.0601863, 0, 1.148424, 22.6804122, 0.3966175, -44.1243925)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_081/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaCarton_0296" parent="H_Logistica/Sur_20" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(1.148424, 0, -0.0601863, 0, 1.15, 0, 0.0601863, 0, 1.148424, 22.6804122, 0.7936869, -44.1243925)
 
-[node name="EstanteríaBaldas_082" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 26.9974791, 0.005, -36.4)
+[node name="Sur_30" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "expedicion"
+metadata/pov = Vector3(30, 1.32, -40)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_082" instance=ExtResource("3")]
+[node name="EstanteríaBaldas_0297" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 27.70102, -0.0082213, -44.2367255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_082"]
-collision_mask = 0
+[node name="Cajas_0298" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 27.6717842, 0.4685144, -44.2695017)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_082/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="Cajas_0299" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 27.7446285, 0.9976064, -44.2690946)
 
-[node name="EstanteríaBaldas_083" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, -0, 0, -1.1, 28.4974791, 0.005, -36.4)
+[node name="MuebleCajonera_0300" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 29.3933951, -0.0082213, -44.2567254)
 
-[node name="Modelo" parent="H_Logistica/EstanteríaBaldas_083" instance=ExtResource("3")]
+[node name="Cajas_0301" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.9986295, 0, 0.052336, 0, 1, 0, -0.052336, 0, 0.9986295, 29.4059639, 0.9088828, -44.2962)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/EstanteríaBaldas_083"]
-collision_mask = 0
+[node name="CarroHerramientas_0302" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(1.05, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 31.1204817, -0.0044833, -44.1481919)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/EstanteríaBaldas_083/Cuerpo"]
-position = Vector3(-0.0022917, 0.95, 0)
-shape = SubResource("Colision_3")
+[node name="CajaDeMadera_0303" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2992081, 0, 0.0453693, 0, 1.3, 0, -0.0453693, 0, 1.2992081, 32.4989232, 0.002092, -44.0675574)
 
-[node name="Escaleras_084" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.1388083, 0, 0.1600491, 0, 1.15, 0, -0.1600491, 0, 1.1388083, 10.848698, 0.0068579, -43.0033119)
+[node name="CajaDeMadera_0304" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(1.2982184, 0, -0.0680367, 0, 1.3, 0, 0.0680367, 0, 1.2982184, 32.5329777, 0.4605958, -44.0675491)
 
-[node name="Modelo" parent="H_Logistica/Escaleras_084" instance=ExtResource("11")]
+[node name="CajaCarton_0305" parent="H_Logistica/Sur_30" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(0.9993908, 0, 0.0348995, 0, 1, 0, -0.0348995, 0, 0.9993908, 28.4986859, -0.0014654, -43.7395922)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/Escaleras_084"]
-collision_mask = 0
+[node name="Norte_10" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "archivo"
+metadata/pov = Vector3(10, 1.32, -40)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/Escaleras_084/Cuerpo"]
-position = Vector3(-0.0423348, 0.8594743, -0.0030416)
-shape = SubResource("Colision_11")
+[node name="EstanteríaBaldas_0306" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 11.2960699, -0.0082213, -35.7767255)
 
-[node name="MesitaIndustrial_085" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(0, 0, 1.05, 0, 1.05, 0, -1.05, 0, 0, 2.9999999, 0.0025634, -37.2999999)
+[node name="CajaDeMadera_0307" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 11.3287835, 0.475008, -35.7698932)
 
-[node name="Modelo" parent="H_Logistica/MesitaIndustrial_085" instance=ExtResource("2")]
+[node name="CajaDeMadera_0308" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 11.2581871, 1.0041, -35.7698984)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/MesitaIndustrial_085"]
-collision_mask = 0
+[node name="EstanteríaBaldas_0309" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 9.9960699, -0.0082213, -35.7767255)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/MesitaIndustrial_085/Cuerpo"]
-position = Vector3(0.0000001, 0.6910127, 0.0000001)
-shape = SubResource("Colision_2")
+[node name="CajaDeMadera_0310" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 10.0287835, 0.475008, -35.7698932)
 
-[node name="CarroHerramientas_086" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.0340481, 0, -0.1823306, 0, 1.05, 0, 0.1823306, 0, 1.0340481, 31.5201216, 0.008738, -42.8877867)
+[node name="CajaDeMadera_0311" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 9.9581871, 1.0041, -35.7698984)
 
-[node name="Modelo" parent="H_Logistica/CarroHerramientas_086" instance=ExtResource("10")]
+[node name="EstanteríaBaldas_0312" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 8.6960699, -0.0082213, -35.7767255)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/CarroHerramientas_086"]
-collision_mask = 0
+[node name="CajaDeMadera_0313" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 8.7287835, 0.475008, -35.7698932)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/CarroHerramientas_086/Cuerpo"]
-position = Vector3(-0.0208921, 0.4787624, -0.0081273)
-shape = SubResource("Colision_10")
+[node name="CajaDeMadera_0314" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 8.6581871, 1.0041, -35.7698984)
 
-[node name="CajaTransporteInferior_087" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.45, 0, 0, 0, 1.45, 0, 0, 0, 1.45, 3.3, 0.0165034, -43.212089)
+[node name="CajaDeMadera_0315" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-1.2492385, 0, -0.0436244, 0, 1.25, 0, 0.0436244, 0, -1.2492385, 12.6981812, 0.0016953, -35.8663103)
 
-[node name="Modelo" parent="H_Logistica/CajaTransporteInferior_087" instance=ExtResource("18")]
+[node name="CajaDeMadera_0316" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-1.2482869, 0, 0.0654199, 0, 1.25, 0, -0.0654199, 0, -1.2482869, 12.6640904, 0.4427182, -35.8663183)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/CajaTransporteInferior_087"]
-collision_mask = 0
+[node name="CajaCarton_0317" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.1492995, 0, -0.0401344, 0, 1.15, 0, 0.0401344, 0, -1.1492995, 7.3483828, -0.000452, -35.8889289)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/CajaTransporteInferior_087/Cuerpo"]
-position = Vector3(0, 0.1668758, 0.0083372)
-shape = SubResource("Colision_18")
+[node name="CajaCarton_0318" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.148424, 0, 0.0601863, 0, 1.15, 0, -0.0601863, 0, -1.148424, 7.3166776, 0.3966175, -35.8890586)
 
-[node name="CajaTransporteSuperior_088" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.45, 0, 0, 0, 1.45, 0, 0, 0, 1.45, 3.3, 0.5284499, -43.212089)
+[node name="CajaCarton_0319" parent="H_Logistica/Norte_10" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.148424, 0, 0.0601863, 0, 1.15, 0, -0.0601863, 0, -1.148424, 7.3166776, 0.7936869, -35.8890586)
 
-[node name="Modelo" parent="H_Logistica/CajaTransporteSuperior_088" instance=ExtResource("18")]
+[node name="Norte_20" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "expedicion"
+metadata/pov = Vector3(20, 1.32, -40)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/CajaTransporteSuperior_088"]
-collision_mask = 0
+[node name="EstanteríaBaldas_0320" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 22.2960699, -0.0082213, -35.7767255)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/CajaTransporteSuperior_088/Cuerpo"]
-position = Vector3(0, 0.1668758, 0.0083372)
-shape = SubResource("Colision_18")
+[node name="Cajas_0321" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 22.3253057, 0.4685144, -35.7439494)
 
-[node name="CajaTransporteInferior_089" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.45, 0, 0, 0, 1.45, 0, 0, 0, 1.45, 18.5, 0.0165034, -43.012089)
+[node name="Cajas_0322" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 22.2524614, 0.9976064, -35.7443565)
 
-[node name="Modelo" parent="H_Logistica/CajaTransporteInferior_089" instance=ExtResource("18")]
+[node name="MuebleCajonera_0323" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(-1.1, 0, 0, 0, 1.1, 0, 0, 0, -1.1, 20.6036947, -0.0082213, -35.7567257)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/CajaTransporteInferior_089"]
-collision_mask = 0
+[node name="Cajas_0324" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.9986295, 0, -0.052336, 0, 1, 0, 0.052336, 0, -0.9986295, 20.591126, 0.9088828, -35.7172511)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/CajaTransporteInferior_089/Cuerpo"]
-position = Vector3(0, 0.1668758, 0.0083372)
-shape = SubResource("Colision_18")
+[node name="CarroHerramientas_0325" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(-1.05, 0, 0, 0, 1.05, 0, 0, 0, -1.05, 18.8766082, -0.0044833, -35.8652592)
 
-[node name="CajaTransporteSuperior_090" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.45, 0, 0, 0, 1.45, 0, 0, 0, 1.45, 18.5, 0.5284499, -43.012089)
+[node name="CajaDeMadera_0326" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-1.2992081, 0, -0.0453693, 0, 1.3, 0, 0.0453693, 0, -1.2992081, 17.4981667, 0.002092, -35.9458937)
 
-[node name="Modelo" parent="H_Logistica/CajaTransporteSuperior_090" instance=ExtResource("18")]
+[node name="CajaDeMadera_0327" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-1.2982184, 0, 0.0680367, 0, 1.3, 0, -0.0680367, 0, -1.2982184, 17.4641122, 0.4605958, -35.945902)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/CajaTransporteSuperior_090"]
-collision_mask = 0
+[node name="CajaCarton_0328" parent="H_Logistica/Norte_20" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-0.9993908, 0, -0.0348995, 0, 1, 0, 0.0348995, 0, -0.9993908, 21.498404, -0.0014654, -36.2738589)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/CajaTransporteSuperior_090/Cuerpo"]
-position = Vector3(0, 0.1668758, 0.0083372)
-shape = SubResource("Colision_18")
+[node name="Norte_30" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "archivo"
+metadata/pov = Vector3(30, 1.32, -40)
 
-[node name="CajaTransporteInferior_091" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.45, 0, 0, 0, 1.45, 0, 0, 0, 1.45, 32.7, 0.0165034, -36.812089)
+[node name="EstanteríaBaldas_0329" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 31.2960699, -0.0082213, -35.7767255)
 
-[node name="Modelo" parent="H_Logistica/CajaTransporteInferior_091" instance=ExtResource("18")]
+[node name="CajaDeMadera_0330" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 31.3287835, 0.475008, -35.7698932)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/CajaTransporteInferior_091"]
-collision_mask = 0
+[node name="CajaDeMadera_0331" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 31.2581871, 1.0041, -35.7698984)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/CajaTransporteInferior_091/Cuerpo"]
-position = Vector3(0, 0.1668758, 0.0083372)
-shape = SubResource("Colision_18")
+[node name="EstanteríaBaldas_0332" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 29.9960699, -0.0082213, -35.7767255)
 
-[node name="CajaTransporteSuperior_092" type="Node3D" parent="H_Logistica"]
-transform = Transform3D(1.45, 0, 0, 0, 1.45, 0, 0, 0, 1.45, 32.7, 0.5284499, -36.812089)
+[node name="CajaDeMadera_0333" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 30.0287835, 0.475008, -35.7698932)
 
-[node name="Modelo" parent="H_Logistica/CajaTransporteSuperior_092" instance=ExtResource("18")]
+[node name="CajaDeMadera_0334" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 29.9581871, 1.0041, -35.7698984)
 
-[node name="Cuerpo" type="StaticBody3D" parent="H_Logistica/CajaTransporteSuperior_092"]
-collision_mask = 0
+[node name="EstanteríaBaldas_0335" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 28.6960699, -0.0082213, -35.7767255)
 
-[node name="Colision" type="CollisionShape3D" parent="H_Logistica/CajaTransporteSuperior_092/Cuerpo"]
-position = Vector3(0, 0.1668758, 0.0083372)
-shape = SubResource("Colision_18")
+[node name="CajaDeMadera_0336" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8195005, 0, 0.0286176, 0, 0.82, 0, -0.0286176, 0, -0.8195005, 28.7287835, 0.475008, -35.7698932)
+
+[node name="CajaDeMadera_0337" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.8188762, 0, -0.0429155, 0, 0.82, 0, 0.0429155, 0, -0.8188762, 28.6581871, 1.0041, -35.7698984)
+
+[node name="CajaDeMadera_0338" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-1.2492385, 0, -0.0436244, 0, 1.25, 0, 0.0436244, 0, -1.2492385, 32.6981812, 0.0016953, -35.8663103)
+
+[node name="CajaDeMadera_0339" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-1.2482869, 0, 0.0654199, 0, 1.25, 0, -0.0654199, 0, -1.2482869, 32.6640904, 0.4427182, -35.8663183)
+
+[node name="CajaCarton_0340" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.1492995, 0, -0.0401344, 0, 1.15, 0, 0.0401344, 0, -1.1492995, 27.3483828, -0.000452, -35.8889289)
+
+[node name="CajaCarton_0341" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.148424, 0, 0.0601863, 0, 1.15, 0, -0.0601863, 0, -1.148424, 27.3166776, 0.3966175, -35.8890586)
+
+[node name="CajaCarton_0342" parent="H_Logistica/Norte_30" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-1.148424, 0, 0.0601863, 0, 1.15, 0, -0.0601863, 0, -1.148424, 27.3166776, 0.7936869, -35.8890586)
+
+[node name="Oeste_Recepcion" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "expedicion"
+metadata/pov = Vector3(0, 1.32, -40)
+
+[node name="EstanteríaBaldas_0343" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, -1.08, 0, 1.08, 0, 1.08, 0, 0, -4.2314551, -0.0082213, -37.7092006)
+
+[node name="Cajas_0344" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0286176, 0, -0.8195005, 0, 0.82, 0, 0.8195005, 0, -0.0286176, -4.2642312, 0.4685144, -37.6799648)
+
+[node name="Cajas_0345" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0429155, 0, -0.8188762, 0, 0.82, 0, 0.8188762, 0, 0.0429155, -4.2638241, 0.9976064, -37.7528091)
+
+[node name="MuebleCajonera_0346" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_MuebleCajonera")]
+transform = Transform3D(0, 0, -1.1, 0, 1.1, 0, 1.1, 0, 0, -4.2514549, -0.0082213, -39.4015757)
+
+[node name="Cajas_0347" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.052336, 0, -0.9986295, 0, 1, 0, 0.9986295, 0, 0.052336, -4.2909295, 0.9088828, -39.4141445)
+
+[node name="CarroHerramientas_0348" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(0, 0, -1.05, 0, 1.05, 0, 1.05, 0, 0, -4.1429214, -0.0044833, -41.1286623)
+
+[node name="CajaDeMadera_0349" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(0.0453693, 0, -1.2992081, 0, 1.3, 0, 1.2992081, 0, 0.0453693, -4.0622869, 0.002092, -42.5071038)
+
+[node name="CajaDeMadera_0350" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_CajaDeMadera")]
+transform = Transform3D(-0.0680367, 0, -1.2982184, 0, 1.3, 0, 1.2982184, 0, -0.0680367, -4.0622786, 0.4605958, -42.5411583)
+
+[node name="CajaCarton_0351" parent="H_Logistica/Oeste_Recepcion" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(0.0348995, 0, -0.9993908, 0, 1, 0, 0.9993908, 0, 0.0348995, -3.7343217, -0.0014654, -38.5068665)
+
+[node name="Este_Despacho" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "repuestos"
+metadata/pov = Vector3(30, 1.32, -40)
+
+[node name="Escaleras_0352" parent="H_Logistica/Este_Despacho" instance=ExtResource("cuadro_Escaleras")]
+transform = Transform3D(0.1149813, 0, 1.0939741, 0, 1.1, 0, -1.0939741, 0, 0.1149813, 34.1500852, -0.0064442, -42.4600627)
+
+[node name="MesitaIndustrial_0353" parent="H_Logistica/Este_Despacho" instance=ExtResource("cuadro_MesitaIndustrial")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 33.998545, -0.0105419, -40.4567256)
+
+[node name="EstanteríaBaldas_0354" parent="H_Logistica/Este_Despacho" instance=ExtResource("cuadro_EstanteríaBaldas")]
+transform = Transform3D(0, 0, 1.08, 0, 1.08, 0, -1.08, 0, 0, 34.2285449, -0.0082213, -38.1042505)
+
+[node name="Cajas_0355" parent="H_Logistica/Este_Despacho" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.0286176, 34.261321, 0.4685144, -38.1334863)
+
+[node name="Cajas_0356" parent="H_Logistica/Este_Despacho" instance=ExtResource("cuadro_Cajas")]
+transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 34.260914, 0.9976064, -38.060642)
+
+[node name="CajaHerramientasMetal_0357" parent="H_Logistica/Este_Despacho" instance=ExtResource("cuadro_CajaHerramientasMetal")]
+transform = Transform3D(0, 0, 0.95, 0, 0.95, 0, -0.95, 0, 0, 33.2043914, -0.0082213, -39.3515435)
+
+[node name="CajaCarton_0358" parent="H_Logistica/Este_Despacho" instance=ExtResource("cuadro_CajaCarton")]
+transform = Transform3D(-0.0401344, 0, 1.1492995, 0, 1.15, 0, -1.1492995, 0, -0.0401344, 33.6363415, -0.000452, -37.2065634)
+
+[node name="Norte_Entrada" type="Node3D" parent="H_Logistica"]
+metadata/motivo = "puerta"
+metadata/pov = Vector3(0, 1.32, -40)
+
+[node name="Mueble_0359" parent="H_Logistica/Norte_Entrada" instance=ExtResource("cuadro_Mueble")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 2.5511774, -0.0078505, -35.7308001)
+
+[node name="CajaPlastico_0360" parent="H_Logistica/Norte_Entrada" instance=ExtResource("cuadro_CajaPlastico")]
+transform = Transform3D(-0.8, 0, 0, 0, 0.8, 0, 0, 0, -0.8, 2.5485449, 1.1776484, -35.7567255)
+
+[node name="CarroHerramientas_0361" parent="H_Logistica/Norte_Entrada" instance=ExtResource("cuadro_CarroHerramientas")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -2.5723472, -0.0046613, -35.8648528)

@@ -1,14 +1,32 @@
 [gd_scene format=3 uid="uid://c7trry61vrlrr"]
 
 [ext_resource type="Script" uid="uid://b2evhjnxbr08x" path="res://escenas/HUD/menu_shift.gd" id="1_shift"]
+[ext_resource type="Texture2D" uid="uid://b5nfwjttgcca4" path="res://sprites/carpetaVintage.png" id="2_1eiwo"]
+[ext_resource type="Texture2D" uid="uid://cl4eico1do3un" path="res://sprites/mockupmenu.png" id="3_gkyss"]
+[ext_resource type="Texture2D" uid="uid://d4jaqncf1y3co" path="res://sprites/separadorVintage.png" id="4_kn11p"]
+[ext_resource type="PackedScene" uid="uid://cfa14xa7pq4wh" path="res://escenas/HUD/slot.tscn" id="5_slot"]
+[ext_resource type="PackedScene" path="res://escenas/HUD/fila_inventario.tscn" id="6_fila"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBox_panel"]
-bg_color = Color(0.72, 0.66, 0.53, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8042i"]
+texture = ExtResource("2_1eiwo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1eiwo"]
+texture = ExtResource("3_gkyss")
+
+[sub_resource type="StyleBoxFlat" id="Enganche"]
+bg_color = Color(0.06, 0.15, 0.2, 0.18)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.68, 0.58, 0.8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47e2d"]
+texture = ExtResource("4_kn11p")
 
 [node name="MenuShift" type="CanvasLayer" unique_id=2113370766]
 process_mode = 3
 layer = 10
-visible = false
 script = ExtResource("1_shift")
 
 [node name="Pantalla" type="Control" parent="." unique_id=295175460]
@@ -37,27 +55,321 @@ anchor_right = 0.9
 anchor_bottom = 0.92
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBox_panel")
+theme_override_styles/panel = SubResource("StyleBoxTexture_8042i")
 
-[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1636717342]
+[node name="Panel2" type="Panel" parent="Pantalla" unique_id=1901242034]
+layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.07189582
-anchor_top = 0.012604937
-anchor_right = 1.2616597
-anchor_bottom = 0.9186297
-offset_left = 214.82399
-offset_top = 57.832
-offset_right = -428.432
-offset_bottom = -40.272034
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.1
+anchor_top = 0.08
+anchor_right = 0.9
+anchor_bottom = 0.92
+offset_left = -122.200005
+offset_top = 38.16
+offset_right = -309.79993
+offset_bottom = -12.160034
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1eiwo")
 
-[node name="GridContainer" type="GridContainer" parent="HSplitContainer" unique_id=569403327]
+[node name="ZonaPersonaje" type="Control" parent="Pantalla/Panel2" unique_id=1485483580]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Cabeza" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=639742096 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.584
+anchor_top = 0.21
+anchor_right = 0.695
+anchor_bottom = 0.3
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "cabeza"
+zona = "cabeza"
+
+[node name="Torso" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=1611730326 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.335
+anchor_top = 0.663
+anchor_right = 0.435
+anchor_bottom = 0.845
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "torso"
+zona = "torso"
+
+[node name="Piernas" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=641204958 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.584
+anchor_top = 0.693
+anchor_right = 0.699
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "piernas"
+zona = "piernas"
+
+[node name="Brazo1" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=1829312819 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.329
+anchor_top = 0.335
+anchor_right = 0.385
+anchor_bottom = 0.385
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "brazo"
+zona = "brazo"
+
+[node name="Brazo2" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=755571847 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.647
+anchor_top = 0.452
+anchor_right = 0.699
+anchor_bottom = 0.502
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "brazo"
+zona = "brazo"
+indice = 1
+
+[node name="Brazo3" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=2055748675 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.329
+anchor_top = 0.389
+anchor_right = 0.385
+anchor_bottom = 0.439
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "brazo"
+zona = "brazo"
+indice = 2
+
+[node name="Brazo4" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=207328846 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.647
+anchor_top = 0.506
+anchor_right = 0.699
+anchor_bottom = 0.556
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "brazo"
+zona = "brazo"
+indice = 3
+
+[node name="Brazo5" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=724982602 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.329
+anchor_top = 0.443
+anchor_right = 0.385
+anchor_bottom = 0.493
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "brazo"
+zona = "brazo"
+indice = 4
+
+[node name="Brazo6" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=1283953898 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.647
+anchor_top = 0.56
+anchor_right = 0.699
+anchor_bottom = 0.61
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "brazo"
+zona = "brazo"
+indice = 5
+
+[node name="Brazo7" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=1656933297 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.329
+anchor_top = 0.497
+anchor_right = 0.385
+anchor_bottom = 0.547
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "brazo"
+zona = "brazo"
+indice = 6
+
+[node name="Brazo8" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=2142322047 instance=ExtResource("5_slot")]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.647
+anchor_top = 0.614
+anchor_right = 0.699
+anchor_bottom = 0.664
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("Enganche")
+tag_requerido = "brazo"
+zona = "brazo"
+indice = 7
+
+[node name="Panel3" type="Panel" parent="Pantalla" unique_id=1289683167]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.08
+anchor_right = 0.9
+anchor_bottom = 0.92
+offset_left = 504.8
+offset_top = 34.16
+offset_right = -62.799927
+offset_bottom = -24.160034
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_47e2d")
+
+[node name="ColumnaInventario" type="VBoxContainer" parent="Pantalla/Panel3" unique_id=1917028978]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08
+anchor_top = 0.1
+anchor_right = 0.92
+anchor_bottom = 0.94
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Pestañas" type="TabBar" parent="Pantalla/Panel3/ColumnaInventario" unique_id=1562236459]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-columns = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 14
+current_tab = 0
+tab_alignment = 2
+tab_count = 4
+tab_0/title = "Cabezas"
+tab_1/title = "Torsos"
+tab_2/title = "Brazos"
+tab_3/title = "Piernas"
 
-[node name="GridContainer2" type="GridContainer" parent="HSplitContainer" unique_id=1163371206]
+[node name="ScrollInventario" type="ScrollContainer" parent="Pantalla/Panel3/ColumnaInventario" unique_id=623935194]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ListaInventario" type="VBoxContainer" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario" unique_id=1507004860]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Slot01" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1231777396 instance=ExtResource("6_fila")]
+layout_mode = 2
+
+[node name="Slot02" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=287409994 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 1
+
+[node name="Slot03" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=287536490 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 2
+
+[node name="Slot04" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1308107027 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 3
+
+[node name="Slot05" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1861772200 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 4
+
+[node name="Slot06" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1476066533 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 5
+
+[node name="Slot07" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=190429349 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 6
+
+[node name="Slot08" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=2056277654 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 7
+
+[node name="Slot09" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=103671459 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 8
+
+[node name="Slot10" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1037376955 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 9
+
+[node name="Slot11" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=891950371 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 10
+
+[node name="Slot12" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=145718857 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 11
+
+[node name="Slot13" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=878825511 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 12
+
+[node name="Slot14" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=501895404 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 13
+
+[node name="Slot15" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1785154619 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 14
+
+[node name="Slot16" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1369626674 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 15
+
+[node name="Slot17" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1810232805 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 16
+
+[node name="Slot18" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=534319645 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 17
+
+[node name="Slot19" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=1849570672 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 18
+
+[node name="Slot20" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=187661233 instance=ExtResource("6_fila")]
+layout_mode = 2
+indice = 19

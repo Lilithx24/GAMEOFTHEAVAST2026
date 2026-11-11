@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TorsoInventario" format=3 uid="uid://c08fynteeqjcq"]
+
+[ext_resource type="Script" uid="uid://c60h3mu0i3n6p" path="res://escenas/HUD/torsoInventario.gd" id="1_mq4s3"]
+[ext_resource type="Texture2D" uid="uid://da6ed4lmypxlu" path="res://sprites/piernas1.png" id="2_xqwpy"]
+
+[resource]
+script = ExtResource("1_mq4s3")
+slotsBrazos = 6
+textura = ExtResource("2_xqwpy")
+tags = Array[String](["torso"])
+metadata/_custom_type_script = "uid://c60h3mu0i3n6p"
