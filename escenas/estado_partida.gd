@@ -21,7 +21,8 @@ var equipo: Dictionary = {
 	"piernas": null
 }
 
-var brazos_equipados: Array[ParteInventario] = []
+@export var brazos_equipados: Array[ParteInventario] = []
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

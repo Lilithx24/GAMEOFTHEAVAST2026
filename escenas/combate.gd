@@ -19,12 +19,31 @@ func _ready() -> void:
 	contenedor = $PanelJugador/HBoxContainer
 	var parteEnemigoA = crearParteEnemigo(100)
 	enemigo_actual = crearEnemigo([parteEnemigoA])
-	var skillA = crearSkill("Ataque 15 de daño", 15, 2)
-	var partePersonajeA = crearPartePersonaje([skillA])
-	var skillB = crearSkill("Ataque 10 de daño", 10, 1)
-	var partePersonajeB = crearPartePersonaje([skillB])
-	personaje = crearPersonaje(100, 2, [partePersonajeA,partePersonajeB])
+	personaje = crearPersonaje(100, 2, [])
+	EstadoPartida.inventario_cambiado.connect(_solicitar_skills)
+	reconstruirSkills()
+
+
+func _solicitar_skills() -> void:
+	reconstruirSkills.call_deferred()
+
+
+# Solo cuando cambia el equipo (y al empezar el combate)
+func reconstruirSkills() -> void:
+	for hijo in contenedor.get_children():
+		contenedor.remove_child(hijo)
+		hijo.queue_free()
+
+	for parte in EstadoPartida.brazos_equipados:
+		var brazo := parte as BrazoInventario   # null si el hueco está vacío o no es un brazo
+		if brazo == null:
+			continue
+		crearSkill(brazo.nombreSkill, brazo.dmgSkill, brazo.staSkill)
+
 	updateSkills()
+	
+	
+###### Funciones de instanciamiento ######
 
 func crearEnemigo(partes: Array[ParteEnemigo]) -> Enemigo:
 	enemigo_actual = ESCENA_ENEMIGO.instantiate()
@@ -68,6 +87,8 @@ func crearSkill(nombre: String, dmg: int, sta: int) -> Skill:
 	contenedor.add_child(skill)
 	return skill
 
+###### Fin funciones instanciamiento ######
+
 func _on_carta_soltada(skill: Skill, parte: ParteEnemigo) -> void:
 	if combate_terminado or not skill.disponible or skill.usada:
 		return
@@ -102,6 +123,7 @@ func terminarTurno() -> void:
 		if hijo is Skill:
 			hijo.recuperar()
 	updateSkills()
+
 
 func updateSkills() -> void:
 	for hijo in contenedor.get_children():

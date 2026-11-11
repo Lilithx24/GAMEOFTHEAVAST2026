@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="ParteInventario" format=3 uid="uid://d101qwcmwrf7m"]
+[gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://d101qwcmwrf7m"]
 
-[ext_resource type="Script" uid="uid://b1ux771lmrk8s" path="res://escenas/HUD/parteInventario.gd" id="1_eracl"]
+[ext_resource type="Script" uid="uid://nlhacceod46a" path="res://escenas/HUD/brazoInventario.gd" id="1_m2w65"]
 [ext_resource type="Texture2D" uid="uid://djw0s1nfd36v7" path="res://sprites/brazodch.png" id="2_m2w65"]
 
 [resource]
-script = ExtResource("1_eracl")
+script = ExtResource("1_m2w65")
+nombreSkill = "Golpe 15"
+dmgSkill = 15
+staSkill = 1
 nombre = "Brazo de Cangrejo"
 textura = ExtResource("2_m2w65")
 tags = Array[String](["brazo"])

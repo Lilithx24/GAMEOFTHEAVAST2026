@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="ParteInventario" format=3 uid="uid://syruvmegv1lp"]
+[gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://syruvmegv1lp"]
 
-[ext_resource type="Script" uid="uid://b1ux771lmrk8s" path="res://escenas/HUD/parteInventario.gd" id="1_vxfec"]
+[ext_resource type="Script" uid="uid://nlhacceod46a" path="res://escenas/HUD/brazoInventario.gd" id="1_jpy2r"]
 [ext_resource type="Texture2D" uid="uid://j1nqm8qyq1j2" path="res://sprites/brazoizq.png" id="2_jpy2r"]
 
 [resource]
-script = ExtResource("1_vxfec")
+script = ExtResource("1_jpy2r")
+nombreSkill = "Ataque 10"
+dmgSkill = 10
+staSkill = 1
 nombre = "Brazo de Humano"
 descripcion_habilidad = "jimbaibnsahdvf bkjashdbfkjashdbf"
 textura = ExtResource("2_jpy2r")
