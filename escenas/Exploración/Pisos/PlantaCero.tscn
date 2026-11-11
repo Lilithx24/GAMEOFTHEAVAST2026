@@ -1639,7 +1639,7 @@ collision_layer = 128
 collision_mask = 0
 monitoring = false
 script = ExtResource("24_examinable")
-id_objeto = "Planta_Cero_Caja_Inicio_2"
+id_objeto = "Planta_Cero_Caja_Inicio_3"
 recompensa = ExtResource("16_0c8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio3" unique_id=1007017519]
