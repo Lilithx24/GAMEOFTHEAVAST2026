@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_mq4s3")
 slotsBrazos = 6
+nombre = "Torso de araña"
 textura = ExtResource("2_xqwpy")
 tags = Array[String](["torso"])
 metadata/_custom_type_script = "uid://c60h3mu0i3n6p"

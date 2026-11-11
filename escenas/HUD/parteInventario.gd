@@ -2,6 +2,7 @@ class_name ParteInventario
 extends Resource
 
 @export var nombre: String
+@export_multiline var descripcion_habilidad: String = ""
 @export var textura: Texture2D
 #@export var skills: Array[Skill]
 @export var tags: Array[String]

@@ -8,7 +8,8 @@ signal item_cambiado(slot: Slot)
 @export_enum("inventario", "temporal", "cabeza", "torso", "piernas", "brazo") var zona: String = "inventario"
 @export var indice: int = 0
 
-@onready var icono: TextureRect = $Icono
+@export_node_path("TextureRect") var ruta_icono: NodePath = ^"Icono"
+@onready var icono: TextureRect = get_node(ruta_icono)
 
 var item: ParteInventario
 var validar_entrega: Callable
