@@ -1815,7 +1815,7 @@ transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.609441, -0.0046613, -12.32
 transform = Transform3D(-4.5896957e-08, 0, 1.05, 0, 1.05, 0, -1.05, 0, -4.5896957e-08, -4.236744, -0.0078319, -18.80396)
 
 [node name="SillaDeRuedas_0119" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/Oeste_Atencion" index="2"]
-transform = Transform3D(-0.079239376, 0, 1.0470058, 0, 1.05, 0, -1.0470058, 0, -0.079239376, -3.8353505, -0.0142889, -23.675594)
+transform = Transform3D(-0.30139518, 0, 1.0058135, 0, 1.0499998, 0, -1.0058135, 0, -0.30139518, -3.6248972, -0.0142889, -23.874903)
 
 [node name="Mueble_0128" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/Sur_Acceso" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.809803, -0.0078505, -24.456606)

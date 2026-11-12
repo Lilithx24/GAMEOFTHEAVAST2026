@@ -4,11 +4,6 @@
 
 [sub_resource type="StyleBoxFlat" id="EstiloBoton"]
 bg_color = Color(0.19, 0.16, 0.11, 0.97)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.75, 0.64, 0.39, 1)
 content_margin_left = 16.0
 content_margin_top = 8.0
 content_margin_right = 16.0
@@ -39,6 +34,11 @@ offset_bottom = 40.0
 focus_mode = 0
 theme_override_colors/font_color = Color(1, 0.94, 0.78, 1)
 theme_override_styles/normal = SubResource("EstiloBoton")
+theme_override_styles/hover = SubResource("EstiloBoton")
+theme_override_styles/pressed = SubResource("EstiloBoton")
+theme_override_styles/hover_pressed = SubResource("EstiloBoton")
+theme_override_styles/disabled = SubResource("EstiloBoton")
+theme_override_styles/focus = SubResource("EstiloBoton")
 text = "Examinar"
 
 [node name="Aviso" type="PanelContainer" parent="."]
