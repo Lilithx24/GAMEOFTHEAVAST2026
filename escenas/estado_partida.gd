@@ -33,6 +33,12 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
+func obtener_vida_maxima() -> int:
+	var torso := equipo["torso"] as TorsoInventario
+	if torso == null:
+		return 50   # vida base si no llevas torso (ajusta el valor)
+	return torso.vidaMax
+
 func obtener_capacidad_brazos() -> int:
 	var torso := equipo["torso"] as TorsoInventario
 

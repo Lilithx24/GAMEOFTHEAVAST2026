@@ -19,7 +19,7 @@ func _ready() -> void:
 	contenedor = $PanelJugador/HBoxContainer
 	var parteEnemigoA = crearParteEnemigo(100)
 	enemigo_actual = crearEnemigo([parteEnemigoA])
-	personaje = crearPersonaje(100, 2, [])
+	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), 2, [])
 	EstadoPartida.inventario_cambiado.connect(_solicitar_skills)
 	reconstruirSkills()
 
