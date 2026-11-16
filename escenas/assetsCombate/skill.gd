@@ -5,6 +5,7 @@ extends PanelContainer
 @export var nombreSkill: String = "nulo"
 @export var dmgSkill: int
 @export var staSkill: int
+@export var efectos: Array[String] = []
 
 var parte_origen: BrazoInventario
 

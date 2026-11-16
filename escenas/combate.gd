@@ -43,19 +43,20 @@ func reconstruirSkills() -> void:
 		var brazo := parte as BrazoInventario   # null si el hueco está vacío o no es un brazo
 		if brazo == null:
 			continue
-		var carta := crearSkill(brazo.nombreSkill, brazo.dmgSkill, brazo.staSkill, brazo)
+		var carta := crearSkill(brazo.nombreSkill, brazo.dmgSkill, brazo.staSkill, brazo, brazo.efectos)
 		if partes_usadas.has(brazo):
 			carta.marcarUsada()
-			
-	
+
+
 	var cabeza: ParteInventario = EstadoPartida.equipo["cabeza"]
 	var piernas: ParteInventario = EstadoPartida.equipo["piernas"]
 	var torso: ParteInventario = EstadoPartida.equipo["torso"]
 
 	###### aplicar los bufos a las estadísticas de los items ######
 	personaje.stamina = personaje.staminaBase + stat(cabeza, "stamina") + stat(piernas, "stamina")
-	personaje.evasion = personaje.evasionBase + stat(cabeza, "evasion") + stat(piernas, "evasion")
-	personaje.proteccion = personaje.proteccionBase + stat(cabeza, "proteccion") + stat(piernas, "proteccion") + stat(torso, "proteccion")
+	personaje.evasion =  stat(cabeza, "evasion") + stat(piernas, "evasion")
+	personaje.proteccion = stat(cabeza, "proteccion") + stat(piernas, "proteccion") + stat(torso, "proteccion")
+	personaje.modDmg = stat(cabeza, "modDmg") + stat(piernas, "modDmg")
 
 	updateSkills()
 	
@@ -94,12 +95,13 @@ func crearPersonaje(vida: int,partes: Array[PartePersonaje]) -> Personaje:
 #	return partePersonaje
 
 
-func crearSkill(nombre: String, dmg: int, sta: int, origen: BrazoInventario = null) -> Skill:
+func crearSkill(nombre: String, dmg: int, sta: int, origen: BrazoInventario = null, efectos: Array[String] = []) -> Skill:
 	var skill: Skill = ESCENA_SKILL.instantiate()
 	skill.parte_origen = origen
 	skill.nombreSkill= nombre
 	skill.dmgSkill = dmg
 	skill.staSkill = sta
+	skill.efectos = efectos
 	contenedor.add_child(skill)
 	return skill
 
@@ -116,13 +118,28 @@ func _on_carta_soltada(skill: Skill, parte: ParteEnemigo) -> void:
 		partes_usadas[skill.parte_origen] = true
 	parteEnemigaSeleccionada = parte
 	skill.marcarUsada()
-	_onSkillElegida(skill.dmgSkill, skill.staSkill)
+	_onSkillElegida(skill.dmgSkill + personaje.modDmg, skill.staSkill, skill.efectos)
 
-func _onSkillElegida(dmg: int, sta: int) -> void:
+func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	if combate_terminado:
 		return
 	parteEnemigaSeleccionada.sufrirDmg(dmg)
 	enemigo_actual.actualizar_barra()
+	if "multihit2" in efectos:
+		await get_tree().create_timer(0.1).timeout
+		parteEnemigaSeleccionada.sufrirDmg(dmg)
+		enemigo_actual.actualizar_barra()
+	if "multihit3" in efectos:
+		await get_tree().create_timer(0.1).timeout
+		parteEnemigaSeleccionada.sufrirDmg(dmg)
+		enemigo_actual.actualizar_barra()
+		await get_tree().create_timer(0.1).timeout
+		parteEnemigaSeleccionada.sufrirDmg(dmg)
+		enemigo_actual.actualizar_barra()
+	if "debil" in efectos:
+		enemigo_actual.debilContador = enemigo_actual.debilContador + 1
+	if "stun" in efectos:
+		enemigo_actual.stun = enemigo_actual.stun + 1
 	personaje.staminaActual -= sta
 	personaje.actualizar_barra()
 	if parteEnemigaSeleccionada.vidaActual == 0 \

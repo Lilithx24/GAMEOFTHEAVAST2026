@@ -2,6 +2,10 @@ class_name Enemigo
 extends Node2D
 @onready var barra_vida: ProgressBar = $ProgressBar
 var partes: Array[ParteEnemigo]
+var dmg: int = 10
+@export var stun: int = 0
+@export var debilContador: int = 0
+@export var debilEstado: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,4 +25,14 @@ func actualizar_barra() -> void:
 	barra_vida.value = vida_actual_total
 
 func turno(objetivo: Personaje) -> void:
-	objetivo.sufrirDmg(10)
+	#checkea si el enemigo está débil y actualiza los valores
+	if debilContador > 0:
+		debilEstado = 1
+		debilContador = debilContador - 1
+	else:
+		debilEstado = 0
+	
+	if stun == 0:
+		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
+	else:
+		stun = stun - 1 

@@ -4,3 +4,4 @@ extends ParteInventario
 @export var nombreSkill: String
 @export var dmgSkill: int
 @export var staSkill: int
+@export var efectos: Array[String]
