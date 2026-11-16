@@ -3,9 +3,14 @@ extends Node
 
 ###### stats ######
 var vidaMax: int = 50
-var staminaMax: int = 2
-var proteccion: float = 0.0
+
+var staminaBase: int = 2
+var evasionBase: int = 10
+var proteccionBase: float = 0.0
+
+var stamina: int = 2
 var evasion: int = 10
+var proteccion: float = 0.0
 
 var vidaActual: int
 var partes: Array[PartePersonaje]

@@ -24,6 +24,9 @@ func _ready() -> void:
 	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), [])
 	EstadoPartida.inventario_cambiado.connect(_solicitar_skills)
 	reconstruirSkills()
+	personaje.staminaActual = personaje.stamina
+	updateSkills()
+
 
 
 func _solicitar_skills() -> void:
@@ -47,12 +50,12 @@ func reconstruirSkills() -> void:
 	
 	var cabeza: ParteInventario = EstadoPartida.equipo["cabeza"]
 	var piernas: ParteInventario = EstadoPartida.equipo["piernas"]
-	
-	###### aplicar los bufos a las estadísiticas de los items ######
-	for pieza in [cabeza, piernas]:
-		if pieza != null:
-			for x in ["evasion", "stamina", "proteccion"]:
-				personaje.set(x, personaje.get(x) + pieza.get(x))
+	var torso: ParteInventario = EstadoPartida.equipo["torso"]
+
+	###### aplicar los bufos a las estadísticas de los items ######
+	personaje.stamina = personaje.staminaBase + stat(cabeza, "stamina") + stat(piernas, "stamina")
+	personaje.evasion = personaje.evasionBase + stat(cabeza, "evasion") + stat(piernas, "evasion")
+	personaje.proteccion = personaje.proteccionBase + stat(cabeza, "proteccion") + stat(piernas, "proteccion") + stat(torso, "proteccion")
 
 	updateSkills()
 	
@@ -81,7 +84,6 @@ func crearPersonaje(vida: int,partes: Array[PartePersonaje]) -> Personaje:
 	add_child(personaje)
 	personaje.vidaMax = vida
 	personaje.vidaActual = personaje.vidaMax
-	personaje.staminaActual = personaje.staminaMax 
 	personaje.actualizar_barra()
 	personaje.partes = partes
 	return personaje
@@ -138,7 +140,6 @@ func terminarTurno() -> void:
 		return
 	enemigo_actual.turno(personaje)
 	partes_usadas.clear()
-	personaje.staminaActual = personaje.staminaMax
 	personaje.actualizar_barra()
 	for hijo in contenedor.get_children():
 		if hijo is Skill:
@@ -146,6 +147,7 @@ func terminarTurno() -> void:
 	if skillSolicitada == true:
 		reconstruirSkills()
 		skillSolicitada = false
+	personaje.staminaActual = personaje.stamina
 	updateSkills()
 
 
@@ -153,6 +155,12 @@ func updateSkills() -> void:
 	for hijo in contenedor.get_children():
 		if hijo is Skill:
 			hijo.updateDisponibilidad(personaje.staminaActual)
+
+func stat(pieza: ParteInventario, nombre: String):
+	if pieza == null:
+		return 0
+	var valor = pieza.get(nombre)
+	return valor if valor != null else 0
 
 func ganarCombate() -> void:
 	combate_terminado = true

@@ -1,6 +1,6 @@
 class_name CabezaInventario
 extends ParteInventario
 
-@export var modEvasion: int
+@export var evasion: int
 @export var modDmg: int
-@export var modSta: int
+@export var stamina: int

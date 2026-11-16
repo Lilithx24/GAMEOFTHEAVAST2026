@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_pas1c")
+stamina = 1
 nombre = "Cabeza Experimento 1"
 descripcion_habilidad = "La chola de un epsperimento fallido."
 textura = ExtResource("2_38c14")
