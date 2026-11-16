@@ -54,7 +54,7 @@ func probar() -> void:
 	estado.inicializar_inventario(vacios)
 	for n in [2, 4, 6, 8]:
 		estado.recoger_parte("torso%d" % n, crear_parte("torso", n))
-	for i in 8:
+	for i in 6:
 		estado.recoger_parte("brazo%d" % i, crear_parte("brazo"))
 	estado.recoger_parte("cabeza", crear_parte("cabeza"))
 	estado.recoger_parte("piernas", crear_parte("piernas"))
@@ -64,34 +64,34 @@ func probar() -> void:
 	var cantidad := todas_las_piezas().size()
 	var brazo: Slot = fila("inventario", 4)
 	verificar(not menu._puede_soltar_en_hoja(Vector2.ZERO, brazo), "No se equipan brazos sin torso")
-	verificar(menu.hoja.get_children().size() == 11, "Cabeza, torso, piernas y ocho enganches existen en el editor")
+	verificar(menu.hoja.get_children().size() == 9, "Cabeza, torso, piernas y seis enganches existen en el editor")
 	var alto: float = menu.scroll.size.y
 	verificar(is_equal_approx(brazo.custom_minimum_size.y * 4 + 24, floorf(alto / 4) * 4) or absf(brazo.custom_minimum_size.y * 4 + 24 - alto) < 4, "La lista reserva altura para cuatro filas")
 
 	menu.pestanas.current_tab = 1
 	menu._soltar_en_hoja(Vector2.ZERO, fila("inventario", 3))
 	await process_frame
-	verificar(estado.obtener_capacidad_brazos() == 8, "Soltar el torso en la hoja lo equipa")
+	verificar(estado.obtener_capacidad_brazos() == 6, "Un torso antiguo de ocho queda limitado a seis")
 	verificar(estado.inventario[3] == null, "La pieza equipada sale del inventario")
-	verificar(menu.hoja.get_children().filter(func(s): return s.zona == "brazo" and s.visible).size() == 8, "Torso de ocho muestra ocho enganches")
+	verificar(menu.hoja.get_children().filter(func(s): return s.zona == "brazo" and s.visible).size() == 6, "El torso muestra como máximo seis enganches")
 
 	menu.pestanas.current_tab = 2
-	for i in 8:
+	for i in 6:
 		menu._soltar_en_hoja(Vector2.ZERO, fila("inventario", 4 + i))
 		await process_frame
-	verificar(estado.brazos_equipados.filter(func(p): return p != null).size() == 8, "Cada brazo ocupa un enganche distinto")
+	verificar(estado.brazos_equipados.filter(func(p): return p != null).size() == 6, "Cada brazo ocupa un enganche distinto")
 	verificar(menu.inventario.get_children().filter(func(s): return s.visible).is_empty(), "Los brazos equipados no figuran en su pestaña")
 	var primero: ParteInventario = estado.brazos_equipados[0]
-	var ultimo: ParteInventario = estado.brazos_equipados[7]
+	var ultimo: ParteInventario = estado.brazos_equipados[5]
 	var slot1: Slot = menu.hoja.get_node("Brazo1")
-	var slot8: Slot = menu.hoja.get_node("Brazo8")
-	verificar(slot8._can_drop_data(Vector2.ZERO, slot1), "Los brazos admiten intercambio entre enganches")
-	slot8._drop_data(Vector2.ZERO, slot1)
+	var slot6: Slot = menu.hoja.get_node("Brazo6")
+	verificar(slot6._can_drop_data(Vector2.ZERO, slot1), "Los brazos admiten intercambio entre enganches")
+	slot6._drop_data(Vector2.ZERO, slot1)
 	await process_frame
-	verificar(estado.brazos_equipados[0] == ultimo and estado.brazos_equipados[7] == primero, "Intercambio conserva ambos brazos")
+	verificar(estado.brazos_equipados[0] == ultimo and estado.brazos_equipados[5] == primero, "Intercambio conserva ambos brazos")
 	verificar(not menu.hoja.get_node("Cabeza")._can_drop_data(Vector2.ZERO, slot1), "Se rechaza un brazo en la cabeza")
 
-	for dato in [[0, "cabeza", 12], [3, "piernas", 13]]:
+	for dato in [[0, "cabeza", 10], [3, "piernas", 11]]:
 		menu.pestanas.current_tab = dato[0]
 		menu._soltar_en_hoja(Vector2.ZERO, fila("inventario", dato[2]))
 		await process_frame

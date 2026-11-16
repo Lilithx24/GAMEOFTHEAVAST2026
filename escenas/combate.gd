@@ -11,12 +11,13 @@ var parteEnemigaSeleccionada: ParteEnemigo
 var enemigo_actual: Enemigo
 var personaje: Personaje
 var combate_terminado: bool = false
-@onready var contenedor = $PanelJugador/HBoxContainer
+var partes_usadas: Dictionary = {}
+@onready var contenedor = $PanelJugador/ScrollContainer/HBoxContainer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	contenedor = $PanelJugador/HBoxContainer
+	contenedor = $PanelJugador/ScrollContainer/HBoxContainer
 	var parteEnemigoA = crearParteEnemigo(100)
 	enemigo_actual = crearEnemigo([parteEnemigoA])
 	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), [])
@@ -38,7 +39,9 @@ func reconstruirSkills() -> void:
 		var brazo := parte as BrazoInventario   # null si el hueco está vacío o no es un brazo
 		if brazo == null:
 			continue
-		crearSkill(brazo.nombreSkill, brazo.dmgSkill, brazo.staSkill)
+		var carta := crearSkill(brazo.nombreSkill, brazo.dmgSkill, brazo.staSkill, brazo)
+		if partes_usadas.has(brazo):
+			carta.marcarUsada()
 
 	updateSkills()
 	
@@ -78,8 +81,9 @@ func crearPersonaje(vida: int,partes: Array[PartePersonaje]) -> Personaje:
 #	return partePersonaje
 
 
-func crearSkill(nombre: String, dmg: int, sta: int) -> Skill:
+func crearSkill(nombre: String, dmg: int, sta: int, origen: BrazoInventario = null) -> Skill:
 	var skill: Skill = ESCENA_SKILL.instantiate()
+	skill.parte_origen = origen
 	skill.nombreSkill= nombre
 	skill.dmgSkill = dmg
 	skill.staSkill = sta
@@ -91,6 +95,12 @@ func crearSkill(nombre: String, dmg: int, sta: int) -> Skill:
 func _on_carta_soltada(skill: Skill, parte: ParteEnemigo) -> void:
 	if combate_terminado or not skill.disponible or skill.usada:
 		return
+	if skill.get_parent() != contenedor or skill.staSkill > personaje.staminaActual:
+		return
+	if skill.parte_origen and not EstadoPartida.brazos_equipados.has(skill.parte_origen):
+		return
+	if skill.parte_origen:
+		partes_usadas[skill.parte_origen] = true
 	parteEnemigaSeleccionada = parte
 	skill.marcarUsada()
 	_onSkillElegida(skill.dmgSkill, skill.staSkill)
@@ -116,6 +126,7 @@ func terminarTurno() -> void:
 	if combate_terminado:
 		return
 	enemigo_actual.turno(personaje)
+	partes_usadas.clear()
 	personaje.staminaActual = personaje.staminaMax
 	personaje.actualizar_barra()
 	for hijo in contenedor.get_children():

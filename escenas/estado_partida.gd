@@ -47,7 +47,7 @@ func obtener_capacidad_brazos() -> int:
 	if torso == null:
 		return 0
 
-	return clampi(torso.slotsBrazos, 2, 8)
+	return clampi(torso.slotsBrazos, 2, TorsoInventario.MAX_BRAZOS)
 
 func inicializar_inventario(items: Array[ParteInventario]) -> void:
 	if inventario_inicializado:
@@ -162,8 +162,8 @@ func _quitar_de(zona: String, indice: int) -> void:
 
 func _poner_equipo(posicion: String, indice: int, pieza: ParteInventario) -> void:
 	if posicion == "brazo":
-		if brazos_equipados.size() < 8:
-			brazos_equipados.resize(8)
+		if brazos_equipados.size() < TorsoInventario.MAX_BRAZOS:
+			brazos_equipados.resize(TorsoInventario.MAX_BRAZOS)
 		brazos_equipados[indice] = pieza
 	else:
 		equipo[posicion] = pieza

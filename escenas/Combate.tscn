@@ -15,12 +15,17 @@ offset_bottom = 658.0
 layout_mode = 3
 anchors_preset = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador" unique_id=1668645083]
-layout_mode = 0
-offset_left = 326.0
-offset_top = 464.0
-offset_right = 745.0
-offset_bottom = 596.0
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelJugador"]
+offset_left = 24.0
+offset_top = 382.0
+offset_right = 1128.0
+offset_bottom = 632.0
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
 alignment = 1
 
 [node name="MenuShift" parent="." unique_id=1139798836 instance=ExtResource("2_t3t54")]

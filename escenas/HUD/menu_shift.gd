@@ -3,6 +3,9 @@ extends CanvasLayer
 const CATEGORIAS: Array[String] = ["cabeza", "torso", "brazo", "piernas"]
 const FILA_INVENTARIO := preload("res://escenas/HUD/fila_inventario.tscn")
 
+@export var hojas_categoria: Array[Texture2D] = []
+
+@onready var hoja_inventario: TextureRect = %HojaInventario
 @onready var inventario: VBoxContainer = %ListaInventario
 @onready var pestanas: TabBar = %Pestañas
 @onready var hoja: Control = %ZonaPersonaje
@@ -12,6 +15,7 @@ const FILA_INVENTARIO := preload("res://escenas/HUD/fila_inventario.tscn")
 var pausa_anterior: bool = false
 var actualizacion_pendiente: bool = false
 var filas_temporales: Dictionary = {}
+var tamanos_titulos: Array[int] = []
 
 
 func _ready() -> void:
@@ -26,10 +30,41 @@ func _ready() -> void:
 	hoja.set_drag_forwarding(Callable(), _puede_soltar_en_hoja, _soltar_en_hoja)
 	for zona: Control in [zona_inventario, scroll, inventario]:
 		zona.set_drag_forwarding(Callable(), _puede_devolver, _devolver)
+	for indice in CATEGORIAS.size():
+		var boton := get_node("Pantalla/Categoria%d" % indice) as Button
+		tamanos_titulos.append(boton.get_theme_font_size("font_size"))
+		boton.pressed.connect(_seleccionar_categoria.bind(indice))
+		boton.resized.connect(_ajustar_titulos)
+	_ajustar_titulos.call_deferred()
 	pestanas.tab_changed.connect(_on_pestana_cambiada)
 	scroll.resized.connect(_ajustar_altura_filas)
 	EstadoPartida.inventario_cambiado.connect(_solicitar_actualizacion)
 	_actualizar_inventario()
+
+
+func _seleccionar_categoria(indice: int) -> void:
+	pestanas.current_tab = indice
+	_actualizar_titulos()
+
+
+func _actualizar_titulos() -> void:
+	for indice in CATEGORIAS.size():
+		var boton := get_node("Pantalla/Categoria%d" % indice) as Button
+		boton.set_pressed_no_signal(indice == pestanas.current_tab)
+
+
+func _ajustar_titulos() -> void:
+	if tamanos_titulos.size() != CATEGORIAS.size():
+		return
+	# Un tamaño común mantiene la fila uniforme y respeta el máximo del Inspector.
+	var tamano: int = tamanos_titulos.min()
+	for indice in CATEGORIAS.size():
+		var boton := get_node("Pantalla/Categoria%d" % indice) as Button
+		var fuente := boton.get_theme_font("font")
+		while tamano > 8 and (fuente.get_string_size(boton.text, HORIZONTAL_ALIGNMENT_LEFT, -1, tamano).x > boton.size.x - 6 or fuente.get_height(tamano) > boton.size.y - 2):
+			tamano -= 1
+	for indice in CATEGORIAS.size():
+		get_node("Pantalla/Categoria%d" % indice).add_theme_font_size_override("font_size", tamano)
 
 
 func _configurar_slot(slot: Slot) -> void:
@@ -67,6 +102,9 @@ func _actualizar_inventario() -> void:
 			_configurar_slot(fila)
 			filas_temporales[id] = fila
 
+	if pestanas.current_tab < hojas_categoria.size():
+		hoja_inventario.texture = hojas_categoria[pestanas.current_tab]
+	_actualizar_titulos()
 	var filtro: String = CATEGORIAS[pestanas.current_tab]
 	for slot: Slot in inventario.get_children():
 		var parte := EstadoPartida.parte_en(slot.zona, slot.indice)

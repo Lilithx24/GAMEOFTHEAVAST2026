@@ -6,6 +6,8 @@ extends PanelContainer
 @export var dmgSkill: int
 @export var staSkill: int
 
+var parte_origen: BrazoInventario
+
 var disponible := true
 var usada := false
 
@@ -15,23 +17,32 @@ var usada := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Ya no hay "text" como en Button: el texto va en los Label hijos
+	# La carta conserva los datos del ataque de la pieza equipada.
 	etiquetaNombre.text = nombreSkill
 	etiquetaCoste.text = "%d STA" % staSkill
+	$VBoxContainer/Damage.text = "%d de daño" % dmgSkill
+	if parte_origen:
+		$VBoxContainer/Imagen.texture = parte_origen.textura
+		$VBoxContainer/Origen.text = parte_origen.nombre
+		tooltip_text = parte_origen.descripcion_habilidad
+	_actualizar_estado()
 
 func updateDisponibilidad(stamina_actual: int) -> void:
 	disponible = staSkill <= stamina_actual
-	if usada:
-		return
-	modulate = Color.WHITE if disponible else Color(0.5, 0.5, 0.5)
+	_actualizar_estado()
 
 func marcarUsada() -> void:
 	usada = true
-	modulate = Color(0.4, 0.4, 0.4)
+	_actualizar_estado()
 
 func recuperar() -> void:
 	usada = false
-	modulate = Color.WHITE
+	_actualizar_estado()
+
+func _actualizar_estado() -> void:
+	modulate = Color.WHITE if disponible and not usada else Color(0.55, 0.55, 0.55)
+	$VBoxContainer/Estado.text = "Usada" if usada else ("Arrastra al enemigo" if disponible else "Sin stamina")
+
 
 # Godot llama a esta función cuando empiezas a arrastrar el nodo
 func _get_drag_data(_at_position: Vector2) -> Variant:
