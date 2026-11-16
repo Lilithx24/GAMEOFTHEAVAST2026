@@ -2,16 +2,61 @@
 
 [ext_resource type="Script" uid="uid://dj4f1q16puk5u" path="res://escenas/assetsCombate/skill.gd" id="1_5ogei"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBox_carta"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.09, 0.13, 0.17, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.48, 0.7, 0.65, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
+corner_radius_bottom_right = 10
+
 [node name="Skill" type="PanelContainer" unique_id=1907490923]
-offset_right = 72.0
-offset_bottom = 54.0
+custom_minimum_size = Vector2(170, 226)
+theme_override_styles/panel = SubResource("StyleBox_carta")
+offset_right = 170.0
+offset_bottom = 226.0
 script = ExtResource("1_5ogei")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=684639416]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Nombre" type="Label" parent="VBoxContainer" unique_id=2102865391]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Coste" type="Label" parent="VBoxContainer" unique_id=1743242823]
 layout_mode = 2
+mouse_filter = 2
+
+[node name="Imagen" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Origen" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 2
+
+[node name="Damage" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+text = "0 de daño"
+
+[node name="Estado" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "Arrastra al enemigo"

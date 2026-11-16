@@ -443,7 +443,13 @@ size = Vector3(0.2, 3, 3.5)
 size = Vector3(0.82586485, 0.4024219, 0.48422852)
 
 [sub_resource type="BoxShape3D" id="FormaCajaInicio2"]
-size = Vector3(0.67477024, 0.3370752, 0.40255126)
+size = Vector3(0.63856834, 0.33506227, 0.36338502)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0c8l5"]
+size = Vector3(0.63856834, 0.33506227, 0.36338502)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u3bwc"]
+size = Vector3(0.33584166, 0.32466555, 0.40255126)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbx7q"]
 shader = ExtResource("23_hl0sa")
@@ -1643,8 +1649,21 @@ id_objeto = "Planta_Cero_Caja_Inicio_3"
 recompensa = ExtResource("16_0c8l5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio3" unique_id=1007017519]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.5719261, 0.32877338, -0.0919466)
-shape = SubResource("FormaCajaInicio2")
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.5691042, 0.33397174, -0.072356224)
+shape = SubResource("BoxShape3D_0c8l5")
+
+[node name="CajaInicio4" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=552283502]
+transform = Transform3D(0.516825, 0, 0.8560912, 0, 1, 0, -0.8560912, 0, 0.516825, -14.278447, 0.46876645, 1.2098539)
+collision_layer = 128
+collision_mask = 0
+monitoring = false
+script = ExtResource("24_examinable")
+id_objeto = "Planta_Cero_Caja_Inicio_4"
+recompensa = ExtResource("16_0c8l5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio4" unique_id=1439482774]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.1026268, 0.20320982, 0.26175594)
+shape = SubResource("BoxShape3D_u3bwc")
 
 [node name="Tuberias" parent="PisoCero" unique_id=1344939659 instance=ExtResource("13_xqewg")]
 
@@ -1723,6 +1742,9 @@ transform = Transform3D(0.16683151, 0, 0.9859852, 0, 1, 0, -0.9859852, 0, 0.1668
 
 [node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_010" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2623, 0, -3.707608)
+
+[node name="RadioVintage_0058" parent="PisoCero/MobiliarioMayor/B_DescansoGuardia/Sur_Descanso" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.246601, 1.1735985, -4.4074535)
 
 [node name="EstanteríaBaldas_0075" parent="PisoCero/MobiliarioMayor/T1_TallerMantenimiento/Sur_10" index="0"]
 transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 6.787631, -0.0082213, -14.38711)

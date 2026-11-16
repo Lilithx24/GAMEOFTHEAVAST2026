@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://c7trry61vrlrr"]
 
 [ext_resource type="Script" uid="uid://b2evhjnxbr08x" path="res://escenas/HUD/menu_shift.gd" id="1_shift"]
-[ext_resource type="Texture2D" uid="uid://b5nfwjttgcca4" path="res://sprites/carpetaVintage.png" id="2_1eiwo"]
-[ext_resource type="Texture2D" uid="uid://cl4eico1do3un" path="res://sprites/mockupmenu.png" id="3_gkyss"]
-[ext_resource type="Texture2D" uid="uid://d4jaqncf1y3co" path="res://sprites/separadorVintage.png" id="4_kn11p"]
+[ext_resource type="Texture2D" uid="uid://dfls7yrfwe3sq" path="res://sprites/INTERFAZ-MENU/mockupmenu.png" id="2_kn11p"]
 [ext_resource type="PackedScene" uid="uid://cfa14xa7pq4wh" path="res://escenas/HUD/slot.tscn" id="5_slot"]
 [ext_resource type="PackedScene" path="res://escenas/HUD/fila_inventario.tscn" id="6_fila"]
+[ext_resource type="FontFile" uid="uid://b74skot5133ph" path="res://Assets/tox_typewriter/Tox Typewriter.ttf" id="9_f75j8"]
+[ext_resource type="Texture2D" uid="uid://bugmdv01mi7vo" path="res://sprites/INTERFAZ-MENU/invent1.png" id="invent1"]
+[ext_resource type="Texture2D" uid="uid://ciqpd5jy4vxby" path="res://sprites/INTERFAZ-MENU/invent2.png" id="invent2"]
+[ext_resource type="Texture2D" uid="uid://cmrbuhdsrki6q" path="res://sprites/INTERFAZ-MENU/invent3.png" id="invent3"]
+[ext_resource type="Texture2D" uid="uid://cj2acs7h773ac" path="res://sprites/INTERFAZ-MENU/invent4.png" id="invent4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8042i"]
-texture = ExtResource("2_1eiwo")
+texture = ExtResource("2_kn11p")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1eiwo"]
-texture = ExtResource("3_gkyss")
+[sub_resource type="StyleBoxEmpty" id="SinFondo"]
 
 [sub_resource type="StyleBoxFlat" id="Enganche"]
 bg_color = Color(0.06, 0.15, 0.2, 0.18)
@@ -21,13 +23,35 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.55, 0.68, 0.58, 0.8)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47e2d"]
-texture = ExtResource("4_kn11p")
+[sub_resource type="StyleBoxFlat" id="BotonCategoria"]
+bg_color = Color(0.76, 0.73, 0.63, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.24, 0.17, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_left = 3
+corner_radius_bottom_right = 3
+
+[sub_resource type="StyleBoxFlat" id="BotonCategoriaActivo"]
+bg_color = Color(0.9, 0.86, 0.73, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.24, 0.17, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_left = 3
+corner_radius_bottom_right = 3
 
 [node name="MenuShift" type="CanvasLayer" unique_id=2113370766]
 process_mode = 3
 layer = 10
 script = ExtResource("1_shift")
+hojas_categoria = Array[Texture2D]([ExtResource("invent1"), ExtResource("invent2"), ExtResource("invent3"), ExtResource("invent4")])
 
 [node name="Pantalla" type="Control" parent="." unique_id=295175460]
 layout_mode = 3
@@ -57,27 +81,40 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_8042i")
 
-[node name="Panel2" type="Panel" parent="Pantalla" unique_id=1901242034]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.08
-anchor_right = 0.9
-anchor_bottom = 0.92
-offset_left = -122.200005
-offset_top = 38.16
-offset_right = -309.79993
-offset_bottom = -12.160034
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_1eiwo")
-
-[node name="ZonaPersonaje" type="Control" parent="Pantalla/Panel2" unique_id=1485483580]
+[node name="HojaInventario" type="TextureRect" parent="Pantalla/Panel" unique_id=1889696454]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("invent1")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="Pantalla" unique_id=1901242034]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.157
+anchor_top = 0.13900001
+anchor_right = 0.46800002
+anchor_bottom = 0.864
+offset_left = 0.13598633
+offset_top = -0.072006226
+offset_right = -0.13604736
+offset_bottom = 0.12799072
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("SinFondo")
+
+[node name="ZonaPersonaje" type="Control" parent="Pantalla/Panel2" unique_id=1485483580]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_top = 0.023000002
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10.809999
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -86,10 +123,14 @@ mouse_filter = 1
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.584
-anchor_top = 0.21
-anchor_right = 0.695
-anchor_bottom = 0.3
+anchor_left = 0.65900004
+anchor_top = 0.17
+anchor_right = 0.90800005
+anchor_bottom = 0.27
+offset_left = 0.07798767
+offset_top = 0.099998474
+offset_right = -0.06402588
+offset_bottom = 0.099998474
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -100,10 +141,14 @@ zona = "cabeza"
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.335
-anchor_top = 0.663
-anchor_right = 0.435
-anchor_bottom = 0.845
+anchor_left = 0.053000003
+anchor_top = 0.674
+anchor_right = 0.316
+anchor_bottom = 0.85300004
+offset_left = 0.026006699
+offset_top = 0.22000122
+offset_right = -0.12799835
+offset_bottom = 0.08996582
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -114,10 +159,14 @@ zona = "torso"
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.584
-anchor_top = 0.693
-anchor_right = 0.699
-anchor_bottom = 0.85
+anchor_left = 0.69600004
+anchor_top = 0.71500003
+anchor_right = 0.93000007
+anchor_bottom = 0.915
+offset_left = -0.16801453
+offset_top = -0.05001831
+offset_right = 0.05996704
+offset_bottom = -0.05001831
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -128,10 +177,14 @@ zona = "piernas"
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.329
-anchor_top = 0.335
-anchor_right = 0.385
-anchor_bottom = 0.385
+anchor_left = 0.028
+anchor_top = 0.31100002
+anchor_right = 0.21800001
+anchor_bottom = 0.38300002
+offset_left = -0.023984909
+offset_top = -0.17001343
+offset_right = -0.044006348
+offset_bottom = -0.010009766
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -142,10 +195,14 @@ zona = "brazo"
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.647
-anchor_top = 0.452
-anchor_right = 0.699
-anchor_bottom = 0.502
+anchor_left = 0.78200006
+anchor_top = 0.31500003
+anchor_right = 0.97200006
+anchor_bottom = 0.38500002
+offset_left = 0.04397583
+offset_top = -0.05001831
+offset_right = 0.023986816
+offset_bottom = 0.049987793
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -157,10 +214,14 @@ indice = 1
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.329
-anchor_top = 0.389
-anchor_right = 0.385
-anchor_bottom = 0.439
+anchor_left = 0.028
+anchor_top = 0.38300002
+anchor_right = 0.21800001
+anchor_bottom = 0.462
+offset_left = -0.023984909
+offset_top = -0.010025024
+offset_right = -0.044006348
+offset_bottom = -0.14001465
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -172,10 +233,14 @@ indice = 2
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.647
-anchor_top = 0.506
-anchor_right = 0.699
-anchor_bottom = 0.556
+anchor_left = 0.78200006
+anchor_top = 0.38500002
+anchor_right = 0.97200006
+anchor_bottom = 0.46400002
+offset_left = 0.04397583
+offset_top = 0.049972534
+offset_right = 0.023986816
+offset_bottom = -0.08001709
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -187,10 +252,14 @@ indice = 3
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.329
-anchor_top = 0.443
-anchor_right = 0.385
-anchor_bottom = 0.493
+anchor_left = 0.028
+anchor_top = 0.462
+anchor_right = 0.21800001
+anchor_bottom = 0.54300004
+offset_left = -0.023984909
+offset_top = -0.13999939
+offset_right = -0.044006348
+offset_bottom = -0.21002197
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -202,10 +271,14 @@ indice = 4
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.647
-anchor_top = 0.56
-anchor_right = 0.699
-anchor_bottom = 0.61
+anchor_left = 0.78200006
+anchor_top = 0.46400002
+anchor_right = 0.97200006
+anchor_bottom = 0.545
+offset_left = 0.04397583
+offset_top = -0.08000183
+offset_right = 0.023986816
+offset_bottom = -0.1499939
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("Enganche")
@@ -213,70 +286,42 @@ tag_requerido = "brazo"
 zona = "brazo"
 indice = 5
 
-[node name="Brazo7" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=1656933297 instance=ExtResource("5_slot")]
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.329
-anchor_top = 0.497
-anchor_right = 0.385
-anchor_bottom = 0.547
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("Enganche")
-tag_requerido = "brazo"
-zona = "brazo"
-indice = 6
-
-[node name="Brazo8" parent="Pantalla/Panel2/ZonaPersonaje" unique_id=2142322047 instance=ExtResource("5_slot")]
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.647
-anchor_top = 0.614
-anchor_right = 0.699
-anchor_bottom = 0.664
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("Enganche")
-tag_requerido = "brazo"
-zona = "brazo"
-indice = 7
-
 [node name="Panel3" type="Panel" parent="Pantalla" unique_id=1289683167]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.08
-anchor_right = 0.9
-anchor_bottom = 0.92
-offset_left = 504.8
-offset_top = 34.16
-offset_right = -62.799927
-offset_bottom = -24.160034
+anchor_left = 0.524
+anchor_top = 0.12
+anchor_right = 0.856
+anchor_bottom = 0.85
+offset_top = -51.759995
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_47e2d")
+theme_override_styles/panel = SubResource("SinFondo")
 
 [node name="ColumnaInventario" type="VBoxContainer" parent="Pantalla/Panel3" unique_id=1917028978]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.08
-anchor_top = 0.1
-anchor_right = 0.92
-anchor_bottom = 0.94
+anchor_left = 0.04
+anchor_top = 0.2
+anchor_right = 0.96
+anchor_bottom = 0.96
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 12
 
 [node name="Pestañas" type="TabBar" parent="Pantalla/Panel3/ColumnaInventario" unique_id=1562236459]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 focus_mode = 0
+theme_override_colors/font_selected_color = Color(0.16, 0.12, 0.07, 1)
+theme_override_colors/font_hovered_color = Color(0.16, 0.12, 0.07, 1)
+theme_override_colors/font_unselected_color = Color(0.3, 0.24, 0.17, 1)
 theme_override_font_sizes/font_size = 14
+theme_override_styles/tab_focus = SubResource("SinFondo")
 current_tab = 0
-tab_alignment = 2
+tab_alignment = 1
 tab_count = 4
 tab_0/title = "Cabezas"
 tab_1/title = "Torsos"
@@ -373,3 +418,91 @@ indice = 18
 [node name="Slot20" parent="Pantalla/Panel3/ColumnaInventario/ScrollInventario/ListaInventario" unique_id=187661233 instance=ExtResource("6_fila")]
 layout_mode = 2
 indice = 19
+
+[node name="Categoria0" type="Button" parent="Pantalla" unique_id=1708992085]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5412500
+anchor_top = 0.1220000
+anchor_right = 0.5912500
+anchor_bottom = 0.1658261
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.3, 0.24, 0.17, 1)
+theme_override_colors/font_pressed_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_fonts/font = ExtResource("9_f75j8")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("BotonCategoria")
+theme_override_styles/pressed = SubResource("BotonCategoriaActivo")
+theme_override_styles/hover = SubResource("BotonCategoriaActivo")
+theme_override_styles/focus = SubResource("SinFondo")
+toggle_mode = true
+text = "1"
+clip_text = true
+
+[node name="Categoria1" type="Button" parent="Pantalla" unique_id=1033547462]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6362500
+anchor_top = 0.1238261
+anchor_right = 0.6862500
+anchor_bottom = 0.1676522
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.3, 0.24, 0.17, 1)
+theme_override_colors/font_pressed_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_fonts/font = ExtResource("9_f75j8")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("BotonCategoria")
+theme_override_styles/pressed = SubResource("BotonCategoriaActivo")
+theme_override_styles/hover = SubResource("BotonCategoriaActivo")
+theme_override_styles/focus = SubResource("SinFondo")
+toggle_mode = true
+text = "2"
+clip_text = true
+
+[node name="Categoria2" type="Button" parent="Pantalla" unique_id=714525455]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7100000
+anchor_top = 0.1274783
+anchor_right = 0.7600000
+anchor_bottom = 0.1713043
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.3, 0.24, 0.17, 1)
+theme_override_colors/font_pressed_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_fonts/font = ExtResource("9_f75j8")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("BotonCategoria")
+theme_override_styles/pressed = SubResource("BotonCategoriaActivo")
+theme_override_styles/hover = SubResource("BotonCategoriaActivo")
+theme_override_styles/focus = SubResource("SinFondo")
+toggle_mode = true
+text = "3"
+clip_text = true
+
+[node name="Categoria3" type="Button" parent="Pantalla" unique_id=991891257]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7875000
+anchor_top = 0.1329565
+anchor_right = 0.8375000
+anchor_bottom = 0.1767826
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.3, 0.24, 0.17, 1)
+theme_override_colors/font_pressed_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_colors/font_hover_color = Color(0.12, 0.09, 0.05, 1)
+theme_override_fonts/font = ExtResource("9_f75j8")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("BotonCategoria")
+theme_override_styles/pressed = SubResource("BotonCategoriaActivo")
+theme_override_styles/hover = SubResource("BotonCategoriaActivo")
+theme_override_styles/focus = SubResource("SinFondo")
+toggle_mode = true
+text = "4"
+clip_text = true
