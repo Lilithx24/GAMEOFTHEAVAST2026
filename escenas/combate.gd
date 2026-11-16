@@ -12,6 +12,7 @@ var enemigo_actual: Enemigo
 var personaje: Personaje
 var combate_terminado: bool = false
 var partes_usadas: Dictionary = {}
+var skillSolicitada: bool = false
 @onready var contenedor = $PanelJugador/ScrollContainer/HBoxContainer
 
 
@@ -26,7 +27,7 @@ func _ready() -> void:
 
 
 func _solicitar_skills() -> void:
-	reconstruirSkills.call_deferred()
+	skillSolicitada = true
 
 
 # Solo cuando cambia el equipo (y al empezar el combate)
@@ -42,6 +43,16 @@ func reconstruirSkills() -> void:
 		var carta := crearSkill(brazo.nombreSkill, brazo.dmgSkill, brazo.staSkill, brazo)
 		if partes_usadas.has(brazo):
 			carta.marcarUsada()
+			
+	
+	var cabeza: ParteInventario = EstadoPartida.equipo["cabeza"]
+	var piernas: ParteInventario = EstadoPartida.equipo["piernas"]
+	
+	###### aplicar los bufos a las estadísiticas de los items ######
+	for pieza in [cabeza, piernas]:
+		if pieza != null:
+			for x in ["evasion", "stamina", "proteccion"]:
+				personaje.set(x, personaje.get(x) + pieza.get(x))
 
 	updateSkills()
 	
@@ -132,6 +143,9 @@ func terminarTurno() -> void:
 	for hijo in contenedor.get_children():
 		if hijo is Skill:
 			hijo.recuperar()
+	if skillSolicitada == true:
+		reconstruirSkills()
+		skillSolicitada = false
 	updateSkills()
 
 

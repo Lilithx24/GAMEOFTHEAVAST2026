@@ -2,7 +2,7 @@ class_name Personaje
 extends Node
 
 ###### stats ######
-var vidaMax: int = 100
+var vidaMax: int = 50
 var staminaMax: int = 2
 var proteccion: float = 0.0
 var evasion: int = 10
