@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/JuegoDeQuimica/bottle_clear_d.glb" id="1"]
+[ext_resource type="PackedScene" path="res://Assets/Objetos/JuegoDeQuimica/bottle_content_d.glb" id="2"]
+[ext_resource type="PackedScene" path="res://Assets/Objetos/JuegoDeQuimica/bottle_label_d.glb" id="3"]
+
+[node name="FrascoMuestra" type="Node3D"]
+
+[node name="Cristal" parent="." instance=ExtResource("1")]
+
+[node name="Contenido" parent="." instance=ExtResource("2")]
+
+[node name="Etiqueta" parent="." instance=ExtResource("3")]

@@ -1,0 +1,44 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Objetos/JuegoDeQuimica/test_tube_stand_a.glb" id="rack"]
+[ext_resource type="PackedScene" path="res://Assets/Objetos/JuegoDeQuimica/test_tube_a.glb" id="tube"]
+[ext_resource type="PackedScene" path="res://Assets/Objetos/JuegoDeQuimica/test_tube_content_a.glb" id="liquid"]
+
+[node name="GradillaMuestras" type="Node3D"]
+
+[node name="Gradilla" parent="." instance=ExtResource("rack")]
+
+[node name="Tubo0" type="Node3D" parent="."]
+position = Vector3(-0.1, 0.008, 0)
+
+[node name="Cristal" parent="Tubo0" instance=ExtResource("tube")]
+
+[node name="Muestra" parent="Tubo0" instance=ExtResource("liquid")]
+
+[node name="Tubo1" type="Node3D" parent="."]
+position = Vector3(-0.05, 0.008, 0)
+
+[node name="Cristal" parent="Tubo1" instance=ExtResource("tube")]
+
+[node name="Muestra" parent="Tubo1" instance=ExtResource("liquid")]
+
+[node name="Tubo2" type="Node3D" parent="."]
+position = Vector3(0, 0.008, 0)
+
+[node name="Cristal" parent="Tubo2" instance=ExtResource("tube")]
+
+[node name="Muestra" parent="Tubo2" instance=ExtResource("liquid")]
+
+[node name="Tubo3" type="Node3D" parent="."]
+position = Vector3(0.05, 0.008, 0)
+
+[node name="Cristal" parent="Tubo3" instance=ExtResource("tube")]
+
+[node name="Muestra" parent="Tubo3" instance=ExtResource("liquid")]
+
+[node name="Tubo4" type="Node3D" parent="."]
+position = Vector3(0.1, 0.008, 0)
+
+[node name="Cristal" parent="Tubo4" instance=ExtResource("tube")]
+
+[node name="Muestra" parent="Tubo4" instance=ExtResource("liquid")]

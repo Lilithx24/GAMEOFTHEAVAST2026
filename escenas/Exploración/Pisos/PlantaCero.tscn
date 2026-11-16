@@ -2068,6 +2068,12 @@ transform = Transform3D(0.0286176, 0, 0.8195005, 0, 0.82, 0, -0.8195005, 0, 0.02
 [node name="Cajas_0225" parent="PisoCero/MobiliarioMayor/F_EnsayoEnergia/Este_Acceso" index="4"]
 transform = Transform3D(-0.0429155, 0, 0.8188762, 0, 0.82, 0, -0.8188762, 0, -0.0429155, 24.511276, 0.9976064, -27.360641)
 
+[node name="Escaleras_0226" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/Norte" index="0"]
+transform = Transform3D(-1.0995742, 0, 0.03063114, -0.030630022, 0, -1.0995733, 0, -1.1, 0, 32.3, 0.3158573, -27.1)
+
+[node name="EstanteríaBaldas_0244" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/Este" index="3"]
+transform = Transform3D(0.502921, 0.9557566, 0, 0, 0, 1.08, 0.9557566, -0.502921, 0, 31.77112, 0.5028, -30.015598)
+
 [node name="CajaCarton_0255" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/Este" index="14" unique_id=1115636355 instance=ExtResource("7_rrlvd")]
 transform = Transform3D(0.28220716, 0, 1.1148359, 0, 1.15, 0, -1.1148359, 0, 0.28220716, 34.21992, -0.00045201182, -25.944153)
 
@@ -2076,6 +2082,9 @@ transform = Transform3D(0.37829754, 0, 1.0859976, 0, 1.1499999, 0, -1.0859976, 0
 
 [node name="CajaCarton_0257" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/Este" index="16" unique_id=1048220528 instance=ExtResource("7_rrlvd")]
 transform = Transform3D(0.37829754, 0, 1.0859976, 0, 1.1499999, 0, -1.0859976, 0, 0.37829754, 34.21095, 0.7936869, -25.913742)
+
+[node name="RepuestosAmontonados" parent="PisoCero/MobiliarioMayor/G_ReservaRepuestos/AcumulacionAccidente" index="1"]
+transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 32.95989, 0.013932999, -28.887138)
 
 [node name="EstanteríaBaldas_0306" parent="PisoCero/MobiliarioMayor/H_Logistica/Norte_10" index="0"]
 transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 11.741381, -0.0082213, -35.776726)
@@ -2230,8 +2239,7 @@ fov = 46.0
 target_position = Vector3(0, 0, -6)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PisoCero/Jugador" unique_id=711460390]
-omni_range = 4096.0
-omni_attenuation = -0.057
+omni_range = 20.0
 
 [node name="EnemigoExploracion" parent="PisoCero" unique_id=337344313 instance=ExtResource("22_xbk8o")]
 transform = Transform3D(0.13735619, 0, -0.99052167, 0, 1, 0, 0.99052167, 0, 0.13735619, 7.7001944, 0, -20.301144)
