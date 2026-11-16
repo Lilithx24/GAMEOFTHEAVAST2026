@@ -22,6 +22,8 @@ var equipo: Dictionary = {
 }
 
 @export var brazos_equipados: Array[ParteInventario] = []
+@export var piernas_equipadas: ParteInventario
+@export var cabeza_equipada: ParteInventario
 
 
 # Called when the node enters the scene tree for the first time.

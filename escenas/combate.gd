@@ -19,7 +19,7 @@ func _ready() -> void:
 	contenedor = $PanelJugador/HBoxContainer
 	var parteEnemigoA = crearParteEnemigo(100)
 	enemigo_actual = crearEnemigo([parteEnemigoA])
-	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), 2, [])
+	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), [])
 	EstadoPartida.inventario_cambiado.connect(_solicitar_skills)
 	reconstruirSkills()
 
@@ -62,21 +62,20 @@ func crearParteEnemigo(vida: int) -> ParteEnemigo:
 	parteEnemigo.vital = true
 	return parteEnemigo
 
-func crearPersonaje(vida: int,stamina: int,partes: Array[PartePersonaje]) -> Personaje:
+func crearPersonaje(vida: int,partes: Array[PartePersonaje]) -> Personaje:
 	var personaje: Personaje = ESCENA_PERSONAJE.instantiate()
 	add_child(personaje)
 	personaje.vidaMax = vida
 	personaje.vidaActual = personaje.vidaMax
-	personaje.staminaMax = stamina
 	personaje.staminaActual = personaje.staminaMax 
 	personaje.actualizar_barra()
 	personaje.partes = partes
 	return personaje
 
-func crearPartePersonaje(skills: Array[Skill]) -> PartePersonaje:
-	var partePersonaje: PartePersonaje = ESCENA_PARTE_PERSONAJE.instantiate()
-	partePersonaje.skills = skills
-	return partePersonaje
+#func crearPartePersonaje(skills: Array[Skill]) -> PartePersonaje:
+#	var partePersonaje: PartePersonaje = ESCENA_PARTE_PERSONAJE.instantiate()
+#	partePersonaje.skills = skills
+#	return partePersonaje
 
 
 func crearSkill(nombre: String, dmg: int, sta: int) -> Skill:

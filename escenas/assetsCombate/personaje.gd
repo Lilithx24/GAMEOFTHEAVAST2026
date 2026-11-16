@@ -1,11 +1,15 @@
 class_name Personaje
 extends Node
 
+###### stats ######
 var vidaMax: int = 100
+var staminaMax: int = 2
+var proteccion: float = 0.0
+var evasion: int = 10
+
 var vidaActual: int
 var partes: Array[PartePersonaje]
 @onready var barra_vida: ProgressBar = $ProgressBarJ
-var staminaMax: int
 var staminaActual: int
 
 func _ready() -> void:
@@ -22,8 +26,14 @@ func actualizar_barra() -> void:
 
 
 func sufrirDmg(damage: int):
-	var nuevaVida = setVidaActual(vidaActual - damage)
-	print("vida restante: ", nuevaVida)
+	var probImpacto: int = (100 - evasion)
+	var tiradaAtaque: int = randi() % 100
+	if tiradaAtaque < probImpacto:
+		var reduccion: float = proteccion / 100.0          
+		var danoFinal: float = damage * (1.0 - reduccion)  
+		setVidaActual(vidaActual - danoFinal)
+	else:
+		print("Fallaste puto")
 
 func setVidaActual(vida: int) -> int:
 	vidaActual = clampi(vida, 0, vidaMax) #Esta mierda es pa que no baje de 0 (Código reciclado)
