@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CabezaInventario" format=3 uid="uid://dhwe0x61g3gnk"]
+
+[ext_resource type="Script" uid="uid://2lctbb4nv7lk" path="res://escenas/HUD/cabezaInventario.gd" id="1_pas1c"]
+[ext_resource type="Texture2D" uid="uid://delkla7e1lpxa" path="res://sprites/cabeza 1.png" id="2_38c14"]
+
+[resource]
+script = ExtResource("1_pas1c")
+nombre = "Cabeza Experimento 1"
+descripcion_habilidad = "La chola de un epsperimento fallido."
+textura = ExtResource("2_38c14")
+tags = Array[String](["cabeza"])
+metadata/_custom_type_script = "uid://2lctbb4nv7lk"
