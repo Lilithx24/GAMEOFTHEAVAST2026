@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cf3v5rxnp556"]
 
 [ext_resource type="Script" uid="uid://dly2oce4o1nwq" path="res://escenas/combate.gd" id="1_jotnx"]
+[ext_resource type="Script" uid="uid://xufsxt6pl2g7" path="res://escenas/ContadorStamina.gd" id="2_414ia"]
 [ext_resource type="PackedScene" uid="uid://c7trry61vrlrr" path="res://escenas/HUD/menu_shift.tscn" id="2_t3t54"]
 
 [node name="Combate" type="Node2D" unique_id=876481208]
@@ -15,17 +16,34 @@ offset_bottom = 658.0
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelJugador"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelJugador" unique_id=512236629]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 382.0
 offset_right = 1128.0
 offset_bottom = 632.0
 vertical_scroll_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador/ScrollContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador/ScrollContainer" unique_id=174099722]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 alignment = 1
 
+[node name="CanvasLayer" type="CanvasLayer" parent="PanelJugador" unique_id=538994018]
+
+[node name="Control" type="Control" parent="PanelJugador/CanvasLayer" unique_id=1476437249]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_414ia")
+
+[node name="Label" type="Label" parent="PanelJugador/CanvasLayer/Control" unique_id=102181022]
+layout_mode = 0
+offset_right = 82.0
+offset_bottom = 23.0
+text = "Stamina: 2"
+
 [node name="MenuShift" parent="." unique_id=1139798836 instance=ExtResource("2_t3t54")]
+visible = false
