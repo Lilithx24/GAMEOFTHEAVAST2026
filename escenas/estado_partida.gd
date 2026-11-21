@@ -1,6 +1,8 @@
 extends Node
 signal inventario_cambiado
 
+const ESCENA_NIVEL := "res://escenas/Exploración/Pisos/PlantaCero.tscn"
+
 var objetos_examinados: Dictionary = {}
 
 var transform_jugador: Transform3D
@@ -190,3 +192,19 @@ func _ajustar_a_torso() -> void:
 		if brazos_equipados[i] != null:
 			_guardar_pieza_devuelta(brazos_equipados[i])
 			brazos_equipados[i] = null
+
+
+func reiniciarNivel() -> void:
+	inventario.clear()
+	inventario_inicializado = false
+	inventario_temporal.clear()
+	equipo = {"cabeza": null, "torso": null, "piernas": null}
+	brazos_equipados.clear()
+	objetos_examinados.clear()
+	enemigo_derrotado = false
+	volver_de_combate = false
+	transform_jugador = Transform3D()   # posición inicial
+
+	get_tree().paused = false
+	get_tree().change_scene_to_file(ESCENA_NIVEL)
+	inventario_cambiado.emit()

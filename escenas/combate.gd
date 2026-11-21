@@ -6,6 +6,7 @@ const ESCENA_ENEMIGO := preload("res://escenas/assetsCombate/enemigo.tscn")
 const ESCENA_PARTE_ENEMIGO := preload("res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.tscn")
 const ESCENA_PERSONAJE := preload("res://escenas/assetsCombate/personaje.tscn")
 const ESCENA_PARTE_PERSONAJE := preload("res://escenas/assetsCombate/assetsPersonaje/partePersonaje.tscn")
+const ESCENA_MUERTE := preload("res://escenas/PantallaMuerte/pantallaMuerte.tscn")
 
 var parteEnemigaSeleccionada: ParteEnemigo
 var enemigo_actual: Enemigo
@@ -26,7 +27,7 @@ func _ready() -> void:
 	reconstruirSkills()
 	personaje.staminaActual = personaje.stamina
 	updateSkills()
-
+	personaje.murio.connect(_on_personaje_murio)
 
 
 func _solicitar_skills() -> void:
@@ -186,6 +187,15 @@ func ganarCombate() -> void:
 	get_tree().change_scene_to_file(
 		"res://escenas/Exploración/Pisos/PlantaCero.tscn"
 	)
+
+func _on_personaje_murio() -> void:
+	if combate_terminado:
+		return
+	combate_terminado = true   # bloquea cartas y fin de turno
+	var pantalla := ESCENA_MUERTE.instantiate()
+	add_child(pantalla)
+	pantalla.reiniciarNivel.connect(EstadoPartida.reiniciarNivel)
+	get_tree().paused = true
 
 func _on_button_pressed() -> void:
 	pass # Replace with function body.
