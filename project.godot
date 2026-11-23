@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 EstadoPartida="*uid://bte5wrms8nv0e"
+TransicionCombate="*res://escenas/Transiciones/transicion_combate.tscn"
 
 [display]
 

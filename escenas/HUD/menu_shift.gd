@@ -174,7 +174,7 @@ func _input(event: InputEvent) -> void:
 
 
 func abrir() -> void:
-	if visible:
+	if visible or TransicionCombate.en_curso:
 		return
 	_actualizar_inventario()
 	pausa_anterior = get_tree().paused

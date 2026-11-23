@@ -17,6 +17,6 @@ func _ready() -> void:
 
 
 func _on_punto_alcanzado(punto: Node3D) -> void:
-	if punto == punto_combate and not EstadoPartida.enemigo_derrotado:
+	if punto == punto_combate and not EstadoPartida.enemigo_derrotado and not TransicionCombate.en_curso:
 		EstadoPartida.transform_jugador = jugador.global_transform
-		get_tree().change_scene_to_file("res://escenas/Combate.tscn")
+		TransicionCombate.iniciar(self, jugador.get_node("Camera3D"), jugador.get_node("Gestor de Audio/Musica"))
