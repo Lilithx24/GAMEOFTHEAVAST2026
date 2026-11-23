@@ -1,8 +1,9 @@
 extends Node3D
 signal punto_alcanzado(punto: Node3D)
+signal enemigo_detectado(enemigo: Node3D)
 @export var duracion_giro: float = 0.25
 @export var duracion_movimiento: float = 0.8
-@onready var rayo_interaccion: RayCast3D = $Camera3D/RayoInteraccion
+@onready var rayo_enemigos: RayCast3D = $Camera3D/RayoEnemigos
 
 var girando: bool = false
 var moviendo: bool = false
@@ -21,9 +22,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		movimiento_pendiente = -1
 
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("interactuar"):
-		if not girando and not moviendo and movimiento_pendiente == 0:
-			intentar_interactuar()
+	if not girando and not moviendo and not TransicionCombate.en_curso:
+		_detectar_enemigo()
+		if TransicionCombate.en_curso:
+			movimiento_pendiente = 0
+			return
 
 	# Consultamos las colisiones durante el paso de física.
 	if movimiento_pendiente != 0:
@@ -89,19 +92,8 @@ func mover(sentido: int) -> void:
 	moviendo = false
 	punto_alcanzado.emit(punto)
 
-func intentar_interactuar() -> void:
-	rayo_interaccion.force_raycast_update()
-
-	if not rayo_interaccion.is_colliding():
-		return
-
-	var cuerpo := rayo_interaccion.get_collider() as Node
-	var nodo: Node = cuerpo
-
-	while nodo != null:
-		if nodo.has_method("interactuar"):
-			if not nodo.has_method("puede_interactuar_con") or nodo.call("puede_interactuar_con", cuerpo):
-				nodo.call("interactuar")
-			return
-
-		nodo = nodo.get_parent()
+func _detectar_enemigo() -> void:
+	rayo_enemigos.force_raycast_update()
+	var enemigo := rayo_enemigos.get_collider() as Node3D
+	if enemigo != null and enemigo.is_in_group("enemigos_exploracion") and not enemigo.get("activado"):
+		enemigo_detectado.emit(enemigo)

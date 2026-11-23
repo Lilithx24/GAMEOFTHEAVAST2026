@@ -30,7 +30,7 @@ func _input(_event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 
-func iniciar(nivel: Node, camara: Camera3D, musica: AudioStreamPlayer3D) -> void:
+func iniciar(nivel: Node, camara: Camera3D, musica: AudioStreamPlayer3D, enemigo: Node3D = null) -> void:
 	if en_curso:
 		return
 	en_curso = true
@@ -41,8 +41,11 @@ func iniciar(nivel: Node, camara: Camera3D, musica: AudioStreamPlayer3D) -> void
 	var giro_original := camara.rotation.z
 	var volumen_original := musica.volume_db if is_instance_valid(musica) else 0.0
 	negro.color.a = 0.0
-	vineta.material.set_shader_parameter("intensidad", intensidad_vineta)
+	vineta.material.set_shader_parameter("intensidad", 0.0)
 	show()
+	if is_instance_valid(enemigo) and enemigo.has_method("abalanzarse"):
+		await enemigo.call("abalanzarse", camara)
+	vineta.material.set_shader_parameter("intensidad", intensidad_vineta)
 	sfx_apagon.play()
 
 	if parpadeo_inicial:

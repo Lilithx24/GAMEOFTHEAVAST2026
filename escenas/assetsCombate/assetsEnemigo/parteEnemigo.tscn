@@ -1,14 +1,11 @@
 [gd_scene format=3 uid="uid://bntfubipviojr"]
 
 [ext_resource type="Script" uid="uid://dqs3onvx502pk" path="res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.gd" id="1_1dkdf"]
-[ext_resource type="Texture2D" uid="uid://vus5amm41mlr" path="res://sprites/test_AC.jpg" id="1_2gcjn"]
-
 [node name="ParteEnemigo" type="TextureRect" unique_id=440506619]
-offset_left = 469.0
-offset_top = 122.0
-offset_right = 4794.5176
-offset_bottom = 6147.8857
-scale = Vector2(0.056640625, 0.042815283)
+offset_left = -170.0
+offset_top = -310.0
+offset_right = 170.0
+offset_bottom = 10.0
 mouse_filter = 0
-texture = ExtResource("1_2gcjn")
+expand_mode = 1
 script = ExtResource("1_1dkdf")

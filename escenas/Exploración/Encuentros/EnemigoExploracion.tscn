@@ -1,9 +1,38 @@
 [gd_scene format=3 uid="uid://bar8x7nt80g2v"]
 
-[ext_resource type="Texture2D" uid="uid://dnqlsym841tjm" path="res://sprites/enemigoprueba .png" id="1_ejyqo"]
+[ext_resource type="Script" uid="uid://bcncv2bfjlt0j" path="res://escenas/Exploración/Encuentros/enemigo_exploracion.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://bfwj8ncun5sxm" path="res://escenas/Enemigos/Enemigo1.tscn" id="2_marioneta"]
 
-[node name="EnemigoExploracion" type="Node3D" unique_id=337344313]
+[sub_resource type="ViewportTexture" id="TexturaMarioneta"]
+viewport_path = NodePath("MarionetaViewport")
 
-[node name="Imagen" type="Sprite3D" parent="." unique_id=33890818]
-transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, 1.3000387, 0)
-texture = ExtResource("1_ejyqo")
+[sub_resource type="BoxShape3D" id="FormaEnemigo"]
+size = Vector3(1.25, 2.45, 0.5)
+
+[node name="EnemigoExploracion" type="Area3D" unique_id=540907404 groups=["enemigos_exploracion"]]
+editor_description = "Encuentro con el enemigo 1. La marioneta 2D está dentro de MarionetaViewport. Ajusta la embestida aquí y el tamaño visible en Imagen."
+collision_layer = 256
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_script")
+distancia_final = 1.4000000000000001
+
+[node name="Imagen" type="Sprite3D" parent="." unique_id=1342766971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.248, 0)
+pixel_size = 0.002
+billboard = 1
+texture = SubResource("TexturaMarioneta")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1330009833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.225, 0)
+shape = SubResource("FormaEnemigo")
+
+[node name="MarionetaViewport" type="SubViewport" parent="." unique_id=106931910]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1400, 1800)
+render_target_update_mode = 4
+
+[node name="Enemigo1" parent="MarionetaViewport" unique_id=190020105 instance=ExtResource("2_marioneta")]
+position = Vector2(766, 1496)

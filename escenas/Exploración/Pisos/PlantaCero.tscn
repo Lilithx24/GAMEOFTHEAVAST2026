@@ -28,6 +28,7 @@
 [ext_resource type="Resource" path="res://Recursos/partes/brazo_gancho_mecanico.tres" id="20_343we"]
 [ext_resource type="PackedScene" uid="uid://b8pexu68t3mra" path="res://Assets/Objetos/CajaControl/utility_box_02_1k.glb" id="20_aev1a"]
 [ext_resource type="Script" uid="uid://8hfli6jcoj8o" path="res://escenas/Exploración/jugador.gd" id="21_2mide"]
+[ext_resource type="PackedScene" path="res://escenas/Exploración/Encuentros/EnemigoExploracion2.tscn" id="22_enemigo2"]
 [ext_resource type="PackedScene" uid="uid://bar8x7nt80g2v" path="res://escenas/Exploración/Encuentros/EnemigoExploracion.tscn" id="22_xbk8o"]
 [ext_resource type="Shader" uid="uid://cn032ucbpdssk" path="res://shader/retro_effect.gdshader" id="23_hl0sa"]
 [ext_resource type="Script" uid="uid://bj6yur5nxoau4" path="res://escenas/Exploración/objeto_examinable.gd" id="24_examinable"]
@@ -2588,8 +2589,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
 current = true
 fov = 46.0
 
-[node name="RayoInteraccion" type="RayCast3D" parent="PisoCero/Jugador/Camera3D" unique_id=1736972125]
-target_position = Vector3(0, 0, -6)
+[node name="RayoEnemigos" type="RayCast3D" parent="PisoCero/Jugador/Camera3D" unique_id=1736972125]
+target_position = Vector3(0, 0, -16)
+collision_mask = 257
+collide_with_areas = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PisoCero/Jugador" unique_id=711460390]
 omni_range = 20.0
@@ -2611,7 +2614,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30819988, -0.005836606, -1
 stream = ExtResource("33_ku7p5")
 
 [node name="EnemigoExploracion" parent="PisoCero" unique_id=337344313 instance=ExtResource("22_xbk8o")]
-transform = Transform3D(0.13735619, 0, -0.99052167, 0, 1, 0, 0.99052167, 0, 0.13735619, 11.141625, 0, -20.046993)
+transform = Transform3D(0.42229038, 0, -0.9064606, 0, 1, 0, 0.9064606, 0, 0.42229038, 9.633333, 1.9073486e-06, -25.110126)
+id_enemigo = "planta_cero_enemigo_1"
+
+[node name="EnemigoExploracion2" parent="PisoCero" unique_id=1157459725 instance=ExtResource("22_enemigo2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.836802, 9.536743e-07, -19.960518)
+id_enemigo = "planta_cero_enemigo_2"
 
 [node name="InteraccionObjetos" parent="." unique_id=1755390002 node_paths=PackedStringArray("camara", "jugador") instance=ExtResource("26_interaccion")]
 camara = NodePath("../PisoCero/Jugador/Camera3D")

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnqlsym841tjm"
-path.s3tc="res://.godot/imported/enemigoprueba .png-96b437dc5972ee0928c8e4b89df39318.s3tc.ctex"
+path.s3tc="res://.godot/imported/enemigoprueba .png-f31ad9a208101d532e8eb66ed4b08aba.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/enemigoprueba .png"
-dest_files=["res://.godot/imported/enemigoprueba .png-96b437dc5972ee0928c8e4b89df39318.s3tc.ctex"]
+source_file="res://tests/enemigoprueba .png"
+dest_files=["res://.godot/imported/enemigoprueba .png-f31ad9a208101d532e8eb66ed4b08aba.s3tc.ctex"]
 
 [params]
 

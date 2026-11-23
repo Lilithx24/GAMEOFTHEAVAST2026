@@ -1,16 +1,24 @@
 [gd_scene format=3 uid="uid://cf3v5rxnp556"]
 
 [ext_resource type="Script" uid="uid://dly2oce4o1nwq" path="res://escenas/combate.gd" id="1_jotnx"]
+[ext_resource type="Texture2D" uid="uid://b6tmv5wdgfong" path="res://Assets/FondoCombate.png" id="2_3i012"]
 [ext_resource type="Script" uid="uid://xufsxt6pl2g7" path="res://escenas/ContadorStamina.gd" id="2_414ia"]
 [ext_resource type="PackedScene" uid="uid://c7trry61vrlrr" path="res://escenas/HUD/menu_shift.tscn" id="2_t3t54"]
+
+[ext_resource type="PackedScene" path="res://escenas/assetsCombate/enemigo.tscn" id="enemigo_visual"]
 
 [node name="Combate" type="Node2D" unique_id=876481208]
 script = ExtResource("1_jotnx")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=261303568]
-offset_left = 2.0
-offset_right = 1161.0
-offset_bottom = 658.0
+offset_left = -149.0
+offset_top = -60.0
+offset_right = 1306.0
+offset_bottom = 753.0
+texture = ExtResource("2_3i012")
+
+[node name="Enemigo" parent="." instance=ExtResource("enemigo_visual")]
+position = Vector2(590, 400)
 
 [node name="PanelJugador" type="Control" parent="." unique_id=675357850]
 layout_mode = 3

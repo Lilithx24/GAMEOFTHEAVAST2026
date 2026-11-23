@@ -3,13 +3,32 @@ extends Node2D
 @onready var barra_vida: ProgressBar = $ProgressBar
 var partes: Array[ParteEnemigo]
 var dmg: int = 10
+@export_enum("Enemigo 1", "Enemigo 2") var tipo_enemigo: int = 0
+@export_group("Fichas de enemigos")
+@export var ficha_enemigo_1: FichaEnemigo
+@export var ficha_enemigo_2: FichaEnemigo
+@export_group("Estados de combate")
 @export var stun: int = 0
 @export var debilContador: int = 0
 @export var debilEstado: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	partes.assign([$Objetivo])
+	configurar_apariencia(tipo_enemigo)
+	actualizar_barra()
+
+
+func configurar_apariencia(tipo: int) -> void:
+	tipo_enemigo = tipo
+	$Objetivo/Enemigo1.visible = tipo == 0
+	$Objetivo/Enemigo2.visible = tipo == 1
+	var ficha := ficha_enemigo_2 if tipo == 1 else ficha_enemigo_1
+	if ficha != null:
+		dmg = ficha.dano
+		$Objetivo.vidaMax = ficha.vida_maxima
+		$Objetivo.vidaActual = ficha.vida_maxima
+	actualizar_barra()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
