@@ -2611,7 +2611,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30819988, -0.005836606, -1
 stream = ExtResource("33_ku7p5")
 
 [node name="EnemigoExploracion" parent="PisoCero" unique_id=337344313 instance=ExtResource("22_xbk8o")]
-transform = Transform3D(0.13735619, 0, -0.99052167, 0, 1, 0, 0.99052167, 0, 0.13735619, 7.7001944, 0, -20.301144)
+transform = Transform3D(0.13735619, 0, -0.99052167, 0, 1, 0, 0.99052167, 0, 0.13735619, 11.141625, 0, -20.046993)
 
 [node name="InteraccionObjetos" parent="." unique_id=1755390002 node_paths=PackedStringArray("camara", "jugador") instance=ExtResource("26_interaccion")]
 camara = NodePath("../PisoCero/Jugador/Camera3D")
