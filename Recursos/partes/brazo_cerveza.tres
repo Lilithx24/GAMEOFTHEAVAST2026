@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="BrazoInventario" format=3]
+[gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://chac7aw4ucf80"]
 
-[ext_resource type="Script" path="res://escenas/HUD/brazoInventario.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://sprites/PARTES/BRAZOS/brazocerveza.png" id="2_textura"]
+[ext_resource type="Script" uid="uid://nlhacceod46a" path="res://escenas/HUD/brazoInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://t66yp1j2vlnk" path="res://sprites/PARTES/BRAZOS/brazocerveza.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
-nombreSkill = "Ataque 10"
-dmgSkill = 10
+nombreSkill = "Drunk Bonk"
+dmgSkill = 5
 staSkill = 1
 nombre = "Brazo de cerveza"
+descripcion_habilidad = "Dañas al oponente y pegas un trago. Recuperas entre 2 y 5 puntos de salud."
 textura = ExtResource("2_textura")
 tags = Array[String](["brazo"])

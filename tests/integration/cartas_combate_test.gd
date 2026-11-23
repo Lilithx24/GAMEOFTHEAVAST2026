@@ -16,6 +16,8 @@ func probar() -> void:
 	var estado := root.get_node("EstadoPartida")
 	var brazo := load("res://Recursos/partes/brazo_humano.tres").duplicate() as BrazoInventario
 	var otro := load("res://Recursos/partes/brazo_cangrejo.tres").duplicate() as BrazoInventario
+	# Fijar el coste de esta prueba sin depender del balance del recurso.
+	otro.staSkill = 1
 	estado.brazos_equipados.assign([brazo, otro])
 	var combate = load("res://escenas/Combate.tscn").instantiate()
 	root.add_child(combate)
@@ -44,6 +46,27 @@ func probar() -> void:
 	combate.updateSkills()
 	combate._on_carta_soltada(carta, objetivo)
 	verificar(objetivo.vidaActual == 75 and not carta.disponible, "Sin stamina no se puede atacar")
+	var ak47 := load("res://Recursos/partes/brazo_ak47.tres").duplicate() as BrazoInventario
+	estado.brazos_equipados.assign([otro, ak47])
+	combate.personaje.staminaActual = 2
+	combate.reconstruirSkills()
+	var anterior := combate.contenedor.get_child(1) as Skill
+	combate._on_carta_soltada(anterior, objetivo)
+	var nueva := combate.contenedor.get_child(1) as Skill
+	verificar(objetivo.vidaActual == 73 and combate.personaje.staminaActual == 1, "AK47 hace 2 de daño y consume 1 de stamina")
+	verificar(nueva != anterior and anterior.usada and anterior.get_parent() == null, "La carta usada se consume y se reemplaza por otra instancia")
+	verificar(combate.contenedor.get_child_count() == 2 and nueva.parte_origen == ak47 and not nueva.usada and nueva.disponible, "La nueva carta conserva origen y posición sin duplicar la mano")
+	combate._on_carta_soltada(anterior, objetivo)
+	verificar(objetivo.vidaActual == 73, "La instancia antigua no puede volver a atacar")
+	combate._on_carta_soltada(nueva, objetivo)
+	verificar(objetivo.vidaActual == 71 and combate.personaje.staminaActual == 0, "El AK47 se puede usar de nuevo en el mismo turno")
+	carta = combate.contenedor.get_child(1) as Skill
+	verificar(not carta.usada and not carta.disponible, "La carta se renueva incluso sin stamina, pero queda bloqueada por su coste")
+	combate._on_carta_soltada(carta, objetivo)
+	verificar(objetivo.vidaActual == 71, "Renovar no permite atacar sin stamina")
+	combate.reconstruirSkills()
+	carta = combate.contenedor.get_child(1) as Skill
+	verificar(not carta.usada and not combate.partes_usadas.has(ak47), "Reconstruir el equipo conserva la carta renovada")
 	combate.queue_free()
 	await process_frame
 	print("RESULTADO: ", fallos, " fallos")

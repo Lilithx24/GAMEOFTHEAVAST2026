@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="BrazoInventario" format=3]
+[gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://d3t4hsw5ic4ou"]
 
-[ext_resource type="Script" path="res://escenas/HUD/brazoInventario.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://sprites/PARTES/BRAZOS/brazoak47.png" id="2_textura"]
+[ext_resource type="Script" uid="uid://nlhacceod46a" path="res://escenas/HUD/brazoInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cnvdfteh0s64q" path="res://sprites/PARTES/BRAZOS/brazoak47.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
-nombreSkill = "Ataque 10"
-dmgSkill = 10
+nombreSkill = "Disparo"
+dmgSkill = 2
 staSkill = 1
+renueva_carta_al_usar = true
 nombre = "Brazo AK47"
 textura = ExtResource("2_textura")
 tags = Array[String](["brazo"])

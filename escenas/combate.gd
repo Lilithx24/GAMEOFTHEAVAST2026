@@ -119,7 +119,21 @@ func _on_carta_soltada(skill: Skill, parte: ParteEnemigo) -> void:
 		partes_usadas[skill.parte_origen] = true
 	parteEnemigaSeleccionada = parte
 	skill.marcarUsada()
-	_onSkillElegida(skill.dmgSkill + personaje.modDmg, skill.staSkill, skill.efectos)
+	await _onSkillElegida(skill.dmgSkill + personaje.modDmg, skill.staSkill, skill.efectos)
+	if not combate_terminado and is_instance_valid(skill) and skill.parte_origen and skill.parte_origen.renueva_carta_al_usar:
+		_reemplazar_carta_usada(skill)
+
+
+func _reemplazar_carta_usada(skill: Skill) -> void:
+	if skill.get_parent() != contenedor or not EstadoPartida.brazos_equipados.has(skill.parte_origen):
+		return
+	var posicion := skill.get_index()
+	partes_usadas.erase(skill.parte_origen)
+	contenedor.remove_child(skill)
+	var nueva := crearSkill(skill.nombreSkill, skill.dmgSkill, skill.staSkill, skill.parte_origen, skill.efectos)
+	contenedor.move_child(nueva, posicion)
+	nueva.updateDisponibilidad(personaje.staminaActual)
+	skill.queue_free()
 
 func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	if combate_terminado:
