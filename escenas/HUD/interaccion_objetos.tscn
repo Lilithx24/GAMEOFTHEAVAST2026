@@ -1,48 +1,108 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3 uid="uid://bp64psdpoq3cm"]
 
-[ext_resource type="Script" path="res://escenas/HUD/interaccion_objetos.gd" id="1"]
+[ext_resource type="Script" uid="uid://dpev0mf2xf2dh" path="res://escenas/HUD/interaccion_objetos.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://dpd048ua3fjho" path="res://Audio/SFX/OpneBox1.mp3" id="2_audio"]
+[ext_resource type="AudioStream" uid="uid://58l02vvayq7c" path="res://Audio/SFX/OpneBox2.mp3" id="3_audio"]
+[ext_resource type="AudioStream" uid="uid://d346xmpkc31le" path="res://Audio/SFX/OpneBox3.mp3" id="4_audio"]
 
-[sub_resource type="StyleBoxFlat" id="EstiloBoton"]
-bg_color = Color(0.19, 0.16, 0.11, 0.97)
-content_margin_left = 16.0
+[ext_resource type="Texture2D" path="res://sprites/INTERFAZ-MENU/boton1 (1).png" id="5_examinar"]
+[ext_resource type="Texture2D" path="res://sprites/INTERFAZ-MENU/boton2 (1).png" id="6_interactuar"]
+[ext_resource type="FontFile" path="res://Assets/tox_typewriter/Tox Typewriter.ttf" id="7_fuente"]
+
+[sub_resource type="StyleBoxTexture" id="EstiloBoton"]
+texture = ExtResource("5_examinar")
+region_rect = Rect2(2040, 880, 960, 660)
+content_margin_left = 20.0
+content_margin_right = 20.0
 content_margin_top = 8.0
-content_margin_right = 16.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="EstiloInteractuar"]
+texture = ExtResource("6_interactuar")
+region_rect = Rect2(220, 840, 1200, 740)
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 8.0
 content_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="EstiloAviso"]
+content_margin_left = 24.0
+content_margin_top = 18.0
+content_margin_right = 24.0
+content_margin_bottom = 18.0
 bg_color = Color(0.13, 0.11, 0.08, 0.97)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.75, 0.64, 0.39, 1)
-content_margin_left = 24.0
-content_margin_top = 18.0
-content_margin_right = 24.0
-content_margin_bottom = 18.0
 
-[node name="InteraccionObjetos" type="CanvasLayer"]
+[node name="InteraccionObjetos" type="CanvasLayer" unique_id=691026875]
 process_mode = 3
 layer = 5
 script = ExtResource("1")
 
+[node name="SonidosExaminar" type="Node" parent="." unique_id=2019596869]
+
+[node name="Examinar1" type="AudioStreamPlayer" parent="SonidosExaminar" unique_id=606097338]
+stream = ExtResource("2_audio")
+volume_db = -5.0
+
+[node name="Examinar2" type="AudioStreamPlayer" parent="SonidosExaminar" unique_id=902857683]
+stream = ExtResource("3_audio")
+volume_db = -5.0
+
+[node name="Examinar3" type="AudioStreamPlayer" parent="SonidosExaminar" unique_id=940696667]
+stream = ExtResource("4_audio")
+volume_db = -5.0
+
 [node name="Examinar" type="Button" parent="."]
 visible = false
-custom_minimum_size = Vector2(120, 40)
-offset_right = 120.0
-offset_bottom = 40.0
+custom_minimum_size = Vector2(170, 52)
+offset_right = 170.0
+offset_bottom = 52.0
 focus_mode = 0
-theme_override_colors/font_color = Color(1, 0.94, 0.78, 1)
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("7_fuente")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_colors/font_hover_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_colors/font_pressed_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_colors/font_focus_color = Color(0.16, 0.12, 0.08, 1)
 theme_override_styles/normal = SubResource("EstiloBoton")
 theme_override_styles/hover = SubResource("EstiloBoton")
 theme_override_styles/pressed = SubResource("EstiloBoton")
 theme_override_styles/hover_pressed = SubResource("EstiloBoton")
 theme_override_styles/disabled = SubResource("EstiloBoton")
 theme_override_styles/focus = SubResource("EstiloBoton")
-text = "Examinar"
+text = "EXAMINAR"
 
-[node name="Aviso" type="PanelContainer" parent="."]
+[node name="Interactuar" type="Button" parent="."]
 visible = false
+custom_minimum_size = Vector2(190, 52)
+offset_right = 190.0
+offset_bottom = 52.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("7_fuente")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_colors/font_hover_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_colors/font_pressed_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_colors/font_focus_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_styles/normal = SubResource("EstiloInteractuar")
+theme_override_styles/hover = SubResource("EstiloInteractuar")
+theme_override_styles/pressed = SubResource("EstiloInteractuar")
+theme_override_styles/hover_pressed = SubResource("EstiloInteractuar")
+theme_override_styles/disabled = SubResource("EstiloInteractuar")
+theme_override_styles/focus = SubResource("EstiloInteractuar")
+text = "INTERACTUAR"
+
+[node name="Aviso" type="PanelContainer" parent="." unique_id=436982741]
+visible = false
+anchors_preset = -1
 anchor_left = 0.15
 anchor_top = 1.0
 anchor_right = 0.85
@@ -54,16 +114,15 @@ grow_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("EstiloAviso")
 
-[node name="Texto" type="Label" parent="Aviso"]
+[node name="Texto" type="Label" parent="Aviso" unique_id=1687775391]
 layout_mode = 2
-mouse_filter = 2
 theme_override_colors/font_color = Color(1, 0.94, 0.78, 1)
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Temporizador" type="Timer" parent="."]
+[node name="Temporizador" type="Timer" parent="." unique_id=1864616946]
 process_mode = 1
 wait_time = 3.0
 one_shot = true

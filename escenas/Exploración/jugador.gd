@@ -79,6 +79,7 @@ func mover(sentido: int) -> void:
 		return
 
 	moviendo = true
+	$"Gestor de Audio/Pasos".play()
 	var tween: Tween = create_tween()
 	tween.set_trans(Tween.TRANS_SINE)
 	tween.set_ease(Tween.EASE_IN_OUT)
@@ -99,8 +100,7 @@ func intentar_interactuar() -> void:
 
 	while nodo != null:
 		if nodo.has_method("interactuar"):
-			# Solo se activa al mirar la hoja, no el marco.
-			if nodo.get_node_or_null("Bisagra/Puerta/Cuerpo") == cuerpo:
+			if not nodo.has_method("puede_interactuar_con") or nodo.call("puede_interactuar_con", cuerpo):
 				nodo.call("interactuar")
 			return
 

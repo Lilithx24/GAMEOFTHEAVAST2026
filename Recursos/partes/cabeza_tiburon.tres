@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CabezaInventario" format=3]
+
+[ext_resource type="Script" path="res://escenas/HUD/cabezaInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://sprites/PARTES/CABEZAS/cabezatiburonl.png" id="2_textura"]
+
+[resource]
+script = ExtResource("1_script")
+stamina = 1
+nombre = "Cabeza de tiburón"
+textura = ExtResource("2_textura")
+tags = Array[String](["cabeza"])

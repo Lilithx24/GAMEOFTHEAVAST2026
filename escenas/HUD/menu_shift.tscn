@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://c7trry61vrlrr"]
 
 [ext_resource type="Script" uid="uid://b2evhjnxbr08x" path="res://escenas/HUD/menu_shift.gd" id="1_shift"]
-[ext_resource type="Texture2D" uid="uid://dfls7yrfwe3sq" path="res://sprites/INTERFAZ-MENU/mockupmenu.png" id="2_kn11p"]
+[ext_resource type="Texture2D" uid="uid://8jaa8pnjnhu7" path="res://sprites/INTERFAZ-MENU/torsosinv.png" id="2_f75j8"]
+[ext_resource type="Texture2D" uid="uid://dfls7yrfwe3sq" path="res://tests/mockupmenu.png" id="2_kn11p"]
+[ext_resource type="Texture2D" uid="uid://cyd3u8gnmoaap" path="res://sprites/INTERFAZ-MENU/cabezasinv.png" id="3_xc1ee"]
+[ext_resource type="Texture2D" uid="uid://bq2lminjkb45o" path="res://sprites/INTERFAZ-MENU/brazosinv.png" id="4_ddqe8"]
+[ext_resource type="Texture2D" uid="uid://brc1ef07kvc03" path="res://sprites/INTERFAZ-MENU/piernasinv.png" id="5_pwsoi"]
 [ext_resource type="PackedScene" uid="uid://cfa14xa7pq4wh" path="res://escenas/HUD/slot.tscn" id="5_slot"]
 [ext_resource type="PackedScene" path="res://escenas/HUD/fila_inventario.tscn" id="6_fila"]
-[ext_resource type="FontFile" uid="uid://b74skot5133ph" path="res://Assets/tox_typewriter/Tox Typewriter.ttf" id="9_f75j8"]
-[ext_resource type="Texture2D" uid="uid://bugmdv01mi7vo" path="res://sprites/INTERFAZ-MENU/invent1.png" id="invent1"]
-[ext_resource type="Texture2D" uid="uid://ciqpd5jy4vxby" path="res://sprites/INTERFAZ-MENU/invent2.png" id="invent2"]
-[ext_resource type="Texture2D" uid="uid://cmrbuhdsrki6q" path="res://sprites/INTERFAZ-MENU/invent3.png" id="invent3"]
-[ext_resource type="Texture2D" uid="uid://cj2acs7h773ac" path="res://sprites/INTERFAZ-MENU/invent4.png" id="invent4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8042i"]
 texture = ExtResource("2_kn11p")
@@ -23,35 +22,11 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.55, 0.68, 0.58, 0.8)
 
-[sub_resource type="StyleBoxFlat" id="BotonCategoria"]
-bg_color = Color(0.76, 0.73, 0.63, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.3, 0.24, 0.17, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
-[sub_resource type="StyleBoxFlat" id="BotonCategoriaActivo"]
-bg_color = Color(0.9, 0.86, 0.73, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.3, 0.24, 0.17, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
 [node name="MenuShift" type="CanvasLayer" unique_id=2113370766]
 process_mode = 3
 layer = 10
 script = ExtResource("1_shift")
-hojas_categoria = Array[Texture2D]([ExtResource("invent1"), ExtResource("invent2"), ExtResource("invent3"), ExtResource("invent4")])
+hojas_categoria = Array[Texture2D]([ExtResource("3_xc1ee"), ExtResource("2_f75j8"), ExtResource("4_ddqe8"), ExtResource("5_pwsoi")])
 
 [node name="Pantalla" type="Control" parent="." unique_id=295175460]
 layout_mode = 3
@@ -90,7 +65,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("invent1")
 expand_mode = 1
 
 [node name="Panel2" type="Panel" parent="Pantalla" unique_id=1901242034]
@@ -422,87 +396,67 @@ indice = 19
 [node name="Categoria0" type="Button" parent="Pantalla" unique_id=1708992085]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.54125
-anchor_top = 0.122
-anchor_right = 0.59125
-anchor_bottom = 0.1658261
+anchor_left = 0.625
+anchor_top = 0.125
+anchor_right = 0.68
+anchor_bottom = 0.16
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0.3, 0.24, 0.17, 1)
-theme_override_colors/font_pressed_color = Color(0.12, 0.09, 0.05, 1)
-theme_override_colors/font_hover_color = Color(0.12, 0.09, 0.05, 1)
-theme_override_fonts/font = ExtResource("9_f75j8")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("BotonCategoria")
-theme_override_styles/pressed = SubResource("BotonCategoriaActivo")
-theme_override_styles/hover = SubResource("BotonCategoriaActivo")
+theme_override_styles/normal = SubResource("SinFondo")
+theme_override_styles/pressed = SubResource("SinFondo")
+theme_override_styles/hover = SubResource("SinFondo")
+theme_override_styles/hover_pressed = SubResource("SinFondo")
+theme_override_styles/disabled = SubResource("SinFondo")
 theme_override_styles/focus = SubResource("SinFondo")
 toggle_mode = true
-text = "1"
-clip_text = true
 
 [node name="Categoria1" type="Button" parent="Pantalla" unique_id=1033547462]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.63625
-anchor_top = 0.1238261
-anchor_right = 0.68625
-anchor_bottom = 0.1676522
+anchor_left = 0.5425
+anchor_top = 0.125
+anchor_right = 0.59
+anchor_bottom = 0.16
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0.3, 0.24, 0.17, 1)
-theme_override_colors/font_pressed_color = Color(0.12, 0.09, 0.05, 1)
-theme_override_colors/font_hover_color = Color(0.12, 0.09, 0.05, 1)
-theme_override_fonts/font = ExtResource("9_f75j8")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("BotonCategoria")
-theme_override_styles/pressed = SubResource("BotonCategoriaActivo")
-theme_override_styles/hover = SubResource("BotonCategoriaActivo")
+theme_override_styles/normal = SubResource("SinFondo")
+theme_override_styles/pressed = SubResource("SinFondo")
+theme_override_styles/hover = SubResource("SinFondo")
+theme_override_styles/hover_pressed = SubResource("SinFondo")
+theme_override_styles/disabled = SubResource("SinFondo")
 theme_override_styles/focus = SubResource("SinFondo")
 toggle_mode = true
-text = "2"
-clip_text = true
 
 [node name="Categoria2" type="Button" parent="Pantalla" unique_id=714525455]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.71
-anchor_top = 0.1274783
-anchor_right = 0.76
-anchor_bottom = 0.1713043
+anchor_left = 0.705
+anchor_top = 0.127
+anchor_right = 0.755
+anchor_bottom = 0.162
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0.3, 0.24, 0.17, 1)
-theme_override_colors/font_pressed_color = Color(0.12, 0.09, 0.05, 1)
-theme_override_colors/font_hover_color = Color(0.12, 0.09, 0.05, 1)
-theme_override_fonts/font = ExtResource("9_f75j8")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("BotonCategoria")
-theme_override_styles/pressed = SubResource("BotonCategoriaActivo")
-theme_override_styles/hover = SubResource("BotonCategoriaActivo")
+theme_override_styles/normal = SubResource("SinFondo")
+theme_override_styles/pressed = SubResource("SinFondo")
+theme_override_styles/hover = SubResource("SinFondo")
+theme_override_styles/hover_pressed = SubResource("SinFondo")
+theme_override_styles/disabled = SubResource("SinFondo")
 theme_override_styles/focus = SubResource("SinFondo")
 toggle_mode = true
-text = "3"
-clip_text = true
 
 [node name="Categoria3" type="Button" parent="Pantalla" unique_id=991891257]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7875
-anchor_top = 0.1329565
+anchor_left = 0.78
+anchor_top = 0.131
 anchor_right = 0.8375
-anchor_bottom = 0.1767826
+anchor_bottom = 0.167
 focus_mode = 0
 mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(0.3, 0.24, 0.17, 1)
-theme_override_colors/font_pressed_color = Color(0.12, 0.09, 0.05, 1)
-theme_override_colors/font_hover_color = Color(0.12, 0.09, 0.05, 1)
-theme_override_fonts/font = ExtResource("9_f75j8")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("BotonCategoria")
-theme_override_styles/pressed = SubResource("BotonCategoriaActivo")
-theme_override_styles/hover = SubResource("BotonCategoriaActivo")
+theme_override_styles/normal = SubResource("SinFondo")
+theme_override_styles/pressed = SubResource("SinFondo")
+theme_override_styles/hover = SubResource("SinFondo")
+theme_override_styles/hover_pressed = SubResource("SinFondo")
+theme_override_styles/disabled = SubResource("SinFondo")
 theme_override_styles/focus = SubResource("SinFondo")
 toggle_mode = true
-text = "4"
-clip_text = true

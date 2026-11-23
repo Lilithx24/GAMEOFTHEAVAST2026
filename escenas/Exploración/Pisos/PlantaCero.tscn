@@ -34,6 +34,8 @@
 [ext_resource type="PackedScene" uid="uid://c1d45nuaj3q53" path="res://Assets/Objetos/CamaraVintage/vintage_video_camera_1k.glb" id="28_3jqnj"]
 [ext_resource type="PackedScene" uid="uid://b5h635gkxr2m4" path="res://Assets/Objetos/Electroscopio/vintage_spacecraft_instrument_1k.glb" id="29_3jqnj"]
 [ext_resource type="PackedScene" uid="uid://bk67qwugntsj0" path="res://Assets/Objetos/Enciclopedia/book_encyclopedia_set_01_1k.glb" id="30_d54pl"]
+[ext_resource type="AudioStream" uid="uid://d27fo7hxm117d" path="res://Audio/SFX/SFX Walk.mp3" id="33_ku7p5"]
+[ext_resource type="AudioStream" uid="uid://gs42uut3ddqs" path="res://Audio/Denial Overworld v1.mp3" id="35_d54pl"]
 
 [sub_resource type="Environment" id="Environment_Oscuridad"]
 background_mode = 1
@@ -590,7 +592,6 @@ material_override = ExtResource("4_blcy7")
 mesh = SubResource("BoxMesh_c3obi")
 
 [node name="Techos" type="Node3D" parent="PisoCero" unique_id=2146880121]
-visible = false
 
 [node name="TechoSalaInicio" type="MeshInstance3D" parent="PisoCero/Techos" unique_id=973707007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.25, 0)
@@ -2240,6 +2241,22 @@ target_position = Vector3(0, 0, -6)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PisoCero/Jugador" unique_id=711460390]
 omni_range = 20.0
+
+[node name="Gestor de Audio" type="Node3D" parent="PisoCero/Jugador" unique_id=169478429]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.371139e-07, -1.2, -10)
+
+[node name="Musica" type="AudioStreamPlayer3D" parent="PisoCero/Jugador/Gestor de Audio" unique_id=2066559898]
+process_mode = 3
+stream = ExtResource("35_d54pl")
+volume_db = -8.0
+autoplay = true
+parameters/looping = true
+
+[node name="Transicion" type="AudioStreamPlayer3D" parent="PisoCero/Jugador/Gestor de Audio" unique_id=1283271385]
+
+[node name="Pasos" type="AudioStreamPlayer3D" parent="PisoCero/Jugador/Gestor de Audio" unique_id=1747883897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30819988, -0.005836606, -1.166133)
+stream = ExtResource("33_ku7p5")
 
 [node name="EnemigoExploracion" parent="PisoCero" unique_id=337344313 instance=ExtResource("22_xbk8o")]
 transform = Transform3D(0.13735619, 0, -0.99052167, 0, 1, 0, 0.99052167, 0, 0.13735619, 7.7001944, 0, -20.301144)

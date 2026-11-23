@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciqpd5jy4vxby"
-path="res://.godot/imported/invent2.png-b7d49433f77c562784bc26b18c54285d.ctex"
+uid="uid://bugmdv01mi7vo"
+path="res://.godot/imported/invent1.png-0287030c10604129fbb172814d491a3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/INTERFAZ-MENU/invent2.png"
-dest_files=["res://.godot/imported/invent2.png-b7d49433f77c562784bc26b18c54285d.ctex"]
+source_file="res://tests/invent1.png"
+dest_files=["res://.godot/imported/invent1.png-0287030c10604129fbb172814d491a3c.ctex"]
 
 [params]
 
