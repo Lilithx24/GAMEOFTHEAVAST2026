@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://bfwj8ncun5sxm"]
+
+[ext_resource type="Texture2D" uid="uid://bxdhyt0qdcbsn" path="res://sprites/PERSONAJES/ENEMIGO1/piernasmantis.png" id="1_piernas"]
+[ext_resource type="Texture2D" uid="uid://yalidi8jgukw" path="res://sprites/PERSONAJES/ENEMIGO1/torsohumano.png" id="2_torso"]
+[ext_resource type="Texture2D" uid="uid://c4qfufucooq3k" path="res://sprites/PERSONAJES/ENEMIGO1/cabezahumano.png" id="3_cabeza"]
+[ext_resource type="Texture2D" uid="uid://cgds4y6q6pxvl" path="res://sprites/PERSONAJES/ENEMIGO1/brazocangrejo.png" id="4_brazo"]
+
+[sub_resource type="Animation" id="Anim_RESET"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cadera:position")
+tracks/0/interp = 1
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -708)]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cadera/Torso:rotation")
+tracks/1/interp = 1
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cadera/Torso/Cabeza:rotation")
+tracks/2/interp = 1
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cadera/Torso/BrazoCangrejo:rotation")
+tracks/3/interp = 1
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Cadera/PiernasMantis:rotation")
+tracks/4/interp = 1
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Cadera/PiernasMantis:scale")
+tracks/5/interp = 1
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_Asalto"]
+resource_name = "Asalto"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cadera:position")
+tracks/0/interp = 1
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -708), Vector2(0, -688), Vector2(0, -738), Vector2(0, -718)]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cadera/Torso:rotation")
+tracks/1/interp = 1
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08, 0.12, 0.06]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cadera/Torso/Cabeza:rotation")
+tracks/2/interp = 1
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.1, -0.16, -0.08]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cadera/Torso/BrazoCangrejo:rotation")
+tracks/3/interp = 1
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.18, 0.55, 0.3]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Cadera/PiernasMantis:rotation")
+tracks/4/interp = 1
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08, -0.12, -0.06]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Cadera/PiernasMantis:scale")
+tracks/5/interp = 1
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.93, 0.9), Vector2(1.08, 1.05), Vector2(1.04, 1.02)]
+}
+
+[sub_resource type="AnimationLibrary" id="Animaciones"]
+_data = {
+&"RESET": SubResource("Anim_RESET"),
+&"asalto": SubResource("Anim_Asalto")
+}
+
+[node name="Enemigo1" type="Node2D" unique_id=961859499]
+editor_description = "Marioneta del enemigo 1. Origen a la altura del suelo. Escala y coloca esta escena desde su nodo raíz. Las piezas se giran desde sus nodos de articulación."
+
+[node name="Cadera" type="Node2D" parent="." unique_id=1561665260]
+editor_description = "Pivote principal del cuerpo, en la unión del torso y las piernas."
+position = Vector2(0, -708)
+
+[node name="PiernasMantis" type="Node2D" parent="Cadera" unique_id=1114148286]
+editor_description = "Pivote del bloque de piernas. El PNG contiene todas las piernas y el abdomen juntos."
+
+[node name="Sprite" type="Sprite2D" parent="Cadera/PiernasMantis" unique_id=705621642]
+position = Vector2(-520, -350)
+texture = ExtResource("1_piernas")
+centered = false
+
+[node name="Torso" type="Node2D" parent="Cadera" unique_id=214009323]
+editor_description = "Pivote del torso en la cintura. La cabeza y la pinza acompañan su movimiento. El brazo humano forma parte de esta textura."
+
+[node name="Sprite" type="Sprite2D" parent="Cadera/Torso" unique_id=353143749]
+position = Vector2(-137, -372)
+texture = ExtResource("2_torso")
+centered = false
+
+[node name="Cabeza" type="Node2D" parent="Cadera/Torso" unique_id=1953696996]
+editor_description = "Pivote de la cabeza en el cuello."
+position = Vector2(70, -265)
+
+[node name="Sprite" type="Sprite2D" parent="Cadera/Torso/Cabeza" unique_id=782763167]
+position = Vector2(-128, -221)
+texture = ExtResource("3_cabeza")
+centered = false
+
+[node name="BrazoCangrejo" type="Node2D" parent="Cadera/Torso" unique_id=460333326]
+editor_description = "Pivote de la pinza en el hombro."
+position = Vector2(-70, -305)
+
+[node name="Sprite" type="Sprite2D" parent="Cadera/Torso/BrazoCangrejo" unique_id=315601918]
+position = Vector2(-195, -67)
+texture = ExtResource("4_brazo")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+&"": SubResource("Animaciones")
+}

@@ -1,0 +1,53 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/Transiciones/transicion_combate.gd" id="1_script"]
+[ext_resource type="Shader" path="res://escenas/Transiciones/apagon.gdshader" id="2_shader"]
+[ext_resource type="AudioStream" path="res://Audio/SFX/Transiciones/ApagonElectrico.wav" id="3_apagon"]
+[ext_resource type="AudioStream" path="res://Audio/SFX/Transiciones/EncendidoElectrico.wav" id="4_encendido"]
+
+[sub_resource type="ShaderMaterial" id="MaterialApagon"]
+shader = ExtResource("2_shader")
+shader_parameter/intensidad = 0.0
+
+[node name="TransicionCombate" type="CanvasLayer"]
+process_mode = 3
+layer = 120
+visible = false
+script = ExtResource("1_script")
+
+[node name="Pantalla" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="Vineta" type="ColorRect" parent="Pantalla"]
+material = SubResource("MaterialApagon")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Negro" type="ColorRect" parent="Pantalla"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Apagon" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_apagon")
+volume_db = -9.0
+
+[node name="Encendido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_encendido")
+volume_db = -12.0

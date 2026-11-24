@@ -1,9 +1,9 @@
 class_name ParteEnemigo
 extends TextureRect
 
-var vidaMax: int
+@export var vidaMax: int = 100
 var vidaActual: int
-var vital: bool
+@export var vital: bool = true
 var tags: Array[String]
 var estados: Array[String]
 
@@ -11,7 +11,7 @@ signal carta_soltada(skill: Skill, parte: ParteEnemigo)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	vidaActual = vidaMax
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

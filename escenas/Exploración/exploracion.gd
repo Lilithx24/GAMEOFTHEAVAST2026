@@ -1,8 +1,6 @@
 extends Node3D
 
 @onready var jugador = $PisoCero/Jugador
-@onready var punto_combate = $PisoCero/PuntosExploracion/Punto10
-@onready var enemigo_visual = $PisoCero/EnemigoExploracion
 
 
 func _ready() -> void:
@@ -10,13 +8,18 @@ func _ready() -> void:
 		jugador.global_transform = EstadoPartida.transform_jugador
 		EstadoPartida.volver_de_combate = false
 
-	if EstadoPartida.enemigo_derrotado:
-		enemigo_visual.queue_free()
+	for enemigo in get_tree().get_nodes_in_group("enemigos_exploracion"):
+		if EstadoPartida.enemigos_derrotados.has(enemigo.identificador()):
+			enemigo.hide()
+			enemigo.collision_layer = 0
+			enemigo.queue_free()
 
-	jugador.punto_alcanzado.connect(_on_punto_alcanzado)
+	jugador.enemigo_detectado.connect(_on_enemigo_detectado)
 
 
-func _on_punto_alcanzado(punto: Node3D) -> void:
-	if punto == punto_combate and not EstadoPartida.enemigo_derrotado:
+func _on_enemigo_detectado(enemigo: Node3D) -> void:
+	if not EstadoPartida.enemigos_derrotados.has(enemigo.identificador()) and not TransicionCombate.en_curso:
+		EstadoPartida.enemigo_actual_id = enemigo.identificador()
+		EstadoPartida.tipo_enemigo_actual = enemigo.tipo_enemigo
 		EstadoPartida.transform_jugador = jugador.global_transform
-		get_tree().change_scene_to_file("res://escenas/Combate.tscn")
+		TransicionCombate.iniciar(self, jugador.get_node("Camera3D"), jugador.get_node("Gestor de Audio/Musica"), enemigo)

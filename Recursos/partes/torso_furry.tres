@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TorsoInventario" format=3]
+
+[ext_resource type="Script" path="res://escenas/HUD/torsoInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://sprites/PARTES/TORSOS/torsofurry.png" id="2_textura"]
+
+[resource]
+script = ExtResource("1_script")
+slotsBrazos = 2
+vidaMax = 50
+proteccion = 0
+nombre = "Torso furry"
+textura = ExtResource("2_textura")
+tags = Array[String](["torso"])

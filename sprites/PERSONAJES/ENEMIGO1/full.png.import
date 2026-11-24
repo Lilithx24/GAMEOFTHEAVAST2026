@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj2acs7h773ac"
-path="res://.godot/imported/invent4.png-58724d0e8368b381d1c7d1e026805a74.ctex"
+uid="uid://wxug24o3qu5b"
+path="res://.godot/imported/full.png-e8ae811460e3a1b25b9773d3596617b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/INTERFAZ-MENU/invent4.png"
-dest_files=["res://.godot/imported/invent4.png-58724d0e8368b381d1c7d1e026805a74.ctex"]
+source_file="res://sprites/PERSONAJES/ENEMIGO1/full.png"
+dest_files=["res://.godot/imported/full.png-e8ae811460e3a1b25b9773d3596617b9.ctex"]
 
 [params]
 

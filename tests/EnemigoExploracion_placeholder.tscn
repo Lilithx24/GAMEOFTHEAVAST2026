@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cufmr8u3bfy5l"]
+
+[ext_resource type="Texture2D" uid="uid://dnqlsym841tjm" path="res://tests/enemigoprueba .png" id="1_ejyqo"]
+
+[node name="EnemigoExploracion" type="Node3D" unique_id=337344313]
+
+[node name="Imagen" type="Sprite3D" parent="." unique_id=33890818]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, 1.3000387, 0)
+texture = ExtResource("1_ejyqo")

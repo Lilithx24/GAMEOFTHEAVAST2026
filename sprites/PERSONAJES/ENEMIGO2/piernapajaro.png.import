@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfls7yrfwe3sq"
-path="res://.godot/imported/mockupmenu.png-db8d86f7fdfad396c0acca5f68bac7da.ctex"
+uid="uid://cvgd1j2p2hrht"
+path="res://.godot/imported/piernapajaro.png-61d16228e9acad26106dd28d1e926bda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/INTERFAZ-MENU/mockupmenu.png"
-dest_files=["res://.godot/imported/mockupmenu.png-db8d86f7fdfad396c0acca5f68bac7da.ctex"]
+source_file="res://sprites/PERSONAJES/ENEMIGO2/piernapajaro.png"
+dest_files=["res://.godot/imported/piernapajaro.png-61d16228e9acad26106dd28d1e926bda.ctex"]
 
 [params]
 

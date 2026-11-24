@@ -40,6 +40,25 @@ func probar() -> void:
 	ui._physics_process(0.016)
 	verificar(not segunda.disponible(), "La segunda caja también se recoge")
 	verificar(root.get_node("EstadoPartida").inventario.filter(func(p): return p != null).size() == 2, "Se conservan ambas recompensas")
+	var puerta = escena.get_node("PisoCero/Puertas/ParedConPuerta")
+	var cuerpo = puerta.get_node("Bisagra/Puerta/Cuerpo")
+	ui.camara.global_position = cuerpo.global_position + cuerpo.global_basis.z * 2.0
+	ui.camara.look_at(cuerpo.global_position)
+	await physics_frame
+	var impacto = ui._lanzar_rayo(ui.camara.global_position, cuerpo.global_position)
+	ui._mostrar_interaccion(impacto)
+	verificar(ui.boton_interactuar.visible and not ui.boton.visible, "La puerta muestra INTERACTUAR, no EXAMINAR")
+	verificar(not puerta.puede_interactuar_con(puerta.get_node("PuertaL/Cuerpo")), "El marco no permite interactuar")
+	ui.boton_interactuar.pressed.emit()
+	paused = true
+	ui._physics_process(0.016)
+	verificar(not puerta.abierta and not ui.boton_interactuar.visible, "SHIFT cancela la interacción pendiente y oculta el botón")
+	paused = false
+	ui._mostrar_interaccion(impacto)
+	ui.boton_interactuar.pressed.emit()
+	ui._physics_process(0.016)
+	verificar(puerta.abierta, "El botón INTERACTUAR abre la puerta")
+	verificar(not puerta.puede_interactuar_con(cuerpo), "La puerta no permite otra interacción mientras se mueve")
 	escena.queue_free()
 	await process_frame
 	print("RESULTADO: ", fallos, " fallos")

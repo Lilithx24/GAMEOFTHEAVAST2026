@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://bnegqqymk6crp"]
+
+[ext_resource type="Script" uid="uid://nlhacceod46a" path="res://escenas/HUD/brazoInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bc82vi77n6lov" path="res://sprites/PARTES/BRAZOS/brazoaspiradora.png" id="2_textura"]
+
+[resource]
+script = ExtResource("1_script")
+nombreSkill = "Ataque 10"
+dmgSkill = 5
+staSkill = 1
+nombre = "Brazo aspiradora"
+textura = ExtResource("2_textura")
+tags = Array[String](["brazo"])

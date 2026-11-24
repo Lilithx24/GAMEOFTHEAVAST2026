@@ -2,14 +2,12 @@ class_name Combate
 extends Node2D
 
 const ESCENA_SKILL := preload("res://escenas/assetsCombate/skill.tscn")
-const ESCENA_ENEMIGO := preload("res://escenas/assetsCombate/enemigo.tscn")
-const ESCENA_PARTE_ENEMIGO := preload("res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.tscn")
 const ESCENA_PERSONAJE := preload("res://escenas/assetsCombate/personaje.tscn")
 const ESCENA_PARTE_PERSONAJE := preload("res://escenas/assetsCombate/assetsPersonaje/partePersonaje.tscn")
 const ESCENA_MUERTE := preload("res://escenas/PantallaMuerte/pantallaMuerte.tscn")
 
 var parteEnemigaSeleccionada: ParteEnemigo
-var enemigo_actual: Enemigo
+@onready var enemigo_actual: Enemigo = $Enemigo
 var personaje: Personaje
 var combate_terminado: bool = false
 var partes_usadas: Dictionary = {}
@@ -20,8 +18,9 @@ var skillSolicitada: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	contenedor = $PanelJugador/ScrollContainer/HBoxContainer
-	var parteEnemigoA = crearParteEnemigo(100)
-	enemigo_actual = crearEnemigo([parteEnemigoA])
+	enemigo_actual.configurar_apariencia(EstadoPartida.tipo_enemigo_actual)
+	for parte in enemigo_actual.partes:
+		parte.carta_soltada.connect(_on_carta_soltada)
 	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), [])
 	EstadoPartida.inventario_cambiado.connect(_solicitar_skills)
 	reconstruirSkills()
@@ -64,23 +63,6 @@ func reconstruirSkills() -> void:
 	
 ###### Funciones de instanciamiento ######
 
-func crearEnemigo(partes: Array[ParteEnemigo]) -> Enemigo:
-	enemigo_actual = ESCENA_ENEMIGO.instantiate()
-	add_child(enemigo_actual)
-	enemigo_actual.partes = partes
-	for parte in partes:
-		enemigo_actual.add_child(parte)
-		parte.carta_soltada.connect(_on_carta_soltada)
-	enemigo_actual.actualizar_barra()
-	return enemigo_actual
-
-func crearParteEnemigo(vida: int) -> ParteEnemigo:
-	var parteEnemigo: ParteEnemigo = ESCENA_PARTE_ENEMIGO.instantiate()
-	parteEnemigo.vidaMax = vida
-	parteEnemigo.vidaActual = parteEnemigo.vidaMax
-	parteEnemigo.vital = true
-	return parteEnemigo
-
 func crearPersonaje(vida: int,partes: Array[PartePersonaje]) -> Personaje:
 	var personaje: Personaje = ESCENA_PERSONAJE.instantiate()
 	add_child(personaje)
@@ -119,7 +101,21 @@ func _on_carta_soltada(skill: Skill, parte: ParteEnemigo) -> void:
 		partes_usadas[skill.parte_origen] = true
 	parteEnemigaSeleccionada = parte
 	skill.marcarUsada()
-	_onSkillElegida(skill.dmgSkill + personaje.modDmg, skill.staSkill, skill.efectos)
+	await _onSkillElegida(skill.dmgSkill + personaje.modDmg, skill.staSkill, skill.efectos)
+	if not combate_terminado and is_instance_valid(skill) and skill.parte_origen and skill.parte_origen.renueva_carta_al_usar:
+		_reemplazar_carta_usada(skill)
+
+
+func _reemplazar_carta_usada(skill: Skill) -> void:
+	if skill.get_parent() != contenedor or not EstadoPartida.brazos_equipados.has(skill.parte_origen):
+		return
+	var posicion := skill.get_index()
+	partes_usadas.erase(skill.parte_origen)
+	contenedor.remove_child(skill)
+	var nueva := crearSkill(skill.nombreSkill, skill.dmgSkill, skill.staSkill, skill.parte_origen, skill.efectos)
+	contenedor.move_child(nueva, posicion)
+	nueva.updateDisponibilidad(personaje.staminaActual)
+	skill.queue_free()
 
 func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	if combate_terminado:
@@ -183,7 +179,9 @@ func stat(pieza: ParteInventario, nombre: String):
 
 func ganarCombate() -> void:
 	combate_terminado = true
-	EstadoPartida.enemigo_derrotado = true
+	if not EstadoPartida.enemigo_actual_id.is_empty():
+		EstadoPartida.enemigos_derrotados[EstadoPartida.enemigo_actual_id] = true
+	EstadoPartida.enemigo_actual_id = ""
 	EstadoPartida.volver_de_combate = true
 	get_tree().change_scene_to_file(
 		"res://escenas/Exploración/Pisos/PlantaCero.tscn"

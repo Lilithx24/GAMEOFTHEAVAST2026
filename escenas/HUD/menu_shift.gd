@@ -15,7 +15,6 @@ const FILA_INVENTARIO := preload("res://escenas/HUD/fila_inventario.tscn")
 var pausa_anterior: bool = false
 var actualizacion_pendiente: bool = false
 var filas_temporales: Dictionary = {}
-var tamanos_titulos: Array[int] = []
 
 
 func _ready() -> void:
@@ -32,10 +31,7 @@ func _ready() -> void:
 		zona.set_drag_forwarding(Callable(), _puede_devolver, _devolver)
 	for indice in CATEGORIAS.size():
 		var boton := get_node("Pantalla/Categoria%d" % indice) as Button
-		tamanos_titulos.append(boton.get_theme_font_size("font_size"))
 		boton.pressed.connect(_seleccionar_categoria.bind(indice))
-		boton.resized.connect(_ajustar_titulos)
-	_ajustar_titulos.call_deferred()
 	pestanas.tab_changed.connect(_on_pestana_cambiada)
 	scroll.resized.connect(_ajustar_altura_filas)
 	EstadoPartida.inventario_cambiado.connect(_solicitar_actualizacion)
@@ -51,20 +47,6 @@ func _actualizar_titulos() -> void:
 	for indice in CATEGORIAS.size():
 		var boton := get_node("Pantalla/Categoria%d" % indice) as Button
 		boton.set_pressed_no_signal(indice == pestanas.current_tab)
-
-
-func _ajustar_titulos() -> void:
-	if tamanos_titulos.size() != CATEGORIAS.size():
-		return
-	# Un tamaño común mantiene la fila uniforme y respeta el máximo del Inspector.
-	var tamano: int = tamanos_titulos.min()
-	for indice in CATEGORIAS.size():
-		var boton := get_node("Pantalla/Categoria%d" % indice) as Button
-		var fuente := boton.get_theme_font("font")
-		while tamano > 8 and (fuente.get_string_size(boton.text, HORIZONTAL_ALIGNMENT_LEFT, -1, tamano).x > boton.size.x - 6 or fuente.get_height(tamano) > boton.size.y - 2):
-			tamano -= 1
-	for indice in CATEGORIAS.size():
-		get_node("Pantalla/Categoria%d" % indice).add_theme_font_size_override("font_size", tamano)
 
 
 func _configurar_slot(slot: Slot) -> void:
@@ -192,7 +174,7 @@ func _input(event: InputEvent) -> void:
 
 
 func abrir() -> void:
-	if visible:
+	if visible or TransicionCombate.en_curso:
 		return
 	_actualizar_inventario()
 	pausa_anterior = get_tree().paused

@@ -4,10 +4,13 @@ signal inventario_cambiado
 const ESCENA_NIVEL := "res://escenas/Exploración/Pisos/PlantaCero.tscn"
 
 var objetos_examinados: Dictionary = {}
+var estados_puertas: Dictionary = {}
 
 var transform_jugador: Transform3D
 var volver_de_combate: bool = false
-var enemigo_derrotado: bool = false
+var enemigos_derrotados: Dictionary = {}
+var enemigo_actual_id: String = ""
+var tipo_enemigo_actual: int = 0
 
 var inventario_inicializado: bool = false
 
@@ -201,7 +204,10 @@ func reiniciarNivel() -> void:
 	equipo = {"cabeza": null, "torso": null, "piernas": null}
 	brazos_equipados.clear()
 	objetos_examinados.clear()
-	enemigo_derrotado = false
+	estados_puertas.clear()
+	enemigos_derrotados.clear()
+	enemigo_actual_id = ""
+	tipo_enemigo_actual = 0
 	volver_de_combate = false
 	transform_jugador = Transform3D()   # posición inicial
 
