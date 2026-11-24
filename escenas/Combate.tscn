@@ -32,18 +32,25 @@ alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PanelJugador" unique_id=538994018]
 
-[node name="Control" type="Control" parent="PanelJugador/CanvasLayer" unique_id=1476437249]
+[node name="ContadorStamina" type="Control" parent="PanelJugador/CanvasLayer" unique_id=1476437249]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_414ia")
 
-[node name="Label" type="Label" parent="PanelJugador/CanvasLayer/Control" unique_id=102181022]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador/CanvasLayer/ContadorStamina" unique_id=1903364674]
 layout_mode = 0
-offset_right = 82.0
-offset_bottom = 23.0
-text = "Stamina: 2"
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="PanelJugador/CanvasLayer/ContadorStamina/HBoxContainer" unique_id=102181022]
+layout_mode = 2
+text = "Stamina:"
+
+[node name="Rayos" type="HBoxContainer" parent="PanelJugador/CanvasLayer/ContadorStamina/HBoxContainer" unique_id=314157588]
+layout_mode = 2
 
 [node name="MenuShift" parent="." unique_id=1139798836 instance=ExtResource("2_t3t54")]
 visible = false

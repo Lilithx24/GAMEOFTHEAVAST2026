@@ -15,7 +15,7 @@ var combate_terminado: bool = false
 var partes_usadas: Dictionary = {}
 var skillSolicitada: bool = false
 @onready var contenedor = $PanelJugador/ScrollContainer/HBoxContainer
-
+@onready var contador_stamina: Control = $PanelJugador/CanvasLayer/ContadorStamina
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -170,6 +170,7 @@ func terminarTurno() -> void:
 
 
 func updateSkills() -> void:
+	contador_stamina.actualizar(personaje.staminaActual)
 	for hijo in contenedor.get_children():
 		if hijo is Skill:
 			hijo.updateDisponibilidad(personaje.staminaActual)
