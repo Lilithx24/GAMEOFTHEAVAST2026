@@ -8,6 +8,7 @@ script = ExtResource("1_jpy2r")
 nombreSkill = "Ataque 10"
 dmgSkill = 10
 staSkill = 1
+usosTotales = 3
 nombre = "Brazo de Humano"
 descripcion_habilidad = "jimbaibnsahdvf bkjashdbfkjashdbf"
 textura = ExtResource("2_jpy2r")

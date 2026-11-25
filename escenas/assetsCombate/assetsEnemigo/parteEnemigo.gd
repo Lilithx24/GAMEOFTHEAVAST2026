@@ -4,8 +4,10 @@ extends TextureRect
 @export var vidaMax: int = 100
 var vidaActual: int
 @export var vital: bool = true
-var tags: Array[String]
-var estados: Array[String]
+@export var tags: Array[String]
+@export var estados: Array[String]
+@export var evasion: int = 0
+@export var proteccion: float = 0.0
 
 signal carta_soltada(skill: Skill, parte: ParteEnemigo)
 
@@ -19,8 +21,13 @@ func _process(_delta: float) -> void:
 	pass
 
 func sufrirDmg(damage: int):
-	var nuevaVida = setVidaActual(vidaActual - damage)
-	print("vida restante: ", nuevaVida)
+	var probImpacto: int = (100 - evasion)
+	var tiradaAtaque: int = randi() % 100
+	if tiradaAtaque < probImpacto || "atrapado" in estados:
+		var reduccion: float = proteccion / 100.0          
+		var danoFinal: float = damage * (1.0 - reduccion)  
+		var nuevaVida = setVidaActual(vidaActual - danoFinal)
+		print("vida restante: ", nuevaVida)
 
 func setVidaActual(vida: int) -> int:
 	vidaActual = clampi(vida, 0, vidaMax) #Esta mierda es pa que no baje de 0

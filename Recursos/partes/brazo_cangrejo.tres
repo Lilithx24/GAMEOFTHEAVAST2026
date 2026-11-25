@@ -8,6 +8,7 @@ script = ExtResource("1_m2w65")
 nombreSkill = "Golpe 15"
 dmgSkill = 15
 staSkill = 2
+usosTotales = 10
 nombre = "Brazo de Cangrejo"
 textura = ExtResource("2_m2w65")
 tags = Array[String](["brazo"])

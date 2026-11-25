@@ -11,6 +11,7 @@ var parte_origen: BrazoInventario
 
 var disponible := true
 var usada := false
+var usosRestantes: int
 
 @onready var etiquetaNombre: Label = $VBoxContainer/Nombre
 @onready var etiquetaCoste: Label = $VBoxContainer/Coste
@@ -28,12 +29,15 @@ func _ready() -> void:
 		tooltip_text = parte_origen.descripcion_habilidad
 	_actualizar_estado()
 
+
 func updateDisponibilidad(stamina_actual: int) -> void:
 	disponible = staSkill <= stamina_actual
 	_actualizar_estado()
 
 func marcarUsada() -> void:
 	usada = true
+	if parte_origen != null:
+		parte_origen.gastar_uso()
 	_actualizar_estado()
 
 func recuperar() -> void:

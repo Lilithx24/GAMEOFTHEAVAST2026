@@ -120,8 +120,12 @@ func _reemplazar_carta_usada(skill: Skill) -> void:
 func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	if combate_terminado:
 		return
-	parteEnemigaSeleccionada.sufrirDmg(dmg)
-	enemigo_actual.actualizar_barra()
+	if "sanacion" in efectos:
+		personaje.vidaActual = personaje.vidaActual + dmg
+		personaje.actualizar_barra()
+	else:
+		parteEnemigaSeleccionada.sufrirDmg(dmg)
+		enemigo_actual.actualizar_barra()
 	if "multihit2" in efectos:
 		await get_tree().create_timer(0.1).timeout
 		parteEnemigaSeleccionada.sufrirDmg(dmg)
@@ -139,6 +143,9 @@ func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 		enemigo_actual.stun = enemigo_actual.stun + 1
 	personaje.staminaActual -= sta
 	personaje.actualizar_barra()
+	if "atrapar" in efectos:
+		if not parteEnemigaSeleccionada.estados.has("atrapado"):
+			parteEnemigaSeleccionada.estados.append("atrapado")
 	if parteEnemigaSeleccionada.vidaActual == 0 \
 			and parteEnemigaSeleccionada.vital:
 		ganarCombate()
@@ -150,6 +157,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		terminarTurno()
 
 func terminarTurno() -> void:
+	############# Esto checkea los brazos que se han quedado sin usos para eliminarlos
+	for i in EstadoPartida.brazos_equipados.size():
+		var brazo := EstadoPartida.brazos_equipados[i] as BrazoInventario
+		if brazo != null and brazo.usos_actuales() <= 0:
+			EstadoPartida.brazos_equipados[i] = null
+	_retirar_cartas_huerfanas()
+	####################################
 	if combate_terminado:
 		return
 	enemigo_actual.turno(personaje)
@@ -176,6 +190,15 @@ func stat(pieza: ParteInventario, nombre: String):
 		return 0
 	var valor = pieza.get(nombre)
 	return valor if valor != null else 0
+	
+func _retirar_cartas_huerfanas() -> void:
+	for hijo in contenedor.get_children():
+		var carta := hijo as Skill
+		if carta == null or carta.parte_origen == null:
+			continue
+		if not EstadoPartida.brazos_equipados.has(carta.parte_origen):
+			contenedor.remove_child(carta)
+			carta.queue_free()
 
 func ganarCombate() -> void:
 	combate_terminado = true
