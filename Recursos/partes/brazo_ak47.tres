@@ -6,8 +6,9 @@
 [resource]
 script = ExtResource("1_script")
 nombreSkill = "Disparo"
-dmgSkill = 2
+dmgSkill = 5
 staSkill = 1
+usosTotales = 20
 renueva_carta_al_usar = true
 nombre = "Brazo AK47"
 textura = ExtResource("2_textura")

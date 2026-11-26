@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="BrazoInventario" format=3]
+[gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://c0w02p146ubpc"]
 
-[ext_resource type="Script" path="res://escenas/HUD/brazoInventario.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://sprites/PARTES/BRAZOS/brazoprecintadora.png" id="2_textura"]
+[ext_resource type="Script" uid="uid://nlhacceod46a" path="res://escenas/HUD/brazoInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://di8xx5j7423tn" path="res://sprites/PARTES/BRAZOS/brazoprecintadora.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
-nombreSkill = "Ataque 10"
-dmgSkill = 10
+nombreSkill = "20 sanacion"
+dmgSkill = 20
 staSkill = 1
+usosTotales = 5
+efectos = Array[String](["sanacion"])
 nombre = "Brazo precintadora"
 textura = ExtResource("2_textura")
 tags = Array[String](["brazo"])

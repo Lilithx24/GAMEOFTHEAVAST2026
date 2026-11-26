@@ -31,6 +31,16 @@ func _ready() -> void:
 
 func _solicitar_skills() -> void:
 	skillSolicitada = true
+	
+	var cabeza: ParteInventario = EstadoPartida.equipo["cabeza"]
+	var piernas: ParteInventario = EstadoPartida.equipo["piernas"]
+	var torso: ParteInventario = EstadoPartida.equipo["torso"]
+
+	###### aplicar los bufos a las estadísticas de los items ######
+	personaje.stamina = personaje.staminaBase + stat(cabeza, "stamina") + stat(piernas, "stamina")
+	personaje.evasion =  stat(cabeza, "evasion") + stat(piernas, "evasion")
+	personaje.proteccion = stat(cabeza, "proteccion") + stat(piernas, "proteccion") + stat(torso, "proteccion")
+	personaje.modDmg = stat(cabeza, "modDmg") + stat(piernas, "modDmg")
 
 
 # Solo cuando cambia el equipo (y al empezar el combate)
@@ -48,15 +58,6 @@ func reconstruirSkills() -> void:
 			carta.marcarUsada()
 
 
-	var cabeza: ParteInventario = EstadoPartida.equipo["cabeza"]
-	var piernas: ParteInventario = EstadoPartida.equipo["piernas"]
-	var torso: ParteInventario = EstadoPartida.equipo["torso"]
-
-	###### aplicar los bufos a las estadísticas de los items ######
-	personaje.stamina = personaje.staminaBase + stat(cabeza, "stamina") + stat(piernas, "stamina")
-	personaje.evasion =  stat(cabeza, "evasion") + stat(piernas, "evasion")
-	personaje.proteccion = stat(cabeza, "proteccion") + stat(piernas, "proteccion") + stat(torso, "proteccion")
-	personaje.modDmg = stat(cabeza, "modDmg") + stat(piernas, "modDmg")
 
 	updateSkills()
 	
@@ -71,11 +72,6 @@ func crearPersonaje(vida: int,partes: Array[PartePersonaje]) -> Personaje:
 	personaje.actualizar_barra()
 	personaje.partes = partes
 	return personaje
-
-#func crearPartePersonaje(skills: Array[Skill]) -> PartePersonaje:
-#	var partePersonaje: PartePersonaje = ESCENA_PARTE_PERSONAJE.instantiate()
-#	partePersonaje.skills = skills
-#	return partePersonaje
 
 
 func crearSkill(nombre: String, dmg: int, sta: int, origen: BrazoInventario = null, efectos: Array[String] = []) -> Skill:

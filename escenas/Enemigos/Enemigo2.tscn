@@ -10,9 +10,11 @@
 resource_name = "RESET"
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Cadera:position")
 tracks/0/interp = 1
-tracks/0/enabled = true
+tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
@@ -20,9 +22,11 @@ tracks/0/keys = {
 "values": [Vector2(-5, -490)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Cadera/Torso:rotation")
 tracks/1/interp = 1
-tracks/1/enabled = true
+tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
@@ -30,9 +34,11 @@ tracks/1/keys = {
 "values": [0.0]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Cadera/Torso/BrazoAla:rotation")
 tracks/2/interp = 1
-tracks/2/enabled = true
+tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
@@ -40,9 +46,11 @@ tracks/2/keys = {
 "values": [0.0]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("Cadera/Torso/BrazoMantis:rotation")
 tracks/3/interp = 1
-tracks/3/enabled = true
+tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
@@ -50,9 +58,11 @@ tracks/3/keys = {
 "values": [0.0]
 }
 tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("Cadera/Torso/Cabeza:rotation")
 tracks/4/interp = 1
-tracks/4/enabled = true
+tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
@@ -60,9 +70,11 @@ tracks/4/keys = {
 "values": [0.0]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cadera/PiernaPajaro:rotation")
-tracks/5/interp = 1
+tracks/5/imported = false
 tracks/5/enabled = true
+tracks/5/path = NodePath("Cadera/Torso/PiernaPajaro:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
@@ -74,9 +86,11 @@ tracks/5/keys = {
 resource_name = "Asalto"
 length = 0.6
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Cadera:position")
 tracks/0/interp = 1
-tracks/0/enabled = true
+tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
@@ -84,9 +98,11 @@ tracks/0/keys = {
 "values": [Vector2(-5, -490), Vector2(-5, -472), Vector2(-5, -520), Vector2(-5, -500)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Cadera/Torso:rotation")
 tracks/1/interp = 1
-tracks/1/enabled = true
+tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
@@ -94,9 +110,11 @@ tracks/1/keys = {
 "values": [0.0, 0.08, -0.08, -0.03]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Cadera/Torso/BrazoAla:rotation")
 tracks/2/interp = 1
-tracks/2/enabled = true
+tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
@@ -104,9 +122,11 @@ tracks/2/keys = {
 "values": [0.0, 0.14, -0.55, -0.25]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("Cadera/Torso/BrazoMantis:rotation")
 tracks/3/interp = 1
-tracks/3/enabled = true
+tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
@@ -114,9 +134,11 @@ tracks/3/keys = {
 "values": [0.0, -0.1, 0.65, 0.3]
 }
 tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("Cadera/Torso/Cabeza:rotation")
 tracks/4/interp = 1
-tracks/4/enabled = true
+tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
@@ -124,9 +146,11 @@ tracks/4/keys = {
 "values": [0.0, -0.08, 0.2, 0.1]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Cadera/PiernaPajaro:rotation")
-tracks/5/interp = 1
+tracks/5/imported = false
 tracks/5/enabled = true
+tracks/5/path = NodePath("Cadera/Torso/PiernaPajaro:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.12, 0.36, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
@@ -146,16 +170,6 @@ editor_description = "Marioneta del enemigo 2. Origen a la altura del suelo. Esc
 [node name="Cadera" type="Node2D" parent="." unique_id=1846365633]
 editor_description = "Pivote principal del cuerpo en la cadera."
 position = Vector2(-5, -490)
-
-[node name="PiernaPajaro" type="Node2D" parent="Cadera" unique_id=717583852]
-editor_description = "Pivote de la pata de pájaro en su unión con la pierna humana."
-position = Vector2(58, 120)
-
-[node name="Sprite" type="Sprite2D" parent="Cadera/PiernaPajaro" unique_id=1279462448]
-z_index = 1
-position = Vector2(-79, -33)
-texture = ExtResource("5_pierna")
-centered = false
 
 [node name="Torso" type="Node2D" parent="Cadera" unique_id=713236176]
 editor_description = "Pivote del torso en la cintura. El brazo y la pierna humanos están incluidos en el PNG. Cabeza, ala y brazo de mantis acompañan al torso."
@@ -195,8 +209,16 @@ position = Vector2(-114, -251)
 texture = ExtResource("4_cabeza")
 centered = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="PiernaPajaro" type="Node2D" parent="Cadera/Torso" unique_id=717583852]
+editor_description = "Pivote de la pata de pájaro en su unión con la pierna humana."
+position = Vector2(58, 120)
+
+[node name="Sprite" type="Sprite2D" parent="Cadera/Torso/PiernaPajaro" unique_id=1279462448]
+z_index = 1
+position = Vector2(-79, -33)
+texture = ExtResource("5_pierna")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1633068608]
 process_mode = 3
-libraries = {
-&"": SubResource("Animaciones")
-}
+libraries/ = SubResource("Animaciones")
