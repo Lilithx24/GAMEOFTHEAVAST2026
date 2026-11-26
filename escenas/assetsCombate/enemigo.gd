@@ -2,7 +2,6 @@ class_name Enemigo
 extends Node2D
 @onready var barra_vida: ProgressBar = $ProgressBar
 var partes: Array[ParteEnemigo]
-var dmg: int = 10
 @export_enum("Enemigo 1", "Enemigo 2") var tipo_enemigo: int = 0
 @export_group("Fichas de enemigos")
 @export var ficha_enemigo_1: FichaEnemigo
@@ -25,7 +24,6 @@ func configurar_apariencia(tipo: int) -> void:
 	$Objetivo/Enemigo2.visible = tipo == 1
 	var ficha := ficha_enemigo_2 if tipo == 1 else ficha_enemigo_1
 	if ficha != null:
-		dmg = ficha.dano
 		$Objetivo.vidaMax = ficha.vida_maxima
 		$Objetivo.vidaActual = ficha.vida_maxima
 	actualizar_barra()
@@ -50,8 +48,44 @@ func turno(objetivo: Personaje) -> void:
 		debilContador = debilContador - 1
 	else:
 		debilEstado = 0
-	
 	if stun == 0:
-		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
+		var brazo_elegido := parte_brazo_aleatoria()
+		ataque(objetivo, brazo_elegido.dmg, brazo_elegido.efectos)
 	else:
 		stun = stun - 1 
+		
+###### funciones auxiliares a turno ######
+func parte_brazo_aleatoria() -> ParteEnemigo:
+	var brazos: Array[ParteEnemigo] = []
+	for parte in partes:
+		if parte.tags.has("brazo"):
+			brazos.append(parte)
+
+	if brazos.is_empty():
+		return null
+
+	return brazos.pick_random()
+
+
+func ataque(objetivo: Personaje, dmg: int, efectos: Array[String]) -> void:
+	if "sanacion" in efectos:
+		for parte in partes:
+			parte.vidaActual = parte.vidaActual + dmg
+			parte.actualizar_barra()
+	else:
+		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
+	if "multihit2" in efectos:
+		await get_tree().create_timer(0.1).timeout
+		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
+	if "multihit3" in efectos:
+		await get_tree().create_timer(0.1).timeout
+		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
+		await get_tree().create_timer(0.1).timeout
+		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
+	if "debil" in efectos:
+		objetivo.debilContador = objetivo.debilContador + 1
+	if "stun" in efectos:
+		objetivo.stun = objetivo.stun + 1
+	if "atrapar" in efectos:
+		if not objetivo.estados.has("atrapado"):
+			objetivo.estados.append("atrapado")

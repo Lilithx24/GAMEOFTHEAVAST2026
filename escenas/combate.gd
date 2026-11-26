@@ -116,29 +116,29 @@ func _reemplazar_carta_usada(skill: Skill) -> void:
 func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	if combate_terminado:
 		return
+	personaje.staminaActual -= sta
+	personaje.actualizar_barra()
 	if "sanacion" in efectos:
 		personaje.vidaActual = personaje.vidaActual + dmg
 		personaje.actualizar_barra()
 	else:
-		parteEnemigaSeleccionada.sufrirDmg(dmg)
+		parteEnemigaSeleccionada.sufrirDmg(dmg*(1 - 0.25 * personaje.debilEstado))
 		enemigo_actual.actualizar_barra()
 	if "multihit2" in efectos:
 		await get_tree().create_timer(0.1).timeout
-		parteEnemigaSeleccionada.sufrirDmg(dmg)
+		parteEnemigaSeleccionada.sufrirDmg(dmg*(1 - 0.25 * personaje.debilEstado))
 		enemigo_actual.actualizar_barra()
 	if "multihit3" in efectos:
 		await get_tree().create_timer(0.1).timeout
-		parteEnemigaSeleccionada.sufrirDmg(dmg)
+		parteEnemigaSeleccionada.sufrirDmg(dmg*(1 - 0.25 * personaje.debilEstado))
 		enemigo_actual.actualizar_barra()
 		await get_tree().create_timer(0.1).timeout
-		parteEnemigaSeleccionada.sufrirDmg(dmg)
+		parteEnemigaSeleccionada.sufrirDmg(dmg*(1 - 0.25 * personaje.debilEstado))
 		enemigo_actual.actualizar_barra()
 	if "debil" in efectos:
 		enemigo_actual.debilContador = enemigo_actual.debilContador + 1
 	if "stun" in efectos:
 		enemigo_actual.stun = enemigo_actual.stun + 1
-	personaje.staminaActual -= sta
-	personaje.actualizar_barra()
 	if "atrapar" in efectos:
 		if not parteEnemigaSeleccionada.estados.has("atrapado"):
 			parteEnemigaSeleccionada.estados.append("atrapado")
@@ -171,7 +171,15 @@ func terminarTurno() -> void:
 	if skillSolicitada == true:
 		reconstruirSkills()
 		skillSolicitada = false
-	personaje.staminaActual = personaje.stamina
+
+	personaje.staminaActual = personaje.stamina - personaje.stun #recargamos la estamina quitandole estamina al personaje por cada contador de stun
+	personaje.stun = 0 #reseteamos el contador de stuns del personaje
+	if personaje.debilContador > 0: #actualizamos los turnos de débil
+		personaje.debilEstado = 1
+		personaje.debilContador = personaje.debilContador - 1
+	else:
+		personaje.debilEstado = 0
+	
 	updateSkills()
 
 

@@ -5,9 +5,7 @@ signal murio
 
 ###### stats ######
 var vidaMax: int = 50
-
 var staminaBase: int = 2
-
 var stamina: int = 2
 var evasion: int = 0
 var proteccion: float = 0.0
@@ -15,6 +13,10 @@ var modDmg: int = 0
 
 var vidaActual: int
 var partes: Array[PartePersonaje]
+var estados: Array[PartePersonaje]
+var stun: int = 0
+var debilContador: int = 0
+var debilEstado: int = 0
 @onready var barra_vida: ProgressBar = $ProgressBarJ
 var staminaActual: int
 

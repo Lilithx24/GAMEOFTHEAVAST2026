@@ -1,9 +1,7 @@
-[gd_resource type="Resource" script_class="FichaEnemigo" format=3]
+[gd_resource type="Resource" script_class="FichaEnemigo" format=3 uid="uid://b66nd0lbot64b"]
 
-[ext_resource type="Script" path="res://escenas/Enemigos/ficha_enemigo.gd" id="1"]
+[ext_resource type="Script" uid="uid://dlqcynukqn2m2" path="res://escenas/Enemigos/ficha_enemigo.gd" id="1"]
 
 [resource]
 script = ExtResource("1")
 nombre = "Enemigo 1"
-vida_maxima = 100
-dano = 10
