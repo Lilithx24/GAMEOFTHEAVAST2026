@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DatosParte" format=3 uid="uid://vtovklkhttsk"]
+
+[ext_resource type="Script" uid="uid://kt7vd375fdjt" path="res://escenas/assetsCombate/assetsEnemigo/datos_parte.gd" id="1_t8ex6"]
+
+[resource]
+script = ExtResource("1_t8ex6")
+tags = Array[String](["brazo"])
+metadata/_custom_type_script = "uid://kt7vd375fdjt"

@@ -22,6 +22,7 @@ func _ready() -> void:
 	for parte in enemigo_actual.partes:
 		parte.carta_soltada.connect(_on_carta_soltada)
 	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), [])
+	aplicarEstadísticas()
 	EstadoPartida.inventario_cambiado.connect(_solicitar_skills)
 	reconstruirSkills()
 	personaje.staminaActual = personaje.stamina
@@ -31,7 +32,9 @@ func _ready() -> void:
 
 func _solicitar_skills() -> void:
 	skillSolicitada = true
+	aplicarEstadísticas()
 	
+func aplicarEstadísticas() -> void:
 	var cabeza: ParteInventario = EstadoPartida.equipo["cabeza"]
 	var piernas: ParteInventario = EstadoPartida.equipo["piernas"]
 	var torso: ParteInventario = EstadoPartida.equipo["torso"]
@@ -140,10 +143,10 @@ func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	if "stun" in efectos:
 		enemigo_actual.stun = enemigo_actual.stun + 1
 	if "atrapar" in efectos:
-		if not parteEnemigaSeleccionada.estados.has("atrapado"):
-			parteEnemigaSeleccionada.estados.append("atrapado")
+		if not parteEnemigaSeleccionada.datos.estados.has("atrapado"):
+			parteEnemigaSeleccionada.datos.estados.append("atrapado")
 	if parteEnemigaSeleccionada.vidaActual == 0 \
-			and parteEnemigaSeleccionada.vital:
+			and parteEnemigaSeleccionada.datos.vital:
 		ganarCombate()
 		return
 	updateSkills()

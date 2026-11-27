@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bntfubipviojr"]
 
 [ext_resource type="Script" uid="uid://dqs3onvx502pk" path="res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.gd" id="1_1dkdf"]
+
 [node name="ParteEnemigo" type="TextureRect" unique_id=440506619]
 offset_left = -170.0
 offset_top = -310.0
