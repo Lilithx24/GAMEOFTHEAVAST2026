@@ -40,25 +40,37 @@ alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PanelJugador" unique_id=538994018]
 
-[node name="ContadorStamina" type="Control" parent="PanelJugador/CanvasLayer" unique_id=1476437249]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_414ia")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador/CanvasLayer/ContadorStamina" unique_id=1903364674]
-layout_mode = 0
+[node name="Interfaz" type="VBoxContainer" parent="PanelJugador/CanvasLayer" unique_id=1799662725]
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="PanelJugador/CanvasLayer/ContadorStamina/HBoxContainer" unique_id=102181022]
+[node name="ContadorStamina" type="HBoxContainer" parent="PanelJugador/CanvasLayer/Interfaz" unique_id=1059483360]
+layout_mode = 2
+script = ExtResource("2_414ia")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador/CanvasLayer/Interfaz/ContadorStamina" unique_id=1903364674]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="PanelJugador/CanvasLayer/Interfaz/ContadorStamina/HBoxContainer" unique_id=102181022]
 layout_mode = 2
 text = "Stamina:"
 
-[node name="Rayos" type="HBoxContainer" parent="PanelJugador/CanvasLayer/ContadorStamina/HBoxContainer" unique_id=314157588]
+[node name="Rayos" type="HBoxContainer" parent="PanelJugador/CanvasLayer/Interfaz/ContadorStamina/HBoxContainer" unique_id=314157588]
 layout_mode = 2
+
+[node name="Stadisticas" type="HBoxContainer" parent="PanelJugador/CanvasLayer/Interfaz" unique_id=981571799]
+layout_mode = 2
+
+[node name="TextoStats" type="Label" parent="PanelJugador/CanvasLayer/Interfaz/Stadisticas" unique_id=1257777097]
+layout_mode = 2
+
+[node name="ProgressBarJ" type="ProgressBar" parent="PanelJugador/CanvasLayer/Interfaz/Stadisticas" unique_id=1469273382]
+top_level = true
+layout_mode = 2
+value = 100.0
+show_percentage = false
 
 [node name="MenuShift" parent="." unique_id=1139798836 instance=ExtResource("2_t3t54")]
 visible = false

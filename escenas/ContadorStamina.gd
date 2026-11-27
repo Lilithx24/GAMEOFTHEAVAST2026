@@ -1,4 +1,4 @@
-extends Control
+extends HBoxContainer
 
 var icono: Texture2D = preload("res://sprites/139387-lightning-icon.png")
 @export var tamano_icono: Vector2 = Vector2(32, 32)
