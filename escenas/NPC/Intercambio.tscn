@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dx8v3o60f4043"]
+
+[ext_resource type="Script" uid="uid://bvuy068c7mc5y" path="res://escenas/NPC/intercambio.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b6tmv5wdgfong" path="res://Assets/FondoCombate.png" id="2"]
+[ext_resource type="PackedScene" path="res://escenas/NPC/NPC1.tscn" id="3"]
+
+[node name="Intercambio" type="Control" unique_id=1408453868]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=597710284]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Oscurecer" type="ColorRect" parent="." unique_id=1713211904]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.07, 0.045, 0.025, 0.2)
+
+[node name="NPC1" parent="." unique_id=245818699 instance=ExtResource("3")]
+
+[node name="Margen" type="MarginContainer" parent="." unique_id=1635970368]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Panel" type="PanelContainer" parent="Margen" unique_id=1994121982]
+layout_mode = 2
+
+[node name="Contenido" type="VBoxContainer" parent="Margen/Panel" unique_id=752942629]
+layout_mode = 2
+theme_override_constants/separation = 12

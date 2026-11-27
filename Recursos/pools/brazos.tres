@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PoolPartes" format=3 uid="uid://bf5b34mwgwisd"]
+
+[ext_resource type="Script" uid="uid://de8pcrmnilijk" path="res://escenas/Exploración/pool_partes.gd" id="1"]
+[ext_resource type="Script" uid="uid://b1ux771lmrk8s" path="res://escenas/HUD/parteInventario.gd" id="2"]
+[ext_resource type="Resource" uid="uid://d3t4hsw5ic4ou" path="res://Recursos/partes/brazo_ak47.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bnegqqymk6crp" path="res://Recursos/partes/brazo_aspiradora.tres" id="4"]
+[ext_resource type="Resource" uid="uid://d101qwcmwrf7m" path="res://Recursos/partes/brazo_cangrejo.tres" id="5"]
+[ext_resource type="Resource" uid="uid://chac7aw4ucf80" path="res://Recursos/partes/brazo_cerveza.tres" id="6"]
+[ext_resource type="Resource" path="res://Recursos/partes/brazo_escorpion.tres" id="7"]
+[ext_resource type="Resource" path="res://Recursos/partes/brazo_gancho_mecanico.tres" id="8"]
+[ext_resource type="Resource" uid="uid://syruvmegv1lp" path="res://Recursos/partes/brazo_humano.tres" id="9"]
+[ext_resource type="Resource" path="res://Recursos/partes/brazo_mantis.tres" id="10"]
+[ext_resource type="Resource" uid="uid://c0w02p146ubpc" path="res://Recursos/partes/brazo_precintadora.tres" id="11"]
+[ext_resource type="Resource" path="res://Recursos/partes/brazo_tentaculo.tres" id="12"]
+
+[resource]
+script = ExtResource("1")
+tipo = "brazo"
+partes = Array[ExtResource("2")]([ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12")])

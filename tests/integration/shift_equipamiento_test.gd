@@ -50,6 +50,15 @@ func probar() -> void:
 	menu = load("res://escenas/HUD/menu_shift.tscn").instantiate()
 	root.add_child(menu)
 	menu.abrir()
+	verificar(menu.pestanas.current_tab == 0 and menu.CATEGORIAS[0] == "torso", "El orden interno comienza por la primera pestaña visual")
+	for i in menu.CATEGORIAS.size():
+		menu.get_node("Pantalla/Categoria%d" % i).pressed.emit()
+		verificar(menu.pestanas.current_tab == i and menu.hoja_inventario.texture == menu.hojas_categoria[i], "El botón selecciona su categoría e imagen")
+		if i > 0:
+			verificar(menu.get_node("Pantalla/Categoria%d" % (i - 1)).anchor_left < menu.get_node("Pantalla/Categoria%d" % i).anchor_left, "Las categorías siguen el orden visual")
+		menu.cerrar()
+		menu.abrir()
+		verificar(menu.pestanas.current_tab == i, "Reabrir conserva la pestaña elegida")
 	var vacios: Array[ParteInventario] = []
 	estado.inicializar_inventario(vacios)
 	for n in [2, 4, 6, 8]:
@@ -68,7 +77,7 @@ func probar() -> void:
 	var alto: float = menu.scroll.size.y
 	verificar(is_equal_approx(brazo.custom_minimum_size.y * 4 + 24, floorf(alto / 4) * 4) or absf(brazo.custom_minimum_size.y * 4 + 24 - alto) < 4, "La lista reserva altura para cuatro filas")
 
-	menu.pestanas.current_tab = 1
+	menu.pestanas.current_tab = menu.CATEGORIAS.find("torso")
 	menu._soltar_en_hoja(Vector2.ZERO, fila("inventario", 3))
 	await process_frame
 	verificar(estado.obtener_capacidad_brazos() == 6, "Un torso antiguo de ocho queda limitado a seis")
@@ -91,13 +100,13 @@ func probar() -> void:
 	verificar(estado.brazos_equipados[0] == ultimo and estado.brazos_equipados[5] == primero, "Intercambio conserva ambos brazos")
 	verificar(not menu.hoja.get_node("Cabeza")._can_drop_data(Vector2.ZERO, slot1), "Se rechaza un brazo en la cabeza")
 
-	for dato in [[0, "cabeza", 10], [3, "piernas", 11]]:
+	for dato in [[menu.CATEGORIAS.find("cabeza"), "cabeza", 10], [menu.CATEGORIAS.find("piernas"), "piernas", 11]]:
 		menu.pestanas.current_tab = dato[0]
 		menu._soltar_en_hoja(Vector2.ZERO, fila("inventario", dato[2]))
 		await process_frame
 		verificar(estado.equipo[dato[1]] != null, "Se equipa " + dato[1])
 
-	menu.pestanas.current_tab = 1
+	menu.pestanas.current_tab = menu.CATEGORIAS.find("torso")
 	for dato in [[2, 6], [1, 4], [0, 2]]:
 		menu._soltar_en_hoja(Vector2.ZERO, fila("inventario", dato[0]))
 		await process_frame
@@ -128,7 +137,7 @@ func probar() -> void:
 			id_torso = id
 		if estado.inventario_temporal[id].tags.has("brazo"):
 			id_brazo = id
-	menu.pestanas.current_tab = 1
+	menu.pestanas.current_tab = menu.CATEGORIAS.find("torso")
 	menu._soltar_en_hoja(Vector2.ZERO, fila("temporal", id_torso))
 	await process_frame
 	verificar(not estado.inventario_temporal.has(id_torso) and not menu.filas_temporales.has(id_torso), "Al sacar un torso temporal desaparece su hueco")

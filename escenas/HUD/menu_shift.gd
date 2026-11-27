@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-const CATEGORIAS: Array[String] = ["cabeza", "torso", "brazo", "piernas"]
+const CATEGORIAS: Array[String] = ["torso", "cabeza", "brazo", "piernas"]
 const FILA_INVENTARIO := preload("res://escenas/HUD/fila_inventario.tscn")
 
 @export var hojas_categoria: Array[Texture2D] = []

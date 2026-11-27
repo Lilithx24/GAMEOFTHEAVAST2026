@@ -17,22 +17,32 @@ func probar() -> void:
 	root.add_child(escena)
 	var ui = escena.get_node("InteraccionObjetos")
 	ui.set_physics_process(false)
-	var primera = escena.get_node("PisoCero/ObjetosExaminables/CajaInicio")
-	var segunda = escena.get_node("PisoCero/ObjetosExaminables/CajaInicio2")
+	var cajas = get_nodes_in_group("cajas_plastico")
+	verificar(cajas.size() == 31, "Las 31 cajas de plástico tienen interacción integrada")
+	var ids := {}
+	for caja in cajas:
+		verificar(caja.disponible() and not ids.has(caja.id_objeto), "%s tiene premio e ID propio" % caja.name)
+		ids[caja.id_objeto] = true
+	verificar(not escena.has_node("PisoCero/ObjetosExaminables"), "No quedan zonas de recompensa antiguas separadas del modelo")
+	var primera = cajas[0]
+	var segunda = cajas[1]
 	await physics_frame
 	await physics_frame
 	verificar(primera.get_node("CollisionShape3D").shape != segunda.get_node("CollisionShape3D").shape, "Cada caja tiene una forma independiente")
 	verificar(primera.id_objeto != segunda.id_objeto, "Las cajas tienen identificadores distintos")
 	for caja in [primera, segunda]:
+		ui.camara.global_position = caja.punto_interaccion() + Vector3(0, 0.4, 1)
 		ui.camara.look_at(caja.punto_interaccion())
 		verificar(ui._es_accesible(caja), "%s accesible con colisión desplazada" % caja.name)
 		verificar(ui._lanzar_rayo(ui.camara.global_position, caja.punto_interaccion()).get("collider") == caja, "%s detectada por su colisión" % caja.name)
+	ui.camara.global_position = primera.punto_interaccion() + Vector3(0, 0.4, 1)
 	ui.camara.look_at(primera.punto_interaccion())
 	ui.objetivo = primera
 	ui.boton.pressed.emit()
 	ui._physics_process(0.016)
 	verificar(not primera.disponible(), "La primera caja se recoge con el botón")
 	verificar(segunda.disponible(), "Recoger la primera no consume la segunda")
+	ui.camara.global_position = segunda.punto_interaccion() + Vector3(0, 0.4, 1)
 	ui.camara.look_at(segunda.punto_interaccion())
 	verificar(ui._es_accesible(segunda), "La segunda sigue siendo accesible")
 	ui.objetivo = segunda

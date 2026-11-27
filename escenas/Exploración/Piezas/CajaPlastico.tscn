@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/Exploración/caja_plastico.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Assets/Objetos/CajaPlastico/plastic_container_1k.glb" id="2"]
+
+[sub_resource type="BoxShape3D" id="Forma"]
+resource_local_to_scene = true
+size = Vector3(0.89508, 0.42969, 0.62636)
+
+[node name="CajaPlastico" type="Area3D"]
+collision_layer = 128
+collision_mask = 0
+monitoring = false
+script = ExtResource("1")
+
+[node name="Modelo" parent="." instance=ExtResource("2")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.214845, 0)
+shape = SubResource("Forma")

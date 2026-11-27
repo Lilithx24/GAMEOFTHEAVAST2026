@@ -26,7 +26,7 @@ border_color = Color(0.55, 0.68, 0.58, 0.8)
 process_mode = 3
 layer = 10
 script = ExtResource("1_shift")
-hojas_categoria = Array[Texture2D]([ExtResource("3_xc1ee"), ExtResource("2_f75j8"), ExtResource("4_ddqe8"), ExtResource("5_pwsoi")])
+hojas_categoria = Array[Texture2D]([ExtResource("2_f75j8"), ExtResource("3_xc1ee"), ExtResource("4_ddqe8"), ExtResource("5_pwsoi")])
 
 [node name="Pantalla" type="Control" parent="." unique_id=295175460]
 layout_mode = 3
@@ -297,8 +297,8 @@ theme_override_styles/tab_focus = SubResource("SinFondo")
 current_tab = 0
 tab_alignment = 1
 tab_count = 4
-tab_0/title = "Cabezas"
-tab_1/title = "Torsos"
+tab_0/title = "Torsos"
+tab_1/title = "Cabezas"
 tab_2/title = "Brazos"
 tab_3/title = "Piernas"
 
@@ -393,7 +393,7 @@ indice = 18
 layout_mode = 2
 indice = 19
 
-[node name="Categoria0" type="Button" parent="Pantalla" unique_id=1708992085]
+[node name="Categoria1" type="Button" parent="Pantalla" unique_id=1708992085]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.625
@@ -410,7 +410,7 @@ theme_override_styles/disabled = SubResource("SinFondo")
 theme_override_styles/focus = SubResource("SinFondo")
 toggle_mode = true
 
-[node name="Categoria1" type="Button" parent="Pantalla" unique_id=1033547462]
+[node name="Categoria0" type="Button" parent="Pantalla" unique_id=1033547462]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5425

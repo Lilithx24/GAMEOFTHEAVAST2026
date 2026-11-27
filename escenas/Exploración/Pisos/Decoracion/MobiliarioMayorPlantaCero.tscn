@@ -38,7 +38,7 @@
 
 [ext_resource type="PackedScene" path="res://Assets/Objetos/EstanteríaBaldas/worn_metal_rack_1k.glb" id="cuadro_EstanteríaBaldas"]
 
-[ext_resource type="PackedScene" path="res://Assets/Objetos/CajaPlastico/plastic_container_1k.glb" id="cuadro_CajaPlastico"]
+[ext_resource type="PackedScene" path="res://escenas/Exploración/Piezas/CajaPlastico.tscn" id="cuadro_CajaPlastico"]
 
 [ext_resource type="PackedScene" path="res://Assets/Objetos/MuebleCajonera/WoodenTable_03_1k.glb" id="cuadro_MuebleCajonera"]
 
@@ -208,9 +208,11 @@ metadata/pov = Vector3(10, 1.32, 0)
 transform = Transform3D(1.08, 0, 0, 0, 1.08, 0, 0, 0, 1.08, 7.45102, -0.0082213, -4.2367255)
 
 [node name="CajaPlastico_0002" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 0
 transform = Transform3D(0.8195005, 0, -0.0286176, 0, 0.82, 0, 0.0286176, 0, 0.8195005, 7.418545, 0.4685027, -4.2367256)
 
 [node name="CajaPlastico_0003" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 1
 transform = Transform3D(0.8188762, 0, 0.0429155, 0, 0.82, 0, -0.0429155, 0, 0.8188762, 7.488545, 0.9975947, -4.2367256)
 
 [node name="MuebleCajonera_0004" parent="A_Metrologia/Sur_Instrumentacion" instance=ExtResource("cuadro_MuebleCajonera")]
@@ -301,6 +303,7 @@ metadata/pov = Vector3(10, 1.32, 0)
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 14.3744704, -0.0078505, -2.559358)
 
 [node name="CajaPlastico_0029" parent="A_Metrologia/Este_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 2
 transform = Transform3D(0, 0, 0.8, 0, 0.8, 0, -0.8, 0, 0, 14.348545, 1.1776484, -2.5567255)
 
 [node name="EstanteríaBaldas_0030" parent="A_Metrologia/Este_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
@@ -353,6 +356,7 @@ metadata/pov = Vector3(20, 1.32, 0)
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 15.6226195, -0.0078505, 2.5459069)
 
 [node name="CajaPlastico_0043" parent="T2_ControlRegistro/Oeste_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 3
 transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 15.6485449, 1.1776484, 2.5432744)
 
 [node name="CarroHerramientas_0044" parent="T2_ControlRegistro/Oeste_Acceso" instance=ExtResource("cuadro_CarroHerramientas")]
@@ -366,6 +370,7 @@ metadata/pov = Vector3(20, 1.32, 0)
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 24.3744704, -0.0078505, -2.559358)
 
 [node name="CajaPlastico_0046" parent="T2_ControlRegistro/Este_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 0
 transform = Transform3D(0, 0, 0.8, 0, 0.8, 0, -0.8, 0, 0, 24.348545, 1.1776484, -2.5567255)
 
 [node name="EstanteríaBaldas_0047" parent="T2_ControlRegistro/Este_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
@@ -387,9 +392,11 @@ metadata/pov = Vector3(30, 1.32, 0)
 transform = Transform3D(-1.07852, 0.0, -0.056523, 0.0, 1.08, 0.0, 0.056523, 0.0, -1.07852, 32.5, 0.006, 4.450467)
 
 [node name="CajaPlastico_0051" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 1
 transform = Transform3D(-0.819875, 0.0, -0.014311, 0.0, 0.82, 0.0, 0.014311, 0.0, -0.819875, 32.53243, 0.482724, 4.452166)
 
 [node name="CajaPlastico_0052" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 2
 transform = Transform3D(-0.815508, 0.0, -0.085713, 0.0, 0.82, 0.0, 0.085713, 0.0, -0.815508, 32.46252, 1.011816, 4.448503)
 
 [node name="MesitaCafe_0053" parent="B_DescansoGuardia/Norte_Cafe" instance=ExtResource("cuadro_MesitaCafe")]
@@ -465,6 +472,7 @@ metadata/pov = Vector3(30, 1.32, 0)
 transform = Transform3D(0.052336, 0.0, 0.99863, 0.0, 1.0, 0.0, -0.99863, 0.0, 0.052336, 25.54839, 0.006371, 2.7)
 
 [node name="CajaPlastico_0073" parent="B_DescansoGuardia/Oeste_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 3
 transform = Transform3D(-0.041869, 0.0, -0.798904, 0.0, 0.8, 0.0, 0.798904, 0.0, -0.041869, 25.57414, 1.19187, 2.696015)
 
 [node name="CarroHerramientas_0074" parent="B_DescansoGuardia/Oeste_Acceso" instance=ExtResource("cuadro_CarroHerramientas")]
@@ -602,6 +610,7 @@ metadata/pov = Vector3(20, 1.32, -10)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4459125, -0.0078505, -14.282651)
 
 [node name="CajaPlastico_0110" parent="T1_TallerMantenimiento/Centro_PasoTecnico" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 0
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 17.448545, 1.1776484, -14.2567256)
 
 [node name="EstanteríaBaldas_0111" parent="T1_TallerMantenimiento/Centro_PasoTecnico" instance=ExtResource("cuadro_EstanteríaBaldas")]
@@ -621,6 +630,7 @@ metadata/pov = Vector3(10, 1.32, -10)
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.7226195, -0.0078505, -7.4540931)
 
 [node name="CajaPlastico_0115" parent="T1_TallerMantenimiento/Oeste_Entrada" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 1
 transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 5.7485449, 1.1776484, -7.4567256)
 
 [node name="CarroHerramientas_0116" parent="T1_TallerMantenimiento/Oeste_Entrada" instance=ExtResource("cuadro_CarroHerramientas")]
@@ -636,6 +646,7 @@ metadata/pov = Vector3(0, 1.32, -20)
 transform = Transform3D(0, 0, -1.05, 0, 1.05, 0, 1.05, 0, 0, -4.2686768, -0.0078319, -18.8039615)
 
 [node name="CajaPlastico_0118" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 2
 transform = Transform3D(0, 0, -0.85, 0, 0.85, 0, 0.85, 0, 0, -4.2414551, 1.2367419, -18.8067256)
 
 [node name="SillaDeRuedas_0119" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_SillaDeRuedas")]
@@ -648,9 +659,11 @@ transform = Transform3D(0, 0, -1.1, 0, 1.1, 0, 1.1, 0, 0, -4.0570768, -0.0082213
 transform = Transform3D(0, 0, -1.08, 0, 1.08, 0, 1.08, 0, 0, -4.2314551, -0.0082213, -22.4592006)
 
 [node name="CajaPlastico_0122" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 3
 transform = Transform3D(-0.0286176, 0, -0.8195005, 0, 0.82, 0, 0.8195005, 0, -0.0286176, -4.2314551, 0.4685027, -22.4267256)
 
 [node name="CajaPlastico_0123" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 0
 transform = Transform3D(0.0429155, 0, -0.8188762, 0, 0.82, 0, 0.8188762, 0, 0.0429155, -4.2314551, 0.9975947, -22.4967256)
 
 [node name="Taburete_0124" parent="C_ClinicaCuarentena/Oeste_Atencion" instance=ExtResource("cuadro_Taburete")]
@@ -664,6 +677,7 @@ metadata/pov = Vector3(0, 1.32, -20)
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 2.5511774, -0.0078505, -15.7308001)
 
 [node name="CajaPlastico_0126" parent="C_ClinicaCuarentena/Norte_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 1
 transform = Transform3D(-0.8, 0, 0, 0, 0.8, 0, 0, 0, -0.8, 2.5485449, 1.1776484, -15.7567255)
 
 [node name="CarroHerramientas_0127" parent="C_ClinicaCuarentena/Norte_Acceso" instance=ExtResource("cuadro_CarroHerramientas")]
@@ -677,6 +691,7 @@ metadata/pov = Vector3(0, 1.32, -20)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5540875, -0.0078505, -24.282651)
 
 [node name="CajaPlastico_0129" parent="C_ClinicaCuarentena/Sur_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 2
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -2.551455, 1.1776484, -24.2567256)
 
 [node name="CarroHerramientas_0130" parent="C_ClinicaCuarentena/Sur_Acceso" instance=ExtResource("cuadro_CarroHerramientas")]
@@ -690,6 +705,7 @@ metadata/pov = Vector3(0, 1.32, -20)
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 4.4744704, -0.0078505, -22.559358)
 
 [node name="CajaPlastico_0132" parent="C_ClinicaCuarentena/Este_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 3
 transform = Transform3D(0, 0, 0.8, 0, 0.8, 0, -0.8, 0, 0, 4.448545, 1.1776484, -22.5567255)
 
 [node name="EstanteríaBaldas_0133" parent="C_ClinicaCuarentena/Este_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
@@ -772,6 +788,7 @@ transform = Transform3D(-0.052336, 0, 0.9986295, 0, 1, 0, -0.9986295, 0, -0.0523
 transform = Transform3D(0, 0, 1.1, 0, 1.1, 0, -1.1, 0, 0, 14.2485447, -0.0082213, -19.2118754)
 
 [node name="CajaPlastico_0156" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 0
 transform = Transform3D(-0.052336, 0, 0.9986295, 0, 1, 0, -0.9986295, 0, -0.052336, 14.248545, 0.9088685, -19.2067255)
 
 [node name="Mueble_0157" parent="D_ArchivoMuestras/Este_Catalogacion" instance=ExtResource("cuadro_Mueble")]
@@ -788,6 +805,7 @@ metadata/pov = Vector3(10, 1.32, -20)
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.7226195, -0.0078505, -17.4540931)
 
 [node name="CajaPlastico_0160" parent="D_ArchivoMuestras/Oeste_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 1
 transform = Transform3D(0, 0, -0.8, 0, 0.8, 0, 0.8, 0, 0, 5.7485449, 1.1776484, -17.4567256)
 
 [node name="EstanteríaBaldas_0161" parent="D_ArchivoMuestras/Oeste_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
@@ -809,9 +827,11 @@ metadata/pov = Vector3(30, 1.32, -20)
 transform = Transform3D(-1.07852, 0.0, 0.056523, 0.0, 1.08, 0.0, -0.056523, 0.0, -1.07852, 32.6, 0.006, -15.5493)
 
 [node name="CajaPlastico_0165" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 2
 transform = Transform3D(-0.81688, 0.0, 0.071468, 0.0, 0.82, 0.0, -0.071468, 0.0, -0.81688, 32.63243, 0.482724, -15.551)
 
 [node name="CajaPlastico_0166" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 3
 transform = Transform3D(-0.82, 0.0, -0.0, 0.0, 0.82, 0.0, 0.0, 0.0, -0.82, 32.56253, 1.011816, -15.54733)
 
 [node name="BarrilPlastico_0167" parent="E_AlmacenQuimico/Norte" instance=ExtResource("cuadro_BarrilPlastico")]
@@ -883,9 +903,11 @@ metadata/pov = Vector3(30, 1.32, -20)
 transform = Transform3D(-0.075337, 0.0, 1.077369, 0.0, 1.08, 0.0, -1.077369, 0.0, -0.075337, 34.44217, 0.006, -22.65)
 
 [node name="CajaPlastico_0187" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 0
 transform = Transform3D(-0.028618, 0.0, 0.819501, 0.0, 0.82, 0.0, -0.819501, 0.0, -0.028618, 34.44443, 0.482724, -22.68239)
 
 [node name="CajaPlastico_0188" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 1
 transform = Transform3D(-0.099933, 0.0, 0.813888, 0.0, 0.82, 0.0, -0.813888, 0.0, -0.099933, 34.43954, 1.011816, -22.61257)
 
 [node name="BarrilPlastico_0189" parent="E_AlmacenQuimico/Este" instance=ExtResource("cuadro_BarrilPlastico")]
@@ -911,6 +933,7 @@ metadata/pov = Vector3(30, 1.32, -20)
 transform = Transform3D(-0.052336, 0.0, 0.99863, 0.0, 1.0, 0.0, -0.99863, 0.0, -0.052336, 25.52472, 0.006371, -17.2)
 
 [node name="CajaPlastico_0195" parent="E_AlmacenQuimico/Oeste" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 2
 transform = Transform3D(0.041869, 0.0, -0.798904, 0.0, 0.8, 0.0, 0.798904, 0.0, 0.041869, 25.55074, 1.19187, -17.20127)
 
 [node name="EstanteríaBaldas_0196" parent="E_AlmacenQuimico/Oeste" instance=ExtResource("cuadro_EstanteríaBaldas")]
@@ -1001,6 +1024,7 @@ metadata/pov = Vector3(20, 1.32, -30)
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 22.5511774, -0.0078505, -25.7308001)
 
 [node name="CajaPlastico_0219" parent="F_EnsayoEnergia/Norte_Suministro" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 3
 transform = Transform3D(-0.8, 0, 0, 0, 0.8, 0, 0, 0, -0.8, 22.5485449, 1.1776484, -25.7567255)
 
 [node name="CarroHerramientas_0220" parent="F_EnsayoEnergia/Norte_Suministro" instance=ExtResource("cuadro_CarroHerramientas")]
@@ -1014,6 +1038,7 @@ metadata/pov = Vector3(20, 1.32, -30)
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 24.3744704, -0.0078505, -32.559358)
 
 [node name="CajaPlastico_0222" parent="F_EnsayoEnergia/Este_Acceso" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 0
 transform = Transform3D(0, 0, 0.8, 0, 0.8, 0, -0.8, 0, 0, 24.348545, 1.1776484, -32.5567255)
 
 [node name="EstanteríaBaldas_0223" parent="F_EnsayoEnergia/Este_Acceso" instance=ExtResource("cuadro_EstanteríaBaldas")]
@@ -1134,6 +1159,7 @@ metadata/pov = Vector3(30, 1.32, -30)
 transform = Transform3D(0.052336, 0.0, -0.99863, 0.0, 1.0, 0.0, 0.99863, 0.0, 0.052336, 25.51313, 0.006371, -27.3)
 
 [node name="CajaPlastico_0256" parent="G_ReservaRepuestos/Oeste" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 1
 transform = Transform3D(0.041869, 0.0, -0.798904, 0.0, 0.8, 0.0, 0.798904, 0.0, 0.041869, 25.53916, 1.19187, -27.30127)
 
 [node name="EstanteríaBaldas_0257" parent="G_ReservaRepuestos/Oeste" instance=ExtResource("cuadro_EstanteríaBaldas")]
@@ -1488,6 +1514,7 @@ metadata/pov = Vector3(0, 1.32, -40)
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 2.5511774, -0.0078505, -35.7308001)
 
 [node name="CajaPlastico_0360" parent="H_Logistica/Norte_Entrada" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 2
 transform = Transform3D(-0.8, 0, 0, 0, 0.8, 0, 0, 0, -0.8, 2.5485449, 1.1776484, -35.7567255)
 
 [node name="CarroHerramientas_0361" parent="H_Logistica/Norte_Entrada" instance=ExtResource("cuadro_CarroHerramientas")]
@@ -1505,6 +1532,7 @@ transform = Transform3D(0.857167, 0.0, -0.515038, 0.0, 1.0, 0.0, 0.515038, 0.0, 
 transform = Transform3D(-0.007671, 0.999532, -0.02962, -0.99997, -0.007707, -0.001104, -0.001332, 0.029611, 0.999561, 27.1, 0.197949, 2.8)
 
 [node name="BandejaCaida" parent="B_DescansoGuardia/AcumulacionAccidente" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 3
 transform = Transform3D(-0.999533, 0.000002, 0.030537, -0.000002, -1.0, 0.0, 0.030537, -0.0, 0.999534, 32.1, 0.435701, 2.6)
 
 [node name="PaqueteEsquina" parent="B_DescansoGuardia/AcumulacionAccidente" instance=ExtResource("cuadro_CajaCarton")]
@@ -1522,6 +1550,7 @@ transform = Transform3D(-0.0, -1.1, -0.0, 0.677228, -0.0, 0.866812, -0.866812, 0
 transform = Transform3D(0.951057, 0.0, -0.309017, 0.0, 1.0, 0.0, 0.309017, 0.0, 0.951057, 33.6, 0.001363, -15.7)
 
 [node name="BandejaVolcada" parent="E_AlmacenQuimico/AcumulacionAccidente" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 0
 transform = Transform3D(-0.999852, -0.000003, 0.017188, 0.000003, -1.0, -0.0, 0.017187, 0.0, 0.999852, 28.1, 0.435701, -21.8)
 
 [node name="EmbalajeRoto" parent="E_AlmacenQuimico/AcumulacionAccidente" instance=ExtResource("cuadro_CajaCarton")]
@@ -1542,6 +1571,7 @@ transform = Transform3D(0.920505, 0.0, 0.390731, 0.0, 1.0, 0.0, -0.390731, 0.0, 
 transform = Transform3D(-0.007793, 0.999532, -0.029588, -0.999966, -0.007707, 0.003012, 0.002783, 0.02961, 0.999558, 30.9, 0.197949, -28.2)
 
 [node name="BandejaRepuestos" parent="G_ReservaRepuestos/AcumulacionAccidente" instance=ExtResource("cuadro_CajaPlastico")]
+tipo_parte = 1
 transform = Transform3D(0.013327, 0.0, -0.999912, 0.0, 1.000001, 0.0, 0.999912, 0.0, 0.013326, 32.0, 0.006, -32.0)
 
 [node name="CartonEsquina" parent="G_ReservaRepuestos/AcumulacionAccidente" instance=ExtResource("cuadro_CajaCarton")]

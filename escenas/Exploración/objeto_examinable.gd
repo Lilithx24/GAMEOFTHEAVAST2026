@@ -17,3 +17,7 @@ func disponible() -> bool:
 		and recompensa != null
 		and not EstadoPartida.fue_examinado(id_objeto)
 	)
+
+
+func obtener_recompensa() -> ParteInventario:
+	return recompensa

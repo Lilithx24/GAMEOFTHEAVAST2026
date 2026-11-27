@@ -4,9 +4,10 @@ extends Node3D
 
 
 func _ready() -> void:
-	if EstadoPartida.volver_de_combate:
+	if EstadoPartida.volver_de_combate or EstadoPartida.volver_de_intercambio:
 		jugador.global_transform = EstadoPartida.transform_jugador
 		EstadoPartida.volver_de_combate = false
+		EstadoPartida.volver_de_intercambio = false
 
 	for enemigo in get_tree().get_nodes_in_group("enemigos_exploracion"):
 		if EstadoPartida.enemigos_derrotados.has(enemigo.identificador()):

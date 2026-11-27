@@ -4,7 +4,10 @@ signal inventario_cambiado
 const ESCENA_NIVEL := "res://escenas/Exploración/Pisos/PlantaCero.tscn"
 
 var objetos_examinados: Dictionary = {}
+var recompensas_cajas: Dictionary = {}
 var estados_puertas: Dictionary = {}
+var intercambio_npc = preload("res://escenas/NPC/estado_intercambio.gd").new()
+var volver_de_intercambio: bool = false
 
 var transform_jugador: Transform3D
 var volver_de_combate: bool = false
@@ -204,7 +207,10 @@ func reiniciarNivel() -> void:
 	equipo = {"cabeza": null, "torso": null, "piernas": null}
 	brazos_equipados.clear()
 	objetos_examinados.clear()
+	recompensas_cajas.clear()
 	estados_puertas.clear()
+	intercambio_npc.reiniciar()
+	volver_de_intercambio = false
 	enemigos_derrotados.clear()
 	enemigo_actual_id = ""
 	tipo_enemigo_actual = 0

@@ -160,10 +160,11 @@ func _es_accesible(objeto: ObjetoExaminable) -> bool:
 
 
 func _recoger(objeto: ObjetoExaminable) -> void:
-	var resultado := EstadoPartida.recoger_parte(objeto.id_objeto, objeto.recompensa)
+	var parte := objeto.obtener_recompensa()
+	var resultado := EstadoPartida.recoger_parte(objeto.id_objeto, parte)
 	match resultado:
 		"ok":
-			texto.text = "Has encontrado %s y se ha agregado a tu SHIFT." % objeto.recompensa.nombre
+			texto.text = "Has encontrado %s y se ha agregado a tu SHIFT." % parte.nombre
 		"lleno":
 			texto.text = "Tu SHIFT está lleno. Haz espacio para recoger esta pieza."
 		_:

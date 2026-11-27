@@ -15,26 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://sxr71xbu6deb" path="res://escenas/Exploración/Pisos/Decoracion/TuberiasPlantaCero.tscn" id="13_xqewg"]
 [ext_resource type="PackedScene" path="res://escenas/Exploración/Pisos/Decoracion/CableadoPlantaCero.tscn" id="14_l68lt"]
 [ext_resource type="PackedScene" path="res://escenas/Exploración/Pisos/Decoracion/VentilacionPlantaCero.tscn" id="15_vs6xb"]
-[ext_resource type="Resource" uid="uid://dt88wlixgc703" path="res://Recursos/partes/torso_mantis.tres" id="15_y5x63"]
-[ext_resource type="Resource" uid="uid://syruvmegv1lp" path="res://Recursos/partes/brazo_humano.tres" id="16_0c8l5"]
 [ext_resource type="PackedScene" path="res://escenas/Exploración/Pisos/Decoracion/MobiliarioMayorPlantaCero.tscn" id="16_t8ma2"]
-[ext_resource type="PackedScene" uid="uid://b3ogab2x34mr5" path="res://Assets/Objetos/CajaPlastico/plastic_container_1k.glb" id="17_ewhvs"]
-[ext_resource type="Resource" uid="uid://dhwe0x61g3gnk" path="res://Recursos/partes/cabeza_humana.tres" id="17_u3bwc"]
-[ext_resource type="Resource" uid="uid://d3t4hsw5ic4ou" path="res://Recursos/partes/brazo_ak47.tres" id="18_4gsx8"]
+[ext_resource type="PackedScene" path="res://escenas/Exploración/Piezas/CajaPlastico.tscn" id="17_ewhvs"]
 [ext_resource type="PackedScene" uid="uid://2k7i7uit4mio" path="res://Assets/Objetos/CajaHerramientasMetal/metal_tool_chest_1k.glb" id="18_k683b"]
 [ext_resource type="PackedScene" uid="uid://c68vnnn1jtwdp" path="res://Assets/Objetos/BarrilMetalOxidado/barrel_stove_1k.glb" id="19_cfroi"]
-[ext_resource type="Resource" uid="uid://bnegqqymk6crp" path="res://Recursos/partes/brazo_aspiradora.tres" id="19_xpim7"]
-[ext_resource type="Resource" uid="uid://chac7aw4ucf80" path="res://Recursos/partes/brazo_cerveza.tres" id="20_86myd"]
-[ext_resource type="Resource" path="res://Recursos/partes/brazo_gancho_mecanico.tres" id="20_343we"]
 [ext_resource type="PackedScene" uid="uid://b8pexu68t3mra" path="res://Assets/Objetos/CajaControl/utility_box_02_1k.glb" id="20_aev1a"]
 [ext_resource type="Script" uid="uid://8hfli6jcoj8o" path="res://escenas/Exploración/jugador.gd" id="21_2mide"]
 [ext_resource type="PackedScene" uid="uid://c6w7pylf5mi7t" path="res://escenas/Exploración/Encuentros/EnemigoExploracion2.tscn" id="22_enemigo2"]
-[ext_resource type="Resource" uid="uid://c08fynteeqjcq" path="res://Recursos/partes/torso_araña.tres" id="22_x0uy2"]
 [ext_resource type="PackedScene" uid="uid://bar8x7nt80g2v" path="res://escenas/Exploración/Encuentros/EnemigoExploracion.tscn" id="22_xbk8o"]
 [ext_resource type="Shader" uid="uid://cn032ucbpdssk" path="res://shader/retro_effect.gdshader" id="23_hl0sa"]
-[ext_resource type="Script" uid="uid://bj6yur5nxoau4" path="res://escenas/Exploración/objeto_examinable.gd" id="24_examinable"]
-[ext_resource type="Resource" uid="uid://d101qwcmwrf7m" path="res://Recursos/partes/brazo_cangrejo.tres" id="25_recompensa"]
-[ext_resource type="PackedScene" path="res://escenas/HUD/interaccion_objetos.tscn" id="26_interaccion"]
+[ext_resource type="PackedScene" uid="uid://bp64psdpoq3cm" path="res://escenas/HUD/interaccion_objetos.tscn" id="26_interaccion"]
 [ext_resource type="PackedScene" uid="uid://tt74ua5t4enh" path="res://Assets/Objetos/SillaDeRuedas/wheelchair_01_1k.glb" id="26_nhfve"]
 [ext_resource type="PackedScene" uid="uid://bk16s4iabn4ae" path="res://Assets/Objetos/CajaDeMadera/wooden_crate_01_1k.glb" id="27_3igwq"]
 [ext_resource type="PackedScene" uid="uid://c1d45nuaj3q53" path="res://Assets/Objetos/CamaraVintage/vintage_video_camera_1k.glb" id="28_3jqnj"]
@@ -42,6 +32,8 @@
 [ext_resource type="PackedScene" uid="uid://bk67qwugntsj0" path="res://Assets/Objetos/Enciclopedia/book_encyclopedia_set_01_1k.glb" id="30_d54pl"]
 [ext_resource type="AudioStream" uid="uid://d27fo7hxm117d" path="res://Audio/SFX/SFX Walk.mp3" id="33_ku7p5"]
 [ext_resource type="AudioStream" uid="uid://gs42uut3ddqs" path="res://Audio/Denial Overworld v1.mp3" id="35_d54pl"]
+[ext_resource type="PackedScene" path="res://escenas/NPC/NPCIntercambio.tscn" id="npc_intercambio"]
+[ext_resource type="PackedScene" path="res://escenas/Exploración/vision_cabeza.tscn" id="vision_cabeza"]
 
 [sub_resource type="Environment" id="Environment_Oscuridad"]
 background_mode = 1
@@ -453,78 +445,6 @@ size = Vector3(0.2, 3, 3.5)
 [sub_resource type="BoxShape3D" id="Shape_Ajuste_ParedA16"]
 size = Vector3(0.2, 3, 3.5)
 
-[sub_resource type="BoxShape3D" id="FormaCajaInicio"]
-size = Vector3(0.82586485, 0.4024219, 0.48422852)
-
-[sub_resource type="BoxShape3D" id="FormaCajaInicio2"]
-size = Vector3(0.63856834, 0.33506227, 0.36338502)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_0c8l5"]
-size = Vector3(0.63856834, 0.33506227, 0.36338502)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_u3bwc"]
-size = Vector3(0.7972963, 0.27889755, 0.44547805)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0118"]
-size = Vector3(0.78081685, 0.3852365, 0.5524089)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0123"]
-size = Vector3(0.75396436, 0.37234578, 0.53361785)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0129"]
-size = Vector3(0.736063, 0.363752, 0.52109075)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0126"]
-size = Vector3(0.7360629, 0.363752, 0.52109075)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0160"]
-size = Vector3(0.7360629, 0.363752, 0.52109075)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0156"]
-size = Vector3(0.91507864, 0.44968998, 0.6463634)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0222"]
-size = Vector3(0.7360629, 0.363752, 0.52109075)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0219"]
-size = Vector3(0.7360629, 0.363752, 0.52109075)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0360"]
-size = Vector3(0.7360629, 0.363752, 0.52109075)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0115"]
-size = Vector3(0.7360629, 0.363752, 0.52109075)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaDeMadera_0081"]
-size = Vector3(0.9278, 0.40458015, 0.46984902)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_Cajas_0094"]
-size = Vector3(0.8353857, 0.32093284, 0.55762553)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaControl_0107"]
-size = Vector3(0.9400002, 1.1403334, 0.452)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_Cajas_0049"]
-size = Vector3(0.68861616, 0.2667649, 0.46085325)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_Cajas_0048"]
-size = Vector3(0.68861634, 0.26676494, 0.46085337)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0029"]
-size = Vector3(0.7360629, 0.363752, 0.52109075)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0002"]
-size = Vector3(0.75396454, 0.37234578, 0.53361803)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0073"]
-size = Vector3(0.7360633, 0.363752, 0.521091)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_Cajas_0197"]
-size = Vector3(0.6886163, 0.2667649, 0.46085224)
-
-[sub_resource type="BoxShape3D" id="FormaExaminar_CajaPlastico_0256"]
-size = Vector3(0.7360633, 0.363752, 0.521091)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbx7q"]
 shader = ExtResource("23_hl0sa")
 shader_parameter/exposure = 1.0
@@ -658,6 +578,7 @@ material_override = ExtResource("4_blcy7")
 mesh = SubResource("BoxMesh_c3obi")
 
 [node name="Techos" type="Node3D" parent="PisoCero" unique_id=2146880121]
+visible = false
 
 [node name="TechoSalaInicio" type="MeshInstance3D" parent="PisoCero/Techos" unique_id=973707007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.25, 0)
@@ -1685,333 +1606,6 @@ transform = Transform3D(-4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-
 [node name="pipe08" parent="PisoCero/Luces" unique_id=37517715 instance=ExtResource("12_daveq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.254864, 2.1388912, -4.656885)
 
-[node name="ObjetosExaminables" type="Node3D" parent="PisoCero" unique_id=1929318420]
-
-[node name="CajaInicio" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1587644882]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.579868, 1.3382261, -4.2550235)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_caja_inicio"
-recompensa = ExtResource("25_recompensa")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio" unique_id=2025524003]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006123543, -0.23906004, -0.019946575)
-shape = SubResource("FormaCajaInicio")
-
-[node name="CajaInicio2" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=949436171]
-transform = Transform3D(0.96386504, 0, -0.266391, 0, 1, 0, 0.266391, 0, 0.96386504, -9.502915, 0.78368485, -3.9376917)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "Planta_Cero_Caja_Inicio_2"
-recompensa = ExtResource("15_y5x63")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio2" unique_id=1786549119]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5818653, 0.36144674, -0.05112219)
-shape = SubResource("FormaCajaInicio2")
-
-[node name="CajaInicio3" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=2127770553]
-transform = Transform3D(0.3770857, 0, 0.92617834, 0, 1, 0, -0.92617834, 0, 0.3770857, -14.121001, 0.78368473, -1.0948488)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "Planta_Cero_Caja_Inicio_3"
-recompensa = ExtResource("16_0c8l5")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio3" unique_id=1007017519]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.5691042, 0.33397174, -0.072356224)
-shape = SubResource("BoxShape3D_0c8l5")
-
-[node name="CajaInicio4" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=552283502]
-transform = Transform3D(0.516825, 0, 0.8560912, 0, 1, 0, -0.8560912, 0, 0.516825, -14.278447, 0.46876645, 1.2098539)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "Planta_Cero_Caja_Inicio_4"
-recompensa = ExtResource("17_u3bwc")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio4" unique_id=1439482774]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.1026268, 0.20320982, 0.26175594)
-shape = SubResource("BoxShape3D_u3bwc")
-
-[node name="CajaInicio5" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1734654769]
-transform = Transform3D(0.030270517, 0, 0.9995419, 0, 1, 0, -0.9995419, 0, 0.030270517, 1.8590384, 1.172106, -15.871292)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "Planta_Cero_Caja_Inicio_5"
-recompensa = ExtResource("18_4gsx8")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio5" unique_id=854667914]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.1349678, 0.1962415, 0.20910859)
-shape = SubResource("BoxShape3D_u3bwc")
-
-[node name="CajaInicio6" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=748237675]
-transform = Transform3D(0.12832718, 0, 0.99173194, 0, 1, 0, -0.99173194, 0, 0.12832718, -1.9880328, 1.172106, -24.593306)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "Planta_Cero_Caja_Inicio_6"
-recompensa = ExtResource("19_xpim7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio6" unique_id=1806917811]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.1349678, 0.1962415, 0.20910859)
-shape = SubResource("BoxShape3D_u3bwc")
-
-[node name="CajaInicio8" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=262669185]
-transform = Transform3D(-0.057018414, 0, 0.99837315, 0, 1, 0, -0.99837315, 0, -0.057018414, -4.305808, 1.0428957, -39.652493)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "Planta_Cero_Caja_Inicio_8"
-recompensa = ExtResource("20_343we")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio8" unique_id=141057810]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.24607849, 0.032523394, 0.037318468)
-shape = SubResource("BoxShape3D_u3bwc")
-
-[node name="CajaInicio7" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1822261099]
-transform = Transform3D(-0.99772555, 0, -0.067408465, 0, 1, 0, 0.067408465, 0, -0.99772555, -4.3561044, 0.99510956, -21.786018)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "Planta_Cero_Caja_Inicio_7"
-recompensa = ExtResource("20_86myd")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaInicio7" unique_id=830369612]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.1349678, 0.1962415, 0.20910859)
-shape = SubResource("BoxShape3D_u3bwc")
-
-[node name="CajaPlastico_0118" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1792283307]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -4.24, 1.4315815, -17.902857)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0118"
-recompensa = ExtResource("22_x0uy2")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0118" unique_id=1041898507]
-shape = SubResource("FormaExaminar_CajaPlastico_0118")
-
-[node name="CajaPlastico_0123" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=402755413]
-transform = Transform3D(0.05233598, 0, 0.9986296, 0, 1, 0, -0.9986296, 0, 0.05233598, -4.2300005, 1.1859889, -22.020933)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0123"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0123" unique_id=384716333]
-shape = SubResource("FormaExaminar_CajaPlastico_0123")
-
-[node name="CajaPlastico_0129" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=2004839913]
-transform = Transform3D(0.994323, 0, 0.10640334, 0, 1, 0, -0.10640334, 0, 0.994323, -1.7945567, 1.3617457, -24.428585)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0129"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0129" unique_id=2060889987]
-shape = SubResource("FormaExaminar_CajaPlastico_0129")
-
-[node name="CajaPlastico_0126" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=811028441]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 2.0620644, 1.3617457, -15.75)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0126"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0126" unique_id=891730063]
-shape = SubResource("FormaExaminar_CajaPlastico_0126")
-
-[node name="CajaPlastico_0160" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1818026372]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.533325, 1.3617457, -17.45)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0160"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0160" unique_id=1276290430]
-shape = SubResource("FormaExaminar_CajaPlastico_0160")
-
-[node name="CajaPlastico_0156" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1806311931]
-transform = Transform3D(-0.052336, 0, -0.9986295, 0, 1, 0, 0.9986295, 0, -0.052336, 14.25, 1.1359348, -19.2)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0156"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0156" unique_id=92789636]
-shape = SubResource("FormaExaminar_CajaPlastico_0156")
-
-[node name="CajaPlastico_0222" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=61399328]
-transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 24.526127, 1.3617457, -32.55)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0222"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0222" unique_id=693168509]
-shape = SubResource("FormaExaminar_CajaPlastico_0222")
-
-[node name="CajaPlastico_0219" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1838109845]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 22.550001, 1.3617457, -25.500376)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0219"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0219" unique_id=45661102]
-shape = SubResource("FormaExaminar_CajaPlastico_0219")
-
-[node name="CajaPlastico_0360" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=717059460]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 2.55, 1.3617457, -35.75)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0360"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0360" unique_id=884488615]
-shape = SubResource("FormaExaminar_CajaPlastico_0360")
-
-[node name="CajaPlastico_0115" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=2087615225]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.5488005, 1.3617457, -7.855567)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0115"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0115" unique_id=1971797231]
-shape = SubResource("FormaExaminar_CajaPlastico_0115")
-
-[node name="CajaDeMadera_0081" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1466528621]
-transform = Transform3D(0.1833424, 0, 0.9830491, 0, 1, 0, -0.9830491, 0, 0.18334238, 13.04903, 0.5848702, -14.018893)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajademadera_0081"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaDeMadera_0081" unique_id=185240892]
-shape = SubResource("FormaExaminar_CajaDeMadera_0081")
-
-[node name="Cajas_0094" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1989904076]
-transform = Transform3D(0.9986295, 0, -0.052336, 0, 1, 0, 0.052336, 0, 0.9986295, 30.904167, 1.0715563, -14.249441)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajas_0094"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/Cajas_0094" unique_id=367546612]
-shape = SubResource("FormaExaminar_Cajas_0094")
-
-[node name="CajaControl_0107" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=2146977331]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 34.55, 0.5546124, -8.3)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajacontrol_0107"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaControl_0107" unique_id=954692367]
-shape = SubResource("FormaExaminar_CajaControl_0107")
-
-[node name="Cajas_0049" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1812928034]
-transform = Transform3D(-0.05233598, 0, -0.9986296, 0, 1, 0, 0.9986296, 0, -0.05233598, 24.395197, 1.1331985, 2.6487503)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajas_0049"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/Cajas_0049" unique_id=1946870774]
-shape = SubResource("FormaExaminar_Cajas_0049")
-
-[node name="Cajas_0048" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1089389086]
-transform = Transform3D(0.03489951, 0, -0.9993908, 0, 1, 0, 0.9993908, 0, 0.03489951, 24.395247, 0.6041065, 2.578757)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajas_0048"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/Cajas_0048" unique_id=525494014]
-shape = SubResource("FormaExaminar_Cajas_0048")
-
-[node name="CajaPlastico_0029" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=683151876]
-transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 14.35, 1.3617457, -2.55)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0029"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0029" unique_id=759526439]
-shape = SubResource("FormaExaminar_CajaPlastico_0029")
-
-[node name="CajaPlastico_0002" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=861499243]
-transform = Transform3D(0.9993908, 0, 0.03489951, 0, 1, 0, -0.03489951, 0, 0.9993908, 7.42, 0.65689695, -4.2300005)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0002"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0002" unique_id=1576782191]
-shape = SubResource("FormaExaminar_CajaPlastico_0002")
-
-[node name="CajaPlastico_0073" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=1302495118]
-transform = Transform3D(-0.05233622, 0, 0.99862945, 0, 1, 0, -0.99862945, 0, -0.05233622, 25.575596, 1.3759673, 2.7027404)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0073"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0073" unique_id=513167063]
-shape = SubResource("FormaExaminar_CajaPlastico_0073")
-
-[node name="Cajas_0197" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=821619829]
-transform = Transform3D(-0.10452805, 0, 0.994522, 0, 1, 0, -0.994522, 0, -0.10452804, 25.496319, 0.6183281, -22.469593)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajas_0197"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/Cajas_0197" unique_id=528446952]
-shape = SubResource("FormaExaminar_Cajas_0197")
-
-[node name="CajaPlastico_0256" type="Area3D" parent="PisoCero/ObjetosExaminables" unique_id=796253446]
-transform = Transform3D(0.05233622, 0, 0.99862945, 0, 1, 0, -0.99862945, 0, 0.05233622, 25.540615, 1.3759673, -27.294544)
-collision_layer = 128
-collision_mask = 0
-monitoring = false
-script = ExtResource("24_examinable")
-id_objeto = "planta_cero_cajaplastico_0256"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PisoCero/ObjetosExaminables/CajaPlastico_0256" unique_id=1864909098]
-shape = SubResource("FormaExaminar_CajaPlastico_0256")
-
 [node name="Tuberias" parent="PisoCero" unique_id=1344939659 instance=ExtResource("13_xqewg")]
 
 [node name="CodoBajante_006" parent="PisoCero/Tuberias/Inicio_Lateral" parent_id_path=PackedInt32Array(1344939659, 1615842163) index="4" unique_id=1453974818]
@@ -2042,6 +1636,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90759754, 4.3213367e-07, -
 [node name="plastic_container_1k" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/BancoPreparacion_001" index="1" unique_id=1193483824 instance=ExtResource("17_ewhvs")]
 transform = Transform3D(0.8788356, 0, -0.23258173, 0, 0.909091, 0, 0.23258173, 0, 0.8788356, 0.42549038, 0.82988644, -0.85735035)
 
+[node name="CajaPlastico" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/BancoPreparacion_001" index="2" unique_id=65215907 instance=ExtResource("17_ewhvs")]
+transform = Transform3D(0.907835, 0, 0.0477679, 0, 0.9090909, 0, -0.0477679, 0, 0.907835, -3.4376192, -0.015655959, 3.4255779)
+tipo_parte = 2
+
+[node name="CajaPlastico2" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/BancoPreparacion_001" index="3" unique_id=1913203059 instance=ExtResource("17_ewhvs")]
+transform = Transform3D(0.77841115, 0, 0.46959788, 0, 0.9090909, 0, -0.46959788, 0, 0.77841115, 7.5686693, -0.015655851, -0.50632524)
+tipo_parte = 1
+
 [node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/BancoPreparacion_002" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.951087, 0, -0.81010747)
 
@@ -2070,7 +1672,7 @@ transform = Transform3D(-0.008793756, 0, -1.049963, 0, 1.0499998, 0, 1.049963, 0
 transform = Transform3D(0.9961628, 0, -0.08752222, 0, 1, 0, 0.08752222, 0, 0.9961628, -0.05341983, 0, 0.10355759)
 
 [node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_009" index="0"]
-transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, -4.333947, 0, -0.25715685)
+transform = Transform3D(0.99999934, 0, 0, 0, 1, 0, 0, 0, 0.99999934, -4.1645384, 0, -0.87725353)
 
 [node name="barrel_stove_1k" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_009" index="1" unique_id=2114041294 instance=ExtResource("19_cfroi")]
 transform = Transform3D(0.9781474, 0, -0.20791164, 0, 1, 0, 0.20791164, 0, 0.9781474, -4.6737623, -0.017202538, 4.0425615)
@@ -2082,7 +1684,7 @@ transform = Transform3D(0.97814745, 0, -0.20791166, 0, 1, 0, 0.20791166, 0, 0.97
 transform = Transform3D(0.9781475, 0, -0.20791167, 0, 1, 0, 0.20791167, 0, 0.9781475, -3.922964, -0.017202538, 3.5734107)
 
 [node name="cardboard_box_01_1k" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_009" index="4" unique_id=155218478 instance=ExtResource("7_rrlvd")]
-transform = Transform3D(0.9781475, 0, -0.20791167, 0, 1, 0, 0.20791167, 0, 0.9781475, -5.1787186, -0.017202538, 1.687814)
+transform = Transform3D(0.9781473, 0, -0.20791163, 0, 1, 0, 0.20791163, 0, 0.9781473, -5.0985794, 0.41177562, 1.6670187)
 
 [node name="cardboard_box_01_1k2" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_009" index="5" unique_id=929736885 instance=ExtResource("7_rrlvd")]
 transform = Transform3D(-0.65820867, 0, -0.75283504, 0, 1, 0, 0.75283504, 0, -0.65820867, -5.2334595, 0.4812394, 2.7119274)
@@ -2090,8 +1692,12 @@ transform = Transform3D(-0.65820867, 0, -0.75283504, 0, 1, 0, 0.75283504, 0, -0.
 [node name="utility_box_02_1k" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_009" index="6" unique_id=1487307669 instance=ExtResource("20_aev1a")]
 transform = Transform3D(0.16683151, 0, 0.9859852, 0, 1, 0, -0.9859852, 0, 0.16683151, -4.7175827, -0.017202538, -1.7003984)
 
+[node name="CajaPlastico" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_009" index="7" unique_id=660437155 instance=ExtResource("17_ewhvs")]
+transform = Transform3D(0.6001509, 0, -0.7998866, 0, 1, 0, 0.7998866, 0, 0.6001509, -4.112712, -0.017202538, -0.109401226)
+tipo_parte = 1
+
 [node name="Modelo" parent="PisoCero/MobiliarioMayor/Inicio_LaboratorioPreparacion/Taburete_010" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2623, 0, -3.707608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.438276, 0, -4.0273724)
 
 [node name="Mueble_0019" parent="PisoCero/MobiliarioMayor/A_Metrologia/Oeste_Medicion" index="0"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.5226197, -0.0078505, 2.395907)
@@ -2272,6 +1878,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.569437, -0.0046613, -24.305
 
 [node name="Mueble_0131" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/Este_Acceso" index="0"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.4744706, -0.0078505, -22.559359)
+
+[node name="CajaPlastico" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/Este_Acceso" index="5" unique_id=848934369 instance=ExtResource("17_ewhvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.039303, -0.012221098, -36.190205)
+tipo_parte = 1
+
+[node name="CajaPlastico2" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/Este_Acceso" index="6" unique_id=1566528188 instance=ExtResource("17_ewhvs")]
+transform = Transform3D(0.9999425, 0, 0.010739118, 0, 1, 0, -0.010739118, 0, 0.9999425, 31.196957, 0.15311038, -44.385803)
+tipo_parte = 1
+
+[node name="CajaPlastico3" parent="PisoCero/MobiliarioMayor/C_ClinicaCuarentena/Este_Acceso" index="7" unique_id=1983810957 instance=ExtResource("17_ewhvs")]
+transform = Transform3D(0.9350995, 0, 0.35438535, 0, 1, 0, -0.35438535, 0, 0.9350995, 29.64201, -0.012221336, -43.240574)
+tipo_parte = 1
 
 [node name="EstanteríaBaldas_0136" parent="PisoCero/MobiliarioMayor/D_ArchivoMuestras/Norte_Archivo" index="0"]
 transform = Transform3D(-1.08, 0, 0, 0, 1.08, 0, 0, 0, -1.08, 11.29607, -0.0082213, -15.357171)
@@ -2626,6 +2244,11 @@ id_enemigo = "planta_cero_enemigo_2"
 camara = NodePath("../PisoCero/Jugador/Camera3D")
 jugador = NodePath("../PisoCero/Jugador")
 
+[node name="VisionCabeza" parent="." unique_id=1323817443 instance=ExtResource("vision_cabeza")]
+
+[node name="NPCIntercambio" parent="." unique_id=1983843705 instance=ExtResource("npc_intercambio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.959045, -0.12796903, -0.5533047)
+
 [node name="Shader" type="CanvasLayer" parent="." unique_id=418767805]
 
 [node name="ColorRect" type="ColorRect" parent="Shader" unique_id=1481366148]
@@ -2636,6 +2259,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="CajaPlastico" parent="." unique_id=1021370832 instance=ExtResource("17_ewhvs")]
+transform = Transform3D(0.6874657, 0, -0.72621685, 0, 1, 0, 0.72621685, 0, 0.6874657, -11.3713045, 0, -3.1450129)
+tipo_parte = 3
+
+[node name="CajaPlastico2" parent="." unique_id=307824138 instance=ExtResource("17_ewhvs")]
+transform = Transform3D(-0.78714776, 0, -0.6167644, 0, 1, 0, 0.6167644, 0, -0.78714776, -2.1644764, 0.41964602, -4.012127)
+tipo_parte = 1
 
 [editable path="PisoCero/Tuberias"]
 [editable path="PisoCero/MobiliarioMayor"]

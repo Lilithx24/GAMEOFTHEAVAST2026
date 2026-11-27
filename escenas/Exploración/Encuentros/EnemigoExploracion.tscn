@@ -10,12 +10,12 @@ viewport_path = NodePath("MarionetaViewport")
 size = Vector3(1.25, 2.45, 0.5)
 
 [node name="EnemigoExploracion" type="Area3D" unique_id=540907404 groups=["enemigos_exploracion"]]
-editor_description = "Encuentro con el enemigo 1. La marioneta 2D está dentro de MarionetaViewport. Ajusta la embestida aquí y el tamaño visible en Imagen."
+editor_description = "Encuentro con el enemigo 1. La marioneta 2D está dentro de MarionetaViewport. No sé lo que estoy haciendo"
 collision_layer = 256
 collision_mask = 0
 monitoring = false
 script = ExtResource("1_script")
-distancia_final = 1.4000000000000001
+distancia_final = 1.4
 
 [node name="Imagen" type="Sprite3D" parent="." unique_id=1342766971]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.248, 0)
