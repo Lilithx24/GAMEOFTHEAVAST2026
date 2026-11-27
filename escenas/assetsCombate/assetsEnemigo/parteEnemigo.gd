@@ -1,21 +1,14 @@
 class_name ParteEnemigo
 extends TextureRect
 
-@export var vidaMax: int = 100
+@export var datos: DatosParte   # los datos ahora vienen de un recurso
 var vidaActual: int
-@export var vital: bool = true
-@export var tags: Array[String]
-@export var estados: Array[String]
-@export var efectos: Array[String]
-@export var evasion: int = 0
-@export var proteccion: float = 0.0
-@export var dmg: int = 10
 
 signal carta_soltada(skill: Skill, parte: ParteEnemigo)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	vidaActual = vidaMax
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,16 +16,16 @@ func _process(_delta: float) -> void:
 	pass
 
 func sufrirDmg(damage: int):
-	var probImpacto: int = (100 - evasion)
+	var probImpacto: int = (100 - datos.evasion)
 	var tiradaAtaque: int = randi() % 100
-	if tiradaAtaque < probImpacto || "atrapado" in estados:
-		var reduccion: float = proteccion / 100.0          
+	if tiradaAtaque < probImpacto || "atrapado" in datos.estados:
+		var reduccion: float = datos.proteccion / 100.0          
 		var danoFinal: float = damage * (1.0 - reduccion)  
 		var nuevaVida = setVidaActual(vidaActual - danoFinal)
 		print("vida restante: ", nuevaVida)
 
 func setVidaActual(vida: int) -> int:
-	vidaActual = clampi(vida, 0, vidaMax) #Esta mierda es pa que no baje de 0
+	vidaActual = clampi(vida, 0, datos.vidaMax) #Esta mierda es pa que no baje de 0
 	return vidaActual
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:

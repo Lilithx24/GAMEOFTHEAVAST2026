@@ -12,8 +12,10 @@ var personaje: Personaje
 var combate_terminado: bool = false
 var partes_usadas: Dictionary = {}
 var skillSolicitada: bool = false
+@onready var barra_vida: ProgressBar = $PanelJugador/CanvasLayer/Interfaz/Stadisticas/ProgressBarJ
 @onready var contenedor = $PanelJugador/ScrollContainer/HBoxContainer
-@onready var contador_stamina: Control = $PanelJugador/CanvasLayer/ContadorStamina
+@onready var contador_stamina: Control = $PanelJugador/CanvasLayer/Interfaz/ContadorStamina
+@onready var texto_stats: Label = $PanelJugador/CanvasLayer/Interfaz/Stadisticas/TextoStats
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,16 +24,21 @@ func _ready() -> void:
 	for parte in enemigo_actual.partes:
 		parte.carta_soltada.connect(_on_carta_soltada)
 	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), [])
+	aplicarEstadísticas()
 	EstadoPartida.inventario_cambiado.connect(_solicitar_skills)
 	reconstruirSkills()
 	personaje.staminaActual = personaje.stamina
 	updateSkills()
 	personaje.murio.connect(_on_personaje_murio)
+	actualizar_barraJ()
 
 
 func _solicitar_skills() -> void:
 	skillSolicitada = true
+	aplicarEstadísticas()
 	
+	
+func aplicarEstadísticas() -> void:
 	var cabeza: ParteInventario = EstadoPartida.equipo["cabeza"]
 	var piernas: ParteInventario = EstadoPartida.equipo["piernas"]
 	var torso: ParteInventario = EstadoPartida.equipo["torso"]
@@ -41,6 +48,13 @@ func _solicitar_skills() -> void:
 	personaje.evasion =  stat(cabeza, "evasion") + stat(piernas, "evasion")
 	personaje.proteccion = stat(cabeza, "proteccion") + stat(piernas, "proteccion") + stat(torso, "proteccion")
 	personaje.modDmg = stat(cabeza, "modDmg") + stat(piernas, "modDmg")
+	
+	###### Cambiamos el texto de la interfaz acorde a los cambios realizados ######
+	texto_stats.text = "Vida: \nProtección: %d\nEvasión: %d\nDaño extra: %d" % [
+		personaje.proteccion,
+		personaje.evasion,
+		personaje.modDmg
+	]
 
 
 # Solo cuando cambia el equipo (y al empezar el combate)
@@ -118,9 +132,11 @@ func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 		return
 	personaje.staminaActual -= sta
 	personaje.actualizar_barra()
+	actualizar_barraJ()
 	if "sanacion" in efectos:
 		personaje.vidaActual = personaje.vidaActual + dmg
 		personaje.actualizar_barra()
+		actualizar_barraJ()
 	else:
 		parteEnemigaSeleccionada.sufrirDmg(dmg*(1 - 0.25 * personaje.debilEstado))
 		enemigo_actual.actualizar_barra()
@@ -140,13 +156,17 @@ func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	if "stun" in efectos:
 		enemigo_actual.stun = enemigo_actual.stun + 1
 	if "atrapar" in efectos:
-		if not parteEnemigaSeleccionada.estados.has("atrapado"):
-			parteEnemigaSeleccionada.estados.append("atrapado")
+		if not parteEnemigaSeleccionada.datos.estados.has("atrapado"):
+			parteEnemigaSeleccionada.datos.estados.append("atrapado")
 	if parteEnemigaSeleccionada.vidaActual == 0 \
-			and parteEnemigaSeleccionada.vital:
+			and parteEnemigaSeleccionada.datos.vital:
 		ganarCombate()
 		return
 	updateSkills()
+
+func actualizar_barraJ() -> void:
+	barra_vida.max_value = personaje.vidaMax
+	barra_vida.value = personaje.vidaActual
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interactuar"):
@@ -165,6 +185,7 @@ func terminarTurno() -> void:
 	enemigo_actual.turno(personaje)
 	partes_usadas.clear()
 	personaje.actualizar_barra()
+	actualizar_barraJ()
 	for hijo in contenedor.get_children():
 		if hijo is Skill:
 			hijo.recuperar()
