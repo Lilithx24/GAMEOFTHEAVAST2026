@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="CabezaInventario" format=3]
+[gd_resource type="Resource" script_class="CabezaInventario" format=3 uid="uid://blsmq1jasgxj0"]
 
-[ext_resource type="Script" path="res://escenas/HUD/cabezaInventario.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://sprites/PARTES/CABEZAS/cabezatiburonl.png" id="2_textura"]
+[ext_resource type="Script" uid="uid://2lctbb4nv7lk" path="res://escenas/HUD/cabezaInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://doc88eyr5pjn7" path="res://sprites/PARTES/CABEZAS/cabezatiburonl.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
 stamina = 1
-nombre = "Cabeza de tiburón"
+nombre = "Shark Head"
 textura = ExtResource("2_textura")
 tags = Array[String](["cabeza"])

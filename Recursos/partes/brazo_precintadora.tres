@@ -5,11 +5,11 @@
 
 [resource]
 script = ExtResource("1_script")
-nombreSkill = "20 sanacion"
+nombreSkill = "20 Healing"
 dmgSkill = 20
 staSkill = 1
 usosTotales = 5
 efectos = Array[String](["sanacion"])
-nombre = "Brazo precintadora"
+nombre = "Tape Dispenser Arm"
 textura = ExtResource("2_textura")
 tags = Array[String](["brazo"])

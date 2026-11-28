@@ -76,7 +76,7 @@ theme_override_styles/pressed = SubResource("EstiloBoton")
 theme_override_styles/hover_pressed = SubResource("EstiloBoton")
 theme_override_styles/disabled = SubResource("EstiloBoton")
 theme_override_styles/focus = SubResource("EstiloBoton")
-text = "EXAMINAR"
+text = "EXAMINE"
 
 [node name="Interactuar" type="Button" parent="."]
 visible = false
@@ -98,7 +98,7 @@ theme_override_styles/pressed = SubResource("EstiloInteractuar")
 theme_override_styles/hover_pressed = SubResource("EstiloInteractuar")
 theme_override_styles/disabled = SubResource("EstiloInteractuar")
 theme_override_styles/focus = SubResource("EstiloInteractuar")
-text = "INTERACTUAR"
+text = "INTERACT"
 
 [node name="Aviso" type="PanelContainer" parent="." unique_id=436982741]
 visible = false

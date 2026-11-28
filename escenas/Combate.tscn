@@ -17,17 +17,19 @@ offset_bottom = 673.0
 texture = ExtResource("2_3i012")
 
 [node name="Enemigo" parent="." unique_id=946742068 instance=ExtResource("enemigo_visual")]
+z_index = 5
 position = Vector2(590, 445)
 scale = Vector2(1.2, 1.2)
 
 [node name="PanelJugador" type="Control" parent="." unique_id=675357850]
+z_index = 10
 layout_mode = 3
 anchors_preset = 0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelJugador" unique_id=512236629]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 382.0
+offset_top = 330.0
 offset_right = 1128.0
 offset_bottom = 632.0
 vertical_scroll_mode = 0

@@ -26,9 +26,9 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=208242355]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
-text = "Has muerto"
+text = "You died"
 horizontal_alignment = 1
 
 [node name="BotonReiniciar" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1127879058]
 layout_mode = 2
-text = "Volver a empezar el nivel"
+text = "Restart level"

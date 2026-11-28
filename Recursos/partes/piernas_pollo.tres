@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="ParteInventario" format=3]
+[gd_resource type="Resource" script_class="ParteInventario" format=3 uid="uid://dra7bpk4e2aym"]
 
-[ext_resource type="Script" path="res://escenas/HUD/parteInventario.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://sprites/PARTES/PIERNAS/piernaspollo.png" id="2_textura"]
+[ext_resource type="Script" uid="uid://b1ux771lmrk8s" path="res://escenas/HUD/parteInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dca31kjfuqbrb" path="res://sprites/PARTES/PIERNAS/piernaspollo.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
-nombre = "Piernas de pollo"
+nombre = "Chicken Legs"
 textura = ExtResource("2_textura")
 tags = Array[String](["piernas"])

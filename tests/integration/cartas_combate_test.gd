@@ -25,7 +25,7 @@ func probar() -> void:
 	verificar(combate.contenedor.get_child_count() == 2, "Una carta por brazo equipado")
 	var carta := combate.contenedor.get_child(0) as Skill
 	verificar(carta.parte_origen == brazo and carta.dmgSkill == brazo.dmgSkill, "La carta conserva el ataque de su parte")
-	verificar(carta.get_node("VBoxContainer/Damage").text == "10 de daño", "La carta muestra el daño")
+	verificar(carta.get_node("VBoxContainer/Damage").text == "10 damage", "La carta muestra el daño")
 	var objetivo = combate.enemigo_actual.partes[0]
 	combate._on_carta_soltada(carta, objetivo)
 	verificar(objetivo.vidaActual == 90 and combate.personaje.staminaActual == 1, "Jugar carta aplica daño y coste")

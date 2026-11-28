@@ -6,5 +6,5 @@
 
 [resource]
 script = ExtResource("1")
-nombre = "Enemigo 1"
+nombre = "Enemy 1"
 partes = Array[ExtResource("1_04vs1")]([ExtResource("2_vtjxl")])

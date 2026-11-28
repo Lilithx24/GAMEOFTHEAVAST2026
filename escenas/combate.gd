@@ -50,7 +50,7 @@ func aplicarEstadísticas() -> void:
 	personaje.modDmg = stat(cabeza, "modDmg") + stat(piernas, "modDmg")
 	
 	###### Cambiamos el texto de la interfaz acorde a los cambios realizados ######
-	texto_stats.text = "Vida: \nProtección: %d\nEvasión: %d\nDaño extra: %d" % [
+	texto_stats.text = "Health: \nProtection: %d\nEvasion: %d\nBonus damage: %d" % [
 		personaje.proteccion,
 		personaje.evasion,
 		personaje.modDmg

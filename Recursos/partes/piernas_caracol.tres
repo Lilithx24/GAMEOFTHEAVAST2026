@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="ParteInventario" format=3]
+[gd_resource type="Resource" script_class="ParteInventario" format=3 uid="uid://deyiuo3rxd0g0"]
 
-[ext_resource type="Script" path="res://escenas/HUD/parteInventario.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://sprites/PARTES/PIERNAS/piernasscaracol.png" id="2_textura"]
+[ext_resource type="Script" uid="uid://b1ux771lmrk8s" path="res://escenas/HUD/parteInventario.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bjyno8br7c72x" path="res://sprites/PARTES/PIERNAS/piernasscaracol.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
-nombre = "Piernas de caracol"
+nombre = "Snail Legs"
 textura = ExtResource("2_textura")
 tags = Array[String](["piernas"])

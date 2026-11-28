@@ -23,6 +23,23 @@ func captura(nombre: String) -> void:
 
 func probar() -> void:
 	estado = root.get_node("EstadoPartida")
+	var editable = load("res://escenas/NPC/Intercambio.tscn").instantiate()
+	verificar(editable is Node2D, "Intercambio es una escena 2D")
+	var titulo = editable.get_node("Interfaz/Margen/Panel/Contenido/Titulo")
+	verificar(not titulo.get_parent() is Container, "El diseño permite recolocar elementos sin un Container")
+	titulo.position += Vector2(12, 6)
+	titulo.text = "Título editado desde la escena"
+	var posicion_titulo: Vector2 = titulo.position
+	editable.get_node("NPC1").position += Vector2(20, -10)
+	var posicion_editada: Vector2 = editable.get_node("NPC1").position
+	root.add_child(editable)
+	await process_frame
+	verificar(titulo.position.is_equal_approx(posicion_titulo) and titulo.text == "Título editado desde la escena", "Arrancar conserva la posición y el texto editados")
+	verificar(editable.get_node("NPC1").position.is_equal_approx(posicion_editada), "Arrancar conserva la posición editada del NPC")
+	verificar(editable.botones.size() == 4 and editable.botones.all(func(b): return b.owner == editable), "Las cuatro ofertas existen como nodos guardados en la escena")
+	editable.queue_free()
+	await process_frame
+	estado.intercambio_npc.reiniciar()
 	var nivel = load(estado.ESCENA_NIVEL).instantiate()
 	root.add_child(nivel)
 	current_scene = nivel
@@ -83,8 +100,9 @@ func probar() -> void:
 	nivel = current_scene
 	npc = nivel.get_node("NPCIntercambio")
 	verificar(npc.global_transform.is_equal_approx(posicion_npc), "NPC permanece en su sitio")
+	var dialogo_esperado: String = npc.get_node("Dialogo").dialog_text
 	npc.interactuar()
-	verificar(npc.get_node("Dialogo").visible and npc.get_node("Dialogo").dialog_text == npc.textos.espera, "Sin nueva victoria muestra el diálogo solicitado")
+	verificar(npc.get_node("Dialogo").visible and npc.get_node("Dialogo").dialog_text == dialogo_esperado and not dialogo_esperado.is_empty(), "Sin nueva victoria muestra el diálogo solicitado")
 	await captura("dialogo")
 	npc.get_node("Dialogo").hide()
 	npc._cerrar_dialogo()

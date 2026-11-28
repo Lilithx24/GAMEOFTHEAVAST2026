@@ -6,5 +6,5 @@
 
 [resource]
 script = ExtResource("1")
-nombre = "Enemigo 2"
+nombre = "Enemy 2"
 partes = Array[ExtResource("1_4dgpe")]([ExtResource("2_xsfne")])

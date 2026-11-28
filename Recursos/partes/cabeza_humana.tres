@@ -7,8 +7,8 @@
 script = ExtResource("1_pas1c")
 modDmg = 50
 stamina = 1
-nombre = "Cabeza Experimento 1"
-descripcion_habilidad = "La chola de un epsperimento fallido."
+nombre = "Experiment 1 Head"
+descripcion_habilidad = "The noggin of a failed experiment."
 textura = ExtResource("2_38c14")
 tags = Array[String](["cabeza"])
 metadata/_custom_type_script = "uid://2lctbb4nv7lk"

@@ -1,13 +1,9 @@
 extends Node3D
 
-@export var textos: TextosIntercambio = preload("res://Recursos/textos_intercambio.tres")
-
 func _ready() -> void:
 	$Dialogo.theme = preload("res://escenas/NPC/estilo_intercambio.gd").crear_tema()
 	$Dialogo.get_label().autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	$Dialogo.get_label().custom_minimum_size = Vector2(480, 80)
-	$Dialogo.title = textos.titulo_dialogo
-	$Dialogo.ok_button_text = textos.volver
 
 
 var entrando := false
@@ -29,7 +25,6 @@ func interactuar() -> void:
 		menu = get_tree().current_scene.get_node_or_null("MenuShift")
 		if menu != null:
 			menu.set_process_input(false)
-		$Dialogo.dialog_text = textos.espera
 		$Dialogo.popup_centered(Vector2i(620, 200))
 		return
 	entrando = true

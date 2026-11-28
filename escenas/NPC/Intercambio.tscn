@@ -1,56 +1,748 @@
 [gd_scene format=3 uid="uid://dx8v3o60f4043"]
 
-[ext_resource type="Script" uid="uid://bvuy068c7mc5y" path="res://escenas/NPC/intercambio.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b6tmv5wdgfong" path="res://Assets/FondoCombate.png" id="2"]
-[ext_resource type="PackedScene" path="res://escenas/NPC/NPC1.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://bc4eufaxmr7bv" path="res://sprites/PARTES/TORSOS/torsofurry.png" id="4_g3mxa"]
+[ext_resource type="Texture2D" uid="uid://bc82vi77n6lov" path="res://sprites/PARTES/BRAZOS/brazoaspiradora.png" id="5_sqtrn"]
+[ext_resource type="Texture2D" uid="uid://dxeb2imdge22i" path="res://sprites/PARTES/CABEZAS/cabezapezabisal.png" id="6_m7xcl"]
+[ext_resource type="Texture2D" uid="uid://bmey81u72qtc8" path="res://sprites/PARTES/PIERNAS/piernasruedas.png" id="7_twa1f"]
+[ext_resource type="Script" uid="uid://wcwsfdh0odgp" path="res://escenas/NPC/marioneta_npc.gd" id="8_7qgrs"]
+[ext_resource type="Texture2D" uid="uid://imv1wdgkldac" path="res://sprites/PERSONAJES/NPC1/brazobicho2.png" id="9_rcyfu"]
+[ext_resource type="Texture2D" uid="uid://qncq48o3740y" path="res://sprites/PERSONAJES/NPC1/brazobicho1.png" id="10_1804l"]
+[ext_resource type="Texture2D" uid="uid://bk3o6c4qi5wij" path="res://sprites/PERSONAJES/NPC1/brazoexcavadora.png" id="11_wi2o2"]
+[ext_resource type="Texture2D" uid="uid://22nmfsehkrv7" path="res://sprites/PERSONAJES/NPC1/brazomecanico.png" id="12_wki3c"]
+[ext_resource type="Texture2D" uid="uid://bph3wijccp4po" path="res://sprites/PERSONAJES/NPC1/brazotentaculo.png" id="13_h4dse"]
+[ext_resource type="Texture2D" uid="uid://lt1qmv0myuep" path="res://sprites/PERSONAJES/NPC1/torsohumano.png" id="14_udb5f"]
+[ext_resource type="Texture2D" uid="uid://q7dcjj0xuokl" path="res://sprites/PERSONAJES/NPC1/cabezarata.png" id="15_x406g"]
+[ext_resource type="Script" uid="uid://bvuy068c7mc5y" path="res://escenas/NPC/intercambio.gd" id="script_intercambio"]
+[ext_resource type="Texture2D" uid="uid://8jaa8pnjnhu7" path="res://sprites/INTERFAZ-MENU/torsosinv.png" id="tema_1_uyybj"]
+[ext_resource type="Texture2D" uid="uid://c8xkwjwbwv3rv" path="res://sprites/INTERFAZ-MENU/boton2 (1).png" id="tema_2_jiq1a"]
+[ext_resource type="FontFile" uid="uid://b74skot5133ph" path="res://Assets/tox_typewriter/Tox Typewriter.ttf" id="tema_3_1mhkv"]
 
-[node name="Intercambio" type="Control" unique_id=1408453868]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1")
+[sub_resource type="Animation" id="aceptar"]
+resource_name = "aceptar"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cuerpo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.55, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cuerpo/Cabeza:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.55, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.23, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cuerpo/Mecanico:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.55, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cuerpo/Excavadora:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.55, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.23, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cuerpo/Tentaculo:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.55, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cuerpo/BichoSuperior:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.55, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.23, 0.0]
+}
 
-[node name="Fondo" type="TextureRect" parent="." unique_id=597710284]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="Animation" id="idle"]
+resource_name = "idle"
+length = 3.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cuerpo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -7), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cuerpo/Cabeza:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.6, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.035, 0.035, -0.035]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cuerpo/Mecanico:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.6, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.035, 0.025, -0.035]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cuerpo/Excavadora:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.6, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.025, -0.025, 0.025]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cuerpo/Tentaculo:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.6, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.04, 0.04, -0.04]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cuerpo/BichoSuperior:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.6, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.03, 0.035, -0.03]
+}
+
+[sub_resource type="AnimationLibrary" id="Animaciones"]
+_data = {
+&"aceptar": SubResource("aceptar"),
+&"idle": SubResource("idle")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnhtf"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+texture = ExtResource("tema_1_uyybj")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(1655, 245, 1465, 1900)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_33j3j"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("tema_2_jiq1a")
+region_rect = Rect2(220, 840, 1200, 740)
+modulate_color = Color(0.9, 0.86, 0.77, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16m8w"]
+bg_color = Color(0.27, 0.17, 0.09, 0.08)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y16ot"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("tema_2_jiq1a")
+region_rect = Rect2(220, 840, 1200, 740)
+modulate_color = Color(1.05, 1.02, 0.92, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_814ot"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("tema_2_jiq1a")
+region_rect = Rect2(220, 840, 1200, 740)
+modulate_color = Color(0.8, 0.74, 0.61, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oamj6"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("tema_2_jiq1a")
+region_rect = Rect2(220, 840, 1200, 740)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_36mtb"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("tema_2_jiq1a")
+region_rect = Rect2(220, 840, 1200, 740)
+modulate_color = Color(0.8, 0.74, 0.61, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_af2vr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs4py"]
+bg_color = Color(0.27, 0.17, 0.09, 0.06)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.24)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shfm2"]
+bg_color = Color(0.27, 0.17, 0.09, 0.18)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.72)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsma0"]
+bg_color = Color(0.27, 0.17, 0.09, 0.18)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.72)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x7i2p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_orjsh"]
+bg_color = Color(0.27, 0.17, 0.09, 0.18)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.72)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vcle"]
+bg_color = Color(0.27, 0.17, 0.09, 0.18)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.72)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7xs6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ykx06"]
+bg_color = Color(0.27, 0.17, 0.09, 0.08)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rerx"]
+bg_color = Color(0.27, 0.17, 0.09, 0.18)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.72)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r3r0p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_alqcg"]
+bg_color = Color(0.27, 0.17, 0.09, 0.18)
+border_width_bottom = 2
+border_color = Color(0.35, 0.17, 0.1, 0.72)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_moyt5"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+texture = ExtResource("tema_1_uyybj")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+expand_margin_top = 30.0
+region_rect = Rect2(1655, 245, 1465, 1900)
+
+[sub_resource type="Theme" id="TemaIntercambio"]
+default_font = ExtResource("tema_3_1mhkv")
+default_font_size = 18
+AcceptDialog/styles/panel = SubResource("StyleBoxTexture_nnhtf")
+Button/colors/font_color = Color(0.2, 0.16, 0.11, 1)
+Button/colors/font_disabled_color = Color(0.38, 0.33, 0.26, 0.65)
+Button/colors/font_focus_color = Color(0.2, 0.16, 0.11, 1)
+Button/colors/font_hover_color = Color(0.2, 0.16, 0.11, 1)
+Button/colors/font_hover_pressed_color = Color(0.2, 0.16, 0.11, 1)
+Button/colors/font_pressed_color = Color(0.2, 0.16, 0.11, 1)
+Button/colors/font_selected_color = Color(0.2, 0.16, 0.11, 1)
+Button/styles/disabled = SubResource("StyleBoxTexture_33j3j")
+Button/styles/focus = SubResource("StyleBoxFlat_16m8w")
+Button/styles/hover = SubResource("StyleBoxTexture_y16ot")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_814ot")
+Button/styles/normal = SubResource("StyleBoxTexture_oamj6")
+Button/styles/pressed = SubResource("StyleBoxTexture_36mtb")
+ItemList/colors/font_color = Color(0.2, 0.16, 0.11, 1)
+ItemList/colors/font_disabled_color = Color(0.38, 0.33, 0.26, 0.65)
+ItemList/colors/font_focus_color = Color(0.2, 0.16, 0.11, 1)
+ItemList/colors/font_hover_color = Color(0.2, 0.16, 0.11, 1)
+ItemList/colors/font_hover_pressed_color = Color(0.2, 0.16, 0.11, 1)
+ItemList/colors/font_pressed_color = Color(0.2, 0.16, 0.11, 1)
+ItemList/colors/font_selected_color = Color(0.2, 0.16, 0.11, 1)
+ItemList/styles/focus = SubResource("StyleBoxEmpty_af2vr")
+ItemList/styles/hovered = SubResource("StyleBoxFlat_hs4py")
+ItemList/styles/hovered_selected = SubResource("StyleBoxFlat_shfm2")
+ItemList/styles/hovered_selected_focus = SubResource("StyleBoxFlat_bsma0")
+ItemList/styles/panel = SubResource("StyleBoxEmpty_x7i2p")
+ItemList/styles/selected = SubResource("StyleBoxFlat_orjsh")
+ItemList/styles/selected_focus = SubResource("StyleBoxFlat_2vcle")
+Label/colors/font_color = Color(0.2, 0.16, 0.11, 1)
+Label/colors/font_disabled_color = Color(0.38, 0.33, 0.26, 0.65)
+Label/colors/font_focus_color = Color(0.2, 0.16, 0.11, 1)
+Label/colors/font_hover_color = Color(0.2, 0.16, 0.11, 1)
+Label/colors/font_hover_pressed_color = Color(0.2, 0.16, 0.11, 1)
+Label/colors/font_pressed_color = Color(0.2, 0.16, 0.11, 1)
+Label/colors/font_selected_color = Color(0.2, 0.16, 0.11, 1)
+Oferta/base_type = &"Button"
+Oferta/styles/disabled = SubResource("StyleBoxEmpty_n7xs6")
+Oferta/styles/hover = SubResource("StyleBoxFlat_ykx06")
+Oferta/styles/hover_pressed = SubResource("StyleBoxFlat_3rerx")
+Oferta/styles/normal = SubResource("StyleBoxEmpty_r3r0p")
+Oferta/styles/pressed = SubResource("StyleBoxFlat_alqcg")
+Window/colors/title_color = Color(0.2, 0.16, 0.11, 1)
+Window/styles/embedded_border = SubResource("StyleBoxTexture_moyt5")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxTexture_moyt5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dgk1"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+texture = ExtResource("tema_1_uyybj")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(1655, 245, 1465, 1900)
+
+[node name="Intercambio" type="Node2D" unique_id=776688057]
+script = ExtResource("script_intercambio")
+mensaje_espera = "Deal with the vermin on this floor first, and I'll find something for you."
+mensaje_sin_ofertas = "I don't have any of those pieces"
+mensaje_sin_piezas = "You have no unequipped parts. Come back when you have some."
+mensaje_resumen = "You give: {entregada}\nYou receive: {recibida}"
+mensaje_no_disponible = "This trade is no longer available. Leave and talk to me again."
+mensaje_trato_hecho = "Deal done. {recibida} is now in your SHIFT."
+mensaje_despedida = "That part will come in handy. Take care out there!"
+mensaje_error_salida = "Could not exit. Please try again."
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1316963776]
+offset_right = 1152.0
+offset_bottom = 648.0
 mouse_filter = 2
 texture = ExtResource("2")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Oscurecer" type="ColorRect" parent="." unique_id=1713211904]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Oscurecer" type="ColorRect" parent="." unique_id=1557590067]
+offset_right = 1152.0
+offset_bottom = 648.0
 mouse_filter = 2
 color = Color(0.07, 0.045, 0.025, 0.2)
 
-[node name="NPC1" parent="." unique_id=245818699 instance=ExtResource("3")]
+[node name="NPC1" type="Node2D" parent="." unique_id=245818699]
+position = Vector2(218.88, 583.2)
+scale = Vector2(0.50622326, 0.50622326)
+script = ExtResource("8_7qgrs")
 
-[node name="Margen" type="MarginContainer" parent="." unique_id=1635970368]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.38
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
+[node name="Cuerpo" type="Node2D" parent="NPC1" unique_id=269050149]
 
-[node name="Panel" type="PanelContainer" parent="Margen" unique_id=1994121982]
-layout_mode = 2
+[node name="BichoSuperior" type="Node2D" parent="NPC1/Cuerpo" unique_id=847672336]
+position = Vector2(79, -570)
 
-[node name="Contenido" type="VBoxContainer" parent="Margen/Panel" unique_id=752942629]
-layout_mode = 2
-theme_override_constants/separation = 12
+[node name="Imagen" type="Sprite2D" parent="NPC1/Cuerpo/BichoSuperior" unique_id=1017012945]
+position = Vector2(-60, -220)
+texture = ExtResource("9_rcyfu")
+centered = false
+
+[node name="BichoInferior" type="Node2D" parent="NPC1/Cuerpo" unique_id=615640942]
+position = Vector2(194, -330)
+
+[node name="Imagen" type="Sprite2D" parent="NPC1/Cuerpo/BichoInferior" unique_id=801719550]
+position = Vector2(-35, -40)
+texture = ExtResource("10_1804l")
+centered = false
+
+[node name="Excavadora" type="Node2D" parent="NPC1/Cuerpo" unique_id=1450587083]
+position = Vector2(154, -505)
+
+[node name="Imagen" type="Sprite2D" parent="NPC1/Cuerpo/Excavadora" unique_id=794446172]
+position = Vector2(-75, -115)
+texture = ExtResource("11_wi2o2")
+centered = false
+
+[node name="Mecanico" type="Node2D" parent="NPC1/Cuerpo" unique_id=1375775491]
+position = Vector2(-176, -525)
+
+[node name="Imagen" type="Sprite2D" parent="NPC1/Cuerpo/Mecanico" unique_id=822268295]
+position = Vector2(-225, -175)
+texture = ExtResource("12_wki3c")
+centered = false
+
+[node name="Tentaculo" type="Node2D" parent="NPC1/Cuerpo" unique_id=357942799]
+position = Vector2(-171, -360)
+
+[node name="Imagen" type="Sprite2D" parent="NPC1/Cuerpo/Tentaculo" unique_id=1000617928]
+position = Vector2(-200, -90)
+texture = ExtResource("13_h4dse")
+centered = false
+
+[node name="Torso" type="Node2D" parent="NPC1/Cuerpo" unique_id=415780933]
+position = Vector2(-1, -360)
+
+[node name="Imagen" type="Sprite2D" parent="NPC1/Cuerpo/Torso" unique_id=69404381]
+position = Vector2(-230, -280)
+texture = ExtResource("14_udb5f")
+centered = false
+
+[node name="Cabeza" type="Node2D" parent="NPC1/Cuerpo" unique_id=812749164]
+position = Vector2(-86, -520)
+
+[node name="Imagen" type="Sprite2D" parent="NPC1/Cuerpo/Cabeza" unique_id=873235382]
+position = Vector2(-105, -145)
+texture = ExtResource("15_x406g")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NPC1" unique_id=475573401]
+libraries/ = SubResource("Animaciones")
+autoplay = &"idle"
+
+[node name="Interfaz" type="Control" parent="." unique_id=646026743]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+theme = SubResource("TemaIntercambio")
+
+[node name="Margen" type="Control" parent="Interfaz" unique_id=2056020586]
+anchors_preset = 0
+offset_left = 437.76
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 1
+
+[node name="Panel" type="Panel" parent="Interfaz/Margen" unique_id=1243622762]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 690.0
+offset_bottom = 624.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4dgk1")
+
+[node name="Contenido" type="Control" parent="Interfaz/Margen/Panel" unique_id=2097993499]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 648.0
+offset_bottom = 570.0
+mouse_filter = 1
+
+[node name="Titulo" type="Label" parent="Interfaz/Margen/Panel/Contenido" unique_id=1672980512]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 618.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 26
+text = "RatChange"
+autowrap_mode = 3
+
+[node name="Estado" type="Label" parent="Interfaz/Margen/Panel/Contenido" unique_id=852573944]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 40.0
+offset_right = 618.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 18
+text = "Do you want one of these?"
+autowrap_mode = 3
+
+[node name="Ofertas" type="Control" parent="Interfaz/Margen/Panel/Contenido" unique_id=834395857]
+anchors_preset = 0
+offset_top = 72.0
+offset_right = 618.0
+offset_bottom = 227.0
+mouse_filter = 1
+
+[node name="Torso" type="Button" parent="Interfaz/Margen/Panel/Contenido/Ofertas" unique_id=1017772076]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 148.0
+offset_bottom = 155.0
+tooltip_text = "Furry Torso
+"
+theme_type_variation = &"Oferta"
+toggle_mode = true
+
+[node name="Contenido" type="Control" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Torso" unique_id=347832390]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 142.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="Categoria" type="Label" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Torso/Contenido" unique_id=765018056]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 14
+text = "TORSO"
+horizontal_alignment = 1
+
+[node name="Imagen" type="TextureRect" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Torso/Contenido" unique_id=587929585]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 136.0
+offset_bottom = 98.0
+mouse_filter = 2
+texture = ExtResource("4_g3mxa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nombre" type="Label" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Torso/Contenido" unique_id=789301170]
+layout_mode = 0
+offset_top = 102.0
+offset_right = 136.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 15
+text = "Furry Torso"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Brazo" type="Button" parent="Interfaz/Margen/Panel/Contenido/Ofertas" unique_id=1900482478]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 156.0
+offset_right = 305.0
+offset_bottom = 155.0
+tooltip_text = "Vacuum Arm
+"
+theme_type_variation = &"Oferta"
+toggle_mode = true
+
+[node name="Contenido" type="Control" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Brazo" unique_id=964352991]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 143.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="Categoria" type="Label" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Brazo/Contenido" unique_id=303577583]
+layout_mode = 0
+offset_right = 137.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 14
+text = "ARM"
+horizontal_alignment = 1
+
+[node name="Imagen" type="TextureRect" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Brazo/Contenido" unique_id=500895490]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 137.0
+offset_bottom = 98.0
+mouse_filter = 2
+texture = ExtResource("5_sqtrn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nombre" type="Label" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Brazo/Contenido" unique_id=2010720117]
+layout_mode = 0
+offset_top = 102.0
+offset_right = 137.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 15
+text = "Vacuum Arm"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Cabeza" type="Button" parent="Interfaz/Margen/Panel/Contenido/Ofertas" unique_id=1643725638]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 313.0
+offset_right = 461.0
+offset_bottom = 155.0
+tooltip_text = "Anglerfish Head
+"
+theme_type_variation = &"Oferta"
+toggle_mode = true
+
+[node name="Contenido" type="Control" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Cabeza" unique_id=1354468228]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 142.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="Categoria" type="Label" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Cabeza/Contenido" unique_id=1899881320]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 14
+text = "HEAD"
+horizontal_alignment = 1
+
+[node name="Imagen" type="TextureRect" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Cabeza/Contenido" unique_id=747750792]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 136.0
+offset_bottom = 98.0
+mouse_filter = 2
+texture = ExtResource("6_m7xcl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nombre" type="Label" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Cabeza/Contenido" unique_id=414173477]
+layout_mode = 0
+offset_top = 102.0
+offset_right = 136.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 15
+text = "Anglerfish Head"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Piernas" type="Button" parent="Interfaz/Margen/Panel/Contenido/Ofertas" unique_id=2115212822]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 469.0
+offset_right = 618.0
+offset_bottom = 155.0
+tooltip_text = "Wheeled Legs
+"
+theme_type_variation = &"Oferta"
+toggle_mode = true
+
+[node name="Contenido" type="Control" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Piernas" unique_id=1360658165]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 143.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="Categoria" type="Label" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Piernas/Contenido" unique_id=928510432]
+layout_mode = 0
+offset_right = 137.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 14
+text = "LEGS"
+horizontal_alignment = 1
+
+[node name="Imagen" type="TextureRect" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Piernas/Contenido" unique_id=532472312]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 137.0
+offset_bottom = 98.0
+mouse_filter = 2
+texture = ExtResource("7_twa1f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nombre" type="Label" parent="Interfaz/Margen/Panel/Contenido/Ofertas/Piernas/Contenido" unique_id=1630768087]
+layout_mode = 0
+offset_top = 102.0
+offset_right = 137.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 15
+text = "Wheeled Legs"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TituloInventario" type="Label" parent="Interfaz/Margen/Panel/Contenido" unique_id=359793575]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 239.0
+offset_right = 618.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 16
+text = "Your part of the deal"
+autowrap_mode = 3
+
+[node name="Inventario" type="ItemList" parent="Interfaz/Margen/Panel/Contenido" unique_id=244358073]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 269.0
+offset_right = 618.0
+offset_bottom = 426.0
+theme_override_font_sizes/font_size = 17
+fixed_icon_size = Vector2i(40, 40)
+
+[node name="Resumen" type="Label" parent="Interfaz/Margen/Panel/Contenido" unique_id=998921772]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 438.0
+offset_right = 618.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 16
+text = "Pick your piece"
+autowrap_mode = 3
+
+[node name="Acciones" type="Control" parent="Interfaz/Margen/Panel/Contenido" unique_id=1884269191]
+anchors_preset = 0
+offset_top = 496.0
+offset_right = 618.0
+offset_bottom = 540.0
+mouse_filter = 1
+
+[node name="Aceptar" type="Button" parent="Interfaz/Margen/Panel/Contenido/Acciones" unique_id=1397471141]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 301.0
+offset_bottom = 44.0
+disabled = true
+text = "Accept"
+
+[node name="Salir" type="Button" parent="Interfaz/Margen/Panel/Contenido/Acciones" unique_id=2052914487]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 317.0
+offset_right = 618.0
+offset_bottom = 44.0
+text = "Exit"
