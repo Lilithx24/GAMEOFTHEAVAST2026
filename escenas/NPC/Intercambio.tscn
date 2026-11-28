@@ -364,7 +364,8 @@ script = ExtResource("script_intercambio")
 mensaje_espera = "Deal with the vermin on this floor first, and I'll find something for you."
 mensaje_sin_ofertas = "I don't have any of those pieces"
 mensaje_sin_piezas = "You have no unequipped parts. Come back when you have some."
-mensaje_resumen = "You give: {entregada}\nYou receive: {recibida}"
+mensaje_resumen = "You give: {entregada}
+You receive: {recibida}"
 mensaje_no_disponible = "This trade is no longer available. Leave and talk to me again."
 mensaje_trato_hecho = "Deal done. {recibida} is now in your SHIFT."
 mensaje_despedida = "That part will come in handy. Take care out there!"
@@ -734,15 +735,18 @@ mouse_filter = 1
 [node name="Aceptar" type="Button" parent="Interfaz/Margen/Panel/Contenido/Acciones" unique_id=1397471141]
 unique_name_in_owner = true
 layout_mode = 0
-offset_right = 301.0
-offset_bottom = 44.0
+offset_left = 162.23999
+offset_top = -24.0
+offset_right = 264.47998
+offset_bottom = 23.0
 disabled = true
 text = "Accept"
 
 [node name="Salir" type="Button" parent="Interfaz/Margen/Panel/Contenido/Acciones" unique_id=2052914487]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 317.0
-offset_right = 618.0
-offset_bottom = 44.0
+offset_left = 287.24
+offset_top = -19.0
+offset_right = 379.0
+offset_bottom = 21.0
 text = "Exit"

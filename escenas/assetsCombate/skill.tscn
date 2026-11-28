@@ -44,7 +44,7 @@ offset_top = 58.0
 offset_right = 116.0
 offset_bottom = 85.0
 theme_override_font_sizes/font_size = 12
-text = "Attack 10"
+text = "Human Arm"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -55,8 +55,8 @@ offset_left = 119.0
 offset_top = 58.0
 offset_right = 143.0
 offset_bottom = 85.0
-theme_override_font_sizes/font_size = 10
-text = "1 STA"
+theme_override_font_sizes/font_size = 14
+text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -70,18 +70,6 @@ offset_bottom = 175.0
 mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
-
-[node name="Origen" type="Label" parent="VBoxContainer" unique_id=468553919]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 181.0
-offset_right = 144.0
-offset_bottom = 201.0
-theme_override_font_sizes/font_size = 10
-text = "Human Arm"
-horizontal_alignment = 1
-vertical_alignment = 1
-text_overrun_behavior = 3
 
 [node name="Damage" type="Label" parent="VBoxContainer" unique_id=1361306831]
 layout_mode = 0
@@ -100,7 +88,6 @@ offset_top = 236.0
 offset_right = 143.0
 offset_bottom = 268.0
 theme_override_font_sizes/font_size = 12
-text = "Drag onto an enemy"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

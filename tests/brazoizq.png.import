@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j1nqm8qyq1j2"
-path="res://.godot/imported/brazoizq.png-f915b01ce83bf597f34c485e6bf0a552.ctex"
+path="res://.godot/imported/brazoizq.png-1e05d11f2b693f333ab90175976cf3d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/brazoizq.png"
-dest_files=["res://.godot/imported/brazoizq.png-f915b01ce83bf597f34c485e6bf0a552.ctex"]
+source_file="res://tests/brazoizq.png"
+dest_files=["res://.godot/imported/brazoizq.png-1e05d11f2b693f333ab90175976cf3d8.ctex"]
 
 [params]
 

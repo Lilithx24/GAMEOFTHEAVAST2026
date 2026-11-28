@@ -6,6 +6,7 @@
 script = ExtResource("1_pkwnt")
 
 [node name="ProgressBarJ" type="ProgressBar" parent="." unique_id=1358147742]
+visible = false
 offset_left = 157.0
 offset_top = 411.0
 offset_right = 919.0

@@ -66,7 +66,19 @@ func turno(objetivo: Personaje) -> void:
 		debilEstado = 0
 	if stun == 0:
 		var brazo_elegido := parte_brazo_aleatoria()
-		ataque(objetivo, brazo_elegido.datos.dmg, brazo_elegido.datos.efectos)
+		if brazo_elegido == null:
+			return
+		var marioneta := $Objetivo/Enemigo2 if tipo_enemigo == 1 else $Objetivo/Enemigo1
+		var animacion: AnimationPlayer = marioneta.get_node("AnimationPlayer")
+		# La animación ya existe en las escenas de ambos enemigos.
+		animacion.play("asalto", -1, 2.0)
+		await get_tree().create_timer(0.12).timeout
+		await ataque(objetivo, brazo_elegido.datos.dmg, brazo_elegido.datos.efectos)
+		if animacion.is_playing():
+			await animacion.animation_finished
+		animacion.play("RESET")
+		animacion.advance(0)
+		animacion.stop()
 	else:
 		stun = stun - 1 
 		
@@ -84,17 +96,23 @@ func parte_brazo_aleatoria() -> ParteEnemigo:
 func ataque(objetivo: Personaje, dmg: int, efectos: Array[String]) -> void:
 	if "sanacion" in efectos:
 		for parte in partes:
-			parte.vidaActual = parte.vidaActual + dmg
-			parte.actualizar_barra()
+			parte.setVidaActual(parte.vidaActual + dmg)
+		actualizar_barra()
 	else:
 		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
 	if "multihit2" in efectos:
 		await get_tree().create_timer(0.1).timeout
+		if objetivo.vidaActual <= 0:
+			return
 		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
 	if "multihit3" in efectos:
 		await get_tree().create_timer(0.1).timeout
+		if objetivo.vidaActual <= 0:
+			return
 		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
 		await get_tree().create_timer(0.1).timeout
+		if objetivo.vidaActual <= 0:
+			return
 		objetivo.sufrirDmg(dmg*(1 - 0.25 * debilEstado))
 	if "debil" in efectos:
 		objetivo.debilContador = objetivo.debilContador + 1

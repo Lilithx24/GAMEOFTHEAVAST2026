@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://delkla7e1lpxa"
-path.s3tc="res://.godot/imported/cabeza 1.png-4578c92c04a8bee99801027a8d49fa79.s3tc.ctex"
+uid="uid://vus5amm41mlr"
+path.s3tc="res://.godot/imported/test_AC.jpg-25e95284dd99c4d9f747fab68a3277b5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/cabeza 1.png"
-dest_files=["res://.godot/imported/cabeza 1.png-4578c92c04a8bee99801027a8d49fa79.s3tc.ctex"]
+source_file="res://tests/test_AC.jpg"
+dest_files=["res://.godot/imported/test_AC.jpg-25e95284dd99c4d9f747fab68a3277b5.s3tc.ctex"]
 
 [params]
 

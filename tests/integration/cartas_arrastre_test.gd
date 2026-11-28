@@ -27,6 +27,9 @@ func run() -> void:
 	for i in 4:
 		await process_frame
 	var card = combat.contenedor.get_child(0)
+	verify(card.get_node("VBoxContainer/Nombre").text == card.parte_origen.nombre, "El título es el nombre de la pieza")
+	verify(card.get_node("VBoxContainer/Coste").text == str(card.staSkill), "El coste solo muestra el número")
+	verify(card.get_node("VBoxContainer/Estado").text.is_empty(), "Una carta disponible no muestra instrucciones redundantes")
 	var sibling = combat.contenedor.get_child(1)
 	var pos: Vector2 = card.global_position
 	var sibling_pos: Vector2 = sibling.global_position
@@ -37,6 +40,8 @@ func run() -> void:
 	card.force_drag(card, null)
 	card._get_drag_data(Vector2.ZERO)
 	await process_frame
+	var preview = root.find_child("VistaArrastreCarta", true, false)
+	verify(preview != null and not preview.z_as_relative and preview.z_index == RenderingServer.CANVAS_ITEM_Z_MAX, "La vista de arrastre tiene su propio orden Z por encima de los enemigos")
 	verify(root.gui_is_dragging(), "Arrastre activo en el viewport")
 	verify(card.visible and not card.get_node("Fondo").visible and not card.get_node("VBoxContainer").visible, "La carta de la mano no se dibuja durante el arrastre")
 	verify(card.global_position == pos and sibling.global_position == sibling_pos, "La mano mantiene los huecos durante el arrastre")

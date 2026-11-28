@@ -25,17 +25,13 @@ content_margin_right = 20.0
 content_margin_top = 8.0
 content_margin_bottom = 8.0
 
-[sub_resource type="StyleBoxFlat" id="EstiloAviso"]
-content_margin_left = 24.0
-content_margin_top = 18.0
-content_margin_right = 24.0
-content_margin_bottom = 18.0
-bg_color = Color(0.13, 0.11, 0.08, 0.97)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.75, 0.64, 0.39, 1)
+[sub_resource type="StyleBoxTexture" id="EstiloAviso"]
+texture = ExtResource("6_interactuar")
+region_rect = Rect2(220, 840, 1200, 740)
+content_margin_left = 22.0
+content_margin_top = 14.0
+content_margin_right = 22.0
+content_margin_bottom = 14.0
 
 [node name="InteraccionObjetos" type="CanvasLayer" unique_id=691026875]
 process_mode = 3
@@ -101,23 +97,24 @@ theme_override_styles/focus = SubResource("EstiloInteractuar")
 text = "INTERACT"
 
 [node name="Aviso" type="PanelContainer" parent="." unique_id=436982741]
-visible = false
-anchors_preset = -1
-anchor_left = 0.15
-anchor_top = 1.0
-anchor_right = 0.85
-anchor_bottom = 1.0
-offset_top = -125.0
-offset_bottom = -35.0
-grow_horizontal = 2
-grow_vertical = 0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = 90.0
+grow_horizontal = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("EstiloAviso")
 
 [node name="Texto" type="Label" parent="Aviso" unique_id=1687775391]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.94, 0.78, 1)
-theme_override_font_sizes/font_size = 20
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("7_fuente")
+theme_override_colors/font_color = Color(0.16, 0.12, 0.08, 1)
+theme_override_font_sizes/font_size = 16
+text = "Found: Fly Head"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

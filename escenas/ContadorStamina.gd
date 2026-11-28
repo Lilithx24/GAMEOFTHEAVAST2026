@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-var icono: Texture2D = preload("res://sprites/139387-lightning-icon.png")
+var icono: Texture2D = preload("res://sprites/Indicador_Stamina.png")
 @export var tamano_icono: Vector2 = Vector2(32, 32)
 
 @onready var fila: HBoxContainer = $HBoxContainer/Rayos

@@ -27,12 +27,11 @@ func _ready() -> void:
 		$Fondo.texture = fondos.pick_random()
 		_aspecto_elegido = true
 	# La carta conserva los datos del ataque de la pieza equipada.
-	etiquetaNombre.text = nombreSkill
-	etiquetaCoste.text = "%d STA" % staSkill
+	etiquetaNombre.text = parte_origen.nombre if parte_origen != null else nombreSkill
+	etiquetaCoste.text = str(staSkill)
 	$VBoxContainer/Damage.text = "%d damage" % dmgSkill
 	if parte_origen:
 		$VBoxContainer/Imagen.texture = parte_origen.textura
-		$VBoxContainer/Origen.text = parte_origen.nombre
 		tooltip_text = parte_origen.descripcion_habilidad
 	_actualizar_estado()
 
@@ -53,7 +52,7 @@ func recuperar() -> void:
 
 func _actualizar_estado() -> void:
 	modulate = Color.WHITE if disponible and not usada else Color(0.55, 0.55, 0.55)
-	$VBoxContainer/Estado.text = "Used" if usada else ("Drag onto an enemy" if disponible else "Not enough stamina")
+	$VBoxContainer/Estado.text = "Used" if usada else ("" if disponible else "Not enough stamina")
 
 
 # Godot llama a esta función cuando empiezas a arrastrar el nodo
@@ -64,9 +63,18 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	var copia: Control = duplicate()
 	# La vista de arrastre conserva el PNG de la carta original.
 	copia._aspecto_elegido = true
+	copia.parte_origen = parte_origen
+	copia.rotation = 0.0
+	copia.z_index = 0
+	copia.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	copia.modulate.a = 0.8
 	copia.position = -size / 2
 	var preview := Control.new()
+	preview.name = "VistaArrastreCarta"
+	# Godot separa la vista de arrastre de la mano: no hereda su orden Z.
+	preview.z_as_relative = false
+	preview.z_index = RenderingServer.CANVAS_ITEM_Z_MAX
+	preview.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	preview.add_child(copia)
 	set_drag_preview(preview)
 	# Ocultar solo el dibujo mantiene el hueco y el orden de la mano.

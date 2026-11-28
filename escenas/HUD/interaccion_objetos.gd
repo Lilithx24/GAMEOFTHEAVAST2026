@@ -164,9 +164,9 @@ func _recoger(objeto: ObjetoExaminable) -> void:
 	var resultado := EstadoPartida.recoger_parte(objeto.id_objeto, parte)
 	match resultado:
 		"ok":
-			texto.text = "You found %s. It has been added to your SHIFT." % parte.nombre
+			texto.text = "Found: %s" % parte.nombre
 		"lleno":
-			texto.text = "Your SHIFT is full. Make room to pick up this part."
+			texto.text = "SHIFT is full. Make some room."
 		_:
 			return
 	_reproducir_sonido_examinar()

@@ -2,6 +2,8 @@ class_name Personaje
 extends Node
 
 signal murio
+signal esquivo
+signal vida_cambiada
 
 ###### stats ######
 var vidaMax: int = 50
@@ -41,12 +43,13 @@ func sufrirDmg(damage: int):
 		var danoFinal: float = damage * (1.0 - reduccion)  
 		setVidaActual(vidaActual - danoFinal)
 	else:
-		print("Fallaste puto")
+		esquivo.emit()
 	if vidaActual <= 0:
 		murio.emit()
 
 func setVidaActual(vida: int) -> int:
 	vidaActual = clampi(vida, 0, vidaMax) #Esta mierda es pa que no baje de 0 (Código reciclado)
+	vida_cambiada.emit()
 	return vidaActual
 	
 	

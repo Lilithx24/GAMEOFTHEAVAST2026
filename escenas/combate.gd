@@ -10,20 +10,26 @@ var parteEnemigaSeleccionada: ParteEnemigo
 @onready var enemigo_actual: Enemigo = $Enemigo
 var personaje: Personaje
 var combate_terminado: bool = false
+var turno_enemigo := false
+var resolviendo_carta := false
 var partes_usadas: Dictionary = {}
 var skillSolicitada: bool = false
-@onready var barra_vida: ProgressBar = $PanelJugador/CanvasLayer/Interfaz/Stadisticas/ProgressBarJ
-@onready var contenedor = $PanelJugador/ScrollContainer/HBoxContainer
+@onready var barra_vida: ProgressBar = $PanelJugador/CanvasLayer/Interfaz/ProgressBarJ
+@onready var contenedor = $PanelJugador/ManoCartas
+@onready var aviso_turno: Control = $PanelJugador/CanvasLayer/AvisoTurno
+@onready var vida_texto: Label = $PanelJugador/CanvasLayer/Interfaz/VidaTexto
 @onready var contador_stamina: Control = $PanelJugador/CanvasLayer/Interfaz/ContadorStamina
-@onready var texto_stats: Label = $PanelJugador/CanvasLayer/Interfaz/Stadisticas/TextoStats
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	contenedor = $PanelJugador/ScrollContainer/HBoxContainer
+	contenedor = $PanelJugador/ManoCartas
 	enemigo_actual.configurar_apariencia(EstadoPartida.tipo_enemigo_actual)
 	for parte in enemigo_actual.partes:
 		parte.carta_soltada.connect(_on_carta_soltada)
 	personaje = crearPersonaje(EstadoPartida.obtener_vida_maxima(), [])
+	personaje.esquivo.connect(_mostrar_esquiva)
+	personaje.vida_cambiada.connect(actualizar_barraJ)
+	$PanelJugador/CanvasLayer/AvisoEsquiva.hide()
 	aplicarEstadísticas()
 	EstadoPartida.inventario_cambiado.connect(_solicitar_skills)
 	reconstruirSkills()
@@ -49,12 +55,6 @@ func aplicarEstadísticas() -> void:
 	personaje.proteccion = stat(cabeza, "proteccion") + stat(piernas, "proteccion") + stat(torso, "proteccion")
 	personaje.modDmg = stat(cabeza, "modDmg") + stat(piernas, "modDmg")
 	
-	###### Cambiamos el texto de la interfaz acorde a los cambios realizados ######
-	texto_stats.text = "Health: \nProtection: %d\nEvasion: %d\nBonus damage: %d" % [
-		personaje.proteccion,
-		personaje.evasion,
-		personaje.modDmg
-	]
 
 
 # Solo cuando cambia el equipo (y al empezar el combate)
@@ -101,7 +101,7 @@ func crearSkill(nombre: String, dmg: int, sta: int, origen: BrazoInventario = nu
 ###### Fin funciones instanciamiento ######
 
 func _on_carta_soltada(skill: Skill, parte: ParteEnemigo) -> void:
-	if combate_terminado or not skill.disponible or skill.usada:
+	if combate_terminado or turno_enemigo or resolviendo_carta or not skill.disponible or skill.usada:
 		return
 	if skill.get_parent() != contenedor or skill.staSkill > personaje.staminaActual:
 		return
@@ -110,10 +110,15 @@ func _on_carta_soltada(skill: Skill, parte: ParteEnemigo) -> void:
 	if skill.parte_origen:
 		partes_usadas[skill.parte_origen] = true
 	parteEnemigaSeleccionada = parte
+	resolviendo_carta = true
+	aviso_turno.hide()
 	skill.marcarUsada()
 	await _onSkillElegida(skill.dmgSkill + personaje.modDmg, skill.staSkill, skill.efectos)
+	resolviendo_carta = false
 	if not combate_terminado and is_instance_valid(skill) and skill.parte_origen and skill.parte_origen.renueva_carta_al_usar:
 		_reemplazar_carta_usada(skill)
+	if not combate_terminado:
+		updateSkills()
 
 
 func _reemplazar_carta_usada(skill: Skill) -> void:
@@ -126,6 +131,7 @@ func _reemplazar_carta_usada(skill: Skill) -> void:
 	contenedor.move_child(nueva, posicion)
 	nueva.updateDisponibilidad(personaje.staminaActual)
 	skill.queue_free()
+	updateSkills()
 
 func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	if combate_terminado:
@@ -134,7 +140,7 @@ func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 	personaje.actualizar_barra()
 	actualizar_barraJ()
 	if "sanacion" in efectos:
-		personaje.vidaActual = personaje.vidaActual + dmg
+		personaje.setVidaActual(personaje.vidaActual + dmg)
 		personaje.actualizar_barra()
 		actualizar_barraJ()
 	else:
@@ -167,12 +173,17 @@ func _onSkillElegida(dmg: int, sta: int, efectos: Array[String]) -> void:
 func actualizar_barraJ() -> void:
 	barra_vida.max_value = personaje.vidaMax
 	barra_vida.value = personaje.vidaActual
+	vida_texto.text = "%d / %d" % [personaje.vidaActual, personaje.vidaMax]
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interactuar"):
 		terminarTurno()
 
 func terminarTurno() -> void:
+	if combate_terminado or turno_enemigo or resolviendo_carta:
+		return
+	turno_enemigo = true
+	aviso_turno.hide()
 	############# Esto checkea los brazos que se han quedado sin usos para eliminarlos
 	for i in EstadoPartida.brazos_equipados.size():
 		var brazo := EstadoPartida.brazos_equipados[i] as BrazoInventario
@@ -182,7 +193,10 @@ func terminarTurno() -> void:
 	####################################
 	if combate_terminado:
 		return
-	enemigo_actual.turno(personaje)
+	await enemigo_actual.turno(personaje)
+	turno_enemigo = false
+	if combate_terminado:
+		return
 	partes_usadas.clear()
 	personaje.actualizar_barra()
 	actualizar_barraJ()
@@ -205,10 +219,14 @@ func terminarTurno() -> void:
 
 
 func updateSkills() -> void:
+	var hay_jugada := false
 	contador_stamina.actualizar(personaje.staminaActual)
 	for hijo in contenedor.get_children():
 		if hijo is Skill:
 			hijo.updateDisponibilidad(personaje.staminaActual)
+			if hijo.disponible and not hijo.usada:
+				hay_jugada = true
+	aviso_turno.visible = not combate_terminado and not turno_enemigo and not resolviendo_carta and not hay_jugada
 
 func stat(pieza: ParteInventario, nombre: String):
 	if pieza == null:
@@ -226,6 +244,7 @@ func _retirar_cartas_huerfanas() -> void:
 			carta.queue_free()
 
 func ganarCombate() -> void:
+	aviso_turno.hide()
 	combate_terminado = true
 	if not EstadoPartida.enemigo_actual_id.is_empty():
 		EstadoPartida.enemigos_derrotados[EstadoPartida.enemigo_actual_id] = true
@@ -238,6 +257,7 @@ func ganarCombate() -> void:
 func _on_personaje_murio() -> void:
 	if combate_terminado:
 		return
+	aviso_turno.hide()
 	combate_terminado = true   # bloquea cartas y fin de turno
 	var pantalla := ESCENA_MUERTE.instantiate()
 	add_child(pantalla)
@@ -246,3 +266,7 @@ func _on_personaje_murio() -> void:
 
 func _on_button_pressed() -> void:
 	pass # Replace with function body.
+
+func _mostrar_esquiva() -> void:
+	$PanelJugador/CanvasLayer/AvisoEsquiva.show()
+	$PanelJugador/CanvasLayer/AvisoEsquiva/Temporizador.start()

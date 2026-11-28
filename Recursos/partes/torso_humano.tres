@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="TorsoInventario" format=3 uid="uid://bb7eqn01lvajq"]
 
 [ext_resource type="Script" uid="uid://c60h3mu0i3n6p" path="res://escenas/HUD/torsoInventario.gd" id="1_6rd12"]
-[ext_resource type="Texture2D" uid="uid://bk14y0a2j3bmh" path="res://sprites/torso1.png" id="2_qbvhu"]
+[ext_resource type="Texture2D" uid="uid://yalidi8jgukw" path="res://sprites/PERSONAJES/ENEMIGO1/torsohumano.png" id="2_qbvhu"]
 
 [resource]
 script = ExtResource("1_6rd12")

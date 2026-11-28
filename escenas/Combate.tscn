@@ -6,6 +6,30 @@
 [ext_resource type="PackedScene" uid="uid://c7trry61vrlrr" path="res://escenas/HUD/menu_shift.tscn" id="2_t3t54"]
 [ext_resource type="PackedScene" uid="uid://dfgvggkb0ji34" path="res://escenas/assetsCombate/enemigo.tscn" id="enemigo_visual"]
 
+[ext_resource type="Script" path="res://escenas/HUD/mano_cartas.gd" id="mano"]
+[ext_resource type="Texture2D" path="res://sprites/INTERFAZ-MENU/boton2 (1).png" id="papel"]
+[ext_resource type="FontFile" path="res://Assets/tox_typewriter/Tox Typewriter.ttf" id="fuente"]
+
+[sub_resource type="StyleBoxTexture" id="PapelHUD"]
+texture = ExtResource("papel")
+region_rect = Rect2(220, 840, 1200, 740)
+
+[sub_resource type="StyleBoxFlat" id="VidaFondo"]
+bg_color = Color(0.24, 0.18, 0.12, 0.3)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24, 0.18, 0.12, 1)
+
+[sub_resource type="StyleBoxFlat" id="VidaRelleno"]
+bg_color = Color(0.45, 0.12, 0.09, 1)
+
+[sub_resource type="Theme" id="TemaHUD"]
+default_font = ExtResource("fuente")
+default_font_size = 16
+Label/colors/font_color = Color(0.16, 0.12, 0.08, 1)
+
 [node name="Combate" type="Node2D" unique_id=876481208]
 script = ExtResource("1_jotnx")
 
@@ -26,53 +50,119 @@ z_index = 10
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelJugador" unique_id=512236629]
+[node name="ManoCartas" type="Control" parent="PanelJugador"]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 330.0
-offset_right = 1128.0
-offset_bottom = 632.0
-vertical_scroll_mode = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador/ScrollContainer" unique_id=174099722]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 12
-alignment = 1
+offset_left = 296.0
+offset_top = 310.0
+offset_right = 1134.0
+offset_bottom = 600.0
+mouse_filter = 2
+script = ExtResource("mano")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PanelJugador" unique_id=538994018]
+layer = 1
 
-[node name="Interfaz" type="VBoxContainer" parent="PanelJugador/CanvasLayer" unique_id=1799662725]
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/separation = 8
+[node name="Interfaz" type="Panel" parent="PanelJugador/CanvasLayer" unique_id=1799662725]
+offset_left = 18.0
+offset_top = 504.0
+offset_right = 278.0
+offset_bottom = 630.0
+mouse_filter = 2
+theme = SubResource("TemaHUD")
+theme_override_styles/panel = SubResource("PapelHUD")
+
+[node name="VidaTexto" type="Label" parent="PanelJugador/CanvasLayer/Interfaz"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 20.0
+offset_right = 232.0
+offset_bottom = 42.0
+text = "50 / 50"
+mouse_filter = 2
+
+[node name="ProgressBarJ" type="ProgressBar" parent="PanelJugador/CanvasLayer/Interfaz"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 48.0
+offset_right = 232.0
+offset_bottom = 61.0
+mouse_filter = 2
+theme_override_styles/background = SubResource("VidaFondo")
+theme_override_styles/fill = SubResource("VidaRelleno")
+value = 100.0
+show_percentage = false
 
 [node name="ContadorStamina" type="HBoxContainer" parent="PanelJugador/CanvasLayer/Interfaz" unique_id=1059483360]
-layout_mode = 2
+layout_mode = 0
+offset_left = 28.0
+offset_top = 74.0
+offset_right = 232.0
+offset_bottom = 102.0
+mouse_filter = 2
 script = ExtResource("2_414ia")
+tamano_icono = Vector2(22, 22)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelJugador/CanvasLayer/Interfaz/ContadorStamina" unique_id=1903364674]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="PanelJugador/CanvasLayer/Interfaz/ContadorStamina/HBoxContainer" unique_id=102181022]
 layout_mode = 2
+mouse_filter = 2
 text = "Stamina:"
 
 [node name="Rayos" type="HBoxContainer" parent="PanelJugador/CanvasLayer/Interfaz/ContadorStamina/HBoxContainer" unique_id=314157588]
 layout_mode = 2
+mouse_filter = 2
 
-[node name="Stadisticas" type="HBoxContainer" parent="PanelJugador/CanvasLayer/Interfaz" unique_id=981571799]
-layout_mode = 2
+[node name="AvisoTurno" type="Panel" parent="PanelJugador/CanvasLayer"]
+offset_left = 18.0
+offset_top = 420.0
+offset_right = 278.0
+offset_bottom = 492.0
+mouse_filter = 2
+theme = SubResource("TemaHUD")
+theme_override_styles/panel = SubResource("PapelHUD")
 
-[node name="TextoStats" type="Label" parent="PanelJugador/CanvasLayer/Interfaz/Stadisticas" unique_id=1257777097]
-layout_mode = 2
+[node name="Texto" type="Label" parent="PanelJugador/CanvasLayer/AvisoTurno"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 12.0
+offset_right = 234.0
+offset_bottom = 60.0
+mouse_filter = 2
+text = "Press E to end your turn"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="ProgressBarJ" type="ProgressBar" parent="PanelJugador/CanvasLayer/Interfaz/Stadisticas" unique_id=1469273382]
-top_level = true
-layout_mode = 2
-value = 100.0
-show_percentage = false
+[node name="AvisoEsquiva" type="Panel" parent="PanelJugador/CanvasLayer"]
+offset_left = 48.0
+offset_top = 356.0
+offset_right = 248.0
+offset_bottom = 410.0
+mouse_filter = 2
+theme = SubResource("TemaHUD")
+theme_override_styles/panel = SubResource("PapelHUD")
+
+[node name="Texto" type="Label" parent="PanelJugador/CanvasLayer/AvisoEsquiva"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 8.0
+offset_right = 182.0
+offset_bottom = 46.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 22
+text = "Dodged"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Temporizador" type="Timer" parent="PanelJugador/CanvasLayer/AvisoEsquiva"]
+wait_time = 0.85
+one_shot = true
 
 [node name="MenuShift" parent="." unique_id=1139798836 instance=ExtResource("2_t3t54")]
 visible = false
+
+[connection signal="timeout" from="PanelJugador/CanvasLayer/AvisoEsquiva/Temporizador" to="PanelJugador/CanvasLayer/AvisoEsquiva" method="hide"]

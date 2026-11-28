@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl4eico1do3un"
-path="res://.godot/imported/mockupmenu.png-947fd8a444487ac63b980687e0ac08a9.ctex"
+uid="uid://bmhfpvpnnxtow"
+path="res://.godot/imported/Indicador_Stamina.png-abe6d2d0951c3a1d966d5c6da80eefd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/mockupmenu.png"
-dest_files=["res://.godot/imported/mockupmenu.png-947fd8a444487ac63b980687e0ac08a9.ctex"]
+source_file="res://sprites/Indicador_Stamina.png"
+dest_files=["res://.godot/imported/Indicador_Stamina.png-abe6d2d0951c3a1d966d5c6da80eefd7.ctex"]
 
 [params]
 

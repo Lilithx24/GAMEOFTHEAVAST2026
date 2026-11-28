@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://syruvmegv1lp"]
 
 [ext_resource type="Script" uid="uid://nlhacceod46a" path="res://escenas/HUD/brazoInventario.gd" id="1_jpy2r"]
-[ext_resource type="Texture2D" uid="uid://j1nqm8qyq1j2" path="res://sprites/brazoizq.png" id="2_jpy2r"]
+[ext_resource type="Texture2D" uid="uid://6nfc580ca5le" path="res://sprites/PARTES/BRAZOS/brazohumano.png" id="2_jpy2r"]
 
 [resource]
 script = ExtResource("1_jpy2r")
