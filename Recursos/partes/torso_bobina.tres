@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="TorsoInventario" format=3 uid="uid://cl5mwqxaw3kyc"]
+[gd_resource type="Resource" script_class="TorsoInventario" format=3 uid="uid://gh0wkxg3x1vu"]
 
 [ext_resource type="Script" uid="uid://c60h3mu0i3n6p" path="res://escenas/HUD/torsoInventario.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://bjsukv30sh4nx" path="res://sprites/PARTES/TORSOS/torsobobina.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
-nombre = "Coil Torso"
+slotsBrazos = 4
+proteccion = 20
+evasion = 20
+nombre = "Torso bobina"
 textura = ExtResource("2_textura")
 tags = Array[String](["torso"])

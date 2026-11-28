@@ -45,7 +45,7 @@ func aplicarEstadísticas() -> void:
 
 	###### aplicar los bufos a las estadísticas de los items ######
 	personaje.stamina = personaje.staminaBase + stat(cabeza, "stamina") + stat(piernas, "stamina")
-	personaje.evasion =  stat(cabeza, "evasion") + stat(piernas, "evasion")
+	personaje.evasion =  stat(cabeza, "evasion") + stat(piernas, "evasion") + stat(torso, "evasion")
 	personaje.proteccion = stat(cabeza, "proteccion") + stat(piernas, "proteccion") + stat(torso, "proteccion")
 	personaje.modDmg = stat(cabeza, "modDmg") + stat(piernas, "modDmg")
 	

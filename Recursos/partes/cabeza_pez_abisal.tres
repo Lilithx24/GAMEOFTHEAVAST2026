@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="CabezaInventario" format=3 uid="uid://58dmyka3qw1d"]
+[gd_resource type="Resource" script_class="CabezaInventario" format=3 uid="uid://c0qt2xydl16tk"]
 
 [ext_resource type="Script" uid="uid://2lctbb4nv7lk" path="res://escenas/HUD/cabezaInventario.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dxeb2imdge22i" path="res://sprites/PARTES/CABEZAS/cabezapezabisal.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
-stamina = 1
-nombre = "Anglerfish Head"
+evasion = 10
+modDmg = 5
+nombre = "Cabeza de pez abisal"
 textura = ExtResource("2_textura")
 tags = Array[String](["cabeza"])

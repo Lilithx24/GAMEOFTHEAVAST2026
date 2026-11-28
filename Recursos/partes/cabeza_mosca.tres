@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_script")
-stamina = 1
+stamina = 2
 vision_material = ExtResource("3_vision")
 nombre = "Fly Head"
 textura = ExtResource("2_textura")

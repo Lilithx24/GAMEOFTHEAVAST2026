@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://dfgvggkb0ji34"]
 
 [ext_resource type="Script" uid="uid://dcfe0wlbsgxos" path="res://escenas/assetsCombate/enemigo.gd" id="1_sms58"]
-
-[ext_resource type="PackedScene" path="res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.tscn" id="2_objetivo"]
-[ext_resource type="PackedScene" path="res://escenas/Enemigos/Enemigo1.tscn" id="3_uno"]
-[ext_resource type="PackedScene" path="res://escenas/Enemigos/Enemigo2.tscn" id="4_dos"]
-[ext_resource type="Resource" path="res://Recursos/enemigos/enemigo_1.tres" id="5_ficha"]
-[ext_resource type="Resource" path="res://Recursos/enemigos/enemigo_2.tres" id="6_ficha"]
+[ext_resource type="PackedScene" uid="uid://bntfubipviojr" path="res://escenas/assetsCombate/assetsEnemigo/parteEnemigo.tscn" id="2_objetivo"]
+[ext_resource type="PackedScene" uid="uid://bfwj8ncun5sxm" path="res://escenas/Enemigos/Enemigo1.tscn" id="3_uno"]
+[ext_resource type="PackedScene" uid="uid://chatmhx82hqht" path="res://escenas/Enemigos/Enemigo2.tscn" id="4_dos"]
+[ext_resource type="Resource" uid="uid://b66nd0lbot64b" path="res://Recursos/enemigos/enemigo_1.tres" id="5_ficha"]
+[ext_resource type="Resource" uid="uid://cxsqagla44k6r" path="res://Recursos/enemigos/enemigo_2.tres" id="6_ficha"]
 
 [sub_resource type="StyleBoxFlat" id="VidaFondo"]
 bg_color = Color(0.12, 0.025, 0.025, 0.95)
@@ -17,15 +16,15 @@ border_width_bottom = 1
 border_color = Color(0.25, 0.12, 0.1, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
-corner_radius_bottom_left = 3
 corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="VidaRoja"]
 bg_color = Color(0.8, 0.065, 0.045, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
-corner_radius_bottom_left = 3
 corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [node name="Enemigo" type="Node2D" unique_id=569635208]
 script = ExtResource("1_sms58")
@@ -43,13 +42,13 @@ theme_override_styles/fill = SubResource("VidaRoja")
 value = 100.0
 show_percentage = false
 
-[node name="Objetivo" parent="." instance=ExtResource("2_objetivo")]
+[node name="Objetivo" parent="." unique_id=226747593 instance=ExtResource("2_objetivo")]
 
-[node name="Enemigo1" parent="Objetivo" instance=ExtResource("3_uno")]
+[node name="Enemigo1" parent="Objetivo" unique_id=228115668 instance=ExtResource("3_uno")]
 position = Vector2(170, 310)
 scale = Vector2(0.25, 0.25)
 
-[node name="Enemigo2" parent="Objetivo" instance=ExtResource("4_dos")]
+[node name="Enemigo2" parent="Objetivo" unique_id=807415571 instance=ExtResource("4_dos")]
 visible = false
 position = Vector2(170, 310)
 scale = Vector2(0.36, 0.36)

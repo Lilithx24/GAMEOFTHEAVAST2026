@@ -1,13 +1,16 @@
-[gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://w827ffjik31k"]
+[gd_resource type="Resource" script_class="BrazoInventario" format=3 uid="uid://cygty2pgrna05"]
 
 [ext_resource type="Script" uid="uid://nlhacceod46a" path="res://escenas/HUD/brazoInventario.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dy0ehjuh4tc0y" path="res://sprites/PARTES/BRAZOS/brazomantis.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
-nombreSkill = "Attack 10"
-dmgSkill = 10
-staSkill = 1
-nombre = "Mantis Arm"
+nombreSkill = "Mantis arm"
+dmgSkill = 12
+staSkill = 2
+usosTotales = 10
+efectos = Array[String](["multihit2"])
+nombre = "Brazo de mantis"
+descripcion_habilidad = "Deals 12 damage twice"
 textura = ExtResource("2_textura")
 tags = Array[String](["brazo"])

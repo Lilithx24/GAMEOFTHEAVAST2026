@@ -7,7 +7,9 @@
 script = ExtResource("1_uufmd")
 slotsBrazos = 4
 vidaMax = 100
-nombre = "Mantis Torso"
+proteccion = 5
+evasion = 5
+nombre = "Torso de Mantis"
 textura = ExtResource("2_toxuj")
 tags = Array[String](["torso"])
 metadata/_custom_type_script = "uid://c60h3mu0i3n6p"

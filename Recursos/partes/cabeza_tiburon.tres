@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="CabezaInventario" format=3 uid="uid://blsmq1jasgxj0"]
+[gd_resource type="Resource" script_class="CabezaInventario" format=3 uid="uid://dhj1aj083ilps"]
 
 [ext_resource type="Script" uid="uid://2lctbb4nv7lk" path="res://escenas/HUD/cabezaInventario.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://doc88eyr5pjn7" path="res://sprites/PARTES/CABEZAS/cabezatiburonl.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
+modDmg = 5
 stamina = 1
-nombre = "Shark Head"
+nombre = "Cabeza de tiburón"
 textura = ExtResource("2_textura")
 tags = Array[String](["cabeza"])

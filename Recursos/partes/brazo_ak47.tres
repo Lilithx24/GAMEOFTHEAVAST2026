@@ -5,11 +5,12 @@
 
 [resource]
 script = ExtResource("1_script")
-nombreSkill = "Shot"
-dmgSkill = 5
+nombreSkill = "AK-47"
+dmgSkill = 8
 staSkill = 1
-usosTotales = 20
+usosTotales = 30
 renueva_carta_al_usar = true
-nombre = "AK47 Arm"
+nombre = "Brazo AK47"
+descripcion_habilidad = "Deal 8 damage, you can cast it again"
 textura = ExtResource("2_textura")
 tags = Array[String](["brazo"])

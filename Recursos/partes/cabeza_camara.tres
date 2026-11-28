@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="CabezaInventario" format=3 uid="uid://dfuof2h2putjv"]
+[gd_resource type="Resource" script_class="CabezaInventario" format=3 uid="uid://dgf63nmuvc5vx"]
 
 [ext_resource type="Script" uid="uid://2lctbb4nv7lk" path="res://escenas/HUD/cabezaInventario.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dbtbcbpnp6swh" path="res://sprites/PARTES/CABEZAS/cabezacamara.png" id="2_textura"]
 
 [resource]
 script = ExtResource("1_script")
+evasion = 10
 stamina = 1
-nombre = "Camera Head"
+nombre = "Cabeza cámara"
 textura = ExtResource("2_textura")
 tags = Array[String](["cabeza"])
