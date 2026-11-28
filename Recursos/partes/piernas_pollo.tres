@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="ParteInventario" format=3]
+[gd_resource type="Resource" script_class="PiernasInventario" format=3 uid="uid://dcpw5ljh0jldt"]
 
-[ext_resource type="Script" path="res://escenas/HUD/parteInventario.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://sprites/PARTES/PIERNAS/piernaspollo.png" id="2_textura"]
+[ext_resource type="Script" uid="uid://b7c6j83yni6vt" path="res://escenas/HUD/piernasInventario.gd" id="1_o4ujw"]
+[ext_resource type="Texture2D" uid="uid://dca31kjfuqbrb" path="res://sprites/PARTES/PIERNAS/piernaspollo.png" id="2_textura"]
 
 [resource]
-script = ExtResource("1_script")
+script = ExtResource("1_o4ujw")
+evasion = 20
 nombre = "Piernas de pollo"
 textura = ExtResource("2_textura")
 tags = Array[String](["piernas"])

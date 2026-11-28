@@ -7,6 +7,8 @@
 script = ExtResource("1_uufmd")
 slotsBrazos = 4
 vidaMax = 100
+proteccion = 5
+evasion = 5
 nombre = "Torso de Mantis"
 textura = ExtResource("2_toxuj")
 tags = Array[String](["torso"])

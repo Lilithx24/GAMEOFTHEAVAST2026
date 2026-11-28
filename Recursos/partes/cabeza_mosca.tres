@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://2lctbb4nv7lk" path="res://escenas/HUD/cabezaInventario.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://qh8bkdm1ro82" path="res://sprites/PARTES/CABEZAS/cabezamosca.png" id="2_textura"]
-[ext_resource type="Material" path="res://Recursos/vision/mosca.tres" id="3_vision"]
+[ext_resource type="Material" uid="uid://quk4xocb8hfd" path="res://Recursos/vision/mosca.tres" id="3_vision"]
 
 [resource]
 script = ExtResource("1_script")
-stamina = 1
+stamina = 2
 vision_material = ExtResource("3_vision")
 nombre = "Cabeza de mosca"
 textura = ExtResource("2_textura")

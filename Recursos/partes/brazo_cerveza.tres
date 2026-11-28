@@ -5,10 +5,12 @@
 
 [resource]
 script = ExtResource("1_script")
-nombreSkill = "Drunk Bonk"
-dmgSkill = 5
-staSkill = 1
+nombreSkill = "Drunken man's arm"
+dmgSkill = 25
+staSkill = 2
+usosTotales = 5
+efectos = Array[String](["sanacion"])
 nombre = "Brazo de cerveza"
-descripcion_habilidad = "Dañas al oponente y pegas un trago. Recuperas entre 2 y 5 puntos de salud."
+descripcion_habilidad = "Heal yourself for 25 hp"
 textura = ExtResource("2_textura")
 tags = Array[String](["brazo"])

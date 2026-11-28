@@ -5,9 +5,12 @@
 
 [resource]
 script = ExtResource("1_script")
-nombreSkill = "Ataque 10"
+nombreSkill = "Vacuum cleaner"
 dmgSkill = 5
 staSkill = 1
+usosTotales = 10
+efectos = Array[String](["debil"])
 nombre = "Brazo aspiradora"
+descripcion_habilidad = "Deals 5 damage and weakens the enemy"
 textura = ExtResource("2_textura")
 tags = Array[String](["brazo"])

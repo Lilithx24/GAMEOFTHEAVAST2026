@@ -5,11 +5,11 @@
 
 [resource]
 script = ExtResource("1_m2w65")
-nombreSkill = "Golpe 15"
-dmgSkill = 10
-staSkill = 2
+nombreSkill = "Chelae"
+dmgSkill = 15
+staSkill = 1
 usosTotales = 10
-efectos = Array[String](["multihit2"])
+efectos = Array[String](["atrapar"])
 nombre = "Brazo de Cangrejo"
 textura = ExtResource("2_m2w65")
 tags = Array[String](["brazo"])

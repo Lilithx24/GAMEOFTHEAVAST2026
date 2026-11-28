@@ -5,12 +5,12 @@
 
 [resource]
 script = ExtResource("1_jpy2r")
-nombreSkill = "Ataque 10"
+nombreSkill = "Someone's arm"
 dmgSkill = 10
 staSkill = 1
-usosTotales = 3
+usosTotales = 20
 nombre = "Brazo de Humano"
-descripcion_habilidad = "jimbaibnsahdvf bkjashdbfkjashdbf"
+descripcion_habilidad = "Deals 10 damage"
 textura = ExtResource("2_jpy2r")
 tags = Array[String](["brazo"])
 metadata/_custom_type_script = "uid://b1ux771lmrk8s"
